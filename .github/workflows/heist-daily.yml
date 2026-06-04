@@ -1,0 +1,56 @@
+name: The heist, nightly
+
+# Builds and sends the day's issue, then commits it to the public archive.
+# Manual runs: Actions tab -> "The heist, nightly" -> Run workflow.
+#
+# Required repo secrets:
+#   GMAIL_USER          - sending Gmail address
+#   GMAIL_APP_PASSWORD  - app password for that Gmail
+# Optional secrets:
+#   PIGEON_SHEET_ID     - subscriber sheet (without it, sends to GMAIL_USER only)
+#   GOOGLE_CREDS_JSON   - service account json (needed with PIGEON_SHEET_ID)
+#   RIJKS_API_KEY       - unlocks the Rijksmuseum
+
+on:
+  schedule:
+    - cron: '30 11 * * *'   # 11:30 UTC daily, 7:30am Charleston in summer
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  heist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Write service account credentials
+        if: ${{ secrets.GOOGLE_CREDS_JSON != '' }}
+        run: printf '%s' "$GOOGLE_CREDS_JSON" > google-creds.json
+        env:
+          GOOGLE_CREDS_JSON: ${{ secrets.GOOGLE_CREDS_JSON }}
+
+      - name: Build and send tonight's heist
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          PIGEON_SHEET_ID: ${{ secrets.PIGEON_SHEET_ID }}
+          GOOGLE_CREDS_PATH: ./google-creds.json
+          RIJKS_API_KEY: ${{ secrets.RIJKS_API_KEY }}
+        run: python -m heist.build_issue --send
+
+      - name: Commit the issue to the archive
+        run: |
+          git config user.name "pigeon"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet || git commit -m "heist: $(date -u +%F)"
+          git push

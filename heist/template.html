@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>the heist · {{date_pretty}}</title>
+</head>
+<body style="margin:0; padding:0; background:#ffffff;">
+<div style="display:none; max-height:0; overflow:hidden;">{{preheader}}</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td align="center" style="padding:32px 16px 56px;">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px; width:100%;">
+
+  <!-- header -->
+  <tr><td align="center" style="padding:8px 0 4px;">
+    <img src="{{header_src}}" alt="the heist" width="220" style="display:block; width:220px; max-width:60%; height:auto;">
+  </td></tr>
+  <tr><td align="center" style="padding:0 0 36px; font-family:Georgia, 'Times New Roman', serif; font-size:13px; font-style:italic; color:#8a8a8a;">
+    your personal art thief
+  </td></tr>
+
+  <!-- tonight's haul -->
+  <tr><td style="padding:0 0 10px; font-family:Helvetica, Arial, sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#d96c5f; font-weight:bold;">
+    Tonight's Haul
+  </td></tr>
+  <tr><td align="center" style="padding:0 0 14px;">
+    <a href="{{haul_url}}" style="text-decoration:none;"><img src="{{haul_image}}" alt="{{haul_title}}" width="560" style="display:block; width:100%; height:auto; border:0;"></a>
+  </td></tr>
+  <tr><td style="padding:0 0 6px; font-family:Georgia, 'Times New Roman', serif; font-size:20px; color:#1a1a1a;">
+    {{haul_title}}
+  </td></tr>
+  <tr><td style="padding:0 0 40px; font-family:Georgia, 'Times New Roman', serif; font-size:14px; color:#6a6a6a; line-height:1.5;">
+    {{haul_artist}}{{#haul_year}}, {{haul_year}}{{/haul_year}}<br>
+    <span style="font-size:12px; color:#9a9a9a;">{{haul_medium}}{{#haul_medium}} · {{/haul_medium}}lifted from <a href="{{haul_url}}" style="color:#9a9a9a;">{{haul_museum}}</a></span>
+  </td></tr>
+
+  <!-- the line -->
+  {{#line_text}}
+  <tr><td style="padding:0 0 10px; font-family:Helvetica, Arial, sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#d96c5f; font-weight:bold;">
+    The Line
+  </td></tr>
+  <tr><td style="padding:0 0 40px; font-family:Georgia, 'Times New Roman', serif; font-size:18px; font-style:italic; color:#1a1a1a; line-height:1.6;">
+    "{{line_text}}"
+    <br><span style="font-size:12px; font-style:normal; color:#9a9a9a;">{{line_context}}</span>
+  </td></tr>
+  {{/line_text}}
+
+  <!-- from the vault -->
+  {{#vault_image}}
+  <tr><td style="padding:0 0 10px; font-family:Helvetica, Arial, sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#d96c5f; font-weight:bold;">
+    From the Vault
+  </td></tr>
+  <tr><td align="center" style="padding:0 0 12px;">
+    <a href="{{vault_url}}" style="text-decoration:none;"><img src="{{vault_image}}" alt="{{vault_title}}" width="560" style="display:block; width:100%; height:auto; border:0;"></a>
+  </td></tr>
+  <tr><td style="padding:0 0 40px; font-family:Georgia, 'Times New Roman', serif; font-size:14px; color:#6a6a6a; line-height:1.5;">
+    {{vault_title}}{{#vault_date}}, {{vault_date}}{{/vault_date}}<br>
+    <span style="font-size:12px; color:#9a9a9a;">found in <a href="{{vault_url}}" style="color:#9a9a9a;">the Library of Congress</a></span>
+  </td></tr>
+  {{/vault_image}}
+
+  <!-- on the lam -->
+  {{#lam_name}}
+  <tr><td style="padding:0 0 10px; font-family:Helvetica, Arial, sans-serif; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#d96c5f; font-weight:bold;">
+    On the Lam
+  </td></tr>
+  {{#lam_image}}
+  <tr><td align="center" style="padding:0 0 12px;">
+    <a href="{{lam_url}}" style="text-decoration:none;"><img src="{{lam_image}}" alt="{{lam_name}}" width="560" style="display:block; width:100%; height:auto; border:0;"></a>
+  </td></tr>
+  {{/lam_image}}
+  <tr><td style="padding:0 0 6px; font-family:Georgia, 'Times New Roman', serif; font-size:18px; color:#1a1a1a;">
+    {{lam_name}}
+  </td></tr>
+  <tr><td style="padding:0 0 40px; font-family:Georgia, 'Times New Roman', serif; font-size:14px; color:#6a6a6a; line-height:1.6;">
+    {{lam_blurb}} <a href="{{lam_url}}" style="color:#9a9a9a;">Lay low here.</a>
+  </td></tr>
+  {{/lam_name}}
+
+  <!-- footer -->
+  <tr><td style="border-top:1px solid #eeeeee; padding:24px 0 0; font-family:Georgia, 'Times New Roman', serif; font-size:12px; color:#9a9a9a; line-height:1.7;">
+    That's the job. Same time tomorrow.<br>
+    Know an inbox that's suffering? Forward this.<br><br>
+    <a href="{{archive_url}}" style="color:#9a9a9a;">Every past heist</a> · reply "unsubscribe" to call it off<br>
+    Delivered by Pigeon, an <a href="https://www.arugulamotors.com" style="color:#9a9a9a;">Arugula Motors</a> build.
+  </td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
