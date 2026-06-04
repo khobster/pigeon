@@ -19,10 +19,10 @@ def steal(rng):
                 summary = ""
                 ctx = data.get("context")
                 if isinstance(ctx, dict):
-                    summary = (ctx.get("summary") or "").split(". ")[0].rstrip(".") + "."
+                    summary = (ctx.get("summary") or "").split(". ")[0].rstrip(".")
+                    summary = summary + "." if summary else ""
                 attribution = ", ".join(p for p in (work, author) if p)
-                context = f"{attribution}. {summary}".strip(". ") + "." if attribution else summary
-                return {"text": text, "context": context}
+                return {"text": text, "attribution": attribution, "summary": summary}
         except Exception as e:  # noqa: BLE001
             last = e
         time.sleep(3 * (attempt + 1))

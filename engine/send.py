@@ -19,6 +19,9 @@ def send_issue(subject: str, html: str, sender_name: str = "the heist"):
             msg["Subject"] = subject
             msg["From"] = formataddr((sender_name, GMAIL_USER))
             msg["To"] = to
+            # Gives Gmail/Apple Mail a native unsubscribe affordance and
+            # keeps bulk-sender reputation healthy as the list grows.
+            msg["List-Unsubscribe"] = f"<mailto:{GMAIL_USER}?subject=unsubscribe>"
             msg.set_content("This issue is best viewed as HTML.")
             msg.add_alternative(html, subtype="html")
             smtp.send_message(msg)
