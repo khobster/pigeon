@@ -14,7 +14,7 @@ from heist.sources import met, aic, cleveland, rijks, chunklet, loc, lam
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-ARCHIVE_URL = "https://khobster.github.io/pigeon/"
+ARCHIVE_URL = "https://heist.arugulamotors.com/"
 HEADER_WEB = "assets/header.png"
 
 
