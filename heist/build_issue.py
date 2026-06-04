@@ -133,12 +133,21 @@ def write_archive(archive_html, today):
     (issues_dir / f"{today.isoformat()}.html").write_text(archive_html)
 
     issues = sorted(issues_dir.glob("*.html"), reverse=True)
+
+    def pretty(stem):
+        try:
+            return date.fromisoformat(stem).strftime("%B %-d, %Y")
+        except ValueError:
+            return stem
+
     items = "\n".join(
-        f'      <li><a href="issues/{p.name}">{p.stem}</a></li>' for p in issues
+        f'      <li><a href="issues/{p.name}">{pretty(p.stem)}</a></li>' for p in issues
     )
+    n = len(issues)
+    count_line = f"{n} heist{'s' if n != 1 else ''} and counting"
     index = (ROOT / "docs" / "_index_template.html").read_text()
     (DOCS / "index.html").write_text(
-        index.replace("{{issue_count}}", str(len(issues))).replace("{{issue_list}}", items)
+        index.replace("{{count_line}}", count_line).replace("{{issue_list}}", items)
     )
     print(f"archived issue {today.isoformat()} ({len(issues)} total)")
 
