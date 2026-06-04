@@ -1,8 +1,9 @@
 """Assemble today's heist, archive it to docs/, and optionally send it.
 
 Usage:
-  python -m heist.build_issue           # build + archive only (dry run)
-  python -m heist.build_issue --send    # build + archive + send to the list
+  python -m heist.build_issue                       # build + archive only (dry run)
+  python -m heist.build_issue --send                # build + archive + send to the list
+  python -m heist.build_issue --test you@email.com  # build + send to one address only
 """
 import random
 import sys
@@ -155,7 +156,13 @@ def write_archive(archive_html, today):
 def main():
     subject, email_html, archive_html, today = build()
     write_archive(archive_html, today)
-    if "--send" in sys.argv:
+    if "--test" in sys.argv:
+        from engine.send import send_issue
+
+        to = sys.argv[sys.argv.index("--test") + 1]
+        send_issue(subject, email_html, recipients=[to])
+        print(f"test: sent '{subject}' to {to} only")
+    elif "--send" in sys.argv:
         from engine.send import send_issue
 
         n = send_issue(subject, email_html)

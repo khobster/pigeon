@@ -7,11 +7,12 @@ from email.utils import formataddr
 from engine.common import GMAIL_USER, GMAIL_APP_PASSWORD, require, subscribers
 
 
-def send_issue(subject: str, html: str, sender_name: str = "the heist"):
+def send_issue(subject: str, html: str, sender_name: str = "the heist", recipients=None):
+    """Send to the list, or to an explicit recipients override (test sends)."""
     require("GMAIL_USER", GMAIL_USER)
     require("GMAIL_APP_PASSWORD", GMAIL_APP_PASSWORD)
 
-    recipients = subscribers()
+    recipients = recipients or subscribers()
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(GMAIL_USER, GMAIL_APP_PASSWORD)
         for i, to in enumerate(recipients):
