@@ -18,17 +18,59 @@ ARCHIVE_URL = "https://khobster.github.io/pigeon/"
 HEADER_WEB = "assets/header.png"
 
 
-def build_haul(rng, today):
+def build_haul(rng, today, extras_wanted=3):
+    """One hero piece plus a few companions from the other museums."""
     museums = [met, aic, cleveland] + ([rijks] if rijks.available() else [])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
-    last = None
+
+    hero, last = None, None
     for museum in rotation:
         try:
-            return museum.steal(rng)
+            hero = museum.steal(rng)
+            break
         except Exception as e:  # noqa: BLE001
             last = e
-    raise RuntimeError(f"every museum was locked tonight: {last}")
+    if not hero:
+        raise RuntimeError(f"every museum was locked tonight: {last}")
+
+    extras = []
+    for museum in rotation * 2:  # loop twice so one museum can contribute two
+        if len(extras) >= extras_wanted:
+            break
+        try:
+            piece = museum.steal(rng)
+            if piece["image"] != hero["image"] and piece["image"] not in [e["image"] for e in extras]:
+                extras.append(piece)
+        except Exception as e:  # noqa: BLE001
+            print(f"  [skip extra] {museum.__name__}: {e}")
+    return hero, extras
+
+
+EXTRA_ROW = """
+  <tr><td align="center" style="padding:8px 0 10px;">
+    <a href="{url}" style="text-decoration:none;"><img src="{image}" alt="{title}" width="440" style="display:block; width:80%; max-width:440px; height:auto; border:0;"></a>
+  </td></tr>
+  <tr><td align="center" style="padding:0 0 18px; font-family:Helvetica, Arial, sans-serif; font-size:12px; color:#999999; line-height:1.5;">
+    <strong style="color:#555555;">{title}</strong><br>{artist}{year_part} · <a href="{url}" style="color:#999999;">{museum}</a>
+  </td></tr>"""
+
+
+def extras_html(extras):
+    if not extras:
+        return ""
+    rows = ['''
+  <tr><td style="padding:0 0 8px; font-family:Helvetica, Arial, sans-serif; font-size:13px; font-weight:bold; color:#555555;">
+    also in the bag:
+  </td></tr>''']
+    for e in extras:
+        title = e["title"] if len(e["title"]) <= 80 else e["title"][:80].rsplit(" ", 1)[0] + "..."
+        rows.append(EXTRA_ROW.format(
+            url=e["url"], image=e["image"], title=title, artist=e["artist"],
+            year_part=f", {e['year']}" if e["year"] else "", museum=e["museum"],
+        ))
+    rows.append('  <tr><td style="padding:0 0 22px;"></td></tr>')
+    return "".join(rows)
 
 
 def try_steal(source, rng):
@@ -44,7 +86,7 @@ def build(today=None):
     today = today or date.today()
     rng = random.Random(today.isoformat())
 
-    haul = build_haul(rng, today)
+    haul, extras = build_haul(rng, today)
     line = try_steal(chunklet, rng)
     vault = try_steal(loc, rng)
     hideout = try_steal(lam, rng)
@@ -60,6 +102,7 @@ def build(today=None):
         "haul_medium": haul["medium"],
         "haul_museum": haul["museum"],
         "haul_url": haul["url"],
+        "extras_html": extras_html(extras),
         "line_text": line.get("text", ""),
         "line_context": line.get("context") or "lifted from somewhere in the canon",
         "vault_image": vault.get("image", ""),
