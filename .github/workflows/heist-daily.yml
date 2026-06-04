@@ -33,8 +33,10 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Write service account credentials
-        if: ${{ secrets.GOOGLE_CREDS_JSON != '' }}
-        run: printf '%s' "$GOOGLE_CREDS_JSON" > google-creds.json
+        run: |
+          if [ -n "$GOOGLE_CREDS_JSON" ]; then
+            printf '%s' "$GOOGLE_CREDS_JSON" > google-creds.json
+          fi
         env:
           GOOGLE_CREDS_JSON: ${{ secrets.GOOGLE_CREDS_JSON }}
 
