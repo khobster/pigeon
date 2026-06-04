@@ -6,6 +6,7 @@ Usage:
   python -m heist.build_issue --test you@email.com  # build + send to one address only
 """
 import random
+import re
 import sys
 from datetime import date
 from pathlib import Path
@@ -83,6 +84,46 @@ def try_steal(source, rng):
         return {}
 
 
+# Generic words that make dull loot. The manifest wants the rare ones.
+SUBJECT_STOP = {
+    "the", "from", "with", "also", "known", "series", "untitled", "study",
+    "view", "scene", "portrait", "madame", "monsieur", "saint", "still",
+    "life", "young", "woman", "man", "girl", "boy", "head", "figure",
+    "landscape", "after", "called", "plate", "number", "between", "design",
+}
+
+
+def keyword(text):
+    """The most distinctive word in a title: longest capitalized word that
+    is not generic catalog language. The manifest, one word per item."""
+    words = re.findall(r"[A-Za-z][A-Za-z']*", text or "")
+    def norm(w):
+        w = w.lower()
+        return w[:-2] if w.endswith("'s") else w
+    caps = [w for w in words if w[0].isupper() and norm(w) not in SUBJECT_STOP and len(w) >= 4]
+    pool = caps or [w for w in words if len(w) >= 5 and norm(w) not in SUBJECT_STOP]
+    return max(pool, key=len) if pool else ""
+
+
+def build_subject(haul, extras, line, vault, hideout):
+    texts = (
+        [haul["title"] or haul["artist"]]
+        + [e["title"] for e in extras]
+        + [line.get("attribution", "")]
+        + [vault.get("title") or vault.get("topic", "")]
+        + [hideout.get("name", "")]
+    )
+    words, seen = [], set()
+    for t in texts:
+        w = keyword(t)
+        if w and w.lower() not in seen:
+            words.append(w)
+            seen.add(w.lower())
+    while len(", ".join(words)) > 75 and len(words) > 3:
+        words.pop(1)  # shed loot from the middle, keep the hero and the hideout
+    return ", ".join(words) or "tonight's haul"
+
+
 def build(today=None):
     today = today or date.today()
     rng = random.Random(today.isoformat())
@@ -121,10 +162,7 @@ def build(today=None):
     email_html = render(template, {**context, "header_src": ARCHIVE_URL + HEADER_WEB})
     archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB})
 
-    title = haul["title"]
-    if len(title) > 60:  # museum titles can be novels; subjects should not be
-        title = title[:60].rsplit(" ", 1)[0].rstrip(",;:") + "..."
-    subject = f"the heist · {title}"
+    subject = build_subject(haul, extras, line, vault, hideout)
     return subject, email_html, archive_html, today
 
 
