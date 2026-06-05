@@ -20,7 +20,7 @@ ARCHIVE_URL = "https://heist.arugulamotors.com/"
 HEADER_WEB = "assets/header.png"
 
 
-def build_haul(rng, today, extras_wanted=3):
+def build_haul(rng, today, extras_wanted=5):
     """One hero piece plus a few companions from the other museums."""
     museums = [met, aic, cleveland, smk] + [m for m in (si, harvard) if m.available()]
     start = today.toordinal() % len(museums)
