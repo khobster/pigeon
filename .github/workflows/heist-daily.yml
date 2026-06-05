@@ -13,7 +13,10 @@ name: The heist, nightly
 
 on:
   schedule:
-    - cron: '30 11 * * *'   # 11:30 UTC daily, 7:30am Charleston in summer
+    # GitHub cron queues under load and popular times run late (the 11:30
+    # slot once fired at 14:05). Odd minute + earlier hour biases delivery
+    # toward 7-8am Charleston even when the queue is slow.
+    - cron: '47 10 * * *'
   workflow_dispatch:
 
 permissions:

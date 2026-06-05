@@ -1,6 +1,7 @@
 """Shared config for Pigeon. Loads .env, exposes the subscriber list."""
 import os
 import sys
+import time
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -40,7 +41,18 @@ def subscribers():
         str(creds_path),
         scopes=["https://www.googleapis.com/auth/spreadsheets"],
     )
-    sheet = gspread.authorize(creds).open_by_key(PIGEON_SHEET_ID).sheet1
-    rows = sheet.get_all_records()
-    emails = [r["email"].strip() for r in rows if r.get("email", "").strip()]
-    return emails or [require("GMAIL_USER", GMAIL_USER)]
+    # Google's API throws transient 500s now and then (it cost us the
+    # 2026-06-05 send). Retry with backoff before giving up.
+    last = None
+    for attempt in range(5):
+        try:
+            sheet = gspread.authorize(creds).open_by_key(PIGEON_SHEET_ID).sheet1
+            rows = sheet.get_all_records()
+            emails = [r["email"].strip() for r in rows if r.get("email", "").strip()]
+            return emails or [require("GMAIL_USER", GMAIL_USER)]
+        except Exception as e:  # noqa: BLE001
+            last = e
+            wait = 15 * (attempt + 1)
+            print(f"  [retry] sheet read failed ({e}); waiting {wait}s")
+            time.sleep(wait)
+    raise RuntimeError(f"subscriber sheet unreachable after retries: {last}")
