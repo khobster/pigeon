@@ -12,7 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from engine.render import render
-from heist.sources import met, aic, cleveland, rijks, chunklet, loc, lam
+from heist.sources import met, aic, cleveland, smk, chunklet, loc, lam
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -22,7 +22,7 @@ HEADER_WEB = "assets/header.png"
 
 def build_haul(rng, today, extras_wanted=3):
     """One hero piece plus a few companions from the other museums."""
-    museums = [met, aic, cleveland] + ([rijks] if rijks.available() else [])
+    museums = [met, aic, cleveland, smk]
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 

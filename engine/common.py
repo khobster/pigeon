@@ -13,7 +13,6 @@ GMAIL_USER = os.getenv("GMAIL_USER")
 GMAIL_APP_PASSWORD = os.getenv("GMAIL_APP_PASSWORD")
 PIGEON_SHEET_ID = os.getenv("PIGEON_SHEET_ID")
 GOOGLE_CREDS_PATH = os.getenv("GOOGLE_CREDS_PATH", "./google-creds.json")
-RIJKS_API_KEY = os.getenv("RIJKS_API_KEY")
 
 
 def require(name, value):
