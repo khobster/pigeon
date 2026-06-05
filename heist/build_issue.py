@@ -109,7 +109,7 @@ def build_subject(haul, extras, line, vault, hideout):
     texts = (
         [haul["title"] or haul["artist"]]
         + [e["title"] for e in extras]
-        + [line.get("attribution", "")]
+        + [line.get("work") or line.get("attribution", "")]
         + [vault.get("title") or vault.get("topic", "")]
         + [hideout.get("name", "")]
     )
@@ -121,7 +121,7 @@ def build_subject(haul, extras, line, vault, hideout):
             seen.add(w.lower())
     while len(", ".join(words)) > 75 and len(words) > 3:
         words.pop(1)  # shed loot from the middle, keep the hero and the hideout
-    return ", ".join(words) or "tonight's haul"
+    return ", ".join(words) or "last night's haul"
 
 
 def build(today=None):
@@ -135,7 +135,7 @@ def build(today=None):
 
     context = {
         "date_pretty": today.strftime("%B %-d, %Y"),
-        "preheader": f"Tonight's haul: {haul['title']}",
+        "preheader": f"Last night's haul: {haul['title']}",
         "archive_url": ARCHIVE_URL,
         "haul_image": haul["image"],
         "haul_title": haul["title"],
