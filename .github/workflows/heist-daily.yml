@@ -9,6 +9,8 @@ name: The heist, nightly
 # Optional secrets:
 #   PIGEON_SHEET_ID     - subscriber sheet (without it, sends to GMAIL_USER only)
 #   GOOGLE_CREDS_JSON   - service account json (needed with PIGEON_SHEET_ID)
+#   SI_API_KEY          - unlocks the Smithsonian museums
+#   HARVARD_API_KEY     - unlocks the Harvard Art Museums
 
 on:
   schedule:
@@ -48,6 +50,8 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           PIGEON_SHEET_ID: ${{ secrets.PIGEON_SHEET_ID }}
           GOOGLE_CREDS_PATH: ./google-creds.json
+          SI_API_KEY: ${{ secrets.SI_API_KEY }}
+          HARVARD_API_KEY: ${{ secrets.HARVARD_API_KEY }}
         run: python -m heist.build_issue --send
 
       - name: Commit the issue to the archive

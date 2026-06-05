@@ -10,7 +10,7 @@ The first newsletter shipped on Pigeon: **the heist**, your personal art thief. 
 
 Sections, daily:
 
-- **Last Night's Haul** — one masterpiece, full size, from the Met, the Art Institute of Chicago, the Cleveland Museum of Art, or SMK in Copenhagen
+- **Last Night's Haul** — one masterpiece, full size, from the Met, the Art Institute of Chicago, the Cleveland Museum of Art, SMK in Copenhagen, the Smithsonian museums, or the Harvard Art Museums
 - **The Line** — a line lifted from somewhere in the western canon
 - **From the Vault** — a find from the Library of Congress archives
 - **On the Lam** — where the thief is laying low, somewhere on earth
