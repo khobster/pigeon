@@ -12,6 +12,8 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import quote
 
+import requests
+
 from engine.render import render
 from heist.sources import met, aic, cleveland, smk, si, harvard, chunklet, loc, lam
 
@@ -29,9 +31,23 @@ def img(url, width=1120):
     uniform. Width 1120 = retina-sharp at the 560px layout."""
     if not url:
         return ""
-    if "ids.lib.harvard.edu" in url:
-        return url  # already redirect-free + IIIF-sized; their server blocks wsrv
+    if url.startswith(ARCHIVE_URL):
+        return url  # already self-hosted on our domain
     return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside"
+
+
+def localize(url, today, tag):
+    """Download an image into the archive and serve it from our own domain.
+    Harvard rate-limits shared proxy fetchers (wsrv got 429s; Apple Mail's
+    privacy relay gets the same treatment, hence question marks on iOS),
+    so their art physically leaves the building at build time."""
+    art_dir = DOCS / "assets" / "art"
+    art_dir.mkdir(parents=True, exist_ok=True)
+    name = f"{today.isoformat()}-{tag}.jpg"
+    resp = requests.get(url, timeout=45, headers={"User-Agent": "Mozilla/5.0 (pigeon-heist)"})
+    resp.raise_for_status()
+    (art_dir / name).write_bytes(resp.content)
+    return f"{ARCHIVE_URL}assets/art/{name}"
 
 
 def build_haul(rng, today, extras_wanted=5):
@@ -143,6 +159,12 @@ def build(today=None):
     rng = random.Random(today.isoformat())
 
     haul, extras = build_haul(rng, today)
+    for i, piece in enumerate([haul] + extras):
+        if "ids.lib.harvard.edu" in piece["image"]:
+            try:
+                piece["image"] = localize(piece["image"], today, f"harvard{i}")
+            except Exception as e:  # noqa: BLE001
+                print(f"  [localize fail, serving direct] {e}")
     line = try_steal(chunklet, rng)
     vault = try_steal(loc, rng)
     hideout = try_steal(lam, rng)
