@@ -10,6 +10,7 @@ import re
 import sys
 from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 from engine.render import render
 from heist.sources import met, aic, cleveland, smk, si, harvard, chunklet, loc, lam
@@ -18,6 +19,19 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 ARCHIVE_URL = "https://heist.arugulamotors.com/"
 HEADER_WEB = "assets/header.png"
+
+
+def img(url, width=1120):
+    """Serve artwork through the wsrv.nl image CDN: one consistent host,
+    proper headers, resized payloads. Six museums' web servers all behave
+    differently in email clients (Apple Mail refused Harvard's redirects
+    and Smithsonian's bare query urls on 2026-06-06); this makes them
+    uniform. Width 1120 = retina-sharp at the 560px layout."""
+    if not url:
+        return ""
+    if "ids.lib.harvard.edu" in url:
+        return url  # already redirect-free + IIIF-sized; their server blocks wsrv
+    return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside"
 
 
 def build_haul(rng, today, extras_wanted=5):
@@ -68,7 +82,7 @@ def extras_html(extras):
     for e in extras:
         title = e["title"] if len(e["title"]) <= 80 else e["title"][:80].rsplit(" ", 1)[0] + "..."
         rows.append(EXTRA_ROW.format(
-            url=e["url"], image=e["image"], title=title, artist=e["artist"],
+            url=e["url"], image=img(e["image"], width=880), title=title, artist=e["artist"],
             year_part=f", {e['year']}" if e["year"] else "", museum=e["museum"],
         ))
     rows.append('  <tr><td style="padding:0 0 22px;"></td></tr>')
@@ -137,7 +151,7 @@ def build(today=None):
         "date_pretty": today.strftime("%B %-d, %Y"),
         "preheader": f"Last night's haul: {haul['title']}",
         "archive_url": ARCHIVE_URL,
-        "haul_image": haul["image"],
+        "haul_image": img(haul["image"]),
         "haul_title": haul["title"],
         "haul_artist": haul["artist"],
         "haul_year": haul["year"],
@@ -148,13 +162,13 @@ def build(today=None):
         "line_text": line.get("text", ""),
         "line_attr": line.get("attribution") or "lifted from somewhere in the canon",
         "line_summary": line.get("summary", ""),
-        "vault_image": vault.get("image", ""),
+        "vault_image": img(vault.get("image", "")),
         "vault_title": vault.get("title", ""),
         "vault_date": vault.get("date", ""),
         "vault_url": vault.get("url", ""),
         "lam_name": hideout.get("name", ""),
         "lam_blurb": hideout.get("blurb", ""),
-        "lam_image": hideout.get("image", ""),
+        "lam_image": img(hideout.get("image", "")),
         "lam_url": hideout.get("url", ""),
     }
 

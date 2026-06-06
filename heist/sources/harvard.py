@@ -30,6 +30,14 @@ def steal(rng):
         image = r.get("primaryimageurl")
         if not image or not r.get("title"):
             continue
+        # nrs.harvard.edu urls are 303 redirects that picky email clients
+        # (Apple Mail) refuse to follow. Resolve to the final image url now.
+        try:
+            image = requests.head(image, allow_redirects=True, timeout=20).url
+        except Exception:  # noqa: BLE001
+            continue
+        # The resolved url is IIIF; ask Harvard for an email-sized render.
+        image = image.replace("/full/full/0/", "/full/!1120,1120/0/")
         people = r.get("people") or []
         return {
             "museum": "Harvard Art Museums",
