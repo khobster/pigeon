@@ -29,9 +29,9 @@ UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) Appl
 OUTBOX = ROOT / ".outbox.json"
 
 
-def img(url, width=1120):
-    """The wsrv.nl image CDN: one consistent host, proper headers, resized
-    payloads. Width 1120 = retina-sharp at the 560px layout."""
+def resized(url, width=1120):
+    """The wsrv.nl image CDN, used only to fetch a smaller render at build
+    time. Width 1120 = retina-sharp at the 560px layout."""
     return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside"
 
 
@@ -46,43 +46,40 @@ def probe_ok(url):
         return False
 
 
-def localize(url, today, tag):
-    """Download an image into the archive and serve it from our own domain.
-    Retries with backoff: Harvard 429s datacenter IPs (it cost us the
-    2026-06-07 issue), so the GitHub runner may need a few polite tries."""
+def verified(url, today, tag, width=1120):
+    """Download the image and return a URL on OUR domain, or raise.
+
+    This is the whole guarantee. Every image in the email is a file we
+    physically hold and serve from heist.arugulamotors.com, so once it is
+    confirmed live on Pages it cannot break when the email is opened later,
+    no matter what a museum server or CDN does in the meantime. A piece
+    whose bytes we cannot fetch gets dropped; the manifest never lists loot
+    the thief could not actually carry out.
+
+    Per attempt we try the wsrv-resized render first (smaller file), then
+    the origin directly. Retries with backoff because some origins (Harvard)
+    rate-limit datacenter IPs like the GitHub runner."""
+    if not url:
+        raise RuntimeError("no image url")
     art_dir = DOCS / "assets" / "art"
     art_dir.mkdir(parents=True, exist_ok=True)
     last = None
     for attempt in range(4):
-        try:
-            resp = requests.get(url, timeout=45, headers=UA)
-            resp.raise_for_status()
-            ext = ".png" if "png" in resp.headers.get("content-type", "") else ".jpg"
-            name = f"{today.isoformat()}-{tag}{ext}"
-            (art_dir / name).write_bytes(resp.content)
-            return f"{ARCHIVE_URL}assets/art/{name}"
-        except Exception as e:  # noqa: BLE001
-            last = e
-            time.sleep(12 * (attempt + 1))
-    raise RuntimeError(f"could not localize: {last}")
-
-
-def verified(url, today, tag):
-    """Return a URL proven to serve this image to email clients, or raise.
-    Ladder: CDN-wrapped -> direct -> downloaded and self-hosted. Origins
-    differ: artic.edu blocks the CDN, Harvard rate-limits every shared
-    fetcher on earth including Apple Mail's privacy relay. A piece whose
-    image cannot be proven gets dropped; the manifest never lists loot
-    the thief could not carry out."""
-    if not url:
-        raise RuntimeError("no image url")
-    if "ids.lib.harvard.edu" not in url:  # Harvard goes straight to self-hosting
-        proxied = img(url)
-        if probe_ok(proxied):
-            return proxied
-        if probe_ok(url):
-            return url
-    return localize(url, today, tag)
+        for candidate in (resized(url, width), url):
+            try:
+                resp = requests.get(candidate, timeout=45, headers=UA)
+                resp.raise_for_status()
+                ctype = resp.headers.get("content-type", "")
+                if not ctype.startswith("image/"):
+                    raise RuntimeError(f"not an image: {ctype or 'unknown'}")
+                ext = ".png" if "png" in ctype else ".jpg"
+                name = f"{today.isoformat()}-{tag}{ext}"
+                (art_dir / name).write_bytes(resp.content)
+                return f"{ARCHIVE_URL}assets/art/{name}"
+            except Exception as e:  # noqa: BLE001
+                last = e
+        time.sleep(10 * (attempt + 1))
+    raise RuntimeError(f"could not fetch {url}: {last}")
 
 
 def build_haul(rng, today, extras_wanted=5):
@@ -113,7 +110,7 @@ def build_haul(rng, today, extras_wanted=5):
             if piece["image"] in seen:
                 continue
             seen.add(piece["image"])
-            piece["image"] = verified(piece["image"], today, f"extra{len(extras)}")
+            piece["image"] = verified(piece["image"], today, f"extra{len(extras)}", width=880)
             extras.append(piece)
         except Exception as e:  # noqa: BLE001
             print(f"  [skip extra] {museum.__name__}: {e}")
@@ -250,6 +247,27 @@ def build(today=None):
     return subject, email_html, archive_html, today
 
 
+def prune_old_art(today, keep_days=365):
+    """Delete self-hosted art older than a year. The live email is never
+    affected; only archive pages past keep_days go text-only. Keeps the
+    repo under the GitHub Pages size limit with zero maintenance."""
+    art_dir = DOCS / "assets" / "art"
+    if not art_dir.exists():
+        return
+    removed = 0
+    for f in art_dir.glob("*-*.*"):
+        stamp = f.name[:10]
+        try:
+            age = (today - date.fromisoformat(stamp)).days
+        except ValueError:
+            continue
+        if age > keep_days:
+            f.unlink()
+            removed += 1
+    if removed:
+        print(f"pruned {removed} art file(s) older than {keep_days} days")
+
+
 def write_archive(archive_html, today):
     issues_dir = DOCS / "issues"
     issues_dir.mkdir(parents=True, exist_ok=True)
@@ -285,8 +303,8 @@ def main():
         return
 
     if "--wait-live" in sys.argv:
-        # Apple Mail prefetches images the moment an email arrives, so every
-        # self-hosted image must be live on Pages BEFORE the send.
+        # Every image is self-hosted now, so none of them may be sent until
+        # all are confirmed live on Pages (Apple Mail prefetches at delivery).
         data = json.loads(OUTBOX.read_text())
         own = [u for u in re.findall(r'<img src="([^"]+)"', data["html"]) if u.startswith(ARCHIVE_URL)]
         deadline = time.time() + 300
@@ -296,27 +314,30 @@ def main():
                     sys.exit(f"timed out waiting for {u} to deploy")
                 print(f"  waiting for {u.rsplit('/', 1)[-1]}...")
                 time.sleep(15)
-        print(f"all {len(own)} self-hosted image(s) live")
+        print(f"all {len(own)} image(s) live on our domain")
         return
 
+    if "--test-outbox" in sys.argv:
+        from engine.send import send_issue
+
+        to = sys.argv[sys.argv.index("--test-outbox") + 1]
+        data = json.loads(OUTBOX.read_text())
+        send_issue(data["subject"], data["html"], recipients=[to])
+        print(f"test: sent '{data['subject']}' to {to} only")
+        return
+
+    # Building downloads every image into docs/. Because all art is now
+    # self-hosted, sending can ONLY happen after the archive is pushed and
+    # the images are confirmed live (--wait-live), so there is no immediate
+    # --send/--test path: everything goes through the outbox.
     subject, email_html, archive_html, today = build()
     write_archive(archive_html, today)
+    prune_old_art(today)
+    OUTBOX.write_text(json.dumps({"subject": subject, "html": email_html}))
     if "--prepare" in sys.argv:
-        OUTBOX.write_text(json.dumps({"subject": subject, "html": email_html}))
         print(f"prepared '{subject}' into the outbox")
-    elif "--test" in sys.argv:
-        from engine.send import send_issue
-
-        to = sys.argv[sys.argv.index("--test") + 1]
-        send_issue(subject, email_html, recipients=[to])
-        print(f"test: sent '{subject}' to {to} only")
-    elif "--send" in sys.argv:
-        from engine.send import send_issue
-
-        n = send_issue(subject, email_html)
-        print(f"sent '{subject}' to {n} subscriber(s)")
     else:
-        print(f"dry run: '{subject}' built but not sent")
+        print(f"dry run: '{subject}' built and archived, not sent")
 
 
 if __name__ == "__main__":
