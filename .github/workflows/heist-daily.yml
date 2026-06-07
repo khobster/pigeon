@@ -44,20 +44,29 @@ jobs:
         env:
           GOOGLE_CREDS_JSON: ${{ secrets.GOOGLE_CREDS_JSON }}
 
-      - name: Build and send tonight's heist
+      # Order matters: Apple Mail prefetches images at delivery time, so any
+      # self-hosted art must be live on Pages BEFORE the email goes out.
+      - name: Build tonight's heist
         env:
-          GMAIL_USER: ${{ secrets.GMAIL_USER }}
-          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          PIGEON_SHEET_ID: ${{ secrets.PIGEON_SHEET_ID }}
-          GOOGLE_CREDS_PATH: ./google-creds.json
           SI_API_KEY: ${{ secrets.SI_API_KEY }}
           HARVARD_API_KEY: ${{ secrets.HARVARD_API_KEY }}
-        run: python -m heist.build_issue --send
+        run: python -m heist.build_issue --prepare
 
-      - name: Commit the issue to the archive
+      - name: Publish the archive and any self-hosted art
         run: |
           git config user.name "pigeon"
           git config user.email "actions@users.noreply.github.com"
           git add docs/
           git diff --cached --quiet || git commit -m "heist: $(date -u +%F)"
           git push
+
+      - name: Wait for the art to deploy
+        run: python -m heist.build_issue --wait-live
+
+      - name: Send
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          PIGEON_SHEET_ID: ${{ secrets.PIGEON_SHEET_ID }}
+          GOOGLE_CREDS_PATH: ./google-creds.json
+        run: python -m heist.build_issue --send-outbox

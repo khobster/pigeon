@@ -1,4 +1,5 @@
 .env
+.outbox.json
 google-creds.json
 __pycache__/
 *.pyc

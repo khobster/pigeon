@@ -5,9 +5,11 @@ Usage:
   python -m heist.build_issue --send                # build + archive + send to the list
   python -m heist.build_issue --test you@email.com  # build + send to one address only
 """
+import json
 import random
 import re
 import sys
+import time
 from datetime import date
 from pathlib import Path
 from urllib.parse import quote
@@ -23,31 +25,64 @@ ARCHIVE_URL = "https://heist.arugulamotors.com/"
 HEADER_WEB = "assets/header.png"
 
 
+UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15"}
+OUTBOX = ROOT / ".outbox.json"
+
+
 def img(url, width=1120):
-    """Serve artwork through the wsrv.nl image CDN: one consistent host,
-    proper headers, resized payloads. Six museums' web servers all behave
-    differently in email clients (Apple Mail refused Harvard's redirects
-    and Smithsonian's bare query urls on 2026-06-06); this makes them
-    uniform. Width 1120 = retina-sharp at the 560px layout."""
-    if not url:
-        return ""
-    if url.startswith(ARCHIVE_URL):
-        return url  # already self-hosted on our domain
+    """The wsrv.nl image CDN: one consistent host, proper headers, resized
+    payloads. Width 1120 = retina-sharp at the 560px layout."""
     return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside"
+
+
+def probe_ok(url):
+    """True if the URL serves an actual image to a normal client right now."""
+    try:
+        r = requests.get(url, timeout=25, headers=UA, stream=True)
+        ok = r.status_code == 200 and r.headers.get("content-type", "").startswith("image/")
+        r.close()
+        return ok
+    except Exception:  # noqa: BLE001
+        return False
 
 
 def localize(url, today, tag):
     """Download an image into the archive and serve it from our own domain.
-    Harvard rate-limits shared proxy fetchers (wsrv got 429s; Apple Mail's
-    privacy relay gets the same treatment, hence question marks on iOS),
-    so their art physically leaves the building at build time."""
+    Retries with backoff: Harvard 429s datacenter IPs (it cost us the
+    2026-06-07 issue), so the GitHub runner may need a few polite tries."""
     art_dir = DOCS / "assets" / "art"
     art_dir.mkdir(parents=True, exist_ok=True)
-    name = f"{today.isoformat()}-{tag}.jpg"
-    resp = requests.get(url, timeout=45, headers={"User-Agent": "Mozilla/5.0 (pigeon-heist)"})
-    resp.raise_for_status()
-    (art_dir / name).write_bytes(resp.content)
-    return f"{ARCHIVE_URL}assets/art/{name}"
+    last = None
+    for attempt in range(4):
+        try:
+            resp = requests.get(url, timeout=45, headers=UA)
+            resp.raise_for_status()
+            ext = ".png" if "png" in resp.headers.get("content-type", "") else ".jpg"
+            name = f"{today.isoformat()}-{tag}{ext}"
+            (art_dir / name).write_bytes(resp.content)
+            return f"{ARCHIVE_URL}assets/art/{name}"
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(12 * (attempt + 1))
+    raise RuntimeError(f"could not localize: {last}")
+
+
+def verified(url, today, tag):
+    """Return a URL proven to serve this image to email clients, or raise.
+    Ladder: CDN-wrapped -> direct -> downloaded and self-hosted. Origins
+    differ: artic.edu blocks the CDN, Harvard rate-limits every shared
+    fetcher on earth including Apple Mail's privacy relay. A piece whose
+    image cannot be proven gets dropped; the manifest never lists loot
+    the thief could not carry out."""
+    if not url:
+        raise RuntimeError("no image url")
+    if "ids.lib.harvard.edu" not in url:  # Harvard goes straight to self-hosting
+        proxied = img(url)
+        if probe_ok(proxied):
+            return proxied
+        if probe_ok(url):
+            return url
+    return localize(url, today, tag)
 
 
 def build_haul(rng, today, extras_wanted=5):
@@ -59,21 +94,27 @@ def build_haul(rng, today, extras_wanted=5):
     hero, last = None, None
     for museum in rotation:
         try:
-            hero = museum.steal(rng)
+            candidate = museum.steal(rng)
+            candidate["image"] = verified(candidate["image"], today, "haul")
+            hero = candidate
             break
         except Exception as e:  # noqa: BLE001
             last = e
+            print(f"  [hero fell through] {museum.__name__}: {e}")
     if not hero:
         raise RuntimeError(f"every museum was locked tonight: {last}")
 
-    extras = []
+    extras, seen = [], {hero["image"]}
     for museum in rotation * 2:  # loop twice so one museum can contribute two
         if len(extras) >= extras_wanted:
             break
         try:
             piece = museum.steal(rng)
-            if piece["image"] != hero["image"] and piece["image"] not in [e["image"] for e in extras]:
-                extras.append(piece)
+            if piece["image"] in seen:
+                continue
+            seen.add(piece["image"])
+            piece["image"] = verified(piece["image"], today, f"extra{len(extras)}")
+            extras.append(piece)
         except Exception as e:  # noqa: BLE001
             print(f"  [skip extra] {museum.__name__}: {e}")
     return hero, extras
@@ -98,7 +139,7 @@ def extras_html(extras):
     for e in extras:
         title = e["title"] if len(e["title"]) <= 80 else e["title"][:80].rsplit(" ", 1)[0] + "..."
         rows.append(EXTRA_ROW.format(
-            url=e["url"], image=img(e["image"], width=880), title=title, artist=e["artist"],
+            url=e["url"], image=e["image"], title=title, artist=e["artist"],
             year_part=f", {e['year']}" if e["year"] else "", museum=e["museum"],
         ))
     rows.append('  <tr><td style="padding:0 0 22px;"></td></tr>')
@@ -159,21 +200,28 @@ def build(today=None):
     rng = random.Random(today.isoformat())
 
     haul, extras = build_haul(rng, today)
-    for i, piece in enumerate([haul] + extras):
-        if "ids.lib.harvard.edu" in piece["image"]:
-            try:
-                piece["image"] = localize(piece["image"], today, f"harvard{i}")
-            except Exception as e:  # noqa: BLE001
-                print(f"  [localize fail, serving direct] {e}")
     line = try_steal(chunklet, rng)
+
     vault = try_steal(loc, rng)
+    if vault:
+        try:
+            vault["image"] = verified(vault["image"], today, "vault")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [vault image unprovable, section dropped] {e}")
+            vault = {}
+
     hideout = try_steal(lam, rng)
+    if hideout.get("image"):
+        try:
+            hideout["image"] = verified(hideout["image"], today, "lam")
+        except Exception:  # noqa: BLE001
+            hideout["image"] = ""  # the hideout survives without a photo
 
     context = {
         "date_pretty": today.strftime("%B %-d, %Y"),
         "preheader": f"Last night's haul: {haul['title']}",
         "archive_url": ARCHIVE_URL,
-        "haul_image": img(haul["image"]),
+        "haul_image": haul["image"],
         "haul_title": haul["title"],
         "haul_artist": haul["artist"],
         "haul_year": haul["year"],
@@ -184,13 +232,13 @@ def build(today=None):
         "line_text": line.get("text", ""),
         "line_attr": line.get("attribution") or "lifted from somewhere in the canon",
         "line_summary": line.get("summary", ""),
-        "vault_image": img(vault.get("image", "")),
+        "vault_image": vault.get("image", ""),
         "vault_title": vault.get("title", ""),
         "vault_date": vault.get("date", ""),
         "vault_url": vault.get("url", ""),
         "lam_name": hideout.get("name", ""),
         "lam_blurb": hideout.get("blurb", ""),
-        "lam_image": img(hideout.get("image", "")),
+        "lam_image": hideout.get("image", ""),
         "lam_url": hideout.get("url", ""),
     }
 
@@ -228,9 +276,35 @@ def write_archive(archive_html, today):
 
 
 def main():
+    if "--send-outbox" in sys.argv:
+        from engine.send import send_issue
+
+        data = json.loads(OUTBOX.read_text())
+        n = send_issue(data["subject"], data["html"])
+        print(f"sent '{data['subject']}' to {n} subscriber(s)")
+        return
+
+    if "--wait-live" in sys.argv:
+        # Apple Mail prefetches images the moment an email arrives, so every
+        # self-hosted image must be live on Pages BEFORE the send.
+        data = json.loads(OUTBOX.read_text())
+        own = [u for u in re.findall(r'<img src="([^"]+)"', data["html"]) if u.startswith(ARCHIVE_URL)]
+        deadline = time.time() + 300
+        for u in own:
+            while not probe_ok(u):
+                if time.time() > deadline:
+                    sys.exit(f"timed out waiting for {u} to deploy")
+                print(f"  waiting for {u.rsplit('/', 1)[-1]}...")
+                time.sleep(15)
+        print(f"all {len(own)} self-hosted image(s) live")
+        return
+
     subject, email_html, archive_html, today = build()
     write_archive(archive_html, today)
-    if "--test" in sys.argv:
+    if "--prepare" in sys.argv:
+        OUTBOX.write_text(json.dumps({"subject": subject, "html": email_html}))
+        print(f"prepared '{subject}' into the outbox")
+    elif "--test" in sys.argv:
         from engine.send import send_issue
 
         to = sys.argv[sys.argv.index("--test") + 1]
