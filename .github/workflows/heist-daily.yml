@@ -24,6 +24,14 @@ on:
     - cron: '47 13 * * *'   # ~9:47am, last resort
   workflow_dispatch:
 
+# Only one heist run executes at a time. With multiple triggers (3 GitHub
+# crons + an external cron dispatch), overlapping runs would risk a double
+# send; this serializes them, so a queued run starts only after the active
+# one finishes and writes its sent-marker, then harmlessly skips.
+concurrency:
+  group: heist-send
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
