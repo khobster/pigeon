@@ -11,13 +11,17 @@ name: The heist, nightly
 #   GOOGLE_CREDS_JSON   - service account json (needed with PIGEON_SHEET_ID)
 #   SI_API_KEY          - unlocks the Smithsonian museums
 #   HARVARD_API_KEY     - unlocks the Harvard Art Museums
+#   HEALTHCHECK_URL     - healthchecks.io ping; alerts if a day is missed
 
 on:
   schedule:
-    # GitHub cron queues under load and popular times run late (the 11:30
-    # slot once fired at 14:05). Odd minute + earlier hour biases delivery
-    # toward 7-8am Charleston even when the queue is slow.
-    - cron: '47 10 * * *'
+    # GitHub's scheduled triggers are best-effort and DO get silently dropped
+    # under load (no run at all on 2026-06-08). So we fire three times across
+    # the morning; the first run that succeeds writes a sent-marker and the
+    # later runs see it and exit. Odd minutes dodge top-of-hour congestion.
+    - cron: '47 10 * * *'   # ~6:47am Charleston (summer)
+    - cron: '47 11 * * *'   # ~7:47am, catches a dropped 10:47
+    - cron: '47 13 * * *'   # ~9:47am, last resort
   workflow_dispatch:
 
 permissions:
@@ -29,14 +33,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Skip if today's issue already went out
+        id: guard
+        run: |
+          if [ -f state/last_sent ] && [ "$(cat state/last_sent)" = "$(date -u +%F)" ]; then
+            echo "Already delivered $(date -u +%F); nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.skip != 'true'
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.guard.outputs.skip != 'true'
         run: pip install -r requirements.txt
 
       - name: Write service account credentials
+        if: steps.guard.outputs.skip != 'true'
         run: |
           if [ -n "$GOOGLE_CREDS_JSON" ]; then
             printf '%s' "$GOOGLE_CREDS_JSON" > google-creds.json
@@ -47,12 +62,14 @@ jobs:
       # Order matters: Apple Mail prefetches images at delivery time, so any
       # self-hosted art must be live on Pages BEFORE the email goes out.
       - name: Build tonight's heist
+        if: steps.guard.outputs.skip != 'true'
         env:
           SI_API_KEY: ${{ secrets.SI_API_KEY }}
           HARVARD_API_KEY: ${{ secrets.HARVARD_API_KEY }}
         run: python -m heist.build_issue --prepare
 
       - name: Publish the archive and any self-hosted art
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name "pigeon"
           git config user.email "actions@users.noreply.github.com"
@@ -61,12 +78,29 @@ jobs:
           git push
 
       - name: Wait for the art to deploy
+        if: steps.guard.outputs.skip != 'true'
         run: python -m heist.build_issue --wait-live
 
       - name: Send
+        if: steps.guard.outputs.skip != 'true'
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           PIGEON_SHEET_ID: ${{ secrets.PIGEON_SHEET_ID }}
           GOOGLE_CREDS_PATH: ./google-creds.json
         run: python -m heist.build_issue --send-outbox
+
+      - name: Mark today as delivered
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          mkdir -p state
+          date -u +%F > state/last_sent
+          git add state/last_sent
+          git commit -m "sent: $(date -u +%F)"
+          git pull --rebase --autostash && git push
+
+      - name: Ping the dead-man's switch
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
+        run: '[ -n "$HEALTHCHECK_URL" ] && curl -fsS --retry 3 "$HEALTHCHECK_URL" || true'
