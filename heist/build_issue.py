@@ -6,8 +6,10 @@ Usage:
   python -m heist.build_issue --test you@email.com  # build + send to one address only
 """
 import json
+import os
 import random
 import re
+import subprocess
 import sys
 import time
 from datetime import date
@@ -45,6 +47,33 @@ def probe_ok(url):
         return ok
     except Exception:  # noqa: BLE001
         return False
+
+
+def all_live(urls, timeout=300):
+    """Poll until every url serves an image, or the timeout lapses."""
+    deadline = time.time() + timeout
+    for u in urls:
+        while not probe_ok(u):
+            if time.time() > deadline:
+                return False
+            print(f"  waiting for {u.rsplit('/', 1)[-1]}...")
+            time.sleep(15)
+    return True
+
+
+def retrigger_pages(attempt):
+    """Nudge GitHub Pages to redeploy by pushing an empty commit.
+
+    Pages occasionally fails its OWN deploy with a transient 401 and never
+    retries; any push to the branch starts a fresh deploy. We only do this
+    inside CI (where a checkout token and git identity already exist) — never
+    on a local --wait-live, which must not push."""
+    subprocess.run(
+        ["git", "commit", "--allow-empty", "-m", f"retrigger Pages deploy (attempt {attempt})"],
+        check=True,
+    )
+    subprocess.run(["git", "pull", "--rebase", "--autostash"], check=True)
+    subprocess.run(["git", "push"], check=True)
 
 
 def verified(url, today, tag, width=1120):
@@ -327,17 +356,21 @@ def main():
     if "--wait-live" in sys.argv:
         # Every image is self-hosted now, so none of them may be sent until
         # all are confirmed live on Pages (Apple Mail prefetches at delivery).
+        # If they don't come up, the usual cause is a transient Pages deploy
+        # failure (a self-inflicted 401 on GitHub's side) that nothing retries
+        # on its own; in CI we retrigger the deploy with an empty commit and
+        # wait again, since the send is gated on the art actually being live.
         data = json.loads(OUTBOX.read_text())
         own = [u for u in re.findall(r'<img src="([^"]+)"', data["html"]) if u.startswith(ARCHIVE_URL)]
-        deadline = time.time() + 300
-        for u in own:
-            while not probe_ok(u):
-                if time.time() > deadline:
-                    sys.exit(f"timed out waiting for {u} to deploy")
-                print(f"  waiting for {u.rsplit('/', 1)[-1]}...")
-                time.sleep(15)
-        print(f"all {len(own)} image(s) live on our domain")
-        return
+        for attempt in range(1, 4):
+            if all_live(own):
+                print(f"all {len(own)} image(s) live on our domain")
+                return
+            if not os.environ.get("GITHUB_ACTIONS"):
+                break  # a local run can't (and must not) retrigger a deploy
+            print(f"art not live (attempt {attempt}); retriggering the Pages deploy")
+            retrigger_pages(attempt)
+        sys.exit("timed out waiting for the art to deploy")
 
     if "--test-outbox" in sys.argv:
         from engine.send import send_issue
