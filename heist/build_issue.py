@@ -152,23 +152,44 @@ def try_steal(source, rng):
         return {}
 
 
-# Generic words that make dull loot. The manifest wants the rare ones.
+# Generic catalog language that makes dull loot. The manifest wants the
+# gem, so the framing words, the materials, the container shapes and the
+# unidentified-portrait boilerplate all get filtered out and whatever rare
+# proper noun is left ("Yue", "Hakone", "Dorian") becomes the loot.
 SUBJECT_STOP = {
-    "the", "from", "with", "also", "known", "series", "untitled", "study",
-    "view", "scene", "portrait", "madame", "monsieur", "saint", "still",
-    "life", "young", "woman", "man", "girl", "boy", "head", "figure",
-    "landscape", "after", "called", "plate", "number", "between", "design",
+    # framing / grammar
+    "the", "from", "with", "and", "for", "also", "known", "series",
+    "untitled", "study", "view", "scene", "after", "called", "plate",
+    "number", "between", "design", "detail", "group", "set", "pair",
+    "model", "picture",
+    # generic people
+    "portrait", "madame", "monsieur", "saint", "young", "woman", "man",
+    "men", "girl", "boy", "child", "head", "figure", "landscape",
+    "unidentified", "unknown", "sitter",
+    # formats / materials
+    "sheet", "panel", "fragment", "album", "leaf", "page", "photograph",
+    "photo", "print", "drawing", "painting", "sketch", "poster",
+    "lithograph", "etching", "engraving", "watercolor", "still", "life",
+    # container shapes
+    "covered", "box", "jar", "vase", "dish", "bowl", "cup", "plate",
+    "bottle", "vessel", "ware", "lid", "cover", "tile", "statue", "bust",
+    "relief",
+    # bland modifiers
+    "new", "old", "red", "blue", "green", "white", "black", "gold", "two",
+    "one", "three", "large", "small", "great", "big",
 }
 
 
 def keyword(text):
-    """The most distinctive word in a title: longest capitalized word that
-    is not generic catalog language. The manifest, one word per item."""
+    """The most interesting word in a title: a distinctive proper noun, not
+    generic catalog language. We keep capitalized words that survive the
+    stop list (down to three letters, so 'Yue' and 'Lid' qualify) and, among
+    those, take the longest. The manifest, one word per item."""
     words = re.findall(r"[A-Za-z][A-Za-z']*", text or "")
     def norm(w):
         w = w.lower()
         return w[:-2] if w.endswith("'s") else w
-    caps = [w for w in words if w[0].isupper() and norm(w) not in SUBJECT_STOP and len(w) >= 4]
+    caps = [w for w in words if w[0].isupper() and norm(w) not in SUBJECT_STOP and len(w) >= 3]
     pool = caps or [w for w in words if len(w) >= 5 and norm(w) not in SUBJECT_STOP]
     return max(pool, key=len) if pool else ""
 
