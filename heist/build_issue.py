@@ -27,6 +27,7 @@ HEADER_WEB = "assets/header.png"
 
 UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15"}
 OUTBOX = ROOT / ".outbox.json"
+PINNED = ROOT / "heist" / "pinned"  # heist/pinned/<date>.json overrides the build
 
 
 def resized(url, width=1120):
@@ -345,6 +346,20 @@ def main():
         data = json.loads(OUTBOX.read_text())
         send_issue(data["subject"], data["html"], recipients=[to])
         print(f"test: sent '{data['subject']}' to {to} only")
+        return
+
+    # A pinned edition (heist/pinned/<date>.json, with subject/email_html/
+    # archive_html) locks a specific hand-approved issue for that day instead
+    # of regenerating it. The nightly build is not fully reproducible — The
+    # Line is drawn fresh each run and the chunklet Lambda can be down — so
+    # this is how we guarantee a particular issue goes out. Its art is already
+    # live, so the usual publish/wait-live/send steps still apply unchanged.
+    pin = PINNED / f"{date.today().isoformat()}.json"
+    if pin.exists():
+        data = json.loads(pin.read_text())
+        write_archive(data["archive_html"], date.today())
+        OUTBOX.write_text(json.dumps({"subject": data["subject"], "html": data["email_html"]}))
+        print(f"using pinned edition for {date.today().isoformat()}: '{data['subject']}'")
         return
 
     # Building downloads every image into docs/. Because all art is now
