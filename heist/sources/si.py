@@ -1,5 +1,7 @@
 """Smithsonian Open Access: SAAM, the National Portrait Gallery, the
 Freer/Sackler, and Cooper Hewitt. CC0 records, free key (SI_API_KEY)."""
+import re
+
 import requests
 
 from engine.common import SI_API_KEY
@@ -15,6 +17,10 @@ UNITS = {
     "FSG": "the Smithsonian's National Museum of Asian Art",
     "CHNDM": "Cooper Hewitt, Smithsonian Design Museum",
 }
+
+# The NPG is wall-to-wall Brady-era "Unidentified Man/Woman" mugshots. They
+# are real CC0 records but dull loot; skip them and take a livelier row.
+SKIP_TITLE = re.compile(r"unidentified|unknown (sitter|man|woman)|^\[?untitled", re.I)
 
 
 def available():
@@ -40,7 +46,7 @@ def steal(rng):
         media = (dnr.get("online_media") or {}).get("media") or []
         image = media[0].get("content") if media else None
         title = r.get("title") or ""
-        if not image or not title:
+        if not image or not title or SKIP_TITLE.search(title):
             continue
         return {
             "museum": UNITS.get(dnr.get("unit_code"), "the Smithsonian"),
