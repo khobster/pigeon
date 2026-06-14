@@ -8,6 +8,8 @@ we rank by that and take the largest real jpg. Anything that is only a
 skipped, which is how the dull Civil War mugshots stop slipping through.
 """
 import re
+import time
+
 import requests
 
 API = "https://www.loc.gov/photos/"
@@ -43,27 +45,57 @@ def _best_image(urls):
     return best, best_area
 
 
+def _search(topic):
+    """Fetch one topic's results, retrying LOC's flaky API.
+
+    loc.gov regularly answers a perfectly valid request with an empty body,
+    an HTML "please slow down" page, or a 429/5xx — especially from a
+    datacenter IP like the GitHub runner. A raw .json() on that throws
+    'Expecting value: line 1 column 1', which used to kill the whole Vault
+    section. So we check the status, guard the decode, and back off."""
+    last = None
+    for attempt in range(4):
+        try:
+            r = requests.get(
+                API,
+                params={"q": topic, "fo": "json", "c": 60},
+                timeout=30,
+                headers={"User-Agent": "pigeon-heist/1.0 (+https://heist.arugulamotors.com)"},
+            )
+            r.raise_for_status()
+            return r.json().get("results") or []
+        except Exception as e:  # noqa: BLE001 — any flake means try again
+            last = e
+            time.sleep(3 * (attempt + 1))
+    raise RuntimeError(f"LOC unreachable for '{topic}': {last}")
+
+
 def steal(rng):
-    topic = rng.choice(TOPICS)
-    results = requests.get(
-        API,
-        params={"q": topic, "fo": "json", "c": 60},
-        timeout=30,
-        headers={"User-Agent": "pigeon-heist/1.0"},
-    ).json().get("results") or []
-    rng.shuffle(results)
-    for item in results:
-        title = (item.get("title") or "").strip(". ")
-        if not title or SKIP_TITLE.search(title):
+    # Try every topic before giving up, so one flaky API call (or one topic
+    # with nothing usable) no longer drops the section. Shuffle once, from the
+    # seeded rng, so the day stays reproducible.
+    order = TOPICS[:]
+    rng.shuffle(order)
+    last = None
+    for topic in order:
+        try:
+            results = _search(topic)
+        except Exception as e:  # noqa: BLE001
+            last = e
             continue
-        image, area = _best_image(item.get("image_url"))
-        if not image or area < MIN_AREA:
-            continue
-        return {
-            "title": title,
-            "date": item.get("date") or "",
-            "image": image,
-            "url": item.get("id") or item.get("url") or "https://www.loc.gov",
-            "topic": topic,
-        }
-    raise RuntimeError(f"LOC: nothing usable for '{topic}'")
+        rng.shuffle(results)
+        for item in results:
+            title = (item.get("title") or "").strip(". ")
+            if not title or SKIP_TITLE.search(title):
+                continue
+            image, area = _best_image(item.get("image_url"))
+            if not image or area < MIN_AREA:
+                continue
+            return {
+                "title": title,
+                "date": item.get("date") or "",
+                "image": image,
+                "url": item.get("id") or item.get("url") or "https://www.loc.gov",
+                "topic": topic,
+            }
+    raise RuntimeError(f"LOC: nothing usable across all topics: {last}")
