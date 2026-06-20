@@ -5,6 +5,7 @@ Usage:
   python -m heist.build_issue --send                # build + archive + send to the list
   python -m heist.build_issue --test you@email.com  # build + send to one address only
 """
+import io
 import json
 import os
 import random
@@ -17,6 +18,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 import requests
+from PIL import Image
 
 from engine.render import render
 from heist.sources import met, aic, cleveland, smk, si, harvard, chunklet, loc, lam
@@ -76,6 +78,39 @@ def retrigger_pages(attempt):
     subprocess.run(["git", "push"], check=True)
 
 
+def is_color(content, min_vivid=0.05, min_hues=2):
+    """True if the image is genuinely in color, not black-and-white.
+
+    The thief only fences color: vivid loot, no grayscale photographs or
+    engravings and no sepia scans either. We shrink the image, find the
+    pixels that are actually saturated (ignoring near-black and near-white),
+    and bucket their hues. Real color art lights up more than one hue bucket;
+    neutral grayscale has no saturated pixels at all, and a sepia or otherwise
+    single-tone scan lights up exactly one. A muted-but-real color piece still
+    clears both bars; a near-monochrome one falls through to the next
+    candidate. If the bytes won't decode we don't second-guess a file that
+    already arrived as a valid image."""
+    try:
+        im = Image.open(io.BytesIO(content)).convert("RGB")
+    except Exception:  # noqa: BLE001
+        return True
+    im.thumbnail((72, 72))
+    hsv = im.convert("HSV").tobytes()
+    n = len(hsv) // 3
+    if not n:
+        return True
+    floor = max(2, 0.02 * n)
+    bins = [0] * 12
+    vivid = 0
+    for i in range(0, len(hsv), 3):
+        h, s, v = hsv[i], hsv[i + 1], hsv[i + 2]
+        if s >= 60 and 30 <= v <= 235:
+            vivid += 1
+            bins[(h * 12) // 256] += 1
+    hues = sum(1 for b in bins if b >= floor)
+    return vivid / n >= min_vivid and hues >= min_hues
+
+
 def verified(url, today, tag, width=1120):
     """Download the image and return a URL on OUR domain, or raise.
 
@@ -83,8 +118,9 @@ def verified(url, today, tag, width=1120):
     physically hold and serve from heist.arugulamotors.com, so once it is
     confirmed live on Pages it cannot break when the email is opened later,
     no matter what a museum server or CDN does in the meantime. A piece
-    whose bytes we cannot fetch gets dropped; the manifest never lists loot
-    the thief could not actually carry out.
+    whose bytes we cannot fetch — or that turns out to be black-and-white —
+    gets dropped; the manifest never lists loot the thief could not actually
+    carry out, and the haul is always in color.
 
     Per attempt we try the wsrv-resized render first (smaller file), then
     the origin directly. Retries with backoff because some origins (Harvard)
@@ -93,7 +129,7 @@ def verified(url, today, tag, width=1120):
         raise RuntimeError("no image url")
     art_dir = DOCS / "assets" / "art"
     art_dir.mkdir(parents=True, exist_ok=True)
-    last = None
+    last, content, ctype = None, None, None
     for attempt in range(4):
         for candidate in (resized(url, width), url):
             try:
@@ -102,14 +138,23 @@ def verified(url, today, tag, width=1120):
                 ctype = resp.headers.get("content-type", "")
                 if not ctype.startswith("image/"):
                     raise RuntimeError(f"not an image: {ctype or 'unknown'}")
-                ext = ".png" if "png" in ctype else ".jpg"
-                name = f"{today.isoformat()}-{tag}{ext}"
-                (art_dir / name).write_bytes(resp.content)
-                return f"{ARCHIVE_URL}assets/art/{name}"
+                content = resp.content
+                break
             except Exception as e:  # noqa: BLE001
                 last = e
+        if content is not None:
+            break
         time.sleep(10 * (attempt + 1))
-    raise RuntimeError(f"could not fetch {url}: {last}")
+    if content is None:
+        raise RuntimeError(f"could not fetch {url}: {last}")
+    # Retrying a grayscale image would just refetch the same bytes, so this
+    # check sits outside the retry loop and drops the piece straight away.
+    if not is_color(content):
+        raise RuntimeError(f"black-and-white, want color: {url}")
+    ext = ".png" if "png" in ctype else ".jpg"
+    name = f"{today.isoformat()}-{tag}{ext}"
+    (art_dir / name).write_bytes(content)
+    return f"{ARCHIVE_URL}assets/art/{name}"
 
 
 def build_haul(rng, today, extras_wanted=5):
