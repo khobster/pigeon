@@ -176,16 +176,24 @@ def build_haul(rng, today, extras_wanted=5):
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
+    # The hero must be color, and every steal() pulls a fresh random sample,
+    # so one unlucky grayscale draw should not cost a whole museum — let alone
+    # the whole issue. Resample each museum a few times before moving on; a
+    # single B&W vase or sanguine drawing no longer aborts the night.
     hero, last = None, None
+    HERO_TRIES = 4
     for museum in rotation:
-        try:
-            candidate = museum.steal(rng)
-            candidate["image"] = verified(candidate["image"], today, "haul")
-            hero = candidate
+        for _ in range(HERO_TRIES):
+            try:
+                candidate = museum.steal(rng)
+                candidate["image"] = verified(candidate["image"], today, "haul")
+                hero = candidate
+                break
+            except Exception as e:  # noqa: BLE001
+                last = e
+                print(f"  [hero fell through] {museum.__name__}: {e}")
+        if hero:
             break
-        except Exception as e:  # noqa: BLE001
-            last = e
-            print(f"  [hero fell through] {museum.__name__}: {e}")
     if not hero:
         raise RuntimeError(f"every museum was locked tonight: {last}")
 
