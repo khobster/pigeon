@@ -1,5 +1,11 @@
-"""Smithsonian Open Access: SAAM, the National Portrait Gallery, the
-Freer/Sackler, and Cooper Hewitt. CC0 records, free key (SI_API_KEY)."""
+"""Smithsonian Open Access: the American Art Museum, the National Museum of
+Asian Art, Cooper Hewitt, the Hirshhorn, and the National Museum of African
+Art. CC0 records, free key (SI_API_KEY).
+
+The National Portrait Gallery was dropped on purpose — it is wall-to-wall
+B&W portraits (named sitters slipped past the color gate, anonymous ones were
+dull loot). The Asian-art unit code FSG is dead (0 CC0 records); the current
+code is NMAA, which is what we query now."""
 import re
 
 import requests
@@ -8,18 +14,19 @@ from engine.common import SI_API_KEY
 
 API = "https://api.si.edu/openaccess/api/v1.0/search"
 QUERY = (
-    '(unit_code:SAAM OR unit_code:NPG OR unit_code:FSG OR unit_code:CHNDM)'
+    '(unit_code:SAAM OR unit_code:NMAA OR unit_code:CHNDM'
+    ' OR unit_code:HMSG OR unit_code:NMAfA)'
     ' AND online_media_type:"Images" AND media_usage:CC0'
 )
 UNITS = {
     "SAAM": "the Smithsonian American Art Museum",
-    "NPG": "the National Portrait Gallery",
-    "FSG": "the Smithsonian's National Museum of Asian Art",
+    "NMAA": "the National Museum of Asian Art",
     "CHNDM": "Cooper Hewitt, Smithsonian Design Museum",
+    "HMSG": "the Hirshhorn Museum and Sculpture Garden",
+    "NMAfA": "the National Museum of African Art",
 }
 
-# The NPG is wall-to-wall Brady-era "Unidentified Man/Woman" mugshots. They
-# are real CC0 records but dull loot; skip them and take a livelier row.
+# Drop anonymous/untitled scans across any unit — dull loot, no story.
 SKIP_TITLE = re.compile(r"unidentified|unknown (sitter|man|woman)|^\[?untitled", re.I)
 
 

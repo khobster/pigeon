@@ -78,7 +78,7 @@ def retrigger_pages(attempt):
     subprocess.run(["git", "push"], check=True)
 
 
-def is_color(content, min_vivid=0.05, min_hues=2):
+def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
     """True if the image is genuinely in color, not black-and-white.
 
     The thief only fences color: vivid loot, no grayscale photographs or
@@ -89,11 +89,24 @@ def is_color(content, min_vivid=0.05, min_hues=2):
     single-tone scan lights up exactly one. A muted-but-real color piece still
     clears both bars; a near-monochrome one falls through to the next
     candidate. If the bytes won't decode we don't second-guess a file that
-    already arrived as a valid image."""
+    already arrived as a valid image.
+
+    We measure only the central `crop` fraction of the image, because museum
+    photogravures and mounted prints are scanned WITH their cream paper mats,
+    signatures and pencil annotations — a warm-toned border is enough vivid
+    pixels in enough hues to sneak a pure-grayscale photograph past the gate.
+    Cropping to the middle of the frame throws the mat away and judges the art
+    itself; a genuine color piece is color all the way in, so it still
+    clears."""
     try:
         im = Image.open(io.BytesIO(content)).convert("RGB")
     except Exception:  # noqa: BLE001
         return True
+    if crop and crop < 1:
+        w, h = im.size
+        margin = (1 - crop) / 2
+        im = im.crop((int(w * margin), int(h * margin),
+                      int(w * (1 - margin)), int(h * (1 - margin))))
     im.thumbnail((72, 72))
     hsv = im.convert("HSV").tobytes()
     n = len(hsv) // 3
