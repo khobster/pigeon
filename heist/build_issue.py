@@ -84,12 +84,13 @@ def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
     The thief only fences color: vivid loot, no grayscale photographs or
     engravings and no sepia scans either. We shrink the image, find the
     pixels that are actually saturated (ignoring near-black and near-white),
-    and bucket their hues. Real color art lights up more than one hue bucket;
-    neutral grayscale has no saturated pixels at all, and a sepia or otherwise
-    single-tone scan lights up exactly one. A muted-but-real color piece still
-    clears both bars; a near-monochrome one falls through to the next
-    candidate. If the bytes won't decode we don't second-guess a file that
-    already arrived as a valid image.
+    and bucket their hues. Real color art lights up more than one hue bucket,
+    or a single COOL one (blue-and-white porcelain is real loot); neutral
+    grayscale has no saturated pixels at all, and a sepia or otherwise warm
+    single-tone scan lights up exactly one warm bucket and is dropped. A
+    muted-but-real color piece still clears the bar; a warm near-monochrome
+    falls through to the next candidate. If the bytes won't decode we don't
+    second-guess a file that already arrived as a valid image.
 
     We measure only the central `crop` fraction of the image, because museum
     photogravures and mounted prints are scanned WITH their cream paper mats,
@@ -121,7 +122,16 @@ def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
             vivid += 1
             bins[(h * 12) // 256] += 1
     hues = sum(1 for b in bins if b >= floor)
-    return vivid / n >= min_vivid and hues >= min_hues
+    # Blue-and-white porcelain (and other vivid single-hue color) is real loot,
+    # but it lights up only one bucket, so the plain hues>=2 rule throws it out
+    # with the sepia. The thing sepia can never be is COLD: a grayscale photo on
+    # cream paper, a sanguine drawing and a brown-toned scan all live in the
+    # red/orange/brown buckets (0, 1, 11). So we also pass a piece whose single
+    # hue is a cool color — blue, green, cyan, purple — which admits the blue
+    # ware while still dropping the warm monochromes.
+    WARM = (0, 1, 11)
+    cold = sum(1 for k in range(12) if bins[k] >= floor and k not in WARM)
+    return vivid / n >= min_vivid and (hues >= min_hues or cold >= 1)
 
 
 def verified(url, today, tag, width=1120):
