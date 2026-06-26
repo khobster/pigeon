@@ -207,8 +207,12 @@ def build_haul(rng, today, extras_wanted=5):
     if not hero:
         raise RuntimeError(f"every museum was locked tonight: {last}")
 
+    # Pass over the museums several times so the haul fills out even when many
+    # candidates are dropped for being black-and-white. Each steal() pulls a
+    # fresh random sample, so a museum can give a different piece every pass;
+    # we stop as soon as we have enough loot.
     extras, seen = [], {hero["image"]}
-    for museum in rotation * 2:  # loop twice so one museum can contribute two
+    for museum in rotation * 6:
         if len(extras) >= extras_wanted:
             break
         try:
