@@ -134,6 +134,36 @@ def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
     return vivid / n >= min_vivid and (hues >= min_hues or cold >= 1)
 
 
+# Devotional religious art — Madonnas, crucifixions, saints, Hindu and
+# Buddhist deities, Qur'an folios — is a huge slice of museum holdings, but it
+# reads as heavy, preachy loot for a one-minute palate cleanser. We skip it by
+# title across every museum. The terms are deliberately broad and a false
+# positive only costs us a resample (the haul redraws cheaply), so we err
+# toward dropping anything that smells devotional; classical mythology
+# (Venus, Cupid, Apollo) is intentionally NOT here — it reads as decorative,
+# not preachy. Word boundaries keep place names safe ("St." abbreviations
+# excepted, which is fine — Saint-named towns are rare loot anyway).
+RELIGIOUS = re.compile(
+    r"\b("
+    r"christ|jesus|crucifix\w*|crucified|madonna|piet[aà]|annunciation|"
+    r"nativity|resurrection|ascension|assumption|immaculate|epiphany|"
+    r"apostle|evangelist|gospel|trinity|saviou?r|sacred heart|ecce homo|"
+    r"lamentation|deposition|entombment|altarpiece|virgin|saint|saints|st\.|"
+    r"holy|angel|archangel|adoration|magi|baptism|prophet|"
+    r"qur'?an|koran|sura[h]?|"
+    r"krishna|vishnu|shiva|brahma|ganesh\w*|durga|lakshmi|parvati|"
+    r"buddha|buddhist|bodhisattva|avalokiteshvara|guanyin|kuan-yin|"
+    r"tirthankara|deity|deities"
+    r")\b",
+    re.I,
+)
+
+
+def secular(title):
+    """False for devotional religious subjects, which the heist won't fence."""
+    return not RELIGIOUS.search(title or "")
+
+
 def verified(url, today, tag, width=1120):
     """Download the image and return a URL on OUR domain, or raise.
 
@@ -196,6 +226,8 @@ def build_haul(rng, today, extras_wanted=5):
         for _ in range(HERO_TRIES):
             try:
                 candidate = museum.steal(rng)
+                if not secular(candidate.get("title")):
+                    raise RuntimeError(f"religious subject: {candidate.get('title')}")
                 candidate["image"] = verified(candidate["image"], today, "haul")
                 hero = candidate
                 break
@@ -220,6 +252,8 @@ def build_haul(rng, today, extras_wanted=5):
             if piece["image"] in seen:
                 continue
             seen.add(piece["image"])
+            if not secular(piece.get("title")):
+                raise RuntimeError(f"religious subject: {piece.get('title')}")
             piece["image"] = verified(piece["image"], today, f"extra{len(extras)}", width=880)
             extras.append(piece)
         except Exception as e:  # noqa: BLE001
