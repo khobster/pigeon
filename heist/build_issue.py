@@ -13,7 +13,7 @@ import re
 import subprocess
 import sys
 import time
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import quote
 
@@ -32,6 +32,47 @@ HEADER_WEB = "assets/header.png"
 UA = {"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15"}
 OUTBOX = ROOT / ".outbox.json"
 PINNED = ROOT / "heist" / "pinned"  # heist/pinned/<date>.json overrides the build
+
+# A ledger of recently-fenced loot so the thief doesn't keep stealing the same
+# pieces. Keyed by each artwork's source image url (stable + unique per work),
+# valued by the date last used. We exclude anything used inside the window at
+# build time and record the new issue's loot afterward; the daily workflow's
+# existing commit picks up the file because record_art stages it in CI.
+RECENT = ROOT / "state" / "recent_art.json"
+RECENT_DAYS = 60
+
+
+def recent_loot(today):
+    """Return (ledger, set-of-keys) of art used within the last RECENT_DAYS,
+    pruning anything older so the file can't grow without bound."""
+    try:
+        ledger = json.loads(RECENT.read_text())
+    except Exception:  # noqa: BLE001  (missing or corrupt -> start clean)
+        return {}, set()
+    cutoff = today - timedelta(days=RECENT_DAYS)
+    fresh = {}
+    for key, used in ledger.items():
+        try:
+            if date.fromisoformat(used) >= cutoff:
+                fresh[key] = used
+        except (TypeError, ValueError):
+            continue
+    return fresh, set(fresh)
+
+
+def record_art(today, keys, ledger):
+    """Stamp this issue's art into the ledger and persist it, staging the file
+    so the workflow's archive commit carries it to the next day. Only the real
+    CI build writes — local dry runs and previews read the ledger (so they
+    avoid recent art) but must never record their throwaway picks into it."""
+    if not os.environ.get("GITHUB_ACTIONS"):
+        return
+    for key in keys:
+        if key:
+            ledger[key] = today.isoformat()
+    RECENT.parent.mkdir(parents=True, exist_ok=True)
+    RECENT.write_text(json.dumps(ledger, indent=0, sort_keys=True))
+    subprocess.run(["git", "add", str(RECENT)], check=False)
 
 
 def resized(url, width=1120):
@@ -210,26 +251,42 @@ def verified(url, today, tag, width=1120):
     return f"{ARCHIVE_URL}assets/art/{name}"
 
 
-def build_haul(rng, today, extras_wanted=5):
-    """One hero piece plus a few companions from the other museums."""
+def vet(candidate, recent, seen):
+    """Reject loot we can't fence: recently shown, religious, or a repeat
+    within this issue. Returns the dedup key (the source image url) to record."""
+    key = candidate.get("image")
+    if not key:
+        raise RuntimeError("no image url")
+    if key in seen:
+        raise RuntimeError("already in this issue")
+    if key in recent:
+        raise RuntimeError(f"shown in the last {RECENT_DAYS} days: {candidate.get('title')}")
+    if not secular(candidate.get("title")):
+        raise RuntimeError(f"religious subject: {candidate.get('title')}")
+    return key
+
+
+def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
+    """One hero piece plus a few companions from the other museums. Returns
+    (hero, extras, used_keys) where used_keys feeds the recently-shown ledger."""
     museums = [met, aic, cleveland, smk] + [m for m in (si, harvard) if m.available()]
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
-    # The hero must be color, and every steal() pulls a fresh random sample,
-    # so one unlucky grayscale draw should not cost a whole museum — let alone
-    # the whole issue. Resample each museum a few times before moving on; a
-    # single B&W vase or sanguine drawing no longer aborts the night.
-    hero, last = None, None
+    # The hero must be color, fresh, and secular, and every steal() pulls a new
+    # random sample, so one unusable draw should not cost a whole museum — let
+    # alone the whole issue. Resample each museum a few times before moving on.
+    hero, last, used, seen = None, None, [], set()
     HERO_TRIES = 4
     for museum in rotation:
         for _ in range(HERO_TRIES):
             try:
                 candidate = museum.steal(rng)
-                if not secular(candidate.get("title")):
-                    raise RuntimeError(f"religious subject: {candidate.get('title')}")
+                key = vet(candidate, recent, seen)
                 candidate["image"] = verified(candidate["image"], today, "haul")
                 hero = candidate
+                used.append(key)
+                seen.add(key)
                 break
             except Exception as e:  # noqa: BLE001
                 last = e
@@ -240,25 +297,22 @@ def build_haul(rng, today, extras_wanted=5):
         raise RuntimeError(f"every museum was locked tonight: {last}")
 
     # Pass over the museums several times so the haul fills out even when many
-    # candidates are dropped for being black-and-white. Each steal() pulls a
-    # fresh random sample, so a museum can give a different piece every pass;
-    # we stop as soon as we have enough loot.
-    extras, seen = [], {hero["image"]}
+    # candidates are dropped. Each steal() pulls a fresh random sample, so a
+    # museum can give a different piece every pass; stop once we have enough.
+    extras = []
     for museum in rotation * 6:
         if len(extras) >= extras_wanted:
             break
         try:
             piece = museum.steal(rng)
-            if piece["image"] in seen:
-                continue
-            seen.add(piece["image"])
-            if not secular(piece.get("title")):
-                raise RuntimeError(f"religious subject: {piece.get('title')}")
+            key = vet(piece, recent, seen)
             piece["image"] = verified(piece["image"], today, f"extra{len(extras)}", width=880)
             extras.append(piece)
+            used.append(key)
+            seen.add(key)
         except Exception as e:  # noqa: BLE001
             print(f"  [skip extra] {museum.__name__}: {e}")
-    return hero, extras
+    return hero, extras, used
 
 
 EXTRA_ROW = """
@@ -361,16 +415,29 @@ def build(today=None):
     today = today or date.today()
     rng = random.Random(today.isoformat())
 
-    haul, extras = build_haul(rng, today)
+    ledger, recent = recent_loot(today)
+
+    haul, extras, used = build_haul(rng, today, recent=recent)
     line = try_steal(chunklet, rng)
 
-    vault = try_steal(loc, rng)
+    # The vault is a single draw from the LoC pool, so redraw a few times to
+    # dodge anything shown recently (or already in tonight's haul) before
+    # settling.
+    vault, vault_key = {}, None
+    for _ in range(8):
+        candidate = try_steal(loc, rng)
+        if not candidate:
+            break
+        key = candidate.get("image")
+        if key and key not in recent and key not in used:
+            vault, vault_key = candidate, key
+            break
     if vault:
         try:
             vault["image"] = verified(vault["image"], today, "vault")
         except Exception as e:  # noqa: BLE001
             print(f"  [vault image unprovable, section dropped] {e}")
-            vault = {}
+            vault, vault_key = {}, None
 
     hideout = try_steal(lam, rng)
     if hideout.get("image"):
@@ -409,6 +476,7 @@ def build(today=None):
     archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB})
 
     subject = build_subject(haul, extras, line, vault, hideout)
+    record_art(today, used + ([vault_key] if vault_key else []), ledger)
     return subject, email_html, archive_html, today
 
 

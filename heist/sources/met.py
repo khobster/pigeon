@@ -4,10 +4,21 @@ import requests
 SEARCH = "https://collectionapi.metmuseum.org/public/collection/v1/search"
 OBJECT = "https://collectionapi.metmuseum.org/public/collection/v1/objects/{}"
 
+# A wide subject vocabulary so the Met doesn't keep funnelling to the same few
+# popular public-domain paintings; each term pulls a different candidate pool.
+QUERIES = [
+    "painting", "portrait", "landscape", "still life", "flowers", "seascape",
+    "garden", "animals", "birds", "horse", "ship", "river", "mountain",
+    "village", "market", "dance", "music", "children", "interior", "fruit",
+    "snow", "night", "harbor", "bridge", "street", "festival", "fan", "vase",
+    "screen", "textile", "ceramic", "tapestry", "boat", "coast", "forest",
+    "woman", "couple", "dancer", "kimono", "armor", "tea", "lacquer",
+]
+
 
 def steal(rng):
     """Return one public-domain artwork with an image, or raise."""
-    q = rng.choice(["painting", "portrait", "landscape", "still life", "flowers"])
+    q = rng.choice(QUERIES)
     ids = requests.get(
         SEARCH,
         params={"q": q, "isPublicDomain": "true", "hasImages": "true"},
