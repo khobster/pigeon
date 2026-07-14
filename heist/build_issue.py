@@ -21,7 +21,7 @@ import requests
 from PIL import Image
 
 from engine.render import render
-from heist.sources import met, aic, cleveland, smk, si, harvard, chunklet, loc, lam
+from heist.sources import met, cleveland, smk, si, commons, chunklet, loc, lam
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -269,7 +269,13 @@ def vet(candidate, recent, seen):
 def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
     """One hero piece plus a few companions from the other museums. Returns
     (hero, extras, used_keys) where used_keys feeds the recently-shown ledger."""
-    museums = [met, aic, cleveland, smk] + [m for m in (si, harvard) if m.available()]
+    # Commons is the always-on anchor (keyless, images on upload.wikimedia.org
+    # which never blocks datacenter IPs). AIC and Harvard were retired here on
+    # 2026-07-14: both hard-block the runner's IP (403 / 429), so they had
+    # stopped contributing any art for weeks while each still burned ~60s of
+    # retry backoff per build. Their modules remain in the tree in case the
+    # blocks ever lift.
+    museums = [met, cleveland, smk, commons] + [m for m in (si,) if m.available()]
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
@@ -420,24 +426,32 @@ def build(today=None):
     haul, extras, used = build_haul(rng, today, recent=recent)
     line = try_steal(chunklet, rng)
 
-    # The vault is a single draw from the LoC pool, so redraw a few times to
-    # dodge anything shown recently (or already in tonight's haul) before
-    # settling.
+    # The vault is one LoC image, but it must survive the same hazards as the
+    # haul. Its single draw used to call verified() exactly once and drop the
+    # whole section on any failure — so one transient 429 on a single tile
+    # (loc.gov rate-limits datacenter IPs) silently killed From the Vault for
+    # the day. Now we redraw from the 389-item pool until an image both dodges
+    # recent loot AND actually downloads, the way the extras loop resamples
+    # across museums. Only if several distinct pool items all fail do we drop
+    # the section.
     vault, vault_key = {}, None
-    for _ in range(8):
+    tried = set()
+    for _ in range(6):
         candidate = try_steal(loc, rng)
         if not candidate:
             break
         key = candidate.get("image")
-        if key and key not in recent and key not in used:
+        if not key or key in recent or key in used or key in tried:
+            continue
+        tried.add(key)
+        try:
+            candidate["image"] = verified(candidate["image"], today, "vault")
             vault, vault_key = candidate, key
             break
-    if vault:
-        try:
-            vault["image"] = verified(vault["image"], today, "vault")
         except Exception as e:  # noqa: BLE001
-            print(f"  [vault image unprovable, section dropped] {e}")
-            vault, vault_key = {}, None
+            print(f"  [vault redraw, image unprovable] {e}")
+    if not vault:
+        print("  [vault dropped: no provable LoC image after resampling]")
 
     hideout = try_steal(lam, rng)
     if hideout.get("image"):
