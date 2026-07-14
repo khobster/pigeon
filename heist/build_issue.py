@@ -21,7 +21,8 @@ import requests
 from PIL import Image
 
 from engine.render import render
-from heist.sources import met, cleveland, smk, si, commons, chunklet, loc, lam
+from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
+                           wellcome, chunklet, loc, lam)
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -269,13 +270,15 @@ def vet(candidate, recent, seen):
 def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
     """One hero piece plus a few companions from the other museums. Returns
     (hero, extras, used_keys) where used_keys feeds the recently-shown ledger."""
-    # Commons is the always-on anchor (keyless, images on upload.wikimedia.org
-    # which never blocks datacenter IPs). AIC and Harvard were retired here on
-    # 2026-07-14: both hard-block the runner's IP (403 / 429), so they had
-    # stopped contributing any art for weeks while each still burned ~60s of
-    # retry backoff per build. Their modules remain in the tree in case the
-    # blocks ever lift.
-    museums = [met, cleveland, smk, commons] + [m for m in (si,) if m.available()]
+    # A broad bench of open-access sources so no single museum dominates and a
+    # dead one is never fatal. Commons is the always-on anchor (keyless, images
+    # on upload.wikimedia.org, which never blocks datacenter IPs); nga is a
+    # bundled CC0 pool; rijks/yale/wellcome are keyless live APIs. AIC and
+    # Harvard were retired 2026-07-14 (both hard-block the runner's IP with
+    # 403/429 and had contributed no art for weeks); their modules stay in the
+    # tree in case the blocks ever lift.
+    museums = ([met, cleveland, smk, commons, nga, rijks, yale, wellcome]
+               + [m for m in (si,) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
