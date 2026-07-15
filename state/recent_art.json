@@ -1,4 +1,5 @@
 {
+"https://api.nga.gov/iiif/3c1508e9-9540-4ee5-8b74-53d15ac8be27/full/!880,880/0/default.jpg": "2026-07-15",
 "https://api.smk.dk/api/v1/thumbnail/5f6346ae-3e80-4fc1-bda1-4e071124f1e3.jpg": "2026-07-14",
 "https://api.smk.dk/api/v1/thumbnail/654abf6d-98c2-4278-b0bc-82e7e54f42ab.jpg": "2026-06-30",
 "https://api.smk.dk/api/v1/thumbnail/930af88c-3053-4ed1-a099-4f9989fdacdb.jpg": "2026-07-12",
@@ -17,6 +18,7 @@
 "https://ids.si.edu/ids/deliveryService?id=FS-FSC-O-11a-h_001": "2026-07-13",
 "https://ids.si.edu/ids/deliveryService?id=FS-fscp6878.10.v1": "2026-07-09",
 "https://ids.si.edu/ids/deliveryService?id=HMSG-66.1561-000001": "2026-07-03",
+"https://ids.si.edu/ids/deliveryService?id=HMSG-HMSG_19865627_20150513_001-000001": "2026-07-15",
 "https://ids.si.edu/ids/deliveryService?id=SAAM-1929.8.318_1": "2026-07-07",
 "https://ids.si.edu/ids/deliveryService?id=SAAM-1929.8.467.3_1": "2026-07-13",
 "https://ids.si.edu/ids/deliveryService?id=SAAM-1944.11.2_1": "2026-07-02",
@@ -32,6 +34,7 @@
 "https://ids.si.edu/ids/deliveryService?id=SAAM-1991.56.219_1": "2026-07-07",
 "https://ids.si.edu/ids/deliveryService?id=SAAM-1998.84.57_1": "2026-07-05",
 "https://ids.si.edu/ids/deliveryService?id=SAAM-2009.44.35_1": "2026-07-06",
+"https://iiif.micr.io/gtsVg/full/max/0/default.jpg": "2026-07-15",
 "https://iip.smk.dk/iiif/jp2/0z709141n_kksgb4646.tif.jp2/full/!843,/0/default.jpg": "2026-07-09",
 "https://iip.smk.dk/iiif/jp2/6395wc28g_KKSgb5729_verso.tif.jp2/full/!843,/0/default.jpg": "2026-07-11",
 "https://iip.smk.dk/iiif/jp2/6682x8133_kksgb19880.tif.jp2/full/!843,/0/default.jpg": "2026-07-08",
@@ -43,6 +46,7 @@
 "https://iip.smk.dk/iiif/jp2/t722hd898_kksgb19273.tif.jp2/full/!843,/0/default.jpg": "2026-07-11",
 "https://iip.smk.dk/iiif/jp2/vt150p17m_kks8449.tif.jp2/full/!843,/0/default.jpg": "2026-06-30",
 "https://iip.smk.dk/iiif/jp2/ww72bg44c_kks1964_351.tif.jp2/full/!843,/0/default.jpg": "2026-07-04",
+"https://images.collections.yale.edu/iiif/2/ycba:eedb3ec6-31dd-4a5f-9e35-0d07cb56e8b0/full/880,/0/default.jpg": "2026-07-15",
 "https://images.metmuseum.org/CRDImages/as/original/DP-13240-001.jpg": "2026-07-04",
 "https://images.metmuseum.org/CRDImages/as/original/DP-24890-002.jpg": "2026-07-02",
 "https://images.metmuseum.org/CRDImages/as/original/DP153705.jpg": "2026-07-06",
@@ -102,5 +106,8 @@
 "https://tile.loc.gov/storage-services/service/pnp/ppmsca/43400/43495v.jpg": "2026-06-30",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsca/54700/54752v.jpg": "2026-07-09",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsca/54900/54935v.jpg": "2026-07-06",
-"https://tile.loc.gov/storage-services/service/pnp/ppmsca/55000/55012v.jpg": "2026-07-11"
+"https://tile.loc.gov/storage-services/service/pnp/ppmsca/55000/55012v.jpg": "2026-07-11",
+"https://tile.loc.gov/storage-services/service/pnp/ppmsca/55100/55157v.jpg": "2026-07-15",
+"https://upload.wikimedia.org/wikipedia/commons/8/83/Olav_Rusti-Gutt_med_eple.jpg": "2026-07-15",
+"https://upload.wikimedia.org/wikipedia/commons/f/f8/Male_Portrait_%E2%80%93_Hanns_Ludwig_Katz_ca._1920.jpg": "2026-07-15"
 }
