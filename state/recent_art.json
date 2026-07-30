@@ -1,4 +1,5 @@
 {
+"https://api.nga.gov/iiif/25eeb1a9-ed63-430b-81cc-b4e8de7c807d/full/!880,880/0/default.jpg": "2026-07-30",
 "https://api.nga.gov/iiif/3090a47c-81ed-42e2-9ef7-e3b3d07bca9c/full/!880,880/0/default.jpg": "2026-07-29",
 "https://api.nga.gov/iiif/3c1508e9-9540-4ee5-8b74-53d15ac8be27/full/!880,880/0/default.jpg": "2026-07-15",
 "https://api.nga.gov/iiif/4dc1a054-675f-4efa-bfcc-60d51bc3465d/full/!880,880/0/default.jpg": "2026-07-22",
@@ -66,6 +67,7 @@
 "https://iiif.micr.io/QvOfM/full/max/0/default.jpg": "2026-07-22",
 "https://iiif.micr.io/WrQnd/full/max/0/default.jpg": "2026-07-24",
 "https://iiif.micr.io/ZfDYa/full/max/0/default.jpg": "2026-07-17",
+"https://iiif.micr.io/cygxu/full/max/0/default.jpg": "2026-07-30",
 "https://iiif.micr.io/fGLky/full/max/0/default.jpg": "2026-07-21",
 "https://iiif.micr.io/gtsVg/full/max/0/default.jpg": "2026-07-15",
 "https://iiif.micr.io/hGEhw/full/max/0/default.jpg": "2026-07-26",
@@ -133,6 +135,7 @@
 "https://images.metmuseum.org/CRDImages/es/original/DP291514.jpg": "2026-07-21",
 "https://images.metmuseum.org/CRDImages/es/original/DP340434.jpg": "2026-07-10",
 "https://images.metmuseum.org/CRDImages/es/original/es1974.356.121.R.jpg": "2026-07-04",
+"https://images.metmuseum.org/CRDImages/is/original/DP108574.jpg": "2026-07-30",
 "https://images.metmuseum.org/CRDImages/is/original/DP170373.jpg": "2026-07-12",
 "https://images.metmuseum.org/CRDImages/is/original/DP170374.jpg": "2026-07-14",
 "https://images.metmuseum.org/CRDImages/is/original/DP367585.jpg": "2026-07-05",
@@ -140,8 +143,10 @@
 "https://openaccess-cdn.clevelandart.org/1914.784/1914.784_web.jpg": "2026-07-21",
 "https://openaccess-cdn.clevelandart.org/1916.1051/1916.1051_web.jpg": "2026-07-05",
 "https://openaccess-cdn.clevelandart.org/1918.580.b/1918.580.b_web.jpg": "2026-07-14",
+"https://openaccess-cdn.clevelandart.org/1920.475/1920.475_web.jpg": "2026-07-30",
 "https://openaccess-cdn.clevelandart.org/1927.1325/1927.1325_web.jpg": "2026-06-30",
 "https://openaccess-cdn.clevelandart.org/1929.110/1929.110_web.jpg": "2026-07-10",
+"https://openaccess-cdn.clevelandart.org/1932.119.48.b/1932.119.48.b_web.jpg": "2026-07-30",
 "https://openaccess-cdn.clevelandart.org/1938.301.58.a/1938.301.58.a_web.jpg": "2026-07-02",
 "https://openaccess-cdn.clevelandart.org/1940.1008/1940.1008_web.jpg": "2026-07-06",
 "https://openaccess-cdn.clevelandart.org/1940.482/1940.482_web.jpg": "2026-07-04",
@@ -172,6 +177,7 @@
 "https://tile.loc.gov/storage-services/service/pnp/cph/3f00000/3f05000/3f05200/3f05211v.jpg": "2026-07-07",
 "https://tile.loc.gov/storage-services/service/pnp/cph/3f00000/3f05000/3f05300/3f05361v.jpg": "2026-07-04",
 "https://tile.loc.gov/storage-services/service/pnp/cph/3f00000/3f05000/3f05700/3f05781v.jpg": "2026-07-22",
+"https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g03000/3g03600/3g03640v.jpg": "2026-07-30",
 "https://tile.loc.gov/storage-services/service/pnp/cph/3g10000/3g14000/3g14900/3g14976v.jpg": "2026-07-05",
 "https://tile.loc.gov/storage-services/service/pnp/ds/00100/00133v.jpg": "2026-07-08",
 "https://tile.loc.gov/storage-services/service/pnp/ds/08000/08071v.jpg": "2026-07-02",
@@ -206,6 +212,7 @@
 "https://upload.wikimedia.org/wikipedia/commons/9/99/J_G_Trautmann_Lot.jpg": "2026-07-16",
 "https://upload.wikimedia.org/wikipedia/commons/9/9e/Jan_Siberechts_-_View_of_Nottingham_from_the_East.jpg": "2026-07-24",
 "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kaart_van_Brugge_-_anoniem_-_Musea_Brugge_-_5.jpg": "2026-07-23",
+"https://upload.wikimedia.org/wikipedia/commons/a/a5/%C3%85torpg%C3%A4stgiveri1.jpg": "2026-07-30",
 "https://upload.wikimedia.org/wikipedia/commons/c/c8/A_Jewish_Nurse_-_Fez.jpg": "2026-07-18",
 "https://upload.wikimedia.org/wikipedia/commons/f/f8/Male_Portrait_%E2%80%93_Hanns_Ludwig_Katz_ca._1920.jpg": "2026-07-15"
 }
