@@ -1,4 +1,5 @@
 {
+"https://api.nga.gov/iiif/10dcd16f-7fc6-4ac4-a93c-f77be29b39ec/full/!880,880/0/default.jpg": "2026-08-06",
 "https://api.nga.gov/iiif/25eeb1a9-ed63-430b-81cc-b4e8de7c807d/full/!880,880/0/default.jpg": "2026-07-30",
 "https://api.nga.gov/iiif/3090a47c-81ed-42e2-9ef7-e3b3d07bca9c/full/!880,880/0/default.jpg": "2026-07-29",
 "https://api.nga.gov/iiif/37918a8c-9cf6-45cd-adfe-630db06f7645/full/!880,880/0/default.jpg": "2026-08-01",
@@ -27,6 +28,7 @@
 "https://api.smk.dk/api/v1/thumbnail/c88c01f8-3240-4ea3-b37a-b7276ba0a2d9.jpg": "2026-07-06",
 "https://api.smk.dk/api/v1/thumbnail/d6a2659c-1485-43d9-be8b-bba27f672f3f.jpg": "2026-07-10",
 "https://ids.si.edu/ids/deliveryService?id=FS-5115_06": "2026-07-26",
+"https://ids.si.edu/ids/deliveryService?id=FS-5211_04": "2026-08-06",
 "https://ids.si.edu/ids/deliveryService?id=FS-5211_06": "2026-07-20",
 "https://ids.si.edu/ids/deliveryService?id=FS-5600_03": "2026-07-18",
 "https://ids.si.edu/ids/deliveryService?id=FS-5872_09": "2026-07-12",
@@ -48,6 +50,7 @@
 "https://ids.si.edu/ids/deliveryService?id=FS-F1898.75_001": "2026-07-01",
 "https://ids.si.edu/ids/deliveryService?id=FS-F1902.27_001": "2026-07-27",
 "https://ids.si.edu/ids/deliveryService?id=FS-F1918.159_002": "2026-07-07",
+"https://ids.si.edu/ids/deliveryService?id=FS-F1918.20_001": "2026-08-06",
 "https://ids.si.edu/ids/deliveryService?id=FS-FSC-O-11a-h_001": "2026-07-13",
 "https://ids.si.edu/ids/deliveryService?id=FS-fscp6878.10.v1": "2026-07-09",
 "https://ids.si.edu/ids/deliveryService?id=HMSG-66.1561-000001": "2026-07-03",
@@ -130,6 +133,7 @@
 "https://iip.smk.dk/iiif/jp2/mp48sj66w_kksgb17372.tif.jp2/full/!843,/0/default.jpg": "2026-07-17",
 "https://iip.smk.dk/iiif/jp2/pn89db11q_KKSgb8420.tif.jp2/full/!843,/0/default.jpg": "2026-08-01",
 "https://iip.smk.dk/iiif/jp2/qr46r338t_KKS2013-46.TIF.reconstructed.tif.jp2/full/!843,/0/default.jpg": "2026-08-02",
+"https://iip.smk.dk/iiif/jp2/sx61dr108_KKSgb5683_crop.tif.jp2/full/!843,/0/default.jpg": "2026-08-06",
 "https://iip.smk.dk/iiif/jp2/t148fm18t_KMS30-03-06_-_006.tif.reconstructed.tif.jp2/full/!843,/0/default.jpg": "2026-07-02",
 "https://iip.smk.dk/iiif/jp2/t148fn067_KKSgb6581_crop.tif.jp2/full/!843,/0/default.jpg": "2026-07-06",
 "https://iip.smk.dk/iiif/jp2/t722hd898_kksgb19273.tif.jp2/full/!843,/0/default.jpg": "2026-07-11",
@@ -204,6 +208,7 @@
 "https://openaccess-cdn.clevelandart.org/1994.286/1994.286_web.jpg": "2026-07-01",
 "https://openaccess-cdn.clevelandart.org/2005.145.110.b/2005.145.110.b_web.jpg": "2026-07-03",
 "https://openaccess-cdn.clevelandart.org/2009.109.b/2009.109.b_web.jpg": "2026-07-11",
+"https://openaccess-cdn.clevelandart.org/2012.35/2012.35_web.jpg": "2026-08-06",
 "https://openaccess-cdn.clevelandart.org/2017.10/2017.10_web.jpg": "2026-07-31",
 "https://openaccess-cdn.clevelandart.org/2022.161/2022.161_web.jpg": "2026-08-03",
 "https://tile.loc.gov/storage-services/master/pnp/var/1800/1813/1813r.jpg": "2026-07-21",
@@ -221,6 +226,7 @@
 "https://tile.loc.gov/storage-services/service/pnp/ppmsc/06000/06003v.jpg": "2026-08-04",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsc/07900/07943v.jpg": "2026-08-03",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsc/09300/09343v.jpg": "2026-07-26",
+"https://tile.loc.gov/storage-services/service/pnp/ppmsc/09600/09656v.jpg": "2026-08-06",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsc/09700/09762v.jpg": "2026-07-23",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsc/09700/09765v.jpg": "2026-07-29",
 "https://tile.loc.gov/storage-services/service/pnp/ppmsca/00200/00287v.jpg": "2026-07-12",
@@ -263,5 +269,6 @@
 "https://upload.wikimedia.org/wikipedia/commons/a/a5/%C3%85torpg%C3%A4stgiveri1.jpg": "2026-07-30",
 "https://upload.wikimedia.org/wikipedia/commons/c/c8/A_Jewish_Nurse_-_Fez.jpg": "2026-07-18",
 "https://upload.wikimedia.org/wikipedia/commons/c/cc/Zsigmond_Nagy_-_Junge_Frau_im_Profil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original": "2026-08-06",
+"https://upload.wikimedia.org/wikipedia/commons/f/f2/Marie_Bracquemond_-_On_the_Terrace_at_S%C3%A8vres_%28Artizon_Museum%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original": "2026-08-06",
 "https://upload.wikimedia.org/wikipedia/commons/f/f8/Male_Portrait_%E2%80%93_Hanns_Ludwig_Katz_ca._1920.jpg": "2026-07-15"
 }
