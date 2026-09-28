@@ -4,15 +4,18 @@ import requests
 SEARCH = "https://collectionapi.metmuseum.org/public/collection/v1/search"
 OBJECT = "https://collectionapi.metmuseum.org/public/collection/v1/objects/{}"
 
-# A wide subject vocabulary so the Met doesn't keep funnelling to the same few
-# popular public-domain paintings; each term pulls a different candidate pool.
+# Eclectic subjects and mediums, deliberately steered AWAY from the generic
+# "painting / portrait / landscape" terms that funnel the Met's search into its
+# most-reproduced old-master oil paintings. This vocabulary pulls prints,
+# ukiyo-e, posters, textiles, ceramics, design and ephemera — the wild, modern-
+# feeling end of an encyclopedic public-domain collection.
 QUERIES = [
-    "painting", "portrait", "landscape", "still life", "flowers", "seascape",
-    "garden", "animals", "birds", "horse", "ship", "river", "mountain",
-    "village", "market", "dance", "music", "children", "interior", "fruit",
-    "snow", "night", "harbor", "bridge", "street", "festival", "fan", "vase",
-    "screen", "textile", "ceramic", "tapestry", "boat", "coast", "forest",
-    "woman", "couple", "dancer", "kimono", "armor", "tea", "lacquer",
+    "ukiyo-e", "woodblock print", "art nouveau", "art deco", "tiffany",
+    "stained glass", "poster", "kimono", "textile", "tapestry", "porcelain",
+    "lacquer", "netsuke", "jewelry", "glass", "folk", "mask", "costume",
+    "botanical", "musical instrument", "arms and armor", "fan", "screen",
+    "playing cards", "calligraphy", "embroidery", "fashion", "vase", "tea",
+    "dance", "festival", "puppet", "toy", "shell", "insect", "map",
 ]
 
 

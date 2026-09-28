@@ -1,4 +1,4 @@
-"""Wikimedia Commons. Public-domain paintings, keyless MediaWiki API.
+"""Wikimedia Commons. Public-domain eclectica, keyless MediaWiki API.
 
 The resilience anchor. Every other source depends on a museum CDN that can
 start blocking the GitHub Actions runner's datacenter IP (AIC and Harvard both
@@ -7,9 +7,9 @@ blocked for them). Commons serves its images from upload.wikimedia.org, which
 is built to be hot-linked from anywhere on earth and does not block datacenter
 IPs, so this drawer can always be opened.
 
-We rotate a set of real, populated painting categories (the obvious guesses
-like "Still life paintings" are near-empty — paintings live in subcategories),
-jump to a random point in each alphabetized category, and take the raw original
+We rotate a set of real, populated categories (the obvious guesses like "Still
+life paintings" are near-empty — the good stuff lives in subcategories), jump
+to a random point in each alphabetized category, and take the raw original
 file url. We deliberately do NOT ask the API for a pre-sized thumbnail: its
 on-the-fly thumbnail renderer intermittently 429s when a proxy fetches it,
 while the static original never does. The build's verified() wraps this url in
@@ -25,19 +25,34 @@ API = "https://commons.wikimedia.org/w/api.php"
 # default agent gets throttled to empty bodies.
 HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com; kevin.murawinski@gmail.com)"}
 
-# Real, populated, painting-heavy categories (verified via categoryinfo).
-# PD-Art (PD-old-100) is the ~185k guaranteed-public-domain megacategory.
+# Eclectic, populated, color-rich categories (direct-file counts verified via
+# categoryinfo — parent painting cats are near-empty because paintings live in
+# subcategories, and gcmtype=file only sees DIRECT members). We deliberately
+# dropped the old oil-painting categories and the 185k PD-Art megacat: they
+# funnelled the thief into the same 17th-19th-century portraits every day. This
+# bench is posters, prints, ukiyo-e, illustration and design — loot that reads
+# modern and wild. The steal() License filter still keeps only PD/CC0, so the
+# copyrighted slice of the 20th-century categories (Art Deco, film-era posters)
+# gets dropped rather than shipped.
 CATS = [
-    "Category:Oil paintings",
-    "Category:Landscape paintings",
-    "Category:Self-portraits",
-    "Category:Portrait paintings of men",
-    "Category:Portrait paintings of women",
-    "Category:Watercolor paintings",
-    "Category:Impressionist paintings",
-    "Category:Genre paintings",
-    "Category:History paintings",
-    "Category:PD-Art (PD-old-100)",
+    "Category:Chromolithographs",
+    "Category:Art Deco",
+    "Category:Art Nouveau posters",
+    "Category:Advertising posters",
+    "Category:Circus posters",
+    "Category:Botanical illustrations",
+    "Category:Scientific illustrations",
+    "Category:Book illustrations",
+    "Category:Illustrations",
+    "Category:Ukiyo-e",
+    "Category:Woodblock prints",
+    "Category:Kimono",
+    "Category:Textiles",
+    "Category:Folk art",
+    "Category:Trade cards",
+    "Category:Cigarette cards",
+    "Category:Fashion plates",
+    "Category:Matchbox labels",
 ]
 
 

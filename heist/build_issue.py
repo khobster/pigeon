@@ -206,6 +206,63 @@ def secular(title):
     return not RELIGIOUS.search(title or "")
 
 
+# The heist used to default to old-master oil portraits because the source pools
+# were painting-heavy. Kevin's call: ration the classic oil painting to a rare
+# treat and let eclectic loot — posters, prints, ukiyo-e, ceramics, textiles,
+# design, illustration — lead the rest of the week. is_classic_painting reads
+# the medium; on an ordinary day vet() rejects one and the haul resamples toward
+# something wilder, and the pools themselves now lean eclectic (see met.QUERIES
+# and commons.CATS).
+CLASSIC_PAINT = re.compile(r"\b(oil|tempera)\b", re.I)
+
+
+def is_classic_painting(candidate):
+    """True for an old-master oil/tempera painting — the 'old-time portrait'
+    look we now save for a treat day."""
+    return bool(CLASSIC_PAINT.search(candidate.get("medium") or ""))
+
+
+def is_treat_day(today):
+    """About one day in seven the thief may lead with a classic painting.
+    Date-seeded so it drifts across the week instead of always landing on the
+    same weekday."""
+    return random.Random("classic-" + today.isoformat()).random() < 1 / 7
+
+
+# Bucket a piece by medium so the haul mixes forms instead of stacking five oil
+# portraits. Commons reports its category as the medium ("chromolithographs",
+# "ukiyo-e"); the museum APIs report a real medium string ("Woodblock print",
+# "Porcelain"). We read the medium and the title together and take the first
+# bucket that matches — order matters (prints before drawings so an ink-and-
+# color woodblock lands in "print", not "drawing").
+_MEDIUM_BUCKETS = [
+    ("poster",    r"poster|affiche|placard"),
+    # photo before print: an "albumen silver print" is a photograph, but the
+    # print bucket's \bprint would otherwise claim it first.
+    ("photo",     r"photograph|gelatin|albumen|daguerreotype|photogravure|collotype|photochrom"),
+    ("print",     r"woodblock|woodcut|ukiyo|lithograph|chromolith|etching|engrav|"
+                  r"aquatint|mezzotint|linocut|screenprint|\bprint|trade card|"
+                  r"cigarette card|playing card|matchbox"),
+    ("ceramic",   r"porcelain|ceramic|stoneware|earthenware|terracotta|faience|pottery|\bware\b"),
+    ("textile",   r"textile|tapestry|embroider|silk|weav|quilt|\brug\b|carpet|kimono|"
+                  r"costume|fashion|garment|\blace\b"),
+    ("design",    r"glass|silver|\bgold\b|bronze|furniture|chair|lamp|clock|jewel|enamel|"
+                  r"lacquer|wallpaper|netsuke|\bfan\b|screen|mask|arm[ou]r|sword|design"),
+    ("sculpture", r"sculptur|marble|statue|\bbust\b|relief|carv"),
+    ("drawing",   r"watercolo|gouache|drawing|pastel|chalk|charcoal|graphite|"
+                  r"ink and|illustration|botanical"),
+    ("painting",  r"oil|tempera|acrylic|fresco|canvas|painting"),
+]
+
+
+def medium_class(candidate):
+    text = ((candidate.get("medium") or "") + " " + (candidate.get("title") or "")).lower()
+    for name, pat in _MEDIUM_BUCKETS:
+        if re.search(pat, text):
+            return name
+    return "other"
+
+
 def verified(url, today, tag, width=1120):
     """Download the image and return a URL on OUR domain, or raise.
 
@@ -252,9 +309,10 @@ def verified(url, today, tag, width=1120):
     return f"{ARCHIVE_URL}assets/art/{name}"
 
 
-def vet(candidate, recent, seen):
-    """Reject loot we can't fence: recently shown, religious, or a repeat
-    within this issue. Returns the dedup key (the source image url) to record."""
+def vet(candidate, recent, seen, allow_classic=True):
+    """Reject loot we can't fence: recently shown, religious, a repeat within
+    this issue, or — unless it's a treat day — a classic oil painting. Returns
+    the dedup key (the source image url) to record."""
     key = candidate.get("image")
     if not key:
         raise RuntimeError("no image url")
@@ -264,6 +322,8 @@ def vet(candidate, recent, seen):
         raise RuntimeError(f"shown in the last {RECENT_DAYS} days: {candidate.get('title')}")
     if not secular(candidate.get("title")):
         raise RuntimeError(f"religious subject: {candidate.get('title')}")
+    if not allow_classic and is_classic_painting(candidate):
+        raise RuntimeError(f"classic painting held for a treat day: {candidate.get('title')}")
     return key
 
 
@@ -282,6 +342,13 @@ def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
+    # Most days the classic oil painting is rationed out (allow_classic=False),
+    # so the haul leads with the eclectic loot the pools now favor; roughly once
+    # a week is a treat day when a painting may lead.
+    treat = is_treat_day(today)
+    if treat:
+        print("  [treat day: a classic painting may lead]")
+
     # The hero must be color, fresh, and secular, and every steal() pulls a new
     # random sample, so one unusable draw should not cost a whole museum — let
     # alone the whole issue. Resample each museum a few times before moving on.
@@ -291,7 +358,7 @@ def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
         for _ in range(HERO_TRIES):
             try:
                 candidate = museum.steal(rng)
-                key = vet(candidate, recent, seen)
+                key = vet(candidate, recent, seen, allow_classic=treat)
                 candidate["image"] = verified(candidate["image"], today, "haul")
                 hero = candidate
                 used.append(key)
@@ -308,15 +375,24 @@ def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
     # Pass over the museums several times so the haul fills out even when many
     # candidates are dropped. Each steal() pulls a fresh random sample, so a
     # museum can give a different piece every pass; stop once we have enough.
+    # A medium cap keeps the bag varied — no more than CLASS_CAP pieces of any
+    # one form (poster, print, ceramic...) so it never becomes five oil
+    # portraits in a row. The hero's medium is counted first.
+    CLASS_CAP = 2
+    counts = {medium_class(hero): 1}
     extras = []
     for museum in rotation * 6:
         if len(extras) >= extras_wanted:
             break
         try:
             piece = museum.steal(rng)
-            key = vet(piece, recent, seen)
+            key = vet(piece, recent, seen, allow_classic=treat)
+            cls = medium_class(piece)
+            if counts.get(cls, 0) >= CLASS_CAP:
+                raise RuntimeError(f"bag already holds {CLASS_CAP} {cls} piece(s)")
             piece["image"] = verified(piece["image"], today, f"extra{len(extras)}", width=880)
             extras.append(piece)
+            counts[cls] = counts.get(cls, 0) + 1
             used.append(key)
             seen.add(key)
         except Exception as e:  # noqa: BLE001
