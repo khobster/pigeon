@@ -22,7 +22,8 @@ from PIL import Image
 
 from engine.render import render
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
-                           wellcome, chunklet, loc, lam)
+                           wellcome, europeana, nypl, chunklet, loc, lam)
+from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -120,31 +121,24 @@ def retrigger_pages(attempt):
     subprocess.run(["git", "push"], check=True)
 
 
-def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
-    """True if the image is genuinely in color, not black-and-white.
+def color_stats(content, crop=0.70):
+    """Measure an image's color. Returns (vivid_frac, hues, cold, sat) where
+    vivid_frac is the share of saturated pixels, hues is how many of 12 hue
+    buckets are lit, cold is how many of those are outside the warm sepia family
+    (buckets 0/1/11), and sat is the mean saturation of the vivid pixels. Returns
+    None if the bytes won't decode.
 
-    The thief only fences color: vivid loot, no grayscale photographs or
-    engravings and no sepia scans either. We shrink the image, find the
-    pixels that are actually saturated (ignoring near-black and near-white),
-    and bucket their hues. Real color art lights up more than one hue bucket,
-    or a single COOL one (blue-and-white porcelain is real loot); neutral
-    grayscale has no saturated pixels at all, and a sepia or otherwise warm
-    single-tone scan lights up exactly one warm bucket and is dropped. A
-    muted-but-real color piece still clears the bar; a warm near-monochrome
-    falls through to the next candidate. If the bytes won't decode we don't
-    second-guess a file that already arrived as a valid image.
-
-    We measure only the central `crop` fraction of the image, because museum
-    photogravures and mounted prints are scanned WITH their cream paper mats,
-    signatures and pencil annotations — a warm-toned border is enough vivid
-    pixels in enough hues to sneak a pure-grayscale photograph past the gate.
-    Cropping to the middle of the frame throws the mat away and judges the art
-    itself; a genuine color piece is color all the way in, so it still
-    clears."""
+    We shrink the image and look only at the central `crop` fraction, because
+    museum photogravures and mounted prints are scanned WITH their cream paper
+    mats and pencil annotations, and a warm-toned border alone can light up
+    enough hues to sneak a grayscale photograph past a naive check. Cropping to
+    the middle judges the art itself; a genuine color piece is color all the way
+    in. This one measurement feeds both is_color (the pass/fail gate) and
+    wow_score (how bold the loot is)."""
     try:
         im = Image.open(io.BytesIO(content)).convert("RGB")
     except Exception:  # noqa: BLE001
-        return True
+        return None
     if crop and crop < 1:
         w, h = im.size
         margin = (1 - crop) / 2
@@ -154,26 +148,45 @@ def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
     hsv = im.convert("HSV").tobytes()
     n = len(hsv) // 3
     if not n:
-        return True
+        return None
     floor = max(2, 0.02 * n)
     bins = [0] * 12
     vivid = 0
+    sat_sum = 0
     for i in range(0, len(hsv), 3):
         h, s, v = hsv[i], hsv[i + 1], hsv[i + 2]
         if s >= 60 and 30 <= v <= 235:
             vivid += 1
+            sat_sum += s
             bins[(h * 12) // 256] += 1
     hues = sum(1 for b in bins if b >= floor)
-    # Blue-and-white porcelain (and other vivid single-hue color) is real loot,
-    # but it lights up only one bucket, so the plain hues>=2 rule throws it out
-    # with the sepia. The thing sepia can never be is COLD: a grayscale photo on
-    # cream paper, a sanguine drawing and a brown-toned scan all live in the
-    # red/orange/brown buckets (0, 1, 11). So we also pass a piece whose single
-    # hue is a cool color — blue, green, cyan, purple — which admits the blue
-    # ware while still dropping the warm monochromes.
     WARM = (0, 1, 11)
     cold = sum(1 for k in range(12) if bins[k] >= floor and k not in WARM)
-    return vivid / n >= min_vivid and (hues >= min_hues or cold >= 1)
+    sat = (sat_sum / vivid / 255) if vivid else 0.0
+    return vivid / n, hues, cold, sat
+
+
+def is_color(content, min_vivid=0.05, min_hues=2, crop=0.70):
+    """True if the image is genuinely in color, not black-and-white.
+
+    The thief only fences color: vivid loot, no grayscale photographs or
+    engravings and no sepia scans either. Real color art lights up more than
+    one hue bucket, or a single COOL one (blue-and-white porcelain is real
+    loot); neutral grayscale has no saturated pixels at all, and a sepia or
+    otherwise warm single-tone scan lights up exactly one warm bucket and is
+    dropped. If the bytes won't decode we don't second-guess a file that
+    already arrived as a valid image.
+
+    Blue-and-white porcelain lights up only one bucket, so the plain hues>=2
+    rule would throw it out with the sepia. The thing sepia can never be is
+    COLD: a grayscale photo on cream paper, a sanguine drawing and a brown scan
+    all live in the red/orange/brown buckets. So we also pass a piece whose
+    single lit hue is cool — blue, green, cyan, purple."""
+    stats = color_stats(content, crop)
+    if stats is None:
+        return True
+    vivid_frac, hues, cold, _sat = stats
+    return vivid_frac >= min_vivid and (hues >= min_hues or cold >= 1)
 
 
 # Devotional religious art — Madonnas, crucifixions, saints, Hindu and
@@ -190,42 +203,82 @@ RELIGIOUS = re.compile(
     r"christ|jesus|crucifix\w*|crucified|madonna|piet[aà]|annunciation|"
     r"nativity|resurrection|ascension|assumption|immaculate|epiphany|"
     r"apostle|evangelist|gospel|trinity|saviou?r|sacred heart|ecce homo|"
+    r"hail mary|ave maria|mater dolorosa|"
     r"lamentation|deposition|entombment|altarpiece|virgin|saint|saints|st\.|"
     r"holy|angel|archangel|adoration|magi|baptism|prophet|"
     r"qur'?an|koran|sura[h]?|"
     r"krishna|vishnu|shiva|brahma|ganesh\w*|durga|lakshmi|parvati|"
     r"buddha|buddhist|bodhisattva|avalokiteshvara|guanyin|kuan-yin|"
-    r"tirthankara|deity|deities"
+    r"tirthankara|deity|deities|"
+    # non-English devotional terms so a foreign-language title can't sneak a
+    # saint or a crucifixion past an English-only filter (e.g. SMK's Danish
+    # "Sankt Hieronymus", a German "Heilige", an Italian "Madonna in gloria").
+    r"sankt|sanct|sainte|santo|santa|hl\.|heilig\w*|"
+    r"kristus|cristo|krist\w+|"
+    r"jomfru|vierge|vergine|virgen|"
+    r"kors\b|kreuz|croce|cruz\b"
     r")\b",
     re.I,
 )
 
 
+# The "St." saint abbreviation can't ride inside RELIGIOUS: that pattern ends
+# with a trailing \b, and "St." is followed by a space (a non-word char after a
+# non-word "."), so \b never matches and every "St. So-and-so" slipped through
+# (e.g. the St. Elisabeth wedding feast that led an issue). Match it separately,
+# capital S required so it's the saint abbreviation, not a stray "st".
+_SAINT_ABBR = re.compile(r"\bSt\.?\s+[A-Z]")
+
+
 def secular(title):
     """False for devotional religious subjects, which the heist won't fence."""
-    return not RELIGIOUS.search(title or "")
+    t = title or ""
+    return not (RELIGIOUS.search(t) or _SAINT_ABBR.search(t))
 
 
 # The heist used to default to old-master oil portraits because the source pools
-# were painting-heavy. Kevin's call: ration the classic oil painting to a rare
-# treat and let eclectic loot — posters, prints, ukiyo-e, ceramics, textiles,
-# design, illustration — lead the rest of the week. is_classic_painting reads
-# the medium; on an ordinary day vet() rejects one and the haul resamples toward
-# something wilder, and the pools themselves now lean eclectic (see met.QUERIES
-# and commons.CATS).
+# were painting-heavy. Kevin's call: ration the traditional look — a classic
+# oil/tempera painting OR a single-sitter portrait in ANY medium — to a rare
+# treat, and let eclectic loot (posters, prints, ukiyo-e, ceramics, textiles,
+# design, illustration) lead the rest of the week. is_rationed catches both; on
+# an ordinary day vet() rejects them and the haul resamples toward something
+# wilder. Restricting the paintings gate to oil/tempera alone let dull portrait
+# lithographs and portrait miniatures walk right in, so the portrait test is by
+# title/medium and medium-agnostic.
 CLASSIC_PAINT = re.compile(r"\b(oil|tempera)\b", re.I)
+# A single-sitter portrait: an explicit "portrait", a "bust of", or an honorific
+# that flags a named individual ("Mrs.", "Madame", "Herr", "Fru"...). Broad on
+# purpose — a false positive only costs a resample toward wilder loot.
+PORTRAIT = re.compile(
+    r"\b(self[- ]?)?portr[ae]it\b|\bbust of\b|\bmrs?\.|\bmme\b|\bmlle\b|"
+    r"\bmadame\b|\bmonsieur\b|\bherr\b|\bfru\b|\bfrau\b|\bsir\b|\blord\b|"
+    r"\blady\b|\bmiss\b|\bminiature\b",
+    re.I,
+)
 
 
 def is_classic_painting(candidate):
-    """True for an old-master oil/tempera painting — the 'old-time portrait'
-    look we now save for a treat day."""
+    """True for an old-master oil/tempera painting."""
     return bool(CLASSIC_PAINT.search(candidate.get("medium") or ""))
 
 
+def is_portrait(candidate):
+    """True for a single-sitter portrait in any medium — the 'old time portrait'
+    look, whether it's an oil, a lithograph or a miniature."""
+    text = (candidate.get("title") or "") + " " + (candidate.get("medium") or "")
+    return bool(PORTRAIT.search(text))
+
+
+def is_rationed(candidate):
+    """The traditional look we save for a treat day: a classic painting or a
+    portrait of any medium."""
+    return is_classic_painting(candidate) or is_portrait(candidate)
+
+
 def is_treat_day(today):
-    """About one day in seven the thief may lead with a classic painting.
-    Date-seeded so it drifts across the week instead of always landing on the
-    same weekday."""
+    """About one day in seven the thief may lead with the traditional look (a
+    classic painting or a portrait). Date-seeded so it drifts across the week
+    instead of always landing on the same weekday."""
     return random.Random("classic-" + today.isoformat()).random() < 1 / 7
 
 
@@ -261,6 +314,138 @@ def medium_class(candidate):
         if re.search(pat, text):
             return name
     return "other"
+
+
+# Titles and artist names arrive as raw catalog strings — filename-derived
+# ("Wood Block Printing 08"), doubled ("Unknown author Unknown author"), or
+# trailing biographical dates ("born Philadelphia 1875-died 1918"). We tidy them
+# so every credit reads like a museum wall label. Kept conservative: a real
+# title is left alone, and any over-reach only costs a slightly plainer caption.
+_UNKNOWN = re.compile(
+    r"^(unknown( author| artist| maker)?|anon(ymous)?|anoniem|unidentified|"
+    r"not known|n/?a)\.?$", re.I)
+# Words that can legitimately precede a trailing number, so we don't turn
+# "Symphony No 5" into "Symphony No".
+_ORDINAL = re.compile(r"\b(no|nr|op|opus|vol|part|book|act|scene|plate|fig|figure|pl)\.?$", re.I)
+
+
+def _ws(s):
+    return re.sub(r"\s+", " ", s or "").strip()
+
+
+def tidy_title(title):
+    t = _ws((title or "").replace("_", " "))
+    t = re.sub(r"\bLCCN\s*\d+\b", "", t, flags=re.I)      # library accession codes
+    t = re.sub(r"\b[A-Z]{2,4}[-\s]?\d{4,}\b", "", t)      # museum accession codes
+    t = _ws(t)
+    if " " not in t and "-" in t:                          # pure filename with hyphens
+        t = t.replace("-", " ")
+    m = re.search(r"\s+(\d{1,3})$", t)                     # trailing file-sequence number
+    if m and not _ORDINAL.search(t[:m.start()]):
+        t = t[:m.start()].rstrip()
+    if t and t == t.upper() and any(c.isalpha() for c in t):  # ALLCAPS -> Title Case
+        t = t.title()
+    if len(t) > 90:                                        # trim an overlong description
+        breaks = [i for i in (t.find(". "), t.find(": "), t.find("; ")) if 20 < i < 90]
+        if breaks:
+            t = t[:min(breaks)]
+    return t.strip(" .,:;-") or "Untitled"
+
+
+def tidy_artist(artist):
+    a = re.sub(r"^(.+?)\s+\1$", r"\1", _ws(artist))        # collapse a doubled name
+    a = re.sub(r",?\s*\b(born|geb\.?|approximately|active|fl\.?|c\.|ca\.|died)\b.*$",
+               "", a, flags=re.I)
+    a = _ws(a).strip(" ,.;")
+    return "Unknown" if (not a or _UNKNOWN.match(a)) else a
+
+
+def tidy(candidate):
+    """Clean a candidate's title and artist in place, then return it."""
+    candidate["title"] = tidy_title(candidate.get("title"))
+    candidate["artist"] = tidy_artist(candidate.get("artist"))
+    return candidate
+
+
+# Bold, graphic forms that read "hit them in the face" even before we look at
+# the pixels — posters, ukiyo-e, chromolithographs. A small nudge; the real
+# signal is the measured color.
+_BOLD_FORM = re.compile(r"poster|affiche|woodblock|woodcut|ukiyo|chromolith", re.I)
+
+
+def wow_score(candidate, stats):
+    """Rate a candidate for wall-punch, so a morning's draw keeps the most vivid
+    loot instead of the first thing that merely passed. stats is a color_stats
+    tuple (vivid_frac, hues, cold, sat). The score is dominated by how saturated
+    and colorful the image actually is — a pale scientific engraving scores near
+    zero while a saturated poster or a bold woodblock scores high — with a small
+    bonus for the bold graphic forms and a penalty for the traditional portrait
+    look we are trying to ration down."""
+    vivid_frac, hues, cold, sat = stats
+    score = vivid_frac + 0.5 * vivid_frac * sat + 0.15 * min(hues, 6) / 6.0
+    text = (candidate.get("medium") or "") + " " + (candidate.get("title") or "")
+    if _BOLD_FORM.search(text):
+        score += 0.20
+    if is_rationed(candidate):
+        score -= 0.40
+    return score
+
+
+def thumb_stats(url):
+    """Fetch a small render of a candidate and return its color_stats, or None.
+    Cheap enough to run over a whole pool of candidates so wow_score can rank
+    them before we commit to the full-resolution download of the winner."""
+    try:
+        r = requests.get(resized(url, 240), timeout=20, headers=UA)
+        r.raise_for_status()
+        if not r.headers.get("content-type", "").startswith("image/"):
+            return None
+        return color_stats(r.content)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+# Muted line-work: engravings, etchings, drawings and the like. These read as
+# old-timey and monochrome even when a scan carries a little tint, and one kept
+# winning the hero slot. Banned from the hero outright, and from the bag, so the
+# issue stays loud. (Woodblock/woodcut are NOT here — ukiyo-e is vivid loot.)
+MUTED_FORM = re.compile(
+    r"engrav|etch|mezzotint|drypoint|silverpoint|\bpencil\b|graphite|"
+    r"charcoal|\bdrawing\b|\bsketch\b",
+    re.I,
+)
+
+
+def _muted(candidate):
+    return bool(MUTED_FORM.search((candidate.get("medium") or "") + " " + (candidate.get("title") or "")))
+
+
+def hero_worthy(candidate, stats):
+    """The hero has to be LOUD: no muted line-work, and genuinely saturated
+    across more than one hue (or a single vivid cool hue). This is the bar that
+    keeps a tinted engraving out of the hero slot — the thing Kevin kept seeing.
+    A dull scan scores vivid_frac near 0.05; a poster or ukiyo-e clears 0.15
+    easily."""
+    vivid_frac, hues, cold, sat = stats
+    if _muted(candidate):
+        return False
+    return vivid_frac >= 0.15 and (hues >= 3 or (cold >= 1 and sat >= 0.5))
+
+
+def punchy(candidate, stats):
+    """The bag bar: still no muted line-work and clearly in color, a notch below
+    the hero so the issue keeps some variety without going dull."""
+    vivid_frac, hues, cold, sat = stats
+    if _muted(candidate):
+        return False
+    return vivid_frac >= 0.08 and (hues >= 2 or cold >= 1)
+
+
+def in_color(candidate, stats):
+    """The fallback bar (same as is_color) so the issue still ships on a night
+    when nothing loud can be found."""
+    vivid_frac, hues, cold, sat = stats
+    return vivid_frac >= 0.05 and (hues >= 2 or cold >= 1)
 
 
 def verified(url, today, tag, width=1120):
@@ -309,10 +494,10 @@ def verified(url, today, tag, width=1120):
     return f"{ARCHIVE_URL}assets/art/{name}"
 
 
-def vet(candidate, recent, seen, allow_classic=True):
+def vet(candidate, recent, seen, allow_traditional=True):
     """Reject loot we can't fence: recently shown, religious, a repeat within
-    this issue, or — unless it's a treat day — a classic oil painting. Returns
-    the dedup key (the source image url) to record."""
+    this issue, or — unless it's a treat day — the traditional look (a classic
+    painting or a portrait). Returns the dedup key (the source image url)."""
     key = candidate.get("image")
     if not key:
         raise RuntimeError("no image url")
@@ -322,107 +507,211 @@ def vet(candidate, recent, seen, allow_classic=True):
         raise RuntimeError(f"shown in the last {RECENT_DAYS} days: {candidate.get('title')}")
     if not secular(candidate.get("title")):
         raise RuntimeError(f"religious subject: {candidate.get('title')}")
-    if not allow_classic and is_classic_painting(candidate):
-        raise RuntimeError(f"classic painting held for a treat day: {candidate.get('title')}")
+    if not allow_traditional and is_rationed(candidate):
+        raise RuntimeError(f"traditional look held for a treat day: {candidate.get('title')}")
     return key
 
 
-def build_haul(rng, today, extras_wanted=5, recent=frozenset()):
-    """One hero piece plus a few companions from the other museums. Returns
+def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
+    """One hero piece plus a bag of companions from the other museums. Returns
     (hero, extras, used_keys) where used_keys feeds the recently-shown ledger."""
     # A broad bench of open-access sources so no single museum dominates and a
     # dead one is never fatal. Commons is the always-on anchor (keyless, images
     # on upload.wikimedia.org, which never blocks datacenter IPs); nga is a
-    # bundled CC0 pool; rijks/yale/wellcome are keyless live APIs. AIC and
-    # Harvard were retired 2026-07-14 (both hard-block the runner's IP with
-    # 403/429 and had contributed no art for weeks); their modules stay in the
-    # tree in case the blocks ever lift.
+    # bundled CC0 pool; rijks/yale/wellcome are keyless live APIs. si and
+    # europeana are key-gated and only join the rotation when their key is set —
+    # europeana alone aggregates 3,000+ institutions. AIC and Harvard were
+    # retired 2026-07-14 (both hard-block the runner's IP with 403/429 and had
+    # contributed no art for weeks); their modules stay in the tree in case the
+    # blocks ever lift.
     museums = ([met, cleveland, smk, commons, nga, rijks, yale, wellcome]
-               + [m for m in (si,) if m.available()])
+               + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
 
-    # Most days the classic oil painting is rationed out (allow_classic=False),
-    # so the haul leads with the eclectic loot the pools now favor; roughly once
-    # a week is a treat day when a painting may lead.
-    treat = is_treat_day(today)
-    if treat:
-        print("  [treat day: a classic painting may lead]")
+    used, seen = [], set()
 
-    # The hero must be color, fresh, and secular, and every steal() pulls a new
-    # random sample, so one unusable draw should not cost a whole museum — let
-    # alone the whole issue. Resample each museum a few times before moving on.
-    hero, last, used, seen = None, None, [], set()
-    HERO_TRIES = 4
-    for museum in rotation:
-        for _ in range(HERO_TRIES):
-            try:
-                candidate = museum.steal(rng)
-                key = vet(candidate, recent, seen, allow_classic=treat)
-                candidate["image"] = verified(candidate["image"], today, "haul")
-                hero = candidate
-                used.append(key)
-                seen.add(key)
-                break
-            except Exception as e:  # noqa: BLE001
-                last = e
-                print(f"  [hero fell through] {museum.__name__}: {e}")
-        if hero:
+    def thumb(url):
+        """Fetch a candidate's small render, returning (bytes, color_stats) or
+        (None, None). We keep the bytes so the art director can look at them."""
+        try:
+            r = requests.get(resized(url, 240), timeout=20, headers=UA)
+            r.raise_for_status()
+            if not r.headers.get("content-type", "").startswith("image/"):
+                return None, None
+            return r.content, color_stats(r.content)
+        except Exception:  # noqa: BLE001
+            return None, None
+
+    # Gather a broad pool of vetted, in-color candidates and KEEP their
+    # thumbnails so the art director can judge them by eye. We no longer ration
+    # paintings or portraits here (allow_traditional=True) — a cool Cezanne or a
+    # Modigliani is exactly the point; the curator decides what's cool. Religious
+    # subjects, recent repeats, and within-issue dupes are still filtered by vet.
+    pool, keys, draws = [], set(), 0
+
+    def try_add(museum, source):
+        """Draw one candidate from a source; add it to the pool (tagged with the
+        source) if it vets and is in color. Returns True on add."""
+        nonlocal draws
+        draws += 1
+        try:
+            c = museum.steal(rng)
+            key = vet(c, recent, set(), allow_traditional=True)
+            if key in keys or key in seen:
+                return False
+            content, stats = thumb(c["image"])
+            if stats is None or not in_color(c, stats):
+                return False
+            keys.add(key)
+            pool.append({"candidate": c, "key": key, "image": content, "stats": stats, "source": source})
+            return True
+        except Exception as e:  # noqa: BLE001
+            print(f"  [candidate skipped] {museum.__name__}: {e}")
+            return False
+
+    # Pre-seed Europeana so its global eclectica reliably makes each issue rather
+    # than only when the round-robin lands on it. Its yield is low (many scans are
+    # sepia/monochrome and get dropped as B&W), so we try hard for a few.
+    if europeana.available():
+        euro_added, euro_tries = 0, 0
+        while euro_added < 4 and euro_tries < 22:
+            euro_tries += 1
+            if try_add(europeana, "europeana"):
+                euro_added += 1
+        print(f"  [europeana seeded {euro_added} into the pool]")
+
+    # General gather fills the rest of the pool from the full rotation.
+    for museum in rotation * 16:
+        if len(pool) >= 18 or draws >= 84:
             break
-    if not hero:
-        raise RuntimeError(f"every museum was locked tonight: {last}")
+        try_add(museum, museum.__name__.rsplit(".", 1)[-1])
+    if not pool:
+        raise RuntimeError("no candidate art could be secured tonight")
 
-    # Pass over the museums several times so the haul fills out even when many
-    # candidates are dropped. Each steal() pulls a fresh random sample, so a
-    # museum can give a different piece every pass; stop once we have enough.
-    # A medium cap keeps the bag varied — no more than CLASS_CAP pieces of any
-    # one form (poster, print, ceramic...) so it never becomes five oil
-    # portraits in a row. The hero's medium is counted first.
-    CLASS_CAP = 2
+    # The art director looks at the pool and picks the coolest hero + a ranked
+    # bag, to the heist's Barnes/Whitney/MoMA taste. If it is unavailable, fall
+    # back to the vividness metric (hero must be loud; bag must be punchy).
+    verdict = curator.curate(
+        [{"i": i, "image": p["image"],
+          **{k: p["candidate"].get(k, "") for k in ("title", "artist", "year", "medium", "museum")}}
+         for i, p in enumerate(pool)],
+        extras_wanted,
+    )
+    if verdict:
+        print(f"  [art director] hero: {pool[verdict['hero']]['candidate'].get('title', '')[:60]}")
+        primary = [verdict["hero"]] + verdict["bag"]
+    else:
+        ranked = sorted(range(len(pool)),
+                        key=lambda i: wow_score(pool[i]["candidate"], pool[i]["stats"]), reverse=True)
+        hero_idx = next((i for i in ranked if hero_worthy(pool[i]["candidate"], pool[i]["stats"])),
+                        ranked[0])
+        primary = [hero_idx] + [i for i in ranked if i != hero_idx
+                                and punchy(pool[i]["candidate"], pool[i]["stats"])]
+    # Backfill any remaining pool pieces (vividness-ranked) so the bag can still
+    # fill even when the curator's bag is short or downloads fail.
+    backfill = sorted([i for i in range(len(pool)) if i not in primary],
+                      key=lambda i: wow_score(pool[i]["candidate"], pool[i]["stats"]), reverse=True)
+    order = primary + backfill
+
+    # Hero: the first piece in order whose full-resolution image downloads.
+    hero = None
+    for pos, idx in enumerate(order):
+        p = pool[idx]
+        try:
+            p["candidate"]["image"] = verified(p["candidate"]["image"], today, "haul")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [hero winner failed to download] {e}")
+            continue
+        hero = tidy(p["candidate"])
+        seen.add(p["key"])
+        used.append(p["key"])
+        order = order[pos + 1:]
+        break
+    if not hero:
+        raise RuntimeError("no hero could be secured tonight")
+
+    # Fill the bag from the rest, medium-diverse (no more than CLASS_CAP of any
+    # one form). Front-load up to EUROPEANA_MIN Europeana pieces so its global
+    # eclectica reliably appears in the bag, then fill the rest in curator order.
+    EUROPEANA_MIN = 2
+    euro_first = [i for i in order if pool[i]["source"] == "europeana"][:EUROPEANA_MIN]
+    fill_seq = euro_first + [i for i in order if i not in euro_first]
+
+    CLASS_CAP = 3
     counts = {medium_class(hero): 1}
     extras = []
-    for museum in rotation * 6:
+    for idx in fill_seq:
         if len(extras) >= extras_wanted:
             break
+        p = pool[idx]
+        cls = medium_class(p["candidate"])
+        if counts.get(cls, 0) >= CLASS_CAP:
+            continue
         try:
-            piece = museum.steal(rng)
-            key = vet(piece, recent, seen, allow_classic=treat)
-            cls = medium_class(piece)
-            if counts.get(cls, 0) >= CLASS_CAP:
-                raise RuntimeError(f"bag already holds {CLASS_CAP} {cls} piece(s)")
-            piece["image"] = verified(piece["image"], today, f"extra{len(extras)}", width=880)
-            extras.append(piece)
-            counts[cls] = counts.get(cls, 0) + 1
-            used.append(key)
-            seen.add(key)
+            p["candidate"]["image"] = verified(p["candidate"]["image"], today, f"extra{len(extras)}", width=880)
         except Exception as e:  # noqa: BLE001
-            print(f"  [skip extra] {museum.__name__}: {e}")
+            print(f"  [extra failed to download] {e}")
+            continue
+        extras.append(tidy(p["candidate"]))
+        counts[cls] = counts.get(cls, 0) + 1
+        used.append(p["key"])
+        seen.add(p["key"])
     return hero, extras, used
 
 
 EXTRA_ROW = """
   <tr><td align="center" style="padding:8px 0 10px;">
     <a href="{url}" style="text-decoration:none;"><img src="{image}" alt="{title}" width="440" style="display:block; width:80%; max-width:440px; height:auto; border:0;"></a>
-  </td></tr>
+  </td></tr>{take_row}
   <tr><td align="center" style="padding:0 0 18px; font-family:Helvetica, Arial, sans-serif; font-size:12px; color:#999999; line-height:1.5;">
     <strong style="color:#555555;">{title}</strong><br>{artist}{year_part} · <a href="{url}" style="color:#999999; white-space:nowrap;">{museum}</a>
   </td></tr>"""
 
+EXTRA_TAKE = """
+  <tr><td align="center" style="padding:2px 0 8px; font-family:Georgia, 'Times New Roman', serif; font-size:14px; font-style:italic; color:#444444; line-height:1.45;">
+    {take}
+  </td></tr>"""
 
-def extras_html(extras):
+
+def extras_html(extras, takes=()):
     if not extras:
         return ""
     rows = ['''
   <tr><td style="padding:0 0 8px; font-family:Helvetica, Arial, sans-serif; font-size:13px; font-weight:bold; color:#555555;">
     also in the bag:
   </td></tr>''']
-    for e in extras:
+    for i, e in enumerate(extras):
         title = e["title"] if len(e["title"]) <= 80 else e["title"][:80].rsplit(" ", 1)[0] + "..."
+        take = takes[i] if i < len(takes) else ""
         rows.append(EXTRA_ROW.format(
             url=e["url"], image=e["image"], title=title, artist=e["artist"],
             year_part=f", {e['year']}" if e["year"] else "", museum=e["museum"],
+            take_row=EXTRA_TAKE.format(take=take) if take else "",
         ))
     rows.append('  <tr><td style="padding:0 0 22px;"></td></tr>')
+    return "".join(rows)
+
+
+VAULT_ROW = """
+  <tr><td align="center" style="padding:0 0 8px;">
+    <a href="{url}" style="text-decoration:none;"><img src="{image}" alt="{title}" width="560" style="display:block; width:100%; height:auto; border:0;"></a>
+  </td></tr>
+  <tr><td style="padding:0 0 18px; font-family:Helvetica, Arial, sans-serif; font-size:13px; color:#555555; line-height:1.4;">
+    {title}{date_part}<br>
+    <span style="font-size:12px; color:#999999;">found in <a href="{url}" style="color:#999999; white-space:nowrap;">the Library of Congress</a></span>
+  </td></tr>"""
+
+
+def vault_html(vaults):
+    if not vaults:
+        return ""
+    rows = []
+    for v in vaults:
+        rows.append(VAULT_ROW.format(
+            url=v.get("url", ""), image=v["image"], title=v.get("title", ""),
+            date_part=f', {v["date"]}' if v.get("date") else "",
+        ))
     return "".join(rows)
 
 
@@ -505,32 +794,38 @@ def build(today=None):
     haul, extras, used = build_haul(rng, today, recent=recent)
     line = try_steal(chunklet, rng)
 
-    # The vault is one LoC image, but it must survive the same hazards as the
-    # haul. Its single draw used to call verified() exactly once and drop the
-    # whole section on any failure — so one transient 429 on a single tile
-    # (loc.gov rate-limits datacenter IPs) silently killed From the Vault for
-    # the day. Now we redraw from the 389-item pool until an image both dodges
-    # recent loot AND actually downloads, the way the extras loop resamples
-    # across museums. Only if several distinct pool items all fail do we drop
-    # the section.
-    vault, vault_key = {}, None
-    tried = set()
-    for _ in range(6):
+    # From the Vault: three LoC finds, one per topic for variety. The pool skews
+    # heavily to a few topics (WPA + circus + railroad posters), so drawing three
+    # at random would routinely show two circus posters; requiring distinct
+    # topics guarantees a mix. Each draw dodges recent loot + this issue's art and
+    # must actually download; we keep going until we have three or run out of
+    # tries, and the section fails soft if fewer are provable.
+    vaults, vault_keys = [], []
+    tried, vault_topics = set(), set()
+    for _ in range(30):
+        if len(vaults) >= 3:
+            break
         candidate = try_steal(loc, rng)
         if not candidate:
             break
         key = candidate.get("image")
+        topic = candidate.get("topic", "")
         if not key or key in recent or key in used or key in tried:
             continue
         tried.add(key)
+        if topic and topic in vault_topics:
+            continue  # one piece per topic — cool variety over three circus posters
         try:
-            candidate["image"] = verified(candidate["image"], today, "vault")
-            vault, vault_key = candidate, key
-            break
+            candidate["image"] = verified(candidate["image"], today, f"vault{len(vaults)}")
+            candidate["title"] = tidy_title(candidate.get("title"))
+            vaults.append(candidate)
+            vault_keys.append(key)
+            if topic:
+                vault_topics.add(topic)
         except Exception as e:  # noqa: BLE001
             print(f"  [vault redraw, image unprovable] {e}")
-    if not vault:
-        print("  [vault dropped: no provable LoC image after resampling]")
+    if not vaults:
+        print("  [vault dropped: no provable LoC images after resampling]")
 
     hideout = try_steal(lam, rng)
     if hideout.get("image"):
@@ -554,10 +849,8 @@ def build(today=None):
         "line_text": line.get("text", ""),
         "line_attr": line.get("attribution") or "lifted from somewhere in the canon",
         "line_summary": line.get("summary", ""),
-        "vault_image": vault.get("image", ""),
-        "vault_title": vault.get("title", ""),
-        "vault_date": vault.get("date", ""),
-        "vault_url": vault.get("url", ""),
+        "vault_any": bool(vaults),
+        "vault_html": vault_html(vaults),
         "lam_name": hideout.get("name", ""),
         "lam_blurb": hideout.get("blurb", ""),
         "lam_image": hideout.get("image", ""),
@@ -568,8 +861,8 @@ def build(today=None):
     email_html = render(template, {**context, "header_src": ARCHIVE_URL + HEADER_WEB})
     archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB})
 
-    subject = build_subject(haul, extras, line, vault, hideout)
-    record_art(today, used + ([vault_key] if vault_key else []), ledger)
+    subject = build_subject(haul, extras, line, vaults[0] if vaults else {}, hideout)
+    record_art(today, used + vault_keys, ledger)
     return subject, email_html, archive_html, today
 
 

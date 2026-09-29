@@ -74,6 +74,9 @@ jobs:
         env:
           SI_API_KEY: ${{ secrets.SI_API_KEY }}
           HARVARD_API_KEY: ${{ secrets.HARVARD_API_KEY }}
+          EUROPEANA_KEY: ${{ secrets.EUROPEANA_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NYPL_TOKEN: ${{ secrets.NYPL_TOKEN }}
         run: python -m heist.build_issue --prepare
 
       - name: Publish the archive and any self-hosted art

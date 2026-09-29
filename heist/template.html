@@ -35,10 +35,15 @@
   <tr><td style="padding:0 0 4px; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; color:#111111; line-height:1.25;">
     {{haul_title}}
   </td></tr>
-  <tr><td style="padding:0 0 22px; font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#555555; line-height:1.4;">
+  <tr><td style="padding:0 0 14px; font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#555555; line-height:1.4;">
     {{haul_artist}}{{#haul_year}}, {{haul_year}}{{/haul_year}}<br>
     <span style="font-size:12px; color:#999999;">{{haul_medium}}{{#haul_medium}} · {{/haul_medium}}lifted from <a href="{{haul_url}}" style="color:#999999; white-space:nowrap;">{{haul_museum}}</a></span>
   </td></tr>
+  {{#haul_take}}
+  <tr><td style="padding:0 0 24px; font-family:Georgia, 'Times New Roman', serif; font-size:16px; font-style:italic; color:#333333; line-height:1.55;">
+    {{haul_take}}
+  </td></tr>
+  {{/haul_take}}
 
   <!-- also in the bag -->
   {{extras_html}}
@@ -57,18 +62,13 @@
   {{/line_text}}
 
   <!-- from the vault -->
-  {{#vault_image}}
+  {{#vault_any}}
   <tr><td style="padding:0 0 12px;">
     <span style="display:inline-block; background:#ffe95e; padding:5px 12px; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#111111;">From the Vault</span>
   </td></tr>
-  <tr><td align="center" style="padding:0 0 10px;">
-    <a href="{{vault_url}}" style="text-decoration:none;"><img src="{{vault_image}}" alt="{{vault_title}}" width="560" style="display:block; width:100%; height:auto; border:0;"></a>
-  </td></tr>
-  <tr><td style="padding:0 0 36px; font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#555555; line-height:1.4;">
-    {{vault_title}}{{#vault_date}}, {{vault_date}}{{/vault_date}}<br>
-    <span style="font-size:12px; color:#999999;">found in <a href="{{vault_url}}" style="color:#999999; white-space:nowrap;">the Library of Congress</a></span>
-  </td></tr>
-  {{/vault_image}}
+  {{vault_html}}
+  <tr><td style="padding:0 0 18px;"></td></tr>
+  {{/vault_any}}
 
   <!-- on the lam -->
   {{#lam_name}}

@@ -25,25 +25,23 @@ API = "https://commons.wikimedia.org/w/api.php"
 # default agent gets throttled to empty bodies.
 HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com; kevin.murawinski@gmail.com)"}
 
-# Eclectic, populated, color-rich categories (direct-file counts verified via
-# categoryinfo — parent painting cats are near-empty because paintings live in
-# subcategories, and gcmtype=file only sees DIRECT members). We deliberately
-# dropped the old oil-painting categories and the 185k PD-Art megacat: they
-# funnelled the thief into the same 17th-19th-century portraits every day. This
-# bench is posters, prints, ukiyo-e, illustration and design — loot that reads
-# modern and wild. The steal() License filter still keeps only PD/CC0, so the
-# copyrighted slice of the 20th-century categories (Art Deco, film-era posters)
-# gets dropped rather than shipped.
+# Loud, graphic, color-saturated categories only (direct-file counts verified
+# via categoryinfo — parent painting cats are near-empty because paintings live
+# in subcategories, and gcmtype=file only sees DIRECT members). We dropped the
+# old oil-painting cats + the 185k PD-Art megacat (endless 17-19th-c portraits),
+# AND the illustration categories (Botanical / Scientific / Book / Illustrations)
+# because those are engraving- and line-work-heavy — muted, old-timey loot that
+# kept winning the hero slot. What's left is posters, chromolithographs, ukiyo-e,
+# textiles and cards: forms that read modern and hit you in the face. The steal()
+# License filter still keeps only PD/CC0, so the copyrighted slice of the
+# 20th-century categories gets dropped rather than shipped.
 CATS = [
     "Category:Chromolithographs",
     "Category:Art Deco",
     "Category:Art Nouveau posters",
     "Category:Advertising posters",
     "Category:Circus posters",
-    "Category:Botanical illustrations",
-    "Category:Scientific illustrations",
-    "Category:Book illustrations",
-    "Category:Illustrations",
+    "Category:Posters",
     "Category:Ukiyo-e",
     "Category:Woodblock prints",
     "Category:Kimono",

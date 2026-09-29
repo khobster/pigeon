@@ -16,6 +16,10 @@ QUERIES = [
     "botanical", "musical instrument", "arms and armor", "fan", "screen",
     "playing cards", "calligraphy", "embroidery", "fashion", "vase", "tea",
     "dance", "festival", "puppet", "toy", "shell", "insect", "map",
+    # modernist supply so the art director has genuinely modern/indie options,
+    # not just old-master paintings, to lean into.
+    "post-impressionism", "impressionism", "expressionism", "modern",
+    "van gogh", "cezanne", "gauguin", "seurat", "toulouse-lautrec", "klimt",
 ]
 
 
