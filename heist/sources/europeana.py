@@ -74,13 +74,20 @@ def steal(rng):
         image = shown if (shown and _DIRECT_IMAGE.search(shown)) else _first(it, "edmPreview")
         if not image:
             continue
+        provider = _first(it, "dataProvider", "edmDataProvider")
+        # Build the record URL from the item id, NOT guid: guid embeds our wskey
+        # as a utm_campaign param (a key leak in every link) and sometimes points
+        # off to a raw Wikidata entity. id looks like "/628/Pb_102090".
+        eid = it.get("id") or ""
         return {
-            "museum": _first(it, "dataProvider", "edmDataProvider") or "Europeana",
+            # Many Europeana holders are obscure digitization outfits; "via
+            # Europeana" gives the odd institution name context and legitimacy.
+            "museum": (f"{provider}, via Europeana" if provider else "Europeana"),
             "title": _first(it, "title") or "Untitled",
             "artist": _first(it, "dcCreator") or "Unknown",
             "year": _first(it, "year"),
             "medium": q,  # the query is a usable medium/subject hint for bucketing
             "image": image,
-            "url": _first(it, "guid") or "https://www.europeana.eu",
+            "url": (f"https://www.europeana.eu/item{eid}" if eid else "https://www.europeana.eu"),
         }
     raise RuntimeError("Europeana: no usable image in sample")
