@@ -236,6 +236,33 @@ def secular(title):
     return not (RELIGIOUS.search(t) or _SAINT_ABBR.search(t))
 
 
+# Racist, colonial, and demeaning material — a real hazard in old poster and
+# ephemera collections. The "human zoo" circus posters (Hagenbeck and his kind
+# exhibited colonized people as spectacle), minstrelsy, blackface, ethnic slurs,
+# and "savage/exotic-races" framing all read as museum-catalog-neutral in a title
+# but are dehumanizing, and the heist will not send them. Caught by title here;
+# the art director (which sees the actual image) is told to reject the rest,
+# including visual caricatures a keyword can't catch. Terms are the unambiguous
+# ones — we lean on the curator for anything subtler rather than over-filter
+# legitimate work by or about the groups these slurs target.
+OFFENSIVE = re.compile(
+    r"\b("
+    r"hagenbeck|v[oö]lkerschau|human zoo|ethnographic (show|exhibition|village)|"
+    r"exotic (races|peoples)|savages?|wild (men|people)|missing link|"
+    r"minstrel|blackface|black-face|pickaninn\w*|golliwog\w*|sambo|"
+    r"\bcoon\b|darkey|darkie|\bdarky\b|mammy|jim crow|plantation melodies|"
+    r"pygm\w+|cannibal\w*|head-?hunter|redskin\w*|\bsquaw\w*|"
+    r"chinaman|chinamen|jap\b|oriental spectacle"
+    r")\b",
+    re.I,
+)
+
+
+def inoffensive(title):
+    """False for racist / colonial-spectacle / demeaning subjects by title."""
+    return not OFFENSIVE.search(title or "")
+
+
 # The heist used to default to old-master oil portraits because the source pools
 # were painting-heavy. Kevin's call: ration the traditional look — a classic
 # oil/tempera painting OR a single-sitter portrait in ANY medium — to a rare
@@ -507,6 +534,8 @@ def vet(candidate, recent, seen, allow_traditional=True):
         raise RuntimeError(f"shown in the last {RECENT_DAYS} days: {candidate.get('title')}")
     if not secular(candidate.get("title")):
         raise RuntimeError(f"religious subject: {candidate.get('title')}")
+    if not inoffensive(candidate.get("title")):
+        raise RuntimeError(f"racist/demeaning subject: {candidate.get('title')}")
     if not allow_traditional and is_rationed(candidate):
         raise RuntimeError(f"traditional look held for a treat day: {candidate.get('title')}")
     return key
@@ -813,6 +842,12 @@ def build(today=None):
         if not key or key in recent or key in used or key in tried:
             continue
         tried.add(key)
+        # The vault draws straight from the LoC pool and skips vet(), so screen
+        # it here: no devotional subjects, and no racist / colonial-spectacle
+        # material (the "human zoo" circus posters live in this pool).
+        title = candidate.get("title", "")
+        if not secular(title) or not inoffensive(title):
+            continue
         if topic and topic in vault_topics:
             continue  # one piece per topic — cool variety over three circus posters
         try:
