@@ -213,7 +213,7 @@ RELIGIOUS = re.compile(
     # non-English devotional terms so a foreign-language title can't sneak a
     # saint or a crucifixion past an English-only filter (e.g. SMK's Danish
     # "Sankt Hieronymus", a German "Heilige", an Italian "Madonna in gloria").
-    r"sankt|sanct|sainte|santo|santa|hl\.|heilig\w*|"
+    r"sankt|sanct|sint|sainte|santo|santa|hl\.|heilig\w*|"
     r"kristus|cristo|krist\w+|"
     r"jomfru|vierge|vergine|virgen|"
     r"kors\b|kreuz|croce|cruz\b"
