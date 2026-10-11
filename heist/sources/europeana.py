@@ -29,10 +29,13 @@ HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com
 # Eclectic subjects and mediums, steered away from generic paintings so the
 # breadth of the aggregator actually shows up as posters, prints and ephemera.
 QUERIES = [
-    "poster", "ukiyo-e", "woodcut", "art nouveau", "art deco", "lithograph",
-    "chromolithograph", "botanical", "textile", "ceramic", "kimono", "fresco",
-    "illustration", "colour engraving", "folk art", "costume", "fan", "mask",
-    "stained glass", "mosaic", "fashion plate", "tapestry",
+    # "mask"/"kimono" dropped: Europeana's ethnography museums returned a flood of
+    # vivid Sri Lankan dance masks that kept winning the hero, and Japanese items
+    # were already over-represented. This list spreads wider.
+    "poster", "art nouveau", "art deco", "lithograph", "chromolithograph",
+    "botanical", "textile", "ceramic", "fresco", "surrealism", "bauhaus",
+    "colour engraving", "folk art", "costume", "mexican", "stained glass",
+    "mosaic", "fashion plate", "tapestry", "modernism",
 ]
 
 
