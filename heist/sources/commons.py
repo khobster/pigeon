@@ -35,6 +35,10 @@ HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com
 # textiles and cards: forms that read modern and hit you in the face. The steal()
 # License filter still keeps only PD/CC0, so the copyrighted slice of the
 # 20th-century categories gets dropped rather than shipped.
+# Note: only Ukiyo-e kept from the Japanese categories (dropped Woodblock prints
+# and Kimono) — three of them plus the Met's huge ukiyo-e holdings made the whole
+# newsletter skew Asian. Propaganda posters added for more Western/global graphic
+# variety.
 CATS = [
     "Category:Chromolithographs",
     "Category:Art Deco",
@@ -42,9 +46,8 @@ CATS = [
     "Category:Advertising posters",
     "Category:Circus posters",
     "Category:Posters",
+    "Category:Propaganda posters",
     "Category:Ukiyo-e",
-    "Category:Woodblock prints",
-    "Category:Kimono",
     "Category:Textiles",
     "Category:Folk art",
     "Category:Trade cards",
