@@ -76,6 +76,8 @@ jobs:
           HARVARD_API_KEY: ${{ secrets.HARVARD_API_KEY }}
           EUROPEANA_KEY: ${{ secrets.EUROPEANA_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           NYPL_TOKEN: ${{ secrets.NYPL_TOKEN }}
         run: python -m heist.build_issue --prepare
 
