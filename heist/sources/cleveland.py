@@ -5,12 +5,16 @@ API = "https://openaccess-api.clevelandart.org/api/artworks/"
 
 
 def steal(rng):
-    total = requests.get(
-        API, params={"cc0": "1", "has_image": "1", "limit": 1}, timeout=30
-    ).json()["info"]["total"]
+    base = {"cc0": "1", "has_image": "1", "limit": 1}
+    # On ~half the draws, restrict to Cleveland's early-modern window (1880-1940:
+    # 6,674 CC0 works — Bellows, late Monet, Degas, Redon lithographs) so its real
+    # modern slice surfaces instead of being diluted by the whole 41k collection.
+    if rng.random() < 0.5:
+        base = {**base, "created_after": 1880, "created_before": 1940}
+    total = requests.get(API, params=base, timeout=30).json()["info"]["total"]
     skip = rng.randint(0, max(0, total - 1))
     arts = requests.get(
-        API, params={"cc0": "1", "has_image": "1", "limit": 1, "skip": skip}, timeout=30
+        API, params={**base, "skip": skip}, timeout=30
     ).json().get("data") or []
     if not arts:
         raise RuntimeError("Cleveland returned nothing")

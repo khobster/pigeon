@@ -18,6 +18,16 @@ QUERY = (
     ' OR unit_code:HMSG OR unit_code:NMAfA)'
     ' AND online_media_type:"Images" AND media_usage:CC0'
 )
+# Cooper Hewitt (CHNDM) is the Smithsonian's design museum; its works-on-paper
+# and textiles are the boldest, most graphic ("cool/modern") loot in the SI set.
+# On ~40% of draws we query that design slice directly so it surfaces far more
+# than a flat five-unit draw would allow (32,850 CC0 records, verified live).
+# NOTE the object_type facets "Posters"/"Wallpaper"/"Graphic design" are NOT
+# populated on SI — posters and wallcoverings live under Prints/Drawings/Textiles.
+CHNDM_DESIGN = (
+    'unit_code:CHNDM AND online_media_type:"Images" AND media_usage:CC0'
+    ' AND (object_type:"Textiles" OR object_type:"Prints" OR object_type:"Drawings")'
+)
 UNITS = {
     "SAAM": "the Smithsonian American Art Museum",
     "NMAA": "the National Museum of Asian Art",
@@ -42,7 +52,8 @@ def _freetext(content, key):
 def steal(rng):
     if not SI_API_KEY:
         raise RuntimeError("No SI_API_KEY configured")
-    base = {"q": QUERY, "api_key": SI_API_KEY, "rows": 20}
+    q = CHNDM_DESIGN if rng.random() < 0.4 else QUERY
+    base = {"q": q, "api_key": SI_API_KEY, "rows": 20}
     total = requests.get(API, params={**base, "rows": 1}, timeout=30).json()["response"]["rowCount"]
     start = rng.randint(0, max(0, min(total, 9000) - 20))
     rows = requests.get(API, params={**base, "start": start}, timeout=30).json()["response"]["rows"]

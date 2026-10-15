@@ -39,14 +39,29 @@ HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com
 # and Kimono) — three of them plus the Met's huge ukiyo-e holdings made the whole
 # newsletter skew Asian. Propaganda posters added for more Western/global graphic
 # variety.
+# 2026-10-15 modern pass: added the early-modernist movements (Wiener Werkstätte,
+# Expressionism, Futurism, Bauhaus, Suprematism), the Jules Chéret poster trove
+# and Autochromes (early colour photography) to pull the "cool/graphic" slice; all
+# file counts verified live via categoryinfo. Swapped the sprawling parent cat
+# "Art Deco" for the populated "Art Deco posters". Dead/still-© cats deliberately
+# skipped (Jugendstil, Travel/WPA/Soviet posters, Cassandre, Mucha). The steal()
+# License filter still keeps only PD/CC0, so a category's copyrighted 20th-c slice
+# is dropped rather than shipped; an empty draw just falls through to the next cat.
 CATS = [
     "Category:Chromolithographs",
-    "Category:Art Deco",
+    "Category:Posters by Jules Chéret",
     "Category:Art Nouveau posters",
+    "Category:Art Deco posters",
     "Category:Advertising posters",
+    "Category:Propaganda posters",
     "Category:Circus posters",
     "Category:Posters",
-    "Category:Propaganda posters",
+    "Category:Wiener Werkstätte",
+    "Category:Expressionism",
+    "Category:Futurism",
+    "Category:Autochromes",
+    "Category:Bauhaus",
+    "Category:Suprematism",
     "Category:Ukiyo-e",
     "Category:Textiles",
     "Category:Folk art",

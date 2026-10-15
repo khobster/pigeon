@@ -1,0 +1,29 @@
+name: AIC reachability retest
+
+# One-off, manual-only check: is the Art Institute of Chicago reachable from the
+# GitHub Actions runner's IP again? AIC was retired 2026-07-14 because Cloudflare
+# hard-blocked the runner. This runs tools/retest_aic.py on the runner and prints
+# a verdict in the job log. It sends nothing, commits nothing, and does not touch
+# the daily heist. Re-adding AIC to the rotation stays a manual decision.
+#
+# Run it: Actions tab -> "AIC reachability retest" -> Run workflow, then read the
+# "Retest AIC" step output for the VERDICT line.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  retest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Retest AIC
+        run: python tools/retest_aic.py

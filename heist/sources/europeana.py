@@ -28,14 +28,23 @@ HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com
 
 # Eclectic subjects and mediums, steered away from generic paintings so the
 # breadth of the aggregator actually shows up as posters, prints and ephemera.
+# 2026-10-15 modern pass: leaned the list hard into early-modernist movements —
+# Europeana is our single biggest lever for "cool/modern" because it aggregates
+# 3,000+ institutions. Every term below was checked live for open-image yield
+# (de stijl 17k, modern photography 7k, bauhaus 2.5k, expressionism 880, wiener
+# werkstätte 485, constructivism 270, kandinsky/photomontage ~100). Dropped the
+# muted old-timey pulls (fresco, mosaic, colour engraving, botanical, ceramic,
+# stained glass). "art deco poster" as a phrase returned 0, so "art deco" is used.
 QUERIES = [
     # "mask"/"kimono" dropped: Europeana's ethnography museums returned a flood of
     # vivid Sri Lankan dance masks that kept winning the hero, and Japanese items
     # were already over-represented. This list spreads wider.
-    "poster", "art nouveau", "art deco", "lithograph", "chromolithograph",
-    "botanical", "textile", "ceramic", "fresco", "surrealism", "bauhaus",
-    "colour engraving", "folk art", "costume", "mexican", "stained glass",
-    "mosaic", "fashion plate", "tapestry", "modernism",
+    "poster", "art nouveau", "art deco", "bauhaus", "de stijl",
+    "constructivism", "suprematism", "wiener werkstätte", "vienna secession",
+    "expressionism", "futurism", "surrealism", "modernism", "avant-garde",
+    "photomontage", "kandinsky", "modern photography",
+    "lithograph", "chromolithograph", "fashion plate",
+    "textile", "costume", "folk art", "tapestry", "mexican",
 ]
 
 
@@ -60,7 +69,10 @@ def steal(rng):
     params = {
         "wskey": EUROPEANA_KEY,
         "query": q,
-        "qf": "TYPE:IMAGE",
+        # A list serializes to repeated qf params: AND across facets, OR within
+        # one. IMAGE_SIZE large OR extra_large biases to full-res hero-worthy
+        # files and drops thumbnail-only scans (verified to keep ~85% of a query).
+        "qf": ["TYPE:IMAGE", "IMAGE_SIZE:large", "IMAGE_SIZE:extra_large"],
         "reusability": "open",
         "media": "true",
         "rows": 48,

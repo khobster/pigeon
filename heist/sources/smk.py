@@ -5,8 +5,10 @@ API = "https://api.smk.dk/api/v1/art/search/"
 
 
 def steal(rng):
+    # On ~1/3 of draws pull Danish modern posters ("plakat", 190 PD works) instead
+    # of the whole 39.5k collection, for a bit of SMK's bold graphic-design slice.
     base = {
-        "keys": "*",
+        "keys": "plakat" if rng.random() < 0.34 else "*",
         "filters": "[has_image:true],[public_domain:true]",
         "rows": 1,
         "lang": "en",

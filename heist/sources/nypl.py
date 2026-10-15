@@ -15,11 +15,16 @@ HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com
 
 # Color-rich graphic subjects — NYPL is deep in these. We steer away from its
 # large black-and-white ephemera (menus, news, plain advertising) because the
-# color gate would just drop those.
+# color gate would just drop those. 2026-10-15 modern pass: NYPL is the single
+# richest well of bold modern graphic design, so the list leans into Deco/Nouveau
+# posters and the WPA/Federal Art Project era (all yields verified live in the
+# thousands: federal art project 14k, trade card 10k, art deco poster 7.8k, travel
+# poster 7.2k). Dropped the muted older pulls (botanical, illuminated, ex libris).
 QUERIES = [
-    "poster", "art deco", "art nouveau", "travel poster", "chromolithograph",
-    "fashion plate", "japanese woodblock print", "circus poster",
-    "botanical", "decorative arts", "illuminated", "ex libris",
+    "art deco poster", "art nouveau", "travel poster", "wpa poster",
+    "federal art project poster", "chromolithograph poster", "theatrical poster",
+    "trade card", "poster", "fashion plate", "circus poster",
+    "japanese woodblock print",
 ]
 
 
