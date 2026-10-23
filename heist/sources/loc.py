@@ -26,6 +26,7 @@ def steal(rng):
         raise RuntimeError(f"LOC pool missing: {e}")
     if not items:
         raise RuntimeError("LOC pool is empty")
-    # Seeded choice keeps the day reproducible; ~180 items means a long run
-    # before the vault repeats itself.
+    # Seeded choice keeps the day reproducible. The pool builder caps every
+    # topic at the same share, so a flat pick is already balanced across ~29
+    # topics (the old pool was 7 topics led by photochroms and circus posters).
     return dict(rng.choice(items))

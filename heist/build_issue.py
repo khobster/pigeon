@@ -22,7 +22,8 @@ from PIL import Image
 
 from engine.render import render
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
-                           wellcome, europeana, nypl, lacma, chunklet, loc, lam)
+                           wellcome, europeana, nypl, lacma, barnes, chunklet,
+                           loc, lam)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -550,11 +551,13 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # bundled CC0 pool; rijks/yale/wellcome are keyless live APIs. si and
     # europeana are key-gated and only join the rotation when their key is set —
     # europeana alone aggregates 3,000+ institutions. lacma is a bundled PD pool
-    # biased to its cool/graphic seam (prints, costumes, textiles, 1850+). AIC and
+    # biased to its cool/graphic seam (prints, costumes, textiles, 1850+). barnes
+    # is a bundled PD pool of the Barnes Foundation's pictures. AIC and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
-    museums = ([met, cleveland, smk, commons, nga, lacma, rijks, yale, wellcome]
+    museums = ([met, cleveland, smk, commons, nga, lacma, barnes, rijks, yale,
+                wellcome]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
