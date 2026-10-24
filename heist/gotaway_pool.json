@@ -1,27 +1,11 @@
 [
 {
 "museum": "the Whitney",
-"title": "Second Theme",
-"artist": "Burgoyne Diller",
-"year": "1961–1962",
-"medium": "Oil on linen",
-"url": "https://whitney.org/collection/works/10105"
-},
-{
-"museum": "the Whitney",
 "title": "Moonlight, Winter",
 "artist": "Rockwell Kent",
-"year": "c. 1940",
+"year": "1940",
 "medium": "Oil on linen",
 "url": "https://whitney.org/collection/works/10353"
-},
-{
-"museum": "the Whitney",
-"title": "Boat, Sea and Sky: Green and Red Sea, Grey Sky",
-"artist": "John Marin",
-"year": "1944",
-"medium": "Oil on linen, with wood frame",
-"url": "https://whitney.org/collection/works/10365"
 },
 {
 "museum": "the Whitney",
@@ -30,14 +14,6 @@
 "year": "1937",
 "medium": "Oil on canvas",
 "url": "https://whitney.org/collection/works/10366"
-},
-{
-"museum": "the Whitney",
-"title": "I'm Tired",
-"artist": "Yasuo Kuniyoshi",
-"year": "1938",
-"medium": "Oil and charcoal on linen",
-"url": "https://whitney.org/collection/works/1049"
 },
 {
 "museum": "the Whitney",
@@ -86,14 +62,6 @@
 "year": "1954",
 "medium": "Oil on composition board",
 "url": "https://whitney.org/collection/works/11315"
-},
-{
-"museum": "the Whitney",
-"title": "Ada on Blue",
-"artist": "Alex Katz",
-"year": "1959",
-"medium": "Oil on composition board",
-"url": "https://whitney.org/collection/works/11316"
 },
 {
 "museum": "the Whitney",
@@ -163,7 +131,7 @@
 "museum": "the Whitney",
 "title": "Autumn",
 "artist": "Thomas Hart Benton",
-"year": "1940–1941",
+"year": "1940",
 "medium": "Oil and tempera on linen mounted on composition board",
 "url": "https://whitney.org/collection/works/1273"
 },
@@ -201,14 +169,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "Aerial Gyrations",
-"artist": "Charles Sheeler",
-"year": "1953",
-"medium": "Gouache on glass",
-"url": "https://whitney.org/collection/works/1471"
-},
-{
-"museum": "the Whitney",
 "title": "River Rouge Plant",
 "artist": "Charles Sheeler",
 "year": "1932",
@@ -219,7 +179,7 @@
 "museum": "the Whitney",
 "title": "Overlabor",
 "artist": "Eugene Higgins",
-"year": "1931–1932",
+"year": "1931",
 "medium": "Oil on linen",
 "url": "https://whitney.org/collection/works/1481"
 },
@@ -257,14 +217,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "September Evening Waterfall",
-"artist": "Pat Steir",
-"year": "1991",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/16230"
-},
-{
-"museum": "the Whitney",
 "title": "Girl in Window (Study for World's Fair Mural)",
 "artist": "Roy Lichtenstein",
 "year": "1963",
@@ -278,22 +230,6 @@
 "year": "1933",
 "medium": "Tempera on composition board",
 "url": "https://whitney.org/collection/works/1641"
-},
-{
-"museum": "the Whitney",
-"title": "The Act of Letting a Person into Your Home",
-"artist": "Edward Ruscha",
-"year": "1983",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/17113"
-},
-{
-"museum": "the Whitney",
-"title": "Lyle",
-"artist": "Chuck Close",
-"year": "1999",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/17164"
 },
 {
 "museum": "the Whitney",
@@ -315,17 +251,17 @@
 "museum": "the Whitney",
 "title": "Black Painting",
 "artist": "Robert Rauschenberg",
-"year": "c. 1953",
+"year": "1953",
 "medium": "Enamel, bitumen, oil, and newspaper on canvas, four parts",
 "url": "https://whitney.org/collection/works/17203"
 },
 {
 "museum": "the Whitney",
-"title": "Homage to the Square: \"White Enclave\"",
-"artist": "Josef Albers",
-"year": "1962",
-"medium": "Oil on composition board",
-"url": "https://whitney.org/collection/works/1747"
+"title": "$199 Television",
+"artist": "Andy Warhol",
+"year": "1961",
+"medium": "Acrylic and oil stick on canvas",
+"url": "https://whitney.org/collection/works/17212"
 },
 {
 "museum": "the Whitney",
@@ -353,9 +289,17 @@
 },
 {
 "museum": "the Whitney",
+"title": "Pat Standing in a Radish Patch",
+"artist": "Claes Oldenburg",
+"year": "1959",
+"medium": "Oil on linen",
+"url": "https://whitney.org/collection/works/19341"
+},
+{
+"museum": "the Whitney",
 "title": "Subway Scene",
 "artist": "Isabel Bishop",
-"year": "1957–1958",
+"year": "1957",
 "medium": "Tempera, pencil, and oil on composition board",
 "url": "https://whitney.org/collection/works/1940"
 },
@@ -366,14 +310,6 @@
 "year": "1934",
 "medium": "Tempera and ink on composition board",
 "url": "https://whitney.org/collection/works/1972"
-},
-{
-"museum": "the Whitney",
-"title": "Untitled #11",
-"artist": "Agnes Martin",
-"year": "1977",
-"medium": "Acrylic and graphite pencil on linen",
-"url": "https://whitney.org/collection/works/2004"
 },
 {
 "museum": "the Whitney",
@@ -393,14 +329,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "3 Hydra Rocks",
-"artist": "Brice Marden",
-"year": "2001–2004",
-"medium": "Oil on linen",
-"url": "https://whitney.org/collection/works/22587"
-},
-{
-"museum": "the Whitney",
 "title": "Summer's Ending",
 "artist": "Jared French",
 "year": "1939",
@@ -411,7 +339,7 @@
 "museum": "the Whitney",
 "title": "Steel Foundry, Coatesville, Pa.",
 "artist": "Ralston Crawford",
-"year": "1936–1937",
+"year": "1936",
 "medium": "Oil on canvas",
 "url": "https://whitney.org/collection/works/2274"
 },
@@ -435,33 +363,9 @@
 "museum": "the Whitney",
 "title": "Summer Table",
 "artist": "Brice Marden",
-"year": "1972–1973",
+"year": "1972",
 "medium": "Oil and wax on canvas",
 "url": "https://whitney.org/collection/works/2369"
-},
-{
-"museum": "the Whitney",
-"title": "The Brown Sweater",
-"artist": "Raphael Soyer",
-"year": "1952",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/2371"
-},
-{
-"museum": "the Whitney",
-"title": "Bikini - Test Able, 1946",
-"artist": "Ralston Crawford",
-"year": "1946",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/2388"
-},
-{
-"museum": "the Whitney",
-"title": "Atlantic",
-"artist": "Ellsworth Kelly",
-"year": "1956",
-"medium": "Oil on canvas, two parts",
-"url": "https://whitney.org/collection/works/2423"
 },
 {
 "museum": "the Whitney",
@@ -475,7 +379,7 @@
 "museum": "the Whitney",
 "title": "The Black Rainbow",
 "artist": "Jim Dine",
-"year": "1959–1960",
+"year": "1959",
 "medium": "Oil and corrugated cardboard on paperboard",
 "url": "https://whitney.org/collection/works/2462"
 },
@@ -499,7 +403,7 @@
 "museum": "the Whitney",
 "title": "From the Other Side of the Bridge",
 "artist": "Boris Margo",
-"year": "1945–1947",
+"year": "1945",
 "medium": "Opaque watercolor, oil, and ink on linen",
 "url": "https://whitney.org/collection/works/2586"
 },
@@ -513,14 +417,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "The Paris Bit",
-"artist": "Stuart Davis",
-"year": "1959",
-"medium": "Oil on canvas",
-"url": "https://whitney.org/collection/works/2625"
-},
-{
-"museum": "the Whitney",
 "title": "A Black Shovel, Number 2",
 "artist": "Jim Dine",
 "year": "1962",
@@ -529,27 +425,11 @@
 },
 {
 "museum": "the Whitney",
-"title": "Depth Profiling",
-"artist": "Terry Winters",
-"year": "1999",
-"medium": "Oil on linen",
-"url": "https://whitney.org/collection/works/27334"
-},
-{
-"museum": "the Whitney",
 "title": "Children Meeting",
 "artist": "Elizabeth Murray",
 "year": "1978",
 "medium": "Oil on canvas",
 "url": "https://whitney.org/collection/works/2896"
-},
-{
-"museum": "the Whitney",
-"title": "Little Big Painting",
-"artist": "Roy Lichtenstein",
-"year": "1965",
-"medium": "Oil and acrylic on canvas",
-"url": "https://whitney.org/collection/works/2924"
 },
 {
 "museum": "the Whitney",
@@ -593,6 +473,14 @@
 },
 {
 "museum": "the Whitney",
+"title": "Green Coca-Cola Bottles",
+"artist": "Andy Warhol",
+"year": "1962",
+"medium": "Acrylic, screenprint, and graphite pencil on canvas",
+"url": "https://whitney.org/collection/works/3253"
+},
+{
+"museum": "the Whitney",
 "title": "Good Government",
 "artist": "Terry Winters",
 "year": "1984",
@@ -601,33 +489,17 @@
 },
 {
 "museum": "the Whitney",
-"title": "The Toaster",
-"artist": "Jim Dine",
-"year": "1962",
-"medium": "Oil, oil stick, and toaster on linen",
-"url": "https://whitney.org/collection/works/340"
-},
-{
-"museum": "the Whitney",
 "title": "Francesco I",
 "artist": "Chuck Close",
-"year": "1987–1988",
+"year": "1987",
 "medium": "Oil on cotton",
 "url": "https://whitney.org/collection/works/34158"
 },
 {
 "museum": "the Whitney",
-"title": "City of Man",
-"artist": "Richard Artschwager",
-"year": "1981",
-"medium": "Acrylic and charcoal on Celotex and plastic laminate with plexiglass",
-"url": "https://whitney.org/collection/works/37687"
-},
-{
-"museum": "the Whitney",
 "title": "What This Painting Aims to Do",
 "artist": "John Baldessari",
-"year": "1966–1968",
+"year": "1966",
 "medium": "Acrylic and oil on canvas",
 "url": "https://whitney.org/collection/works/37694"
 },
@@ -646,14 +518,6 @@
 "year": "1986",
 "medium": "Casein and wax on mahogany",
 "url": "https://whitney.org/collection/works/37858"
-},
-{
-"museum": "the Whitney",
-"title": "Krazy Kat: 1",
-"artist": "Sherrie Levine",
-"year": "1988",
-"medium": "Casein paint on cherry wood",
-"url": "https://whitney.org/collection/works/37859"
 },
 {
 "museum": "the Whitney",
@@ -721,14 +585,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "Nancy to Her Girlfriend, (RP288)",
-"artist": "Richard Prince",
-"year": "1988",
-"medium": "Acrylic and screenprint on canvas",
-"url": "https://whitney.org/collection/works/40710"
-},
-{
-"museum": "the Whitney",
 "title": "Homage to the Square: \"Ascending\"",
 "artist": "Josef Albers",
 "year": "1953",
@@ -750,14 +606,6 @@
 "year": "2004",
 "medium": "Acrylic and graphite pencil on linen",
 "url": "https://whitney.org/collection/works/40829"
-},
-{
-"museum": "the Whitney",
-"title": "1998",
-"artist": "Cheyney Thompson",
-"year": "2004",
-"medium": "Acrylic and graphite pencil on linen",
-"url": "https://whitney.org/collection/works/40830"
 },
 {
 "museum": "the Whitney",
@@ -785,25 +633,9 @@
 },
 {
 "museum": "the Whitney",
-"title": "Mesokingdom Five (orgone sea)",
-"artist": "Carroll Dunham",
-"year": "2001",
-"medium": "Mixed media on linen",
-"url": "https://whitney.org/collection/works/47027"
-},
-{
-"museum": "the Whitney",
-"title": "Untitled (Hujar Dead)",
-"artist": "David Wojnarowicz",
-"year": "1988–1989",
-"medium": "Gelatin silver print, acrylic, screenprint, and collaged paper on board",
-"url": "https://whitney.org/collection/works/48140"
-},
-{
-"museum": "the Whitney",
 "title": "Third Theme",
 "artist": "Burgoyne Diller",
-"year": "1946–1948",
+"year": "1946",
 "medium": "Oil on linen",
 "url": "https://whitney.org/collection/works/51"
 },
@@ -811,7 +643,7 @@
 "museum": "the Whitney",
 "title": "Number One",
 "artist": "Brice Marden",
-"year": "1983–1984",
+"year": "1983",
 "medium": "Oil on canvas, three parts",
 "url": "https://whitney.org/collection/works/5484"
 },
@@ -819,17 +651,9 @@
 "museum": "the Whitney",
 "title": "Pine Gap",
 "artist": "Carroll Dunham",
-"year": "1985–1986",
+"year": "1985",
 "medium": "Casein, carbon pencil, colored and graphite pencil, and dry pigment on wood veneers mounted on plastic",
 "url": "https://whitney.org/collection/works/5684"
-},
-{
-"museum": "the Whitney",
-"title": "The Rope",
-"artist": "Jared French",
-"year": "1954",
-"medium": "Tempera on paper mounted on linen and wood",
-"url": "https://whitney.org/collection/works/577"
 },
 {
 "museum": "the Whitney",
@@ -857,14 +681,6 @@
 },
 {
 "museum": "the Whitney",
-"title": "Riders in the Hills",
-"artist": "John Sloan",
-"year": "1946",
-"medium": "Tempera and oil on composition board",
-"url": "https://whitney.org/collection/works/718"
-},
-{
-"museum": "the Whitney",
 "title": "Lincolnville Beach",
 "artist": "Alex Katz",
 "year": "1956",
@@ -886,22 +702,6 @@
 "year": "1934",
 "medium": "Tempera and oil on wood",
 "url": "https://whitney.org/collection/works/753"
-},
-{
-"museum": "the Whitney",
-"title": "Minsky's Chorus",
-"artist": "Reginald Marsh",
-"year": "1935",
-"medium": "Tempera, ink, and oil on composition board",
-"url": "https://whitney.org/collection/works/7545"
-},
-{
-"museum": "the Whitney",
-"title": "Trembling Foot",
-"artist": "Elizabeth Murray",
-"year": "1988",
-"medium": "Oil on shaped canvas",
-"url": "https://whitney.org/collection/works/7575"
 },
 {
 "museum": "the Whitney",
@@ -1032,6 +832,2662 @@
 "url": "https://whitney.org/collection/works/973"
 },
 {
+"museum": "the Art Institute of Chicago",
+"title": "Interrogation II",
+"artist": "Leon Golub",
+"year": "1981",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/100250"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Untitled (Purple, White, and Red)",
+"artist": "Mark Rothko",
+"year": "1953",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/100472"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Sky above Clouds IV",
+"artist": "Georgia O'Keeffe",
+"year": "1965",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/100858"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "American Collectors (Fred and Marcia Weisman)",
+"artist": "David Hockney",
+"year": "1968",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/102234"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Train Station",
+"artist": "Walter Ellison",
+"year": "1935",
+"medium": "Oil on cardboard",
+"url": "https://www.artic.edu/artworks/105800"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "TAKEN FROM HERE TO WHERE IT CAME FROM AND TAKEN TO A PLACE AND USED IN SUCH A MANNER THAT IT CAN ONLY REMAIN AS A REPRESENTATION OF WHAT IT WAS WHERE IT CAME FROM",
+"artist": "Lawrence Weiner",
+"year": "1980",
+"medium": "Language + materials referred to",
+"url": "https://www.artic.edu/artworks/107069"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "America Windows",
+"artist": "Marc Chagall",
+"year": "1977",
+"medium": "Stained glass",
+"url": "https://www.artic.edu/artworks/109439"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Nighthawks",
+"artist": "Edward Hopper",
+"year": "1942",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/111628"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Awakening of the Forest",
+"artist": "Paul Delvaux",
+"year": "1939",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/111642"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Earth Is a Man",
+"artist": "Roberto Matta",
+"year": "1942",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/117188"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Nightlife",
+"artist": "Archibald John Motley Jr.",
+"year": "1943",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/117266"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Juan Soriano De Lacandón",
+"artist": "Leonora Carrington",
+"year": "1964",
+"medium": "Graphite and casein on panel",
+"url": "https://www.artic.edu/artworks/118661"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Wedding",
+"artist": "Jacob Lawrence",
+"year": "1948",
+"medium": "Egg tempera on hardboard",
+"url": "https://www.artic.edu/artworks/125660"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Starry Night and the Astronauts",
+"artist": "Alma Thomas",
+"year": "1972",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/129884"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Many Mansions",
+"artist": "Kerry James Marshall",
+"year": "1994",
+"medium": "Acrylic on paper mounted on canvas",
+"url": "https://www.artic.edu/artworks/137125"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Night Sky #2",
+"artist": "Vija Celmins",
+"year": "1991",
+"medium": "Alkyd on canvas mounted on aluminum",
+"url": "https://www.artic.edu/artworks/140645"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Explosion at Sea",
+"artist": "Vija Celmins",
+"year": "1966",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/146905"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Rodeo",
+"artist": "Brice Marden",
+"year": "1971",
+"medium": "Oil and wax on two joined canvases",
+"url": "https://www.artic.edu/artworks/146988"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "PH-774",
+"artist": "Clyfford Still",
+"year": "1958",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/146991"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Woman Descending the Staircase (Frau die Treppe herabgehend)",
+"artist": "Gerhard Richter",
+"year": "1965",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/147003"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Human Nature/Life Death",
+"artist": "Bruce Nauman",
+"year": "1983",
+"medium": "Neon tubing with clear glass tubing suspension frames",
+"url": "https://www.artic.edu/artworks/147513"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Weaving",
+"artist": "Diego Rivera",
+"year": "1936",
+"medium": "Tempera and oil on canvas",
+"url": "https://www.artic.edu/artworks/151363"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Inventions of the Monsters",
+"artist": "Salvador Dalí",
+"year": "1937",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/151424"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Monk (Mönch)",
+"artist": "Katharina Fritsch",
+"year": "1997",
+"medium": "Polyester and paint",
+"url": "https://www.artic.edu/artworks/154232"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Night Is Stirring (Anger) (La Nuit remue [colère])",
+"artist": "Wou-Ki Zao",
+"year": "1956",
+"medium": "Oil on linen",
+"url": "https://www.artic.edu/artworks/15563"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Relaxing in the Shade",
+"artist": "Yamakawa Shûhô",
+"year": "1933",
+"medium": "Two-panel screen; ink and color on silk",
+"url": "https://www.artic.edu/artworks/156474"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Red Yellow Blue White and Black II",
+"artist": "Ellsworth Kelly",
+"year": "1953",
+"medium": "Oil on canvas; 7 joined panels",
+"url": "https://www.artic.edu/artworks/157156"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "\"Untitled\"",
+"artist": "Felix Gonzalez-Torres",
+"year": "1989",
+"medium": "Enamel paint on wall",
+"url": "https://www.artic.edu/artworks/159824"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Albino",
+"artist": "Marlene Dumas",
+"year": "1986",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/160222"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Gasthof zur Muldentalsperre",
+"artist": "Peter Doig",
+"year": "2000",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/160226"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Plow and the Song",
+"artist": "Arshile Gorky",
+"year": "1946",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/16964"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Oonagh MacCumhail: The Case of the Entered Novitiate",
+"artist": "Matthew Barney",
+"year": "2002",
+"medium": "Internally lubricated plastic, cast urethane, cast thermoplastic, prosthetic plastic, stainless steel, acrylic, earth, and potatoes in polyethylene and acrylic vitrine",
+"url": "https://www.artic.edu/artworks/181774"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Urns (Set of 8)",
+"artist": "Thomas Schütte",
+"year": "1999",
+"medium": "Terra-cotta and porcelain",
+"url": "https://www.artic.edu/artworks/182728"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Landscape",
+"artist": "Li Huayi",
+"year": "2002",
+"medium": "Unmounted, ink and color on paper",
+"url": "https://www.artic.edu/artworks/183277"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Near the Lagoon",
+"artist": "Jasper Johns",
+"year": "2002",
+"medium": "Encaustic on canvas and wooden boards with objects",
+"url": "https://www.artic.edu/artworks/184095"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Mirror #3 (Six Panels)",
+"artist": "Roy Lichtenstein",
+"year": "1971",
+"medium": "Oil and Magna on two sets of three joined canvases",
+"url": "https://www.artic.edu/artworks/184362"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Venus de Milo with Drawers",
+"artist": "Salvador Dalí",
+"year": "1936",
+"medium": "Painted plaster with metal pulls and mink pom-poms",
+"url": "https://www.artic.edu/artworks/185184"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The First Part of the Return from Parnassus",
+"artist": "Cy Twombly",
+"year": "1961",
+"medium": "Oil paint, lead pencil, wax crayon, and colored pencil on canvas",
+"url": "https://www.artic.edu/artworks/186049"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Wall Drawing #821: A black square divided horizontally and vertically into four equal parts, each with a different direction of alternating flat and glossy bands",
+"artist": "Sol LeWitt",
+"year": "1997",
+"medium": "Acrylic paint",
+"url": "https://www.artic.edu/artworks/186392"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Hinoki",
+"artist": "Charles Ray",
+"year": "2007",
+"medium": "Cypress",
+"url": "https://www.artic.edu/artworks/189207"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Object",
+"artist": "Claude Cahun",
+"year": "1936",
+"medium": "Wood and paint with tennis ball, hair, and found objects",
+"url": "https://www.artic.edu/artworks/189807"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Bloom",
+"artist": "Julia Fish",
+"year": "1989",
+"medium": "Oil and wax on canvas",
+"url": "https://www.artic.edu/artworks/189932"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Room No. VI",
+"artist": "Eldzier Cortor",
+"year": "1948",
+"medium": "Oil and gesso on Masonite",
+"url": "https://www.artic.edu/artworks/191556"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Self-Portrait of My Sister",
+"artist": "Gertrude Abercrombie",
+"year": "1941",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/198809"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "In Memory of My Father",
+"artist": "Sylvia Plimack Mangold",
+"year": "1976",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/199002"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Cotton Pickers",
+"artist": "Thomas Hart Benton",
+"year": "1945",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/217201"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Khee II",
+"artist": "Jack Whitten",
+"year": "1978",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/218612"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Ready-to-Wear",
+"artist": "Stuart Davis",
+"year": "1955",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/2189"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Object with Number 1",
+"artist": "Joaquín Torres Garcia",
+"year": "1932",
+"medium": "Oil and nails on wood",
+"url": "https://www.artic.edu/artworks/220179"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Golden Wings Brushing the Clouds Incarnated from Earthly Wide Star (Chikatsusei Maunkinshi)",
+"artist": "Shiraga Kazuo",
+"year": "1960",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/220272"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "We Must Bear",
+"artist": "Nilima Sheikh",
+"year": "2014",
+"medium": "Casein tempera on canvas",
+"url": "https://www.artic.edu/artworks/221885"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "A Siren Beside a Ship",
+"artist": "Mark Bradford",
+"year": "2014",
+"medium": "Mixed media on canvas",
+"url": "https://www.artic.edu/artworks/225016"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Male-Female Figure and the Pomegranate",
+"artist": "Ibrahim El-Salahi",
+"year": "1966",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/227420"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Target",
+"artist": "Jasper Johns",
+"year": "1961",
+"medium": "Encaustic and newspaper on canvas",
+"url": "https://www.artic.edu/artworks/229351"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Liz #3 [Early Colored Liz]",
+"artist": "Andy Warhol",
+"year": "1963",
+"medium": "Acrylic and silkscreen ink on linen",
+"url": "https://www.artic.edu/artworks/229406"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "AC10",
+"artist": "Wei Zhang",
+"year": "1984",
+"medium": "Oil on linen; 2 panels",
+"url": "https://www.artic.edu/artworks/229510"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Finnish Painting",
+"artist": "Pope.L",
+"year": "2015",
+"medium": "Oil, acrylic, flash paint, marker, pen, collage, thumbtacks and tape on torn paper",
+"url": "https://www.artic.edu/artworks/229866"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Celestial Chaos No. 1",
+"artist": "Tai Xiangzhou",
+"year": "2014",
+"medium": "Ink on silk",
+"url": "https://www.artic.edu/artworks/230189"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Untitled 72–12–A",
+"artist": "Chung, Sang-Hwa",
+"year": "1972",
+"medium": "Acrylic on canvas",
+"url": "https://www.artic.edu/artworks/234004"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Involvement Series",
+"artist": "Wanda Pimentel",
+"year": "1968",
+"medium": "Vinyl on canvas",
+"url": "https://www.artic.edu/artworks/234433"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Brushstroke with Spatter",
+"artist": "Roy Lichtenstein",
+"year": "1966",
+"medium": "Oil and Magna on canvas",
+"url": "https://www.artic.edu/artworks/24836"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Dugout (preliminary work)",
+"artist": "Norman Rockwell",
+"year": "1948",
+"medium": "Oil and gouache on canvas",
+"url": "https://www.artic.edu/artworks/282198"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "La durée poignardée (Time Transfixed)",
+"artist": "René Magritte",
+"year": "1938",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/34181"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Landscapes",
+"artist": "Huang Binhong",
+"year": "1945",
+"medium": "Album leaves; ink and color on paper",
+"url": "https://www.artic.edu/artworks/34299"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Miss E. Knows",
+"artist": "Jim Nutt",
+"year": "1967",
+"medium": "Acrylic on Plexiglas with aluminum and rubber; in artist's painted frame",
+"url": "https://www.artic.edu/artworks/35198"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Mao",
+"artist": "Andy Warhol",
+"year": "1972",
+"medium": "Acrylic, silkscreen ink, and pencil on linen",
+"url": "https://www.artic.edu/artworks/47149"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Figure with Meat",
+"artist": "Francis Bacon",
+"year": "1954",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/4884"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Artist Looks at Nature",
+"artist": "Charles Sheeler",
+"year": "1943",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/49714"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Composition",
+"artist": "Maria Helena Vieira da Silva",
+"year": "1936",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/53001"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Red Armchair",
+"artist": "Pablo Picasso",
+"year": "1931",
+"medium": "Oil and Ripolin on panel",
+"url": "https://www.artic.edu/artworks/5357"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Rock",
+"artist": "Peter Blume",
+"year": "1944",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/56682"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "White Crucifixion",
+"artist": "Marc Chagall",
+"year": "1938",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/59426"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Cow's Skull with Calico Roses",
+"artist": "Georgia O'Keeffe",
+"year": "1931",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/61428"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "...And the Home of the Brave",
+"artist": "Charles Demuth",
+"year": "1931",
+"medium": "Oil and graphite on fiber board",
+"url": "https://www.artic.edu/artworks/64276"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Woodman (Waldarbeiter)",
+"artist": "Georg Baselitz",
+"year": "1969",
+"medium": "Charcoal and synthetic resin on linen",
+"url": "https://www.artic.edu/artworks/68823"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Hang Up",
+"artist": "Eva Hesse",
+"year": "1966",
+"medium": "Acrylic on cloth over wood and acrylic on cord over steel tube",
+"url": "https://www.artic.edu/artworks/71396"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "The Beginning",
+"artist": "Barnett Newman",
+"year": "1946",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/73417"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Watchtower with Geese (Hochsitz mit Gänsen)",
+"artist": "Sigmar Polke",
+"year": "1987",
+"medium": "Resin and acrylic paint on various fabrics",
+"url": "https://www.artic.edu/artworks/76054"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Excavation",
+"artist": "Willem de Kooning",
+"year": "1950",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/76244"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Tanktotem I",
+"artist": "David Smith",
+"year": "1952",
+"medium": "Steel",
+"url": "https://www.artic.edu/artworks/79379"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Greyed Rainbow",
+"artist": "Jackson Pollock",
+"year": "1953",
+"medium": "Oil on linen",
+"url": "https://www.artic.edu/artworks/83642"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "That Which I Should Have Done I Did Not Do (The Door)",
+"artist": "Ivan Albright",
+"year": "1931",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/83905"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Self-Portrait",
+"artist": "Max Beckmann",
+"year": "1937",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/84241"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Hero Construction",
+"artist": "Richard Hunt",
+"year": "1958",
+"medium": "Steel",
+"url": "https://www.artic.edu/artworks/8633"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "City Landscape",
+"artist": "Joan Mitchell",
+"year": "1955",
+"medium": "Oil on linen",
+"url": "https://www.artic.edu/artworks/86385"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Untitled #12",
+"artist": "Agnes Martin",
+"year": "1977",
+"medium": "India ink, graphite, and gesso on canvas",
+"url": "https://www.artic.edu/artworks/89403"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Lever #1",
+"artist": "Martin Puryear",
+"year": "1988",
+"medium": "Red cedar, cypress, poplar, and ash",
+"url": "https://www.artic.edu/artworks/90443"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Couple in Bed",
+"artist": "Philip Guston",
+"year": "1977",
+"medium": "Oil on canvas",
+"url": "https://www.artic.edu/artworks/90583"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Chalk-Mirror Displacement",
+"artist": "Robert Smithson",
+"year": "1969",
+"medium": "Sixteen mirrors and chalk",
+"url": "https://www.artic.edu/artworks/93345"
+},
+{
+"museum": "the Art Institute of Chicago",
+"title": "Minnie",
+"artist": "Ed Paschke",
+"year": "1974",
+"medium": "Oil on linen",
+"url": "https://www.artic.edu/artworks/97402"
+},
+{
+"museum": "the Guggenheim",
+"title": "Daddy, Daddy, Daddy",
+"artist": "Mark Bradford",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10230"
+},
+{
+"museum": "the Guggenheim",
+"title": "Prisoner of Love #3",
+"artist": "Glenn Ligon",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10381"
+},
+{
+"museum": "the Guggenheim",
+"title": "Malcolm X, Sun, Frederick Douglass, Boy with Bubbles (version 2) #2",
+"artist": "Glenn Ligon",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10383"
+},
+{
+"museum": "the Guggenheim",
+"title": "Bedspring",
+"artist": "Jim Dine",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1061"
+},
+{
+"museum": "the Guggenheim",
+"title": "Pearls",
+"artist": "Jim Dine",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1062"
+},
+{
+"museum": "the Guggenheim",
+"title": "CREMASTER 3",
+"artist": "Matthew Barney",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10768"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Apartment)",
+"artist": "Rachel Whiteread",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10835"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Basement)",
+"artist": "Rachel Whiteread",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10836"
+},
+{
+"museum": "the Guggenheim",
+"title": "Maman",
+"artist": "Louise Bourgeois",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10856"
+},
+{
+"museum": "the Guggenheim",
+"title": "Seestück",
+"artist": "Gerhard Richter",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/10859"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Land of the Two Rivers",
+"artist": "Anselm Kiefer",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/11"
+},
+{
+"museum": "the Guggenheim",
+"title": "Eight Gray",
+"artist": "Gerhard Richter",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/11078"
+},
+{
+"museum": "the Guggenheim",
+"title": "NACH ALLES / AFTER ALL",
+"artist": "Lawrence Weiner",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/11207"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Propitious Moment",
+"artist": "Jean Dubuffet",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1155"
+},
+{
+"museum": "the Guggenheim",
+"title": "Nunc Stans",
+"artist": "Jean Dubuffet",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1158"
+},
+{
+"museum": "the Guggenheim",
+"title": "Attirement of the Bride (La Toilette de la mariée)",
+"artist": "Max Ernst",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1186"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Antipope",
+"artist": "Max Ernst",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1188"
+},
+{
+"museum": "the Guggenheim",
+"title": "Chrysler Imperial",
+"artist": "Matthew Barney",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/12536"
+},
+{
+"museum": "the Guggenheim",
+"title": "White Knot: 1",
+"artist": "Sherrie Levine",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/12967"
+},
+{
+"museum": "the Guggenheim",
+"title": "Concetto spaziale, Attese",
+"artist": "Lucio Fontana",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1334"
+},
+{
+"museum": "the Guggenheim",
+"title": "Concetto spaziale, Attese",
+"artist": "Lucio Fontana",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1335"
+},
+{
+"museum": "the Guggenheim",
+"title": "Canal",
+"artist": "Helen Frankenthaler",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1348"
+},
+{
+"museum": "the Guggenheim",
+"title": "Nude Figure–Woman on the Beach",
+"artist": "Willem de Kooning",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/14021"
+},
+{
+"museum": "the Guggenheim",
+"title": "Birth",
+"artist": "Kenneth Noland",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/14067"
+},
+{
+"museum": "the Guggenheim",
+"title": "Red",
+"artist": "Mark Rothko",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/14069"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Nose",
+"artist": "Alberto Giacometti",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1425"
+},
+{
+"museum": "the Guggenheim",
+"title": "Diego",
+"artist": "Alberto Giacometti",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1428"
+},
+{
+"museum": "the Guggenheim",
+"title": "Keith (From Gimme Shelter)",
+"artist": "Elizabeth Peyton",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/14581"
+},
+{
+"museum": "the Guggenheim",
+"title": "There, Motion Has Not Yet Ceased",
+"artist": "Yves Tanguy",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/14607"
+},
+{
+"museum": "the Guggenheim",
+"title": "Gray Scramble",
+"artist": "Frank Stella",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/15014"
+},
+{
+"museum": "the Guggenheim",
+"title": "“Untitled” (Public Opinion)",
+"artist": "Felix Gonzalez-Torres",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1512"
+},
+{
+"museum": "the Guggenheim",
+"title": "W",
+"artist": "Adolph Gottlieb",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1530"
+},
+{
+"museum": "the Guggenheim",
+"title": "Mist",
+"artist": "Adolph Gottlieb",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1531"
+},
+{
+"museum": "the Guggenheim",
+"title": "My Pocketbook",
+"artist": "Richard Prince",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/15762"
+},
+{
+"museum": "the Guggenheim",
+"title": "My Way",
+"artist": "Richard Prince",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/15763"
+},
+{
+"museum": "the Guggenheim",
+"title": "Duo",
+"artist": "Philip Guston",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1582"
+},
+{
+"museum": "the Guggenheim",
+"title": "Expanded Expansion",
+"artist": "Eva Hesse",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/1648"
+},
+{
+"museum": "the Guggenheim",
+"title": "Double Torqued Ellipse",
+"artist": "Richard Serra",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/17144"
+},
+{
+"museum": "the Guggenheim",
+"title": "Study for Homage to the Square: Consent",
+"artist": "Josef Albers",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/190"
+},
+{
+"museum": "the Guggenheim",
+"title": "Study for Homage to the Square",
+"artist": "Josef Albers",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/193"
+},
+{
+"museum": "the Guggenheim",
+"title": "Dark Blue Curve",
+"artist": "Ellsworth Kelly",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2075"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Matter of Time",
+"artist": "Richard Serra",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/21794"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Selections from Truisms, Inflammatory Essays, The Living Series, The Survival Series, Under a Rock, Laments, and Child Text)",
+"artist": "Jenny Holzer",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/22064"
+},
+{
+"museum": "the Guggenheim",
+"title": "“Untitled” (Golden)",
+"artist": "Felix Gonzalez-Torres",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/22508"
+},
+{
+"museum": "the Guggenheim",
+"title": "Installation for Bilbao",
+"artist": "Jenny Holzer",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/24"
+},
+{
+"museum": "the Guggenheim",
+"title": "Corax",
+"artist": "Ibram Lassaw",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2410"
+},
+{
+"museum": "the Guggenheim",
+"title": "Wall Drawing #146. All two-part combinations of blue arcs from corners and sides and blue straight, not straight and broken lines.",
+"artist": "Sol LeWitt",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2472"
+},
+{
+"museum": "the Guggenheim",
+"title": "Wall Drawing #264. A wall divided into 16 equal parts with all one-, two-, three-, and four-part combinations of lines in four directions and four colors.",
+"artist": "Sol LeWitt",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2478"
+},
+{
+"museum": "the Guggenheim",
+"title": "Girl with Tear I",
+"artist": "Roy Lichtenstein",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2500"
+},
+{
+"museum": "the Guggenheim",
+"title": "Interior with Mirrored Wall",
+"artist": "Roy Lichtenstein",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2501"
+},
+{
+"museum": "the Guggenheim",
+"title": "Atlantic Wall",
+"artist": "Julie Mehretu",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/25118"
+},
+{
+"museum": "the Guggenheim",
+"title": "Middle Grey",
+"artist": "Julie Mehretu",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/25120"
+},
+{
+"museum": "the Guggenheim",
+"title": "Empire of Light",
+"artist": "René Magritte",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2594"
+},
+{
+"museum": "the Guggenheim",
+"title": "Kathreiners Morgenlatte",
+"artist": "Sigmar Polke",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/26"
+},
+{
+"museum": "the Guggenheim",
+"title": "Achrome",
+"artist": "Piero Manzoni",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2643"
+},
+{
+"museum": "the Guggenheim",
+"title": "D’après la Marquise de la Solana",
+"artist": "Brice Marden",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2791"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Costume Party",
+"artist": "George Segal",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/27913"
+},
+{
+"museum": "the Guggenheim",
+"title": "Grove IV",
+"artist": "Brice Marden",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2798"
+},
+{
+"museum": "the Guggenheim",
+"title": "Fiesta",
+"artist": "Agnes Martin",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2808"
+},
+{
+"museum": "the Guggenheim",
+"title": "Series of Vulnerable Arrangements—Voice and Wind",
+"artist": "Haegue Yang",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/28092"
+},
+{
+"museum": "the Guggenheim",
+"title": "Errance I",
+"artist": "André Masson",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2820"
+},
+{
+"museum": "the Guggenheim",
+"title": "Study for Chimpanzee",
+"artist": "Francis Bacon",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/292"
+},
+{
+"museum": "the Guggenheim",
+"title": "Three Studies for a Crucifixion",
+"artist": "Francis Bacon",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/293"
+},
+{
+"museum": "the Guggenheim",
+"title": "Horizontals Flanking,  Large, Green Line",
+"artist": "Jo Baer",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/294"
+},
+{
+"museum": "the Guggenheim",
+"title": "Painting",
+"artist": "Joan Miró",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2944"
+},
+{
+"museum": "the Guggenheim",
+"title": "Canada I",
+"artist": "Joan Mitchell",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2951"
+},
+{
+"museum": "the Guggenheim",
+"title": "Place for Puppies",
+"artist": "Joan Mitchell",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/2952"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Pink Felt)",
+"artist": "Robert Morris",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3016"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Brown Felt)",
+"artist": "Robert Morris",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3019"
+},
+{
+"museum": "the Guggenheim",
+"title": "Point de Gaze, Chapter 23",
+"artist": "R. H. Quaytman",
+"year": "2010s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/30217"
+},
+{
+"museum": "the Guggenheim",
+"title": "Point de Gaze, Chapter 23 (Lygia Clark)",
+"artist": "R. H. Quaytman",
+"year": "2010s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/30218"
+},
+{
+"museum": "the Guggenheim",
+"title": "Impenetrable",
+"artist": "Mona Hatoum",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/30304"
+},
+{
+"museum": "the Guggenheim",
+"title": "No. 2. J.B.",
+"artist": "Yayoi Kusama",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/30413"
+},
+{
+"museum": "the Guggenheim",
+"title": "Elegy to the Spanish Republic No. 110",
+"artist": "Robert Motherwell",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3047"
+},
+{
+"museum": "the Guggenheim",
+"title": "Three Standing Figures",
+"artist": "Henry Moore",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3055"
+},
+{
+"museum": "the Guggenheim",
+"title": "Iberia",
+"artist": "Robert Motherwell",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/31"
+},
+{
+"museum": "the Guggenheim",
+"title": "None Sing Neon Sign",
+"artist": "Bruce Nauman",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3160"
+},
+{
+"museum": "the Guggenheim",
+"title": "Floating Room (Light Outside, Dark Inside)",
+"artist": "Bruce Nauman",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3170"
+},
+{
+"museum": "the Guggenheim",
+"title": "White Vertical Water",
+"artist": "Louise Nevelson",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3226"
+},
+{
+"museum": "the Guggenheim",
+"title": "Lunar",
+"artist": "Isamu Noguchi",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3245"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Cry",
+"artist": "Isamu Noguchi",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3246"
+},
+{
+"museum": "the Guggenheim",
+"title": "Trans Shift",
+"artist": "Kenneth Noland",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3247"
+},
+{
+"museum": "the Guggenheim",
+"title": "Freighter and Sailboat",
+"artist": "Claes Oldenburg",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3318"
+},
+{
+"museum": "the Guggenheim",
+"title": "Soft Pay-Telephone",
+"artist": "Claes Oldenburg",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3319"
+},
+{
+"museum": "the Guggenheim",
+"title": "Black and White",
+"artist": "Irene Rice Pereira",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3393"
+},
+{
+"museum": "the Guggenheim",
+"title": "Two Doves with Wings Spread",
+"artist": "Pablo Picasso",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3457"
+},
+{
+"museum": "the Guggenheim",
+"title": "Lobster and Cat",
+"artist": "Pablo Picasso",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3458"
+},
+{
+"museum": "the Guggenheim",
+"title": "Wright Curve",
+"artist": "Ellsworth Kelly",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/34729"
+},
+{
+"museum": "the Guggenheim",
+"title": "Number 18",
+"artist": "Jackson Pollock",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3484"
+},
+{
+"museum": "the Guggenheim",
+"title": "Ocean Greyness",
+"artist": "Jackson Pollock",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3486"
+},
+{
+"museum": "the Guggenheim",
+"title": "Seer",
+"artist": "Martin Puryear",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3502"
+},
+{
+"museum": "the Guggenheim",
+"title": "Cradle Song",
+"artist": "Theodore Roszak",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3526"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Black on Gray)",
+"artist": "Mark Rothko",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3535"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Mythic Being: Smoke",
+"artist": "Adrian Piper",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/36095"
+},
+{
+"museum": "the Guggenheim",
+"title": "Decide Who You Are #19: Torch Song Alert",
+"artist": "Adrian Piper",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/36096"
+},
+{
+"museum": "the Guggenheim",
+"title": "Yellow Painting",
+"artist": "Ad Reinhardt",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3697"
+},
+{
+"museum": "the Guggenheim",
+"title": "Abstract Painting",
+"artist": "Ad Reinhardt",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3698"
+},
+{
+"museum": "the Guggenheim",
+"title": "Woman on a Bridge #1 of 5: Tar Beach",
+"artist": "Faith Ringgold",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3719"
+},
+{
+"museum": "the Guggenheim",
+"title": "Evening 9:10, 461 Lenox Avenue",
+"artist": "Romare Bearden",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/37659"
+},
+{
+"museum": "the Guggenheim",
+"title": "Georgia Mae",
+"artist": "Simone Leigh",
+"year": "2010s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/37752"
+},
+{
+"museum": "the Guggenheim",
+"title": "One Hundred and Fifty Multicolored Marilyns",
+"artist": "Andy Warhol",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/38"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Gleaner",
+"artist": "Georg Baselitz",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/381"
+},
+{
+"museum": "the Guggenheim",
+"title": "Picasso’s Chair",
+"artist": "George Segal",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3861"
+},
+{
+"museum": "the Guggenheim",
+"title": "Terremoto",
+"artist": "Joseph Beuys",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/389"
+},
+{
+"museum": "the Guggenheim",
+"title": "F.I.U.: The Defense of Nature",
+"artist": "Joseph Beuys",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/393"
+},
+{
+"museum": "the Guggenheim",
+"title": "Kokuroo (黒瀧王)",
+"artist": "Shiraga Kazuo",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/39498"
+},
+{
+"museum": "the Guggenheim",
+"title": "Cubi XXVII",
+"artist": "David Smith",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3955"
+},
+{
+"museum": "the Guggenheim",
+"title": "Tiges grises et argentées",
+"artist": "Jesús Rafael Soto",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3976"
+},
+{
+"museum": "the Guggenheim",
+"title": "Cube with Ambiguous Space",
+"artist": "Jesús Rafael Soto",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/3977"
+},
+{
+"museum": "the Guggenheim",
+"title": "Harran II",
+"artist": "Frank Stella",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4003"
+},
+{
+"museum": "the Guggenheim",
+"title": "Jamais",
+"artist": "Clyfford Still",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4007"
+},
+{
+"museum": "the Guggenheim",
+"title": "Shiro",
+"artist": "Kumi Sugaï",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4016"
+},
+{
+"museum": "the Guggenheim",
+"title": "White Moving Forms on Black Background (TNT)",
+"artist": "Jean Tinguely",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4048"
+},
+{
+"museum": "the Guggenheim",
+"title": "Constructive City with Universal Man",
+"artist": "Joaquín Torres-García",
+"year": "1940s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4061"
+},
+{
+"museum": "the Guggenheim",
+"title": "Self Harmony",
+"artist": "Rose B. Simpson",
+"year": "2020s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/41541"
+},
+{
+"museum": "the Guggenheim",
+"title": "Aix-en-Provence",
+"artist": "Maria Helena Vieira da Silva",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4155"
+},
+{
+"museum": "the Guggenheim",
+"title": "Self-Portrait",
+"artist": "Andy Warhol",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4183"
+},
+{
+"museum": "the Guggenheim",
+"title": "OVER AND OVER. OVER AND OVER. AND OVER AND OVER. AND OVER AND OVER.",
+"artist": "Lawrence Weiner",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4212"
+},
+{
+"museum": "the Guggenheim",
+"title": "Tragedy and Comedy",
+"artist": "Jacob Lawrence",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/42189"
+},
+{
+"museum": "the Guggenheim",
+"title": "Pushkin",
+"artist": "Barbara Chase-Riboud",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/43532"
+},
+{
+"museum": "the Guggenheim",
+"title": "Les Reines de France",
+"artist": "Anselm Kiefer",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/4434"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled (Broken Crowd)",
+"artist": "Rashid Johnson",
+"year": "2020s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/44420"
+},
+{
+"museum": "the Guggenheim",
+"title": "Stay Black and Die (from the series “Things I need to do”)",
+"artist": "Rashid Johnson",
+"year": "2000s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/44423"
+},
+{
+"museum": "the Guggenheim",
+"title": "Two",
+"artist": "Lynda Benglis",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/515"
+},
+{
+"museum": "the Guggenheim",
+"title": "Fire Fountain",
+"artist": "Yves Klein",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/52"
+},
+{
+"museum": "the Guggenheim",
+"title": "Cot",
+"artist": "Robert Rauschenberg",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/5203"
+},
+{
+"museum": "the Guggenheim",
+"title": "Talisman Freeze",
+"artist": "Robert Rauschenberg",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/5205"
+},
+{
+"museum": "the Guggenheim",
+"title": "Untitled red monochrome (M 63)",
+"artist": "Yves Klein",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/5639"
+},
+{
+"museum": "the Guggenheim",
+"title": "Le Défi",
+"artist": "Louise Bourgeois",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/653"
+},
+{
+"museum": "the Guggenheim",
+"title": "Teapot on Yellow Background",
+"artist": "Georges Braque",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/679"
+},
+{
+"museum": "the Guggenheim",
+"title": "Red Lily Pads",
+"artist": "Alexander Calder",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/750"
+},
+{
+"museum": "the Guggenheim",
+"title": "Blondie",
+"artist": "Alexander Calder",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/760"
+},
+{
+"museum": "the Guggenheim",
+"title": "Dolores James",
+"artist": "John Chamberlain",
+"year": "1960s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/803"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Swimmer in the Econo-mist (painting 1)",
+"artist": "James Rosenquist",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/86"
+},
+{
+"museum": "the Guggenheim",
+"title": "Stanley II",
+"artist": "Chuck Close",
+"year": "1980s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/879"
+},
+{
+"museum": "the Guggenheim",
+"title": "Andromeda: Grand Hôtel de l’Observatoire",
+"artist": "Joseph Cornell",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/904"
+},
+{
+"museum": "the Guggenheim",
+"title": "Space Object Box: “Little Bear, etc.” motif",
+"artist": "Joseph Cornell",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/905"
+},
+{
+"museum": "the Guggenheim",
+"title": "Juliet",
+"artist": "Lynda Benglis",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/9281"
+},
+{
+"museum": "the Guggenheim",
+"title": "The Swimmer in the Econo-mist (painting 3)",
+"artist": "James Rosenquist",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/93"
+},
+{
+"museum": "the Guggenheim",
+"title": "Achrome",
+"artist": "Piero Manzoni",
+"year": "1950s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/9305"
+},
+{
+"museum": "the Guggenheim",
+"title": "Small Model VII",
+"artist": "Louise Nevelson",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/9325"
+},
+{
+"museum": "the Guggenheim",
+"title": "Puttin’ on the Ritz",
+"artist": "Cecily Brown",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/9371"
+},
+{
+"museum": "the Guggenheim",
+"title": "Loving Love",
+"artist": "Agnes Martin",
+"year": "1990s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/9606"
+},
+{
+"museum": "the Guggenheim",
+"title": "…Whose Name Was Writ in Water",
+"artist": "Willem de Kooning",
+"year": "1970s",
+"medium": "",
+"url": "https://www.guggenheim.org/artwork/997"
+},
+{
+"museum": "the Met",
+"title": "Cauliflower and Pumpkin",
+"artist": "Loïs Mailou Jones",
+"year": "1938",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/482399"
+},
+{
+"museum": "the Met",
+"title": "Self-Portrait II",
+"artist": "Horace Pippin",
+"year": "1944",
+"medium": "Oil on canvas, adhered to cardboard",
+"url": "https://www.metmuseum.org/art/collection/search/482605"
+},
+{
+"museum": "the Met",
+"title": "Rising Green",
+"artist": "Lee Krasner",
+"year": "1972",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/482672"
+},
+{
+"museum": "the Met",
+"title": "The Street",
+"artist": "Philip Guston",
+"year": "1977",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/482740"
+},
+{
+"museum": "the Met",
+"title": "White Rectangles, Number 3",
+"artist": "Irene Rice Pereira",
+"year": "1939",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/482746"
+},
+{
+"museum": "the Met",
+"title": "Attorney Street (Handball Court with Autobiographical Poem by Piñero)",
+"artist": "Martin Wong",
+"year": "1982",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/483000"
+},
+{
+"museum": "the Met",
+"title": "Mrs. N's Palace",
+"artist": "Louise Nevelson",
+"year": "1964",
+"medium": "Painted wood, mirror",
+"url": "https://www.metmuseum.org/art/collection/search/484216"
+},
+{
+"museum": "the Met",
+"title": "No. 13 (White, Red on Yellow)",
+"artist": "Mark Rothko",
+"year": "1958",
+"medium": "Oil and acrylic with powdered pigments on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/484362"
+},
+{
+"museum": "the Met",
+"title": "Self-Portrait Looking at The Last Supper",
+"artist": "Marisol",
+"year": "1982",
+"medium": "Wood, plywood, stone, plaster, aluminum, dye, charcoal",
+"url": "https://www.metmuseum.org/art/collection/search/484650"
+},
+{
+"museum": "the Met",
+"title": "Elenka",
+"artist": "Alice Neel",
+"year": "1936",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/484829"
+},
+{
+"museum": "the Met",
+"title": "Large Interior, Los Angeles",
+"artist": "David Hockney",
+"year": "1988",
+"medium": "Oil, ink on cut-and-pasted paper, on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/485302"
+},
+{
+"museum": "the Met",
+"title": "Sunflower",
+"artist": "Joan Mitchell",
+"year": "1969",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/485308"
+},
+{
+"museum": "the Met",
+"title": "Americana",
+"artist": "Charles Sheeler",
+"year": "1931",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/486014"
+},
+{
+"museum": "the Met",
+"title": "All That Rises Must Converge",
+"artist": "Barbara Chase-Riboud",
+"year": "1973",
+"medium": "Polished bronze, synthetic silk, and silk fiber",
+"url": "https://www.metmuseum.org/art/collection/search/486026"
+},
+{
+"museum": "the Met",
+"title": "Stationary Figure",
+"artist": "Philip Guston",
+"year": "1973",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/486049"
+},
+{
+"museum": "the Met",
+"title": "Woman Fixing Her Hair",
+"artist": "Elizabeth Catlett",
+"year": "1993",
+"medium": "Mahogany and opals",
+"url": "https://www.metmuseum.org/art/collection/search/486209"
+},
+{
+"museum": "the Met",
+"title": "Naked Man, Back View",
+"artist": "Lucian Freud",
+"year": "1991",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/486316"
+},
+{
+"museum": "the Met",
+"title": "Böhmen liegt am Meer (Bohemia Lies by the Sea)",
+"artist": "Anselm Kiefer",
+"year": "1996",
+"medium": "Oil, emulsion, shellac, charcoal, and powdered paint on burlap",
+"url": "https://www.metmuseum.org/art/collection/search/486996"
+},
+{
+"museum": "the Met",
+"title": "White Flag",
+"artist": "Jasper Johns",
+"year": "1955",
+"medium": "Encaustic, oil, newsprint, and charcoal on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/487065"
+},
+{
+"museum": "the Met",
+"title": "Painting",
+"artist": "Charles Henry Alston",
+"year": "1950",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488660"
+},
+{
+"museum": "the Met",
+"title": "Cow's Skull: Red, White, and Blue",
+"artist": "Georgia O'Keeffe",
+"year": "1931",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488694"
+},
+{
+"museum": "the Met",
+"title": "Office in a Small City",
+"artist": "Edward Hopper",
+"year": "1953",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488730"
+},
+{
+"museum": "the Met",
+"title": "The Cathedrals of Art",
+"artist": "Florine Stettheimer",
+"year": "1942",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488732"
+},
+{
+"museum": "the Met",
+"title": "Kouros",
+"artist": "Isamu Noguchi",
+"year": "1945",
+"medium": "Marble",
+"url": "https://www.metmuseum.org/art/collection/search/488755"
+},
+{
+"museum": "the Met",
+"title": "Water of the Flowery Mill",
+"artist": "Arshile Gorky",
+"year": "1944",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488915"
+},
+{
+"museum": "the Met",
+"title": "Easter Monday",
+"artist": "Willem de Kooning",
+"year": "1955",
+"medium": "Oil and newspaper transfer on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488916"
+},
+{
+"museum": "the Met",
+"title": "Autumn Rhythm: Number 30, 1950",
+"artist": "Jackson Pollock",
+"year": "1950",
+"medium": "Oil-modified alkyd resin on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/488978"
+},
+{
+"museum": "the Met",
+"title": "Blue Green Red",
+"artist": "Ellsworth Kelly",
+"year": "1963",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/489307"
+},
+{
+"museum": "the Met",
+"title": "Third Avenue El",
+"artist": "Hedda Sterne",
+"year": "1952",
+"medium": "Oil and spray enamel on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/489321"
+},
+{
+"museum": "the Met",
+"title": "The Beginning",
+"artist": "Max Beckmann",
+"year": "1946",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/489625"
+},
+{
+"museum": "the Met",
+"title": "Grape Wine",
+"artist": "Andrew Wyeth",
+"year": "1966",
+"medium": "Tempera on Masonite",
+"url": "https://www.metmuseum.org/art/collection/search/489674"
+},
+{
+"museum": "the Met",
+"title": "Delirious Hem",
+"artist": "Ellen Gallagher",
+"year": "1995",
+"medium": "Graphite and colored pencil on cut and torn pasted papers mounted on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/490064"
+},
+{
+"museum": "the Met",
+"title": "Before and After I",
+"artist": "Andy Warhol",
+"year": "1961",
+"medium": "Casein on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/490117"
+},
+{
+"museum": "the Met",
+"title": "Ethel Scull 36 Times",
+"artist": "Andy Warhol",
+"year": "1963",
+"medium": "Acrylic and silkscreen on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/490127"
+},
+{
+"museum": "the Met",
+"title": "Take Off",
+"artist": "Helen Frankenthaler",
+"year": "1956",
+"medium": "Oil and enamel on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/490184"
+},
+{
+"museum": "the Met",
+"title": "Self-Portrait",
+"artist": "Leonora Carrington",
+"year": "1937",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/492697"
+},
+{
+"museum": "the Met",
+"title": "Being With (Être Avec)",
+"artist": "Roberto Matta",
+"year": "1946",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/493210"
+},
+{
+"museum": "the Met",
+"title": "Winter Pool",
+"artist": "Robert Rauschenberg",
+"year": "1959",
+"medium": "Combine painting: oil, paper, fabric, wood, metal, sandpaper, tape, printed paper, printed reproductions, handheld bellows, and found painting, on two canvases, with ladder",
+"url": "https://www.metmuseum.org/art/collection/search/494509"
+},
+{
+"museum": "the Met",
+"title": "Head I",
+"artist": "Francis Bacon",
+"year": "1947",
+"medium": "Oil and tempera on board",
+"url": "https://www.metmuseum.org/art/collection/search/494826"
+},
+{
+"museum": "the Met",
+"title": "August Encampment",
+"artist": "Jaune Quick-to-See Smith, Enrolled Salish member of the Confederated Salish and Kootenai Tribes of the Flathead Reservation",
+"year": "1988",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/495248"
+},
+{
+"museum": "the Met",
+"title": "Dusasa II",
+"artist": "El Anatsui",
+"year": "2007",
+"medium": "Found aluminum, copper wire, and plastic disks",
+"url": "https://www.metmuseum.org/art/collection/search/495553"
+},
+{
+"museum": "the Met",
+"title": "Wallowa Mountains Memory, Variation",
+"artist": "Kay WalkingStick",
+"year": "2004",
+"medium": "Oil and gold leaf on wood panel",
+"url": "https://www.metmuseum.org/art/collection/search/495554"
+},
+{
+"museum": "the Met",
+"title": "Fair of Face, Full of Woe",
+"artist": "Cecily Brown",
+"year": "2008",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/497143"
+},
+{
+"museum": "the Met",
+"title": "Night Journey",
+"artist": "Frank Bowling",
+"year": "1969",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/499035"
+},
+{
+"museum": "the Met",
+"title": "Love Letter I",
+"artist": "Anwar Jalal Shemza",
+"year": "1969",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/499568"
+},
+{
+"museum": "the Met",
+"title": "Red Roses Sonata",
+"artist": "Alma Thomas",
+"year": "1972",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/632918"
+},
+{
+"museum": "the Met",
+"title": "Crack Between the Floorboards",
+"artist": "Mark Bradford",
+"year": "2014",
+"medium": "Printed and painted paper, masking tape, and acrylic media on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/651079"
+},
+{
+"museum": "the Met",
+"title": "History Refused to Die",
+"artist": "Thornton Dial",
+"year": "2004",
+"medium": "Okra stalks and roots, clothing, collaged drawings, tin, wire, steel, Masonite, steel chain, enamel, and spray paint",
+"url": "https://www.metmuseum.org/art/collection/search/653727"
+},
+{
+"museum": "the Met",
+"title": "Mountain Devil Lizard Dreaming-Sand-Hill Country (after Hailstorm)",
+"artist": "Kathleen Petyarre",
+"year": "2000",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/655833"
+},
+{
+"museum": "the Met",
+"title": "Untitled (Studio)",
+"artist": "Kerry James Marshall",
+"year": "2014",
+"medium": "Acrylic on PVC panels",
+"url": "https://www.metmuseum.org/art/collection/search/669451"
+},
+{
+"museum": "the Met",
+"title": "Let My People Go",
+"artist": "Aaron Douglas",
+"year": "1935",
+"medium": "Oil on Masonite",
+"url": "https://www.metmuseum.org/art/collection/search/676458"
+},
+{
+"museum": "the Met",
+"title": "Alphabet No. 2",
+"artist": "Ibrahim El-Salahi",
+"year": "1962",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/702950"
+},
+{
+"museum": "the Met",
+"title": "Gigantomachy II",
+"artist": "Leon Golub",
+"year": "1966",
+"medium": "Acrylic on linen",
+"url": "https://www.metmuseum.org/art/collection/search/725889"
+},
+{
+"museum": "the Met",
+"title": "The Liar, the copy of the Liar - 1",
+"artist": "Francis Alÿs",
+"year": "1991",
+"medium": "Enamel on metal sheet, oil on paperboard with masking tape and oil and wax on canvas glued to particle board",
+"url": "https://www.metmuseum.org/art/collection/search/733808"
+},
+{
+"museum": "the Met",
+"title": "Structure with One Thousand Pieces",
+"artist": "Saloua Raouda Choucair",
+"year": "1966",
+"medium": "Wood and metal nofixtures",
+"url": "https://www.metmuseum.org/art/collection/search/742937"
+},
+{
+"museum": "the Met",
+"title": "Old Colored School",
+"artist": "Beverly Buchanan",
+"year": "2010",
+"medium": "Wood and paint",
+"url": "https://www.metmuseum.org/art/collection/search/748495"
+},
+{
+"museum": "the Met",
+"title": "Aranyani",
+"artist": "Mrinalini Mukherjee",
+"year": "1996",
+"medium": "Hemp",
+"url": "https://www.metmuseum.org/art/collection/search/749860"
+},
+{
+"museum": "the Met",
+"title": "Fly the Wild",
+"artist": "Stanley Whitney",
+"year": "2017",
+"medium": "Oil on linen canvas",
+"url": "https://www.metmuseum.org/art/collection/search/752049"
+},
+{
+"museum": "the Met",
+"title": "Homage To Malcolm",
+"artist": "Jack Whitten",
+"year": "1965",
+"medium": "Wood, metal and paint",
+"url": "https://www.metmuseum.org/art/collection/search/768411"
+},
+{
+"museum": "the Met",
+"title": "Andrea Motley Crabtree, the first",
+"artist": "Henry Taylor",
+"year": "2017",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/769369"
+},
+{
+"museum": "the Met",
+"title": "Single Form (Eikon)",
+"artist": "Barbara Hepworth",
+"year": "1937",
+"medium": "Bronze",
+"url": "https://www.metmuseum.org/art/collection/search/777685"
+},
+{
+"museum": "the Met",
+"title": "Towards a Homoerotic Historiography",
+"artist": "Carlos Motta",
+"year": "2013",
+"medium": "Eleven gold-washed metal figures and ten tumbaga-washed metal figures",
+"url": "https://www.metmuseum.org/art/collection/search/784631"
+},
+{
+"museum": "the Met",
+"title": "Necklacing",
+"artist": "Michael Armitage",
+"year": "2016",
+"medium": "Oil on lubugo barkcloth",
+"url": "https://www.metmuseum.org/art/collection/search/785431"
+},
+{
+"museum": "the Met",
+"title": "Carousel State",
+"artist": "Sam Gilliam",
+"year": "1968",
+"medium": "Acrylic and aluminum powder on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/786826"
+},
+{
+"museum": "the Met",
+"title": "Two Trees",
+"artist": "Peter Doig",
+"year": "2017",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/812918"
+},
+{
+"museum": "the Met",
+"title": "House of Cards (5 Panes)",
+"artist": "Gerhard Richter",
+"year": "2019",
+"medium": "Glass and steel",
+"url": "https://www.metmuseum.org/art/collection/search/816148"
+},
+{
+"museum": "the Met",
+"title": "An Ear of Mud, An Ear of Paste",
+"artist": "Abdel Hadi El-Gazzar",
+"year": "1951",
+"medium": "Oil on paperboard",
+"url": "https://www.metmuseum.org/art/collection/search/816458"
+},
+{
+"museum": "the Met",
+"title": "Continual Light Cylinder",
+"artist": "Julio Le Parc",
+"year": "1962",
+"medium": "Wood, acrylic sheet, projectors, and motors",
+"url": "https://www.metmuseum.org/art/collection/search/816628"
+},
+{
+"museum": "the Met",
+"title": "Iberic",
+"artist": "Carmen Herrera",
+"year": "1949",
+"medium": "Acrylic on canvas on board",
+"url": "https://www.metmuseum.org/art/collection/search/817303"
+},
+{
+"museum": "the Met",
+"title": "Two horses",
+"artist": "Charles Ray",
+"year": "2019",
+"medium": "Granite",
+"url": "https://www.metmuseum.org/art/collection/search/825497"
+},
+{
+"museum": "the Met",
+"title": "mistikôsiwak (Wooden Boat People): Welcoming the Newcomers",
+"artist": "Kent Monkman",
+"year": "2019",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/830024"
+},
+{
+"museum": "the Met",
+"title": "The Seated I",
+"artist": "Wangechi Mutu",
+"year": "2019",
+"medium": "Bronze",
+"url": "https://www.metmuseum.org/art/collection/search/830453"
+},
+{
+"museum": "the Met",
+"title": "Livro Noite e Dia (Book of Night and Day)",
+"artist": "Lygia Pape",
+"year": "1963",
+"medium": "Acrylic on wood, 30 parts",
+"url": "https://www.metmuseum.org/art/collection/search/838205"
+},
+{
+"museum": "the Met",
+"title": "Jucambe",
+"artist": "Agustín Cárdenas",
+"year": "1958",
+"medium": "Burnt oak and metal",
+"url": "https://www.metmuseum.org/art/collection/search/838643"
+},
+{
+"museum": "the Met",
+"title": "Drawing without paper 86/18",
+"artist": "Gego (Gertrud Goldschmidt)",
+"year": "1986",
+"medium": "painted iron rod, aluminum, and nylon",
+"url": "https://www.metmuseum.org/art/collection/search/841074"
+},
+{
+"museum": "the Met",
+"title": "Bribes de corps #296",
+"artist": "Huguette Caland",
+"year": "1973",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/843659"
+},
+{
+"museum": "the Met",
+"title": "Portrait of Elke I",
+"artist": "Georg Baselitz",
+"year": "1969",
+"medium": "Synthetic resin emulsion paints (Dispersionsfarbe) on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/844405"
+},
+{
+"museum": "the Met",
+"title": "The Broken Five",
+"artist": "Rashid Johnson",
+"year": "2019",
+"medium": "Ceramic, mirrored glass, spray paint, wood, brass, oil stick, black soap, and wax",
+"url": "https://www.metmuseum.org/art/collection/search/845852"
+},
+{
+"museum": "the Met",
+"title": "Conversion (S.M. del Popolo/after C.)",
+"artist": "Julie Mehretu",
+"year": "2019",
+"medium": "Ink and acrylic on canvas\r\nLIGT LEVELS RESTRICTIONS per Cons: fluorescent paints: 8-10ftc max",
+"url": "https://www.metmuseum.org/art/collection/search/848796"
+},
+{
+"museum": "the Met",
+"title": "The Guide (Éclaireur)",
+"artist": "Hervé Télémaque",
+"year": "1962",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/848826"
+},
+{
+"museum": "the Met",
+"title": "Pintura Constructiva",
+"artist": "Joaquín Torres-García",
+"year": "1931",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/851349"
+},
+{
+"museum": "the Met",
+"title": "Large Jug",
+"artist": "Simone Leigh",
+"year": "2021",
+"medium": "Stoneware",
+"url": "https://www.metmuseum.org/art/collection/search/852917"
+},
+{
+"museum": "the Met",
+"title": "The Abolitionists in the Park",
+"artist": "Nicole Eisenman",
+"year": "2020",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/875741"
+},
+{
+"museum": "the Met",
+"title": "Fall",
+"artist": "Sudhir Patwardhan",
+"year": "1998",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/890800"
+},
+{
+"museum": "the Met",
+"title": "The Village Where I Came From",
+"artist": "Pacita Abad",
+"year": "1991",
+"medium": "Acrylic, oil, buttons, beads, and painted cloth on stitched and padded canvas",
+"url": "https://www.metmuseum.org/art/collection/search/892409"
+},
+{
+"museum": "the Met",
+"title": "Colombe d'Or",
+"artist": "David Diao",
+"year": "1972",
+"medium": "Acrylic on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/892457"
+},
+{
+"museum": "the Met",
+"title": "The Arts",
+"artist": "Uzo Egonu",
+"year": "1973",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/892461"
+},
+{
+"museum": "the Met",
+"title": "End of the Day",
+"artist": "Matthew Wong",
+"year": "2019",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/895906"
+},
+{
+"museum": "the Met",
+"title": "Blue Cryptobiosis #10",
+"artist": "Christine Ay Tjoe",
+"year": "2021",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/895946"
+},
+{
+"museum": "the Met",
+"title": "Release",
+"artist": "Rose B. Simpson",
+"year": "2022",
+"medium": "Clay, steel, twine and grout",
+"url": "https://www.metmuseum.org/art/collection/search/897893"
+},
+{
+"museum": "the Met",
+"title": "Work #9",
+"artist": "Aiko Miyawaki",
+"year": "1968",
+"medium": "Brass",
+"url": "https://www.metmuseum.org/art/collection/search/899216"
+},
+{
+"museum": "the Met",
+"title": "No. 43",
+"artist": "Yoshio Sekine",
+"year": "1965",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/901207"
+},
+{
+"museum": "the Met",
+"title": "Minotauro Morente",
+"artist": "Bahman Mohassess",
+"year": "1966",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/904106"
+},
+{
+"museum": "the Met",
+"title": "The Mete of the Muse",
+"artist": "Fred Wilson",
+"year": "2006",
+"medium": "Bronze, patina, paint",
+"url": "https://www.metmuseum.org/art/collection/search/909326"
+},
+{
+"museum": "the Met",
+"title": "Untitled Self-Portrait",
+"artist": "Eileen Agar",
+"year": "1949",
+"medium": "Oil on board",
+"url": "https://www.metmuseum.org/art/collection/search/909908"
+},
+{
+"museum": "the Met",
+"title": "Evergreen Beauty",
+"artist": "Yeung Tong Lung",
+"year": "2017",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/910299"
+},
+{
+"museum": "the Met",
+"title": "Black wall",
+"artist": "Sarah Grilo",
+"year": "1967",
+"medium": "Oil on canvas",
+"url": "https://www.metmuseum.org/art/collection/search/912363"
+},
+{
+"museum": "the Met",
+"title": "Split 4",
+"artist": "Amy Sillman",
+"year": "2020",
+"medium": "Acrylic and oil on linen",
+"url": "https://www.metmuseum.org/art/collection/search/913107"
+},
+{
 "museum": "MoMA",
 "title": "Gun with Hand #1",
 "artist": "Vija Celmins",
@@ -1049,17 +3505,9 @@
 },
 {
 "museum": "MoMA",
-"title": "Edge of Town",
-"artist": "Philip Guston",
-"year": "1969",
-"medium": "Oil on canvas",
-"url": "https://www.moma.org/collection/works/100250"
-},
-{
-"museum": "MoMA",
 "title": "Energy",
 "artist": "Mangelos (Dimitrije Bašičević)",
-"year": "1977-1978",
+"year": "1977",
 "medium": "Synthetic polymer paint on wood panel",
 "url": "https://www.moma.org/collection/works/101474"
 },
@@ -1075,7 +3523,7 @@
 "museum": "MoMA",
 "title": "In Advance of the Broken Arm",
 "artist": "Marcel Duchamp",
-"year": "August 1964 (fourth version, after lost original of November 1915)",
+"year": "1964",
 "medium": "Wood and galvanized-iron snow shovel",
 "url": "https://www.moma.org/collection/works/105050"
 },
@@ -1099,7 +3547,7 @@
 "museum": "MoMA",
 "title": "Living: You should limit the number of times...",
 "artist": "Jenny Holzer",
-"year": "1980-82",
+"year": "1980",
 "medium": "Bronze",
 "url": "https://www.moma.org/collection/works/106989"
 },
@@ -1107,7 +3555,7 @@
 "museum": "MoMA",
 "title": "Living: Some days you wake up and immediately...",
 "artist": "Jenny Holzer",
-"year": "1980-82",
+"year": "1980",
 "medium": "Bronze",
 "url": "https://www.moma.org/collection/works/106991"
 },
@@ -1161,14 +3609,6 @@
 },
 {
 "museum": "MoMA",
-"title": "iamb (The Limbo of Vanity): Chapter 12",
-"artist": "R. H. Quaytman",
-"year": "2008",
-"medium": "Oil, silkscreen ink, and gesso on wood",
-"url": "https://www.moma.org/collection/works/128999"
-},
-{
-"museum": "MoMA",
 "title": "Untitled <em>from the series</em> Hourglasses",
 "artist": "Alfredo Volpi",
 "year": "1964",
@@ -1179,7 +3619,7 @@
 "museum": "MoMA",
 "title": "Sky Machine",
 "artist": "Yoko Ono",
-"year": "1961/1966",
+"year": "1961",
 "medium": "Stainless steel dispenser with engraving, stainless steel pedestal, painted steel base, and cards with pencil inscriptions",
 "url": "https://www.moma.org/collection/works/131637"
 },
@@ -1235,7 +3675,7 @@
 "museum": "MoMA",
 "title": "What Will Become of Me",
 "artist": "Adrian Piper",
-"year": "1985, ongoing",
+"year": "1985",
 "medium": "Framed text, glass jars, shelf, hair, fingernails, and skin",
 "url": "https://www.moma.org/collection/works/153243"
 },
@@ -1259,7 +3699,7 @@
 "museum": "MoMA",
 "title": "Pension Cadiz from H-Fact: Hospitality/Hostility",
 "artist": "Hüseyin Bahri Alptekin",
-"year": "2003-07",
+"year": "2003",
 "medium": "Light box",
 "url": "https://www.moma.org/collection/works/160455"
 },
@@ -1267,25 +3707,9 @@
 "museum": "MoMA",
 "title": "Motel Beirut from H-Fact: Hospitality/Hostility",
 "artist": "Hüseyin Bahri Alptekin",
-"year": "2003-07",
+"year": "2003",
 "medium": "Light box",
 "url": "https://www.moma.org/collection/works/160507"
-},
-{
-"museum": "MoMA",
-"title": "Hotel Estambul from H-Fact: Hospitality/Hostility",
-"artist": "Hüseyin Bahri Alptekin",
-"year": "2003-07",
-"medium": "Light box",
-"url": "https://www.moma.org/collection/works/160508"
-},
-{
-"museum": "MoMA",
-"title": "Construction with Curved Forms",
-"artist": "Joaquín Torres-García",
-"year": "1931",
-"medium": "Oil and nails on wood",
-"url": "https://www.moma.org/collection/works/164938"
 },
 {
 "museum": "MoMA",
@@ -1307,7 +3731,7 @@
 "museum": "MoMA",
 "title": "Broken Dance, Ethnic Heritage Series",
 "artist": "John Outterbridge",
-"year": "c. 1978-82",
+"year": "1978",
 "medium": "Stainless steel, wood, leather, sewn cloth, and ammunition box",
 "url": "https://www.moma.org/collection/works/166351"
 },
@@ -1377,6 +3801,14 @@
 },
 {
 "museum": "MoMA",
+"title": "Untitled. Transformable Structure",
+"artist": "Sandu Darie",
+"year": "1950s",
+"medium": "Oil on hinged wood elements",
+"url": "https://www.moma.org/collection/works/204788"
+},
+{
+"museum": "MoMA",
 "title": "Cocoon no. 2",
 "artist": "Lygia Clark",
 "year": "1959",
@@ -1425,14 +3857,6 @@
 },
 {
 "museum": "MoMA",
-"title": "Displacement of a Luminous Element",
-"artist": "Jesús Rafael Soto",
-"year": "1954",
-"medium": "Vinyl on plexiglass and tempera on board and wood",
-"url": "https://www.moma.org/collection/works/205999"
-},
-{
-"museum": "MoMA",
 "title": "2x-2",
 "artist": "Rubem Valentim",
 "year": "1960",
@@ -1462,14 +3886,6 @@
 "year": "1969",
 "medium": "Wood and painted wood, in 7 parts",
 "url": "https://www.moma.org/collection/works/290963"
-},
-{
-"museum": "MoMA",
-"title": "MAY 20, 1967",
-"artist": "On Kawara",
-"year": "1967",
-"medium": "Acrylic on canvas",
-"url": "https://www.moma.org/collection/works/293592"
 },
 {
 "museum": "MoMA",
@@ -1555,7 +3971,7 @@
 "museum": "MoMA",
 "title": "Blue Composition",
 "artist": "Alexander \"Skunder\" Boghossian",
-"year": "c. 1966-68",
+"year": "1966",
 "medium": "Acrylic and gouache on panel",
 "url": "https://www.moma.org/collection/works/436064"
 },
@@ -1595,7 +4011,7 @@
 "museum": "MoMA",
 "title": "The Boudoir",
 "artist": "Gwendolyn Knight Lawrence",
-"year": "c. 1941",
+"year": "1941",
 "medium": "Tempera on board",
 "url": "https://www.moma.org/collection/works/466100"
 },
@@ -1603,7 +4019,7 @@
 "museum": "MoMA",
 "title": "Thought Comes from the Body II",
 "artist": "Seth Price",
-"year": "2022-23",
+"year": "2022",
 "medium": "Acrylic paint, polymers, and UV-print on aluminum composite, two panels",
 "url": "https://www.moma.org/collection/works/466103"
 },
@@ -1659,7 +4075,7 @@
 "museum": "MoMA",
 "title": "Composition in White, Black, and Red",
 "artist": "Piet Mondrian",
-"year": "Paris 1936",
+"year": "1936",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/78310"
 },
@@ -1667,7 +4083,7 @@
 "museum": "MoMA",
 "title": "Girl before a Mirror",
 "artist": "Pablo Picasso",
-"year": "Paris, March 14, 1932",
+"year": "1932",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/78311"
 },
@@ -1827,7 +4243,7 @@
 "museum": "MoMA",
 "title": "Flag",
 "artist": "Jasper Johns",
-"year": "1954-55  (dated on reverse 1954)",
+"year": "1954",
 "medium": "Encaustic, oil, and collage on fabric mounted on plywood, three panels",
 "url": "https://www.moma.org/collection/works/78805"
 },
@@ -1851,7 +4267,7 @@
 "museum": "MoMA",
 "title": "Torso, III",
 "artist": "Leon Golub",
-"year": "December 3, 1960",
+"year": "1960",
 "medium": "Oil and lacquer on canvas",
 "url": "https://www.moma.org/collection/works/78865"
 },
@@ -1867,7 +4283,7 @@
 "museum": "MoMA",
 "title": "The Glory of the Kings",
 "artist": "Erol (Erol Akyavas)",
-"year": "1959?",
+"year": "1959",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/78928"
 },
@@ -1923,17 +4339,9 @@
 "museum": "MoMA",
 "title": "Vir Heroicus Sublimis",
 "artist": "Barnett Newman",
-"year": "1950-51",
+"year": "1950",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/79250"
-},
-{
-"museum": "MoMA",
-"title": "Echo: Number 25, 1951",
-"artist": "Jackson Pollock",
-"year": "1951",
-"medium": "Enamel paint on canvas",
-"url": "https://www.moma.org/collection/works/79251"
 },
 {
 "museum": "MoMA",
@@ -1955,7 +4363,7 @@
 "museum": "MoMA",
 "title": "Fulang-Chang and I",
 "artist": "Frida Kahlo",
-"year": "1937 (assembled after 1939)",
+"year": "1937",
 "medium": "In two parts, oil on board (1937) with painted mirror frame (added after 1939); and mirror with painted mirror frame (after 1939)",
 "url": "https://www.moma.org/collection/works/79374"
 },
@@ -2019,17 +4427,9 @@
 "museum": "MoMA",
 "title": "The Kitchen",
 "artist": "Pablo Picasso",
-"year": "Paris, November 1948",
+"year": "1948",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/79668"
-},
-{
-"museum": "MoMA",
-"title": "Slow Swirl at the Edge of the Sea",
-"artist": "Mark Rothko",
-"year": "1944",
-"medium": "Oil on canvas",
-"url": "https://www.moma.org/collection/works/79691"
 },
 {
 "museum": "MoMA",
@@ -2046,14 +4446,6 @@
 "year": "1966",
 "medium": "Oil on canvas, in two parts",
 "url": "https://www.moma.org/collection/works/79717"
-},
-{
-"museum": "MoMA",
-"title": "Gold Marilyn Monroe",
-"artist": "Andy Warhol",
-"year": "1962",
-"medium": "Silkscreen ink and acrylic on canvas",
-"url": "https://www.moma.org/collection/works/79737"
 },
 {
 "museum": "MoMA",
@@ -2075,7 +4467,7 @@
 "museum": "MoMA",
 "title": "F-111",
 "artist": "James Rosenquist",
-"year": "1964-65",
+"year": "1964",
 "medium": "Oil on canvas with aluminum, twenty-three sections",
 "url": "https://www.moma.org/collection/works/79805"
 },
@@ -2123,7 +4515,7 @@
 "museum": "MoMA",
 "title": "The Portrait",
 "artist": "René Magritte",
-"year": "Brussels 1935",
+"year": "1935",
 "medium": "Oil on canvas",
 "url": "https://www.moma.org/collection/works/79990"
 },
@@ -2209,14 +4601,6 @@
 },
 {
 "museum": "MoMA",
-"title": "Woman Dressing Her Hair",
-"artist": "Pablo Picasso",
-"year": "Royan, June 1940",
-"medium": "Oil on canvas",
-"url": "https://www.moma.org/collection/works/80360"
-},
-{
-"museum": "MoMA",
 "title": "Fission",
 "artist": "Bridget Riley",
 "year": "1962",
@@ -2267,7 +4651,7 @@
 "museum": "MoMA",
 "title": "Self-Portrait I",
 "artist": "Joan Miró",
-"year": "Paris, October 1937-March 1938",
+"year": "1937",
 "medium": "Pencil, crayon, and oil on canvas",
 "url": "https://www.moma.org/collection/works/80604"
 },
@@ -2283,7 +4667,7 @@
 "museum": "MoMA",
 "title": "Grand Jazz Band (New Orleans)",
 "artist": "Jean Dubuffet",
-"year": "December 1944",
+"year": "1944",
 "medium": "Oil and tempera on canvas",
 "url": "https://www.moma.org/collection/works/80669"
 },
@@ -2299,7 +4683,7 @@
 "museum": "MoMA",
 "title": "Artist's Shit No. 014",
 "artist": "Piero Manzoni",
-"year": "May 1961",
+"year": "1961",
 "medium": "Metal, paper, and “artist’s shit”",
 "url": "https://www.moma.org/collection/works/80768"
 },
@@ -2307,7 +4691,7 @@
 "museum": "MoMA",
 "title": "The Back (IV)",
 "artist": "Henri Matisse",
-"year": "Nice, place Charles-Félix, c. 1931",
+"year": "1931",
 "medium": "Bronze",
 "url": "https://www.moma.org/collection/works/80778"
 },
@@ -2363,7 +4747,7 @@
 "museum": "MoMA",
 "title": "Object",
 "artist": "Meret Oppenheim",
-"year": "Paris, 1936",
+"year": "1936",
 "medium": "Fur-covered cup, saucer, and spoon",
 "url": "https://www.moma.org/collection/works/80997"
 },
@@ -2435,7 +4819,7 @@
 "museum": "MoMA",
 "title": "Bird-Head (Oiseau-tête)",
 "artist": "Max Ernst",
-"year": "1934-35",
+"year": "1934",
 "medium": "Bronze",
 "url": "https://www.moma.org/collection/works/81224"
 },
@@ -2449,17 +4833,9 @@
 },
 {
 "museum": "MoMA",
-"title": "Retrospective Bust of a Woman",
-"artist": "Salvador Dalí",
-"year": "1933 (some elements reconstructed 1970)",
-"medium": "Painted porcelain, bread, corn, feathers, paint on paper, beads, ink stand, sand, and two pens",
-"url": "https://www.moma.org/collection/works/81329"
-},
-{
-"museum": "MoMA",
 "title": "Table Piece LXXXVIII (The Deluge)",
 "artist": "Anthony Caro",
-"year": "1969-70",
+"year": "1969",
 "medium": "Painted steel",
 "url": "https://www.moma.org/collection/works/81375"
 },
@@ -2491,7 +4867,7 @@
 "museum": "MoMA",
 "title": "Self-Portrait",
 "artist": "Max Beckmann",
-"year": "1936 (cast 1951)",
+"year": "1936",
 "medium": "Bronze",
 "url": "https://www.moma.org/collection/works/81517"
 },
@@ -2531,7 +4907,7 @@
 "museum": "MoMA",
 "title": "Pastry Case, I",
 "artist": "Claes Oldenburg",
-"year": "1961-62",
+"year": "1961",
 "medium": "Burlap and muslin soaked in plaster, painted with enamel, metal bowls, and ceramic plates in glass-and-metal case",
 "url": "https://www.moma.org/collection/works/81721"
 },
@@ -2539,7 +4915,7 @@
 "museum": "MoMA",
 "title": "Apartment",
 "artist": "Isamu Noguchi",
-"year": "Kamakura, 1952",
+"year": "1952",
 "medium": "Unglazed Seto red stoneware",
 "url": "https://www.moma.org/collection/works/81740"
 },
@@ -2561,9 +4937,17 @@
 },
 {
 "museum": "MoMA",
+"title": "Untitled (Bébé Marie)",
+"artist": "Joseph Cornell",
+"year": "1940s",
+"medium": "Papered and painted wood box, with painted corrugated cardboard bottom, containing doll in cloth dress and straw hat with cloth flowers, dried flowers, and twigs, flecked with paint",
+"url": "https://www.moma.org/collection/works/81784"
+},
+{
+"museum": "MoMA",
 "title": "The River",
 "artist": "Aristide Maillol",
-"year": "Begun 1938-39; completed 1943 (cast 1948)",
+"year": "1938",
 "medium": "Lead",
 "url": "https://www.moma.org/collection/works/81798"
 },
@@ -2579,17 +4963,9 @@
 "museum": "MoMA",
 "title": "Constellation with Red Object",
 "artist": "Alexander Calder",
-"year": "Roxbury, Connecticut, 1943",
+"year": "1943",
 "medium": "Painted wood and steel wire",
 "url": "https://www.moma.org/collection/works/81834"
-},
-{
-"museum": "MoMA",
-"title": "Brooch",
-"artist": "Alexander Calder",
-"year": "c. 1940",
-"medium": "Hammered silver",
-"url": "https://www.moma.org/collection/works/81835"
 },
 {
 "museum": "MoMA",
@@ -2603,7 +4979,7 @@
 "museum": "MoMA",
 "title": "Why Not Sneeze Rose Sélavy?",
 "artist": "Marcel Duchamp",
-"year": "1964 (replica of 1921 original)",
+"year": "1964",
 "medium": "Painted metal birdcage containing marble blocks, thermometer, and piece of cuttlebone",
 "url": "https://www.moma.org/collection/works/81966"
 },
@@ -2633,14 +5009,6 @@
 },
 {
 "museum": "MoMA",
-"title": "Giant Soft Fan",
-"artist": "Claes Oldenburg",
-"year": "1966-67",
-"medium": "Vinyl filled with foam rubber, wood, metal, and plastic tubing",
-"url": "https://www.moma.org/collection/works/82053"
-},
-{
-"museum": "MoMA",
 "title": "In the Studio",
 "artist": "Philip Guston",
 "year": "1975",
@@ -2662,5 +5030,1293 @@
 "year": "1938",
 "medium": "Glue tempera on cardboard mounted on wood",
 "url": "https://www.moma.org/collection/works/91774"
+},
+{
+"museum": "Tate",
+"title": "Noeme",
+"artist": "Tomma Abts",
+"year": "2004",
+"medium": "Oil paint and acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/abts-noeme-t12275"
+},
+{
+"museum": "Tate",
+"title": "Zebe",
+"artist": "Tomma Abts",
+"year": "2010",
+"medium": "Acrylic paint and oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/abts-zebe-t13592"
+},
+{
+"museum": "Tate",
+"title": "Angel of Anarchy",
+"artist": "Eileen Agar",
+"year": "1936",
+"medium": "Plaster, fabric, shells, beads, diamante stones and other materials",
+"url": "https://www.tate.org.uk/art/artworks/agar-angel-of-anarchy-t03809"
+},
+{
+"museum": "Tate",
+"title": "Head of Dylan Thomas",
+"artist": "Eileen Agar",
+"year": "1960",
+"medium": "Oil paint and acrylic paint on board",
+"url": "https://www.tate.org.uk/art/artworks/agar-head-of-dylan-thomas-t00492"
+},
+{
+"museum": "Tate",
+"title": "Study for Homage to the Square: Beaming",
+"artist": "Josef Albers",
+"year": "1963",
+"medium": "Oil paint on fibreboard",
+"url": "https://www.tate.org.uk/art/artworks/albers-study-for-homage-to-the-square-beaming-t02310"
+},
+{
+"museum": "Tate",
+"title": "Study for Homage to the Square: Departing in Yellow",
+"artist": "Josef Albers",
+"year": "1964",
+"medium": "Oil paint on fibreboard",
+"url": "https://www.tate.org.uk/art/artworks/albers-study-for-homage-to-the-square-departing-in-yellow-t00783"
+},
+{
+"museum": "Tate",
+"title": "3Y + 3B",
+"artist": "Rasheed Araeen",
+"year": "1969",
+"medium": "Wood, paint and metal",
+"url": "https://www.tate.org.uk/art/artworks/araeen-3y-3b-t12408"
+},
+{
+"museum": "Tate",
+"title": "Rang Baranga",
+"artist": "Rasheed Araeen",
+"year": "1969",
+"medium": "Painted wood",
+"url": "https://www.tate.org.uk/art/artworks/araeen-rang-baranga-t12409"
+},
+{
+"museum": "Tate",
+"title": "Table and Chair",
+"artist": "Richard Artschwager",
+"year": "1963",
+"medium": "Melamine and wood",
+"url": "https://www.tate.org.uk/art/artworks/artschwager-table-and-chair-t03793"
+},
+{
+"museum": "Tate",
+"title": "Tower II",
+"artist": "Richard Artschwager",
+"year": "1979",
+"medium": "Wood",
+"url": "https://www.tate.org.uk/art/artworks/artschwager-tower-ii-t07140"
+},
+{
+"museum": "Tate",
+"title": "Figure in a Landscape",
+"artist": "Francis Bacon",
+"year": "1945",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/bacon-figure-in-a-landscape-n05941"
+},
+{
+"museum": "Tate",
+"title": "Study of a Dog",
+"artist": "Francis Bacon",
+"year": "1952",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/bacon-study-of-a-dog-n06131"
+},
+{
+"museum": "Tate",
+"title": "Stations of the Spectrum (Primary)",
+"artist": "Jo Baer",
+"year": "1967",
+"medium": "Oil paint and damar resin on 3 canvases",
+"url": "https://www.tate.org.uk/art/artworks/baer-stations-of-the-spectrum-primary-t03110"
+},
+{
+"museum": "Tate",
+"title": "Folkdance Melancholia",
+"artist": "Georg Baselitz",
+"year": "1989",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/baselitz-folkdance-melancholia-ar00031"
+},
+{
+"museum": "Tate",
+"title": "Where is the Yellow Milkjug, Mrs Bird?",
+"artist": "Georg Baselitz",
+"year": "1989",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/baselitz-where-is-the-yellow-milkjug-mrs-bird-ar00032"
+},
+{
+"museum": "Tate",
+"title": "Prunier",
+"artist": "Max Beckmann",
+"year": "1944",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/beckmann-prunier-t02395"
+},
+{
+"museum": "Tate",
+"title": "Peg-Top",
+"artist": "Hans Bellmer",
+"year": "1937",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/bellmer-peg-top-t00713"
+},
+{
+"museum": "Tate",
+"title": "The Doll",
+"artist": "Hans Bellmer",
+"year": "1936",
+"medium": "Painted aluminium on brass base",
+"url": "https://www.tate.org.uk/art/artworks/bellmer-the-doll-t01157"
+},
+{
+"museum": "Tate",
+"title": "Quartered Meteor",
+"artist": "Lynda Benglis",
+"year": "1969",
+"medium": "Lead and steel on steel base",
+"url": "https://www.tate.org.uk/art/artworks/benglis-quartered-meteor-t13353"
+},
+{
+"museum": "Tate",
+"title": "Fat Chair",
+"artist": "Joseph Beuys",
+"year": "1964",
+"medium": "Wood, glass, metal, fabric, paint, fat and thermometer",
+"url": "https://www.tate.org.uk/art/artworks/beuys-fat-chair-ar00088"
+},
+{
+"museum": "Tate",
+"title": "Scala Napoletana",
+"artist": "Joseph Beuys",
+"year": "1985",
+"medium": "Wood, steel wire and lead",
+"url": "https://www.tate.org.uk/art/artworks/beuys-scala-napoletana-ar00086"
+},
+{
+"museum": "Tate",
+"title": "Amoeba",
+"artist": "Louise Bourgeois",
+"year": "1963",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/bourgeois-amoeba-t07780"
+},
+{
+"museum": "Tate",
+"title": "Cell (Eyes and Mirrors)",
+"artist": "Louise Bourgeois",
+"year": "1989",
+"medium": "Steel, limestone and glass",
+"url": "https://www.tate.org.uk/art/artworks/bourgeois-cell-eyes-and-mirrors-t06899"
+},
+{
+"museum": "Tate",
+"title": "Sacha Jason Guyana Dreams",
+"artist": "Frank Bowling",
+"year": "1989",
+"medium": "Acrylic paint and resin on canvas",
+"url": "https://www.tate.org.uk/art/artworks/bowling-sacha-jason-guyana-dreams-t12134"
+},
+{
+"museum": "Tate",
+"title": "Spreadout Ron Kitaj",
+"artist": "Frank Bowling",
+"year": "1984",
+"medium": "Acrylic paint, oil paint, acrylic gel, damar, beeswax, chalk, metallic pigments, acrylic foam, shells and plastic toys o",
+"url": "https://www.tate.org.uk/art/artworks/bowling-spreadout-ron-kitaj-t04889"
+},
+{
+"museum": "Tate",
+"title": "The Billiard Table",
+"artist": "Georges Braque",
+"year": "1945",
+"medium": "Oil paint and sand on canvas",
+"url": "https://www.tate.org.uk/art/artworks/braque-the-billiard-table-t07992"
+},
+{
+"museum": "Tate",
+"title": "Paintings",
+"artist": "Marcel Broodthaers",
+"year": "1973",
+"medium": "Oil paint on 9 canvases",
+"url": "https://www.tate.org.uk/art/artworks/broodthaers-paintings-t03696"
+},
+{
+"museum": "Tate",
+"title": "Trouble in Paradise",
+"artist": "Cecily Brown",
+"year": "1999",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/brown-trouble-in-paradise-t07606"
+},
+{
+"museum": "Tate",
+"title": "Antennae with Red and Blue Dots",
+"artist": "Alexander Calder",
+"year": "1960",
+"medium": "Aluminium and steel wire",
+"url": "https://www.tate.org.uk/art/artworks/calder-antennae-with-red-and-blue-dots-t00541"
+},
+{
+"museum": "Tate",
+"title": "T and Swallow",
+"artist": "Alexander Calder",
+"year": "1936",
+"medium": "Wood and steel",
+"url": "https://www.tate.org.uk/art/artworks/calder-t-and-swallow-t01142"
+},
+{
+"museum": "Tate",
+"title": "Bouquet with Flying Lovers",
+"artist": "Marc Chagall",
+"year": "1934",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/chagall-bouquet-with-flying-lovers-n05804"
+},
+{
+"museum": "Tate",
+"title": "The Dance and the Circus",
+"artist": "Marc Chagall",
+"year": "1950",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/chagall-the-dance-and-the-circus-n06135"
+},
+{
+"museum": "Tate",
+"title": "Kora",
+"artist": "John Chamberlain",
+"year": "1963",
+"medium": "Painted steel",
+"url": "https://www.tate.org.uk/art/artworks/chamberlain-kora-t01094"
+},
+{
+"museum": "Tate",
+"title": "Infinite Structure",
+"artist": "Saloua Raouda Choucair",
+"year": "1963",
+"medium": "Tufa stone",
+"url": "https://www.tate.org.uk/art/artworks/choucair-infinite-structure-t13262"
+},
+{
+"museum": "Tate",
+"title": "Poem",
+"artist": "Saloua Raouda Choucair",
+"year": "1963",
+"medium": "Wood",
+"url": "https://www.tate.org.uk/art/artworks/choucair-poem-t13278"
+},
+{
+"museum": "Tate",
+"title": "Autumnal Cannibalism",
+"artist": "Salvador Dalí",
+"year": "1936",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dali-autumnal-cannibalism-t01978"
+},
+{
+"museum": "Tate",
+"title": "Forgotten Horizon",
+"artist": "Salvador Dalí",
+"year": "1936",
+"medium": "Oil paint on mahogany",
+"url": "https://www.tate.org.uk/art/artworks/dali-forgotten-horizon-t01078"
+},
+{
+"museum": "Tate",
+"title": "Leda",
+"artist": "Paul Delvaux",
+"year": "1948",
+"medium": "Oil paint on board",
+"url": "https://www.tate.org.uk/art/artworks/delvaux-leda-t03361"
+},
+{
+"museum": "Tate",
+"title": "Sleeping Venus",
+"artist": "Paul Delvaux",
+"year": "1944",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/delvaux-sleeping-venus-t00134"
+},
+{
+"museum": "Tate",
+"title": "Walking Dream with Four Foot Clamp",
+"artist": "Jim Dine",
+"year": "1965",
+"medium": "Oil paint, charcoal and steel on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dine-walking-dream-with-four-foot-clamp-t00761"
+},
+{
+"museum": "Tate",
+"title": "Echo Lake",
+"artist": "Peter Doig",
+"year": "1998",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/doig-echo-lake-t07467"
+},
+{
+"museum": "Tate",
+"title": "Ski Jacket",
+"artist": "Peter Doig",
+"year": "1994",
+"medium": "Oil paint on 2 canvases",
+"url": "https://www.tate.org.uk/art/artworks/doig-ski-jacket-t06962"
+},
+{
+"museum": "Tate",
+"title": "Spinning Round",
+"artist": "Jean Dubuffet",
+"year": "1961",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dubuffet-spinning-round-t00801"
+},
+{
+"museum": "Tate",
+"title": "The Busy Life",
+"artist": "Jean Dubuffet",
+"year": "1953",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dubuffet-the-busy-life-t00867"
+},
+{
+"museum": "Tate",
+"title": "Dart Object",
+"artist": "Marcel Duchamp",
+"year": "1951",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/duchamp-dart-object-t07280"
+},
+{
+"museum": "Tate",
+"title": "Female Fig Leaf",
+"artist": "Marcel Duchamp",
+"year": "1950",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/duchamp-female-fig-leaf-t07279"
+},
+{
+"museum": "Tate",
+"title": "Ivory Black",
+"artist": "Marlene Dumas",
+"year": "1997",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dumas-ivory-black-t07459"
+},
+{
+"museum": "Tate",
+"title": "Lead White",
+"artist": "Marlene Dumas",
+"year": "1997",
+"medium": "Oil paint and oil stick on canvas",
+"url": "https://www.tate.org.uk/art/artworks/dumas-lead-white-t07458"
+},
+{
+"museum": "Tate",
+"title": "Nature",
+"artist": "Lucio Fontana",
+"year": "1959",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/fontana-nature-t03588"
+},
+{
+"museum": "Tate",
+"title": "Francis Bacon",
+"artist": "Lucian Freud",
+"year": "1952",
+"medium": "Oil paint on metal",
+"url": "https://www.tate.org.uk/art/artworks/freud-francis-bacon-n06040"
+},
+{
+"museum": "Tate",
+"title": "Girl with a White Dog",
+"artist": "Lucian Freud",
+"year": "1950",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/freud-girl-with-a-white-dog-n06039"
+},
+{
+"museum": "Tate",
+"title": "Esirn Coaler",
+"artist": "Ellen Gallagher",
+"year": "2007",
+"medium": "Plasticine and aluminium",
+"url": "https://www.tate.org.uk/art/artworks/gallagher-esirn-coaler-t12508"
+},
+{
+"museum": "Tate",
+"title": "Interior",
+"artist": "Alberto Giacometti",
+"year": "1949",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/giacometti-interior-n05908"
+},
+{
+"museum": "Tate",
+"title": "Seated Man",
+"artist": "Alberto Giacometti",
+"year": "1949",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/giacometti-seated-man-n05909"
+},
+{
+"museum": "Tate",
+"title": "Waterfall",
+"artist": "Arshile Gorky",
+"year": "1943",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/gorky-waterfall-t01319"
+},
+{
+"museum": "Tate",
+"title": "Labyrinth No. 2",
+"artist": "Adolph Gottlieb",
+"year": "1950",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/gottlieb-labyrinth-no-2-t03095"
+},
+{
+"museum": "Tate",
+"title": "The Alchemist",
+"artist": "Adolph Gottlieb",
+"year": "1945",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/gottlieb-the-alchemist-t03094"
+},
+{
+"museum": "Tate",
+"title": "Black Sea",
+"artist": "Philip Guston",
+"year": "1977",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/guston-black-sea-t03364"
+},
+{
+"museum": "Tate",
+"title": "The Return",
+"artist": "Philip Guston",
+"year": "1956",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/guston-the-return-t00252"
+},
+{
+"museum": "Tate",
+"title": "Divan Bed",
+"artist": "Mona Hatoum",
+"year": "1996",
+"medium": "Steel",
+"url": "https://www.tate.org.uk/art/artworks/hatoum-divan-bed-t07277"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Wheelchair)",
+"artist": "Mona Hatoum",
+"year": "1998",
+"medium": "Stainless steel and rubber",
+"url": "https://www.tate.org.uk/art/artworks/hatoum-untitled-wheelchair-t07497"
+},
+{
+"museum": "Tate",
+"title": "Addendum",
+"artist": "Eva Hesse",
+"year": "1967",
+"medium": "Papier mâché, wood and cord",
+"url": "https://www.tate.org.uk/art/artworks/hesse-addendum-t02394"
+},
+{
+"museum": "Tate",
+"title": "Man in Shower in Beverly Hills",
+"artist": "David Hockney",
+"year": "1964",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/hockney-man-in-shower-in-beverly-hills-t03074"
+},
+{
+"museum": "Tate",
+"title": "Mr and Mrs Clark and Percy",
+"artist": "David Hockney",
+"year": "1970",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/hockney-mr-and-mrs-clark-and-percy-t01269"
+},
+{
+"museum": "Tate",
+"title": "Protect Protect",
+"artist": "Jenny Holzer",
+"year": "2007",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/holzer-protect-protect-ar00083"
+},
+{
+"museum": "Tate",
+"title": "Shape the Battlespace",
+"artist": "Jenny Holzer",
+"year": "2007",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/holzer-shape-the-battlespace-ar00084"
+},
+{
+"museum": "Tate",
+"title": "0 through 9",
+"artist": "Jasper Johns",
+"year": "1961",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/johns-0-through-9-t00454"
+},
+{
+"museum": "Tate",
+"title": "Dancers on a Plane",
+"artist": "Jasper Johns",
+"year": "1980",
+"medium": "Oil paint and acrylic paint on canvas and bronze frame",
+"url": "https://www.tate.org.uk/art/artworks/johns-dancers-on-a-plane-t03242"
+},
+{
+"museum": "Tate",
+"title": "Pansies",
+"artist": "Alex Katz",
+"year": "1967",
+"medium": "Oil paint on hardboard",
+"url": "https://www.tate.org.uk/art/artworks/katz-pansies-ar00001"
+},
+{
+"museum": "Tate",
+"title": "Tulips",
+"artist": "Alex Katz",
+"year": "1969",
+"medium": "Oil paint on hardboard",
+"url": "https://www.tate.org.uk/art/artworks/katz-tulips-ar00002"
+},
+{
+"museum": "Tate",
+"title": "Broadway",
+"artist": "Ellsworth Kelly",
+"year": "1958",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/kelly-broadway-t00511"
+},
+{
+"museum": "Tate",
+"title": "White Curve",
+"artist": "Ellsworth Kelly",
+"year": "1974",
+"medium": "Aluminium",
+"url": "https://www.tate.org.uk/art/artworks/kelly-white-curve-t03072"
+},
+{
+"museum": "Tate",
+"title": "Man under a Pyramid",
+"artist": "Anselm Kiefer",
+"year": "1996",
+"medium": "Emulsion, acrylic paint, shellac and ash on 2 canvases",
+"url": "https://www.tate.org.uk/art/artworks/kiefer-man-under-a-pyramid-ar00037"
+},
+{
+"museum": "Tate",
+"title": "Urd Werdande Skuld (The Norns)",
+"artist": "Anselm Kiefer",
+"year": "1983",
+"medium": "Oil paint, shellac, emulsion and fibre on canvas",
+"url": "https://www.tate.org.uk/art/artworks/kiefer-urd-werdande-skuld-the-norns-ar00036"
+},
+{
+"museum": "Tate",
+"title": "IKB 79",
+"artist": "Yves Klein",
+"year": "1959",
+"medium": "Paint on canvas on plywood",
+"url": "https://www.tate.org.uk/art/artworks/klein-ikb-79-t01513"
+},
+{
+"museum": "Tate",
+"title": "Seated Figure on a Bench",
+"artist": "Willem de Kooning",
+"year": "1972",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/kooning-seated-figure-on-a-bench-t03162"
+},
+{
+"museum": "Tate",
+"title": "The Visit",
+"artist": "Willem de Kooning",
+"year": "1966",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/kooning-the-visit-t01108"
+},
+{
+"museum": "Tate",
+"title": "Gothic Landscape",
+"artist": "Lee Krasner",
+"year": "1961",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/krasner-gothic-landscape-t03291"
+},
+{
+"museum": "Tate",
+"title": "Continual Mobile, Continual Light",
+"artist": "Julio Le Parc",
+"year": "1963",
+"medium": "Painted wood, aluminium and nylon thread",
+"url": "https://www.tate.org.uk/art/artworks/le-parc-continual-mobile-continual-light-t00678"
+},
+{
+"museum": "Tate",
+"title": "Virtual Forms in Various Situations",
+"artist": "Julio Le Parc",
+"year": "1965",
+"medium": "Wood, aluminium and polystyrene",
+"url": "https://www.tate.org.uk/art/artworks/le-parc-virtual-forms-in-various-situations-t03774"
+},
+{
+"museum": "Tate",
+"title": "Two Open Modular Cubes/Half-Off",
+"artist": "Sol LeWitt",
+"year": "1972",
+"medium": "Enamel on aluminium",
+"url": "https://www.tate.org.uk/art/artworks/lewitt-two-open-modular-cubeshalf-off-t01865"
+},
+{
+"museum": "Tate",
+"title": "Wall Drawing #1136",
+"artist": "Sol LeWitt",
+"year": "2004",
+"medium": "Paint on wall",
+"url": "https://www.tate.org.uk/art/artworks/lewitt-wall-drawing-1136-ar00165"
+},
+{
+"museum": "Tate",
+"title": "Wall Explosion II",
+"artist": "Roy Lichtenstein",
+"year": "1965",
+"medium": "Enamel on steel",
+"url": "https://www.tate.org.uk/art/artworks/lichtenstein-wall-explosion-ii-t03083"
+},
+{
+"museum": "Tate",
+"title": "Whaam!",
+"artist": "Roy Lichtenstein",
+"year": "1963",
+"medium": "Acrylic paint and oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/lichtenstein-whaam-t00897"
+},
+{
+"museum": "Tate",
+"title": "Woman in Red",
+"artist": "Evert Lundquist",
+"year": "1956",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/lundquist-woman-in-red-t00208"
+},
+{
+"museum": "Tate",
+"title": "The Future of Statues",
+"artist": "René Magritte",
+"year": "1937",
+"medium": "Oil paint on plaster",
+"url": "https://www.tate.org.uk/art/artworks/magritte-the-future-of-statues-t03258"
+},
+{
+"museum": "Tate",
+"title": "Pisces",
+"artist": "Man Ray",
+"year": "1938",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/man-ray-pisces-t00324"
+},
+{
+"museum": "Tate",
+"title": "Artist’s Breath",
+"artist": "Piero Manzoni",
+"year": "1960",
+"medium": "Balloon, rope, lead seals and bronze plaque on wooden base",
+"url": "https://www.tate.org.uk/art/artworks/manzoni-artists-breath-t07589"
+},
+{
+"museum": "Tate",
+"title": "Couplet III",
+"artist": "Brice Marden",
+"year": "1988",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/marden-couplet-iii-t05723"
+},
+{
+"museum": "Tate",
+"title": "Faraway Love",
+"artist": "Agnes Martin",
+"year": "1999",
+"medium": "Acrylic paint and graphite on canvas",
+"url": "https://www.tate.org.uk/art/artworks/martin-faraway-love-ar00178"
+},
+{
+"museum": "Tate",
+"title": "Untitled #5",
+"artist": "Agnes Martin",
+"year": "1994",
+"medium": "Acrylic paint and graphite on canvas",
+"url": "https://www.tate.org.uk/art/artworks/martin-untitled-5-ar00177"
+},
+{
+"museum": "Tate",
+"title": "Ibdes in Aragon",
+"artist": "André Masson",
+"year": "1935",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/masson-ibdes-in-aragon-n05646"
+},
+{
+"museum": "Tate",
+"title": "The Red Lands and the Montagne Sainte Victoire",
+"artist": "André Masson",
+"year": "1948",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/masson-the-red-lands-and-the-montagne-sainte-victoire-t00073"
+},
+{
+"museum": "Tate",
+"title": "Draped Nude",
+"artist": "Henri Matisse",
+"year": "1936",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/matisse-draped-nude-t00306"
+},
+{
+"museum": "Tate",
+"title": "Woman",
+"artist": "Joan Miró",
+"year": "1949",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/miro-woman-t03401"
+},
+{
+"museum": "Tate",
+"title": "Women and Bird in the Moonlight",
+"artist": "Joan Miró",
+"year": "1949",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/miro-women-and-bird-in-the-moonlight-n06007"
+},
+{
+"museum": "Tate",
+"title": "Chord II",
+"artist": "Joan Mitchell",
+"year": "1986",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/mitchell-chord-ii-t12921"
+},
+{
+"museum": "Tate",
+"title": "Composition B (No.II) with Red",
+"artist": "Piet Mondrian",
+"year": "1935",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/mondrian-composition-b-noii-with-red-t07560"
+},
+{
+"museum": "Tate",
+"title": "Composition with Yellow, Blue and Red",
+"artist": "Piet Mondrian",
+"year": "1937",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/mondrian-composition-with-yellow-blue-and-red-t00648"
+},
+{
+"museum": "Tate",
+"title": "Two Warps and Wefts of Short Lines 0° 90°",
+"artist": "François Morellet",
+"year": "1955",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/morellet-two-warps-and-wefts-of-short-lines-0-90-t01840"
+},
+{
+"museum": "Tate",
+"title": "Composition in Yellow, Black and White",
+"artist": "Marlow Moss",
+"year": "1949",
+"medium": "Oil paint and wood on canvas",
+"url": "https://www.tate.org.uk/art/artworks/moss-composition-in-yellow-black-and-white-t01113"
+},
+{
+"museum": "Tate",
+"title": "Open No. 121 (Bolton Landing Elegy)",
+"artist": "Robert Motherwell",
+"year": "1969",
+"medium": "Acrylic paint and charcoal on canvas",
+"url": "https://www.tate.org.uk/art/artworks/motherwell-open-no-121-bolton-landing-elegy-t01194"
+},
+{
+"museum": "Tate",
+"title": "Open No. 122 in Scarlet and Blue",
+"artist": "Robert Motherwell",
+"year": "1969",
+"medium": "Acrylic paint and charcoal on canvas",
+"url": "https://www.tate.org.uk/art/artworks/motherwell-open-no-122-in-scarlet-and-blue-t01180"
+},
+{
+"museum": "Tate",
+"title": "Enforced Perspective: Allegory and Symbolism",
+"artist": "Bruce Nauman",
+"year": "1975",
+"medium": "Steel",
+"url": "https://www.tate.org.uk/art/artworks/nauman-enforced-perspective-allegory-and-symbolism-ar00180"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Hand Circle)",
+"artist": "Bruce Nauman",
+"year": "1996",
+"medium": "Bronze, silver solder and copper",
+"url": "https://www.tate.org.uk/art/artworks/nauman-untitled-hand-circle-ar00580"
+},
+{
+"museum": "Tate",
+"title": "Dominican Boys on 108th Street",
+"artist": "Alice Neel",
+"year": "1955",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/neel-dominican-boys-on-108th-street-t11922"
+},
+{
+"museum": "Tate",
+"title": "Kenneth Dolittle",
+"artist": "Alice Neel",
+"year": "1931",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/neel-kenneth-dolittle-t11921"
+},
+{
+"museum": "Tate",
+"title": "Adam",
+"artist": "Barnett Newman",
+"year": "1951",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/newman-adam-t01091"
+},
+{
+"museum": "Tate",
+"title": "Eve",
+"artist": "Barnett Newman",
+"year": "1950",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/newman-eve-t03081"
+},
+{
+"museum": "Tate",
+"title": "Drought",
+"artist": "Kenneth Noland",
+"year": "1962",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/noland-drought-t00763"
+},
+{
+"museum": "Tate",
+"title": "Gift",
+"artist": "Kenneth Noland",
+"year": "1961",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/noland-gift-t00898"
+},
+{
+"museum": "Tate",
+"title": "Counter and Plates with Potato and Ham",
+"artist": "Claes Oldenburg",
+"year": "1961",
+"medium": "Painted plaster",
+"url": "https://www.tate.org.uk/art/artworks/oldenburg-counter-and-plates-with-potato-and-ham-t01239"
+},
+{
+"museum": "Tate",
+"title": "Soft Drainpipe - Blue (Cool) Version",
+"artist": "Claes Oldenburg",
+"year": "1967",
+"medium": "Acrylic on canvas and steel",
+"url": "https://www.tate.org.uk/art/artworks/oldenburg-soft-drainpipe-blue-cool-version-t01257"
+},
+{
+"museum": "Tate",
+"title": "Cock",
+"artist": "Pablo Picasso",
+"year": "1932",
+"medium": "Bronze",
+"url": "https://www.tate.org.uk/art/artworks/picasso-cock-n06023"
+},
+{
+"museum": "Tate",
+"title": "Nude Woman in a Red Armchair",
+"artist": "Pablo Picasso",
+"year": "1932",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/picasso-nude-woman-in-a-red-armchair-n06205"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Square 2)",
+"artist": "Sigmar Polke",
+"year": "2003",
+"medium": "Gold paint, oil paint and acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/polke-untitled-square-2-t11856"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Triptych)",
+"artist": "Sigmar Polke",
+"year": "2002",
+"medium": "Polyester resin and acrylic paint on fabric",
+"url": "https://www.tate.org.uk/art/artworks/polke-untitled-triptych-t11855"
+},
+{
+"museum": "Tate",
+"title": "Naked Man with Knife",
+"artist": "Jackson Pollock",
+"year": "1938",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/pollock-naked-man-with-knife-t03327"
+},
+{
+"museum": "Tate",
+"title": "Yellow Islands",
+"artist": "Jackson Pollock",
+"year": "1952",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/pollock-yellow-islands-t00436"
+},
+{
+"museum": "Tate",
+"title": "Square Tubes [Series D]",
+"artist": "Charlotte Posenenske",
+"year": "1967",
+"medium": "Galvanized steel",
+"url": "https://www.tate.org.uk/art/artworks/posenenske-square-tubes-series-d-t12772"
+},
+{
+"museum": "Tate",
+"title": "Square Tubes [Series D]",
+"artist": "Charlotte Posenenske",
+"year": "1967",
+"medium": "Galvanized steel",
+"url": "https://www.tate.org.uk/art/artworks/posenenske-square-tubes-series-d-t12774"
+},
+{
+"museum": "Tate",
+"title": "Almanac",
+"artist": "Robert Rauschenberg",
+"year": "1962",
+"medium": "Oil paint, acrylic paint and screenprint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/rauschenberg-almanac-t01135"
+},
+{
+"museum": "Tate",
+"title": "Abstract Painting No. 5",
+"artist": "Ad Reinhardt",
+"year": "1962",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/reinhardt-abstract-painting-no-5-t01582"
+},
+{
+"museum": "Tate",
+"title": "Abstract Painting",
+"artist": "Ad Reinhardt",
+"year": "1951",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/reinhardt-abstract-painting-t01531"
+},
+{
+"museum": "Tate",
+"title": "11 Panes",
+"artist": "Gerhard Richter",
+"year": "2004",
+"medium": "Glass and wood",
+"url": "https://www.tate.org.uk/art/artworks/richter-11-panes-ar00026"
+},
+{
+"museum": "Tate",
+"title": "Abstract Painting (809-3)",
+"artist": "Gerhard Richter",
+"year": "1994",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/richter-abstract-painting-809-3-ar00027"
+},
+{
+"museum": "Tate",
+"title": "Fall",
+"artist": "Bridget Riley",
+"year": "1963",
+"medium": "Polyvinyl acetate paint on hardboard",
+"url": "https://www.tate.org.uk/art/artworks/riley-fall-t00616"
+},
+{
+"museum": "Tate",
+"title": "Late Morning",
+"artist": "Bridget Riley",
+"year": "1967",
+"medium": "Polyvinyl acetate paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/riley-late-morning-t01032"
+},
+{
+"museum": "Tate",
+"title": "Silo",
+"artist": "James Rosenquist",
+"year": "1963",
+"medium": "Oil paint on canvas, wood and Perspex",
+"url": "https://www.tate.org.uk/art/artworks/rosenquist-silo-t01829"
+},
+{
+"museum": "Tate",
+"title": "The Unknown Political Prisoner (Defiant and Triumphant)",
+"artist": "Theodore Roszak",
+"year": "1952",
+"medium": "Steel",
+"url": "https://www.tate.org.uk/art/artworks/roszak-the-unknown-political-prisoner-defiant-and-triumphant-n06163"
+},
+{
+"museum": "Tate",
+"title": "Black on Maroon",
+"artist": "Mark Rothko",
+"year": "1958",
+"medium": "Oil paint, acrylic paint, glue tempera and pigment on canvas",
+"url": "https://www.tate.org.uk/art/artworks/rothko-black-on-maroon-t01031"
+},
+{
+"museum": "Tate",
+"title": "Light Red Over Black",
+"artist": "Mark Rothko",
+"year": "1957",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/rothko-light-red-over-black-t00275"
+},
+{
+"museum": "Tate",
+"title": "DAILY PLANET",
+"artist": "Edward Ruscha",
+"year": "2003",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/ruscha-daily-planet-ar00048"
+},
+{
+"museum": "Tate",
+"title": "Pay Nothing Until April",
+"artist": "Edward Ruscha",
+"year": "2003",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/ruscha-pay-nothing-until-april-ar00047"
+},
+{
+"museum": "Tate",
+"title": "Shooting Picture",
+"artist": "Niki de Saint Phalle",
+"year": "1961",
+"medium": "Plaster, paint, string, polythene and wire on wood",
+"url": "https://www.tate.org.uk/art/artworks/saint-phalle-shooting-picture-t03824"
+},
+{
+"museum": "Tate",
+"title": "Box #61",
+"artist": "Lucas Samaras",
+"year": "1967",
+"medium": "Wood, wool, brillants, photograph, cardboard and steel pins",
+"url": "https://www.tate.org.uk/art/artworks/samaras-box-61-t07151"
+},
+{
+"museum": "Tate",
+"title": "Box",
+"artist": "Lucas Samaras",
+"year": "1963",
+"medium": "Mahogany box, wool, steel pins, glass and acetate film",
+"url": "https://www.tate.org.uk/art/artworks/samaras-box-t07186"
+},
+{
+"museum": "Tate",
+"title": "Four Sisters in the Bath",
+"artist": "Thomas Schütte",
+"year": "1989",
+"medium": "Bricks, pebbles, terracotta, wax, polyurethane foam and paint",
+"url": "https://www.tate.org.uk/art/artworks/schutte-four-sisters-in-the-bath-t12807"
+},
+{
+"museum": "Tate",
+"title": "Trip Hammer",
+"artist": "Richard Serra",
+"year": "1988",
+"medium": "Steel",
+"url": "https://www.tate.org.uk/art/artworks/serra-trip-hammer-t07350"
+},
+{
+"museum": "Tate",
+"title": "Chessmen One",
+"artist": "Anwar Jalal Shemza",
+"year": "1961",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/shemza-chessmen-one-t13333"
+},
+{
+"museum": "Tate",
+"title": "Composition with Number Six",
+"artist": "Anwar Jalal Shemza",
+"year": "1966",
+"medium": "Wood and paint on hardboard",
+"url": "https://www.tate.org.uk/art/artworks/shemza-composition-with-number-six-t13566"
+},
+{
+"museum": "Tate",
+"title": "Cubi XIX",
+"artist": "David Smith",
+"year": "1964",
+"medium": "Stainless steel",
+"url": "https://www.tate.org.uk/art/artworks/smith-cubi-xix-t00891"
+},
+{
+"museum": "Tate",
+"title": "Painting 1964",
+"artist": "David Smith",
+"year": "1964",
+"medium": "Oil paint on canvas on plywood",
+"url": "https://www.tate.org.uk/art/artworks/smith-painting-1964-t00931"
+},
+{
+"museum": "Tate",
+"title": "Cardinal",
+"artist": "Jesus Rafael Soto",
+"year": "1965",
+"medium": "Wood on chipboard, metal rods and nylon threads",
+"url": "https://www.tate.org.uk/art/artworks/soto-cardinal-t00793"
+},
+{
+"museum": "Tate",
+"title": "Horizontal Movement",
+"artist": "Jesus Rafael Soto",
+"year": "1963",
+"medium": "Oil paint on chipboard, nylon thread and iron rod",
+"url": "https://www.tate.org.uk/art/artworks/soto-horizontal-movement-t00649"
+},
+{
+"museum": "Tate",
+"title": "Hyena Stomp",
+"artist": "Frank Stella",
+"year": "1962",
+"medium": "Alkyd paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/stella-hyena-stomp-t00730"
+},
+{
+"museum": "Tate",
+"title": "Six Mile Bottom",
+"artist": "Frank Stella",
+"year": "1960",
+"medium": "Alkyd paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/stella-six-mile-bottom-t01552"
+},
+{
+"museum": "Tate",
+"title": "1953",
+"artist": "Clyfford Still",
+"year": "1953",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/still-1953-t01498"
+},
+{
+"museum": "Tate",
+"title": "Azure Day",
+"artist": "Yves Tanguy",
+"year": "1937",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/tanguy-azure-day-t07080"
+},
+{
+"museum": "Tate",
+"title": "The Invisibles",
+"artist": "Yves Tanguy",
+"year": "1951",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/tanguy-the-invisibles-t00657"
+},
+{
+"museum": "Tate",
+"title": "Débricollage",
+"artist": "Jean Tinguely",
+"year": "1970",
+"medium": "Metal, plastic, wood and electric motor",
+"url": "https://www.tate.org.uk/art/artworks/tinguely-debricollage-t03822"
+},
+{
+"museum": "Tate",
+"title": "Metamechanical Sculpture with Tripod",
+"artist": "Jean Tinguely",
+"year": "1954",
+"medium": "Steel, cardboard, plastic and electric motor",
+"url": "https://www.tate.org.uk/art/artworks/tinguely-metamechanical-sculpture-with-tripod-t03823"
+},
+{
+"museum": "Tate",
+"title": "Quattro Stagioni: Estate",
+"artist": "Cy Twombly",
+"year": "1993",
+"medium": "Acrylic paint and graphite on canvas",
+"url": "https://www.tate.org.uk/art/artworks/twombly-quattro-stagioni-estate-t07888"
+},
+{
+"museum": "Tate",
+"title": "Quattro Stagioni: Primavera",
+"artist": "Cy Twombly",
+"year": "1993",
+"medium": "Acrylic paint, oil paint, crayon and graphite on canvas",
+"url": "https://www.tate.org.uk/art/artworks/twombly-quattro-stagioni-primavera-t07887"
+},
+{
+"museum": "Tate",
+"title": "Paris",
+"artist": "Maria Helena Vieira da Silva",
+"year": "1951",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/vieira-da-silva-paris-t00245"
+},
+{
+"museum": "Tate",
+"title": "The Corridor",
+"artist": "Maria Helena Vieira da Silva",
+"year": "1950",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/vieira-da-silva-the-corridor-n06189"
+},
+{
+"museum": "Tate",
+"title": "Marilyn Diptych",
+"artist": "Andy Warhol",
+"year": "1962",
+"medium": "Acrylic paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/warhol-marilyn-diptych-t03093"
+},
+{
+"museum": "Tate",
+"title": "Self-Portrait",
+"artist": "Andy Warhol",
+"year": "1967",
+"medium": "Synthetic polymer paint and silkscreen on canvas",
+"url": "https://www.tate.org.uk/art/artworks/warhol-self-portrait-t01288"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Rooms)",
+"artist": "Rachel Whiteread",
+"year": "2001",
+"medium": "Plaster, fibreglass, wood and metal",
+"url": "https://www.tate.org.uk/art/artworks/whiteread-untitled-rooms-t07938"
+},
+{
+"museum": "Tate",
+"title": "Untitled (Stairs)",
+"artist": "Rachel Whiteread",
+"year": "2001",
+"medium": "Plaster, fibreglass and wood",
+"url": "https://www.tate.org.uk/art/artworks/whiteread-untitled-stairs-t07939"
+},
+{
+"museum": "Tate",
+"title": "Monkey Puzzle",
+"artist": "Terry Winters",
+"year": "1987",
+"medium": "Oil paint on canvas",
+"url": "https://www.tate.org.uk/art/artworks/winters-monkey-puzzle-t05076"
 }
 ]

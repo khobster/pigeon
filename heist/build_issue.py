@@ -10,10 +10,12 @@ import json
 import os
 import random
 import re
+import shutil
 import subprocess
 import sys
 import time
 from datetime import date, timedelta
+from html import escape as esc
 from pathlib import Path
 from urllib.parse import quote
 
@@ -28,6 +30,7 @@ from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
+PLATES = ROOT / "heist" / "gotaway_plates"
 ARCHIVE_URL = "https://heist.arugulamotors.com/"
 HEADER_WEB = "assets/header.png"
 
@@ -203,10 +206,10 @@ RELIGIOUS = re.compile(
     r"\b("
     r"christ|jesus|crucifix\w*|crucified|madonna|piet[aà]|annunciation|"
     r"nativity|resurrection|ascension|assumption|immaculate|epiphany|"
-    r"apostle|evangelist|gospel|trinity|saviou?r|sacred heart|ecce homo|"
+    r"apostles?|evangelists?|gospels?|trinity|saviou?r|sacred heart|ecce homo|"
     r"hail mary|ave maria|mater dolorosa|"
     r"lamentation|deposition|entombment|altarpiece|virgin|saint|saints|st\.|"
-    r"holy|angel|archangel|adoration|magi|baptism|prophet|"
+    r"holy|angels?|archangels?|adoration|magi|baptism|prophets?|"
     r"qur'?an|koran|sura[h]?|"
     r"krishna|vishnu|shiva|brahma|ganesh\w*|durga|lakshmi|parvati|"
     r"buddha|buddhist|bodhisattva|avalokiteshvara|guanyin|kuan-yin|"
@@ -250,7 +253,10 @@ OFFENSIVE = re.compile(
     r"\b("
     r"hagenbeck|v[oö]lkerschau|human zoo|ethnographic (show|exhibition|village)|"
     r"exotic (races|peoples)|savages?|wild (men|people)|missing link|"
-    r"minstrel|blackface|black-face|pickaninn\w*|golliwog\w*|sambo|"
+    r"minstrel\w*|blackface|black-face|pickaninn\w*|golliwog\w*|sambo|"
+    # blackface troupes whose posters never say "minstrel"
+    r"mcintyre (and|&) heath|primrose (and|&) west|haverly\w*|dockstader\w*|"
+    r"uncle tom\w*|colou?red show|"
     r"\bcoon\b|darkey|darkie|\bdarky\b|mammy|jim crow|plantation melodies|"
     r"pygm\w+|cannibal\w*|head-?hunter|redskin\w*|\bsquaw\w*|"
     r"chinaman|chinamen|jap\b|oriental spectacle"
@@ -707,6 +713,8 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
         cls = medium_class(p["candidate"])
         if counts.get(cls, 0) >= CLASS_CAP:
             continue
+        if p["source"] == "barnes" and sum(e.get("museum", "").startswith("the Barnes") for e in extras) >= 2:
+            continue
         try:
             p["candidate"]["image"] = verified(p["candidate"]["image"], today, f"extra{len(extras)}", width=880)
         except Exception as e:  # noqa: BLE001
@@ -760,6 +768,29 @@ VAULT_ROW = """
     {title}{date_part}<br>
     <span style="font-size:12px; color:#999999;">found in <a href="{url}" style="color:#999999; white-space:nowrap;">the Library of Congress</a></span>
   </td></tr>"""
+
+
+GONE_ROW = """
+  <tr><td style="padding:0 0 {gap}px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr><td style="border:2px dashed #d0d0d0; padding:14px;">
+      <a href="{url}" style="text-decoration:none;"><img src="{plate}" alt="Not pictured" width="528" style="display:block; width:100%; height:auto; border:0;"></a>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+      <tr><td align="center" style="padding:18px 8px 6px; font-family:Helvetica, Arial, sans-serif; font-size:20px; font-weight:bold; color:#111111; line-height:1.3;">{title}</td></tr>
+      <tr><td align="center" style="padding:0 8px 18px; font-family:Helvetica, Arial, sans-serif; font-size:14px; color:#555555;">{artist}{year_part}</td></tr>
+      <tr><td align="center" style="padding:0 0 8px;"><a href="{url}" style="display:inline-block; background:#111111; color:#ffffff; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; text-decoration:none; padding:14px 26px;">See it at {museum}</a></td></tr>
+      </table>
+    </td></tr>
+    </table>
+  </td></tr>"""
+
+
+def gotaway_html(pieces):
+    return "".join(GONE_ROW.format(
+        gap=0 if i == len(pieces) - 1 else 22, plate=p["plate"],
+        url=esc(p["url"]), title=esc(p["title"]), artist=esc(p["artist"]),
+        year_part=f", {esc(p['year'])}" if p.get("year") else "", museum=esc(p["museum"]))
+        for i, p in enumerate(pieces))
 
 
 def vault_html(vaults):
@@ -892,19 +923,27 @@ def build(today=None):
     if not vaults:
         print("  [vault dropped: no provable LoC images after resampling]")
 
-    # The One That Got Away: a modern piece we can't show (still in copyright),
-    # named and linked to the museum's own page. Text only; dodges recent repeats.
-    gone = {}
-    for _ in range(10):
-        gone = try_steal(gotaway, rng)
-        if not gone or gone.get("url") not in recent:
-            break
-    gone_keys = [gone["url"]] if gone.get("url") else []
+    # The Ones That Got Away: modern pieces we can't show (still in copyright),
+    # named and linked to each museum's own page. Text only.
+    try:
+        gone = gotaway.steal(rng, avoid=recent)
+    except Exception as e:  # noqa: BLE001
+        print(f"  [got-away dropped] {e}")
+        gone = {"pieces": [], "line": ""}
+    gone_keys = [p["url"] for p in gone["pieces"]]
+    plates = json.loads((PLATES / "plates.json").read_text())
+    art_dir = DOCS / "assets" / "art"
+    art_dir.mkdir(parents=True, exist_ok=True)
+    for i, (piece, plate) in enumerate(zip(gone["pieces"], rng.sample(plates, len(gone["pieces"])))):
+        name = f"{today.isoformat()}-gone{i}.jpg"
+        shutil.copyfile(PLATES / f"{plate}.jpg", art_dir / name)
+        piece["plate"] = f"{ARCHIVE_URL}assets/art/{name}"
 
     hideout = try_steal(lam, rng)
     if hideout.get("image"):
         try:
-            hideout["image"] = verified(hideout["image"], today, "lam")
+            # 3x the 560px layout: the hideout photo runs full width, so keep it sharp.
+            hideout["image"] = verified(hideout["image"], today, "lam", width=1680)
         except Exception:  # noqa: BLE001
             hideout["image"] = ""  # the hideout survives without a photo
 
@@ -925,13 +964,9 @@ def build(today=None):
         "line_summary": line.get("summary", ""),
         "vault_any": bool(vaults),
         "vault_html": vault_html(vaults),
-        "gotaway_title": gone.get("title", ""),
-        "gotaway_artist": gone.get("artist", ""),
-        "gotaway_year": gone.get("year", ""),
-        "gotaway_medium": gone.get("medium", ""),
-        "gotaway_line": gone.get("line", ""),
-        "gotaway_museum": gone.get("museum", ""),
-        "gotaway_url": gone.get("url", ""),
+        "gotaway_any": bool(gone["pieces"]),
+        "gotaway_line": gone["line"],
+        "gotaway_html": gotaway_html(gone["pieces"]),
         "lam_name": hideout.get("name", ""),
         "lam_blurb": hideout.get("blurb", ""),
         "lam_image": hideout.get("image", ""),

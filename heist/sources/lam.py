@@ -1,6 +1,7 @@
 """On the Lam: tonight's hideout, somewhere on earth."""
 import json
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import requests
 
@@ -19,7 +20,13 @@ def steal(rng):
     # Keep it a bite, not a meal: first two sentences.
     parts = blurb.split(". ")
     blurb = ". ".join(parts[:2]).rstrip(".") + "." if parts else ""
-    image = ((data.get("thumbnail") or {}).get("source") or "").replace("/320px-", "/640px-")
+    # The full-size original, not the 320px thumbnail; the build scales it to
+    # a crisp email size. Only a real photo (JPEG, 800px+); lead images that
+    # are PNG/SVG are maps, flags and seals.
+    orig = data.get("originalimage") or {}
+    image = orig.get("source", "")
+    if not urlsplit(image).path.lower().endswith((".jpg", ".jpeg")) or orig.get("width", 0) < 800:
+        image = ""
     return {
         "name": place["name"],
         "blurb": blurb,
