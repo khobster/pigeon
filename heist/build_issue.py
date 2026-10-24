@@ -22,8 +22,8 @@ from PIL import Image
 
 from engine.render import render
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
-                           wellcome, europeana, nypl, lacma, barnes, chunklet,
-                           loc, lam)
+                           wellcome, europeana, nypl, lacma, barnes, parismusees,
+                           chunklet, loc, lam, gotaway)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -476,6 +476,10 @@ def in_color(candidate, stats):
     return vivid_frac >= 0.05 and (hues >= 2 or cold >= 1)
 
 
+MAX_BYTES = 1_500_000
+Image.MAX_IMAGE_PIXELS = None  # big museum scans are fine, we shrink them
+
+
 def verified(url, today, tag, width=1120):
     """Download the image and return a URL on OUR domain, or raise.
 
@@ -517,6 +521,14 @@ def verified(url, today, tag, width=1120):
     if not is_color(content):
         raise RuntimeError(f"black-and-white, want color: {url}")
     ext = ".png" if "png" in ctype else ".jpg"
+    # When wsrv can't handle a huge origin we get the raw original (one
+    # Europeana scan came back at 45MB), so shrink anything oversized here.
+    if len(content) > MAX_BYTES:
+        im = Image.open(io.BytesIO(content)).convert("RGB")
+        im.thumbnail((width, width * 3))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=85, optimize=True)
+        content, ext = buf.getvalue(), ".jpg"
     name = f"{today.isoformat()}-{tag}{ext}"
     (art_dir / name).write_bytes(content)
     return f"{ARCHIVE_URL}assets/art/{name}"
@@ -552,12 +564,13 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # europeana are key-gated and only join the rotation when their key is set —
     # europeana alone aggregates 3,000+ institutions. lacma is a bundled PD pool
     # biased to its cool/graphic seam (prints, costumes, textiles, 1850+). barnes
-    # is a bundled PD pool of the Barnes Foundation's pictures. AIC and
+    # is a bundled PD pool of the Barnes Foundation's pictures, parismusees a
+    # bundled CC0 pool of the City of Paris museums (via its Commons mirror). AIC and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
-    museums = ([met, cleveland, smk, commons, nga, lacma, barnes, rijks, yale,
-                wellcome]
+    museums = ([met, cleveland, smk, commons, nga, lacma, barnes, parismusees,
+                rijks, yale, wellcome]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
@@ -614,6 +627,15 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
                 euro_added += 1
         print(f"  [europeana seeded {euro_added} into the pool]")
 
+    # The Barnes is the heist's house taste (Cezanne, Renoir, Matisse, Soutine),
+    # so seed a few every night; one is then guaranteed a spot in the bag.
+    barnes_added, barnes_tries = 0, 0
+    while barnes_added < 3 and barnes_tries < 12:
+        barnes_tries += 1
+        if try_add(barnes, "barnes"):
+            barnes_added += 1
+    print(f"  [barnes seeded {barnes_added} into the pool]")
+
     # General gather fills the rest of the pool from the full rotation.
     for museum in rotation * 16:
         if len(pool) >= 18 or draws >= 84:
@@ -667,9 +689,13 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # Fill the bag from the rest, medium-diverse (no more than CLASS_CAP of any
     # one form). Front-load up to EUROPEANA_MIN Europeana pieces so its global
     # eclectica reliably appears in the bag, then fill the rest in curator order.
+    # Same for the Barnes: one piece a night, unless it already took the hero.
     EUROPEANA_MIN = 2
+    barnes_first = [] if hero.get("museum", "").startswith("the Barnes") else \
+        [i for i in order if pool[i]["source"] == "barnes"][:1]
     euro_first = [i for i in order if pool[i]["source"] == "europeana"][:EUROPEANA_MIN]
-    fill_seq = euro_first + [i for i in order if i not in euro_first]
+    front = barnes_first + euro_first
+    fill_seq = front + [i for i in order if i not in front]
 
     CLASS_CAP = 3
     counts = {medium_class(hero): 1}
@@ -866,6 +892,15 @@ def build(today=None):
     if not vaults:
         print("  [vault dropped: no provable LoC images after resampling]")
 
+    # The One That Got Away: a modern piece we can't show (still in copyright),
+    # named and linked to the museum's own page. Text only; dodges recent repeats.
+    gone = {}
+    for _ in range(10):
+        gone = try_steal(gotaway, rng)
+        if not gone or gone.get("url") not in recent:
+            break
+    gone_keys = [gone["url"]] if gone.get("url") else []
+
     hideout = try_steal(lam, rng)
     if hideout.get("image"):
         try:
@@ -890,6 +925,13 @@ def build(today=None):
         "line_summary": line.get("summary", ""),
         "vault_any": bool(vaults),
         "vault_html": vault_html(vaults),
+        "gotaway_title": gone.get("title", ""),
+        "gotaway_artist": gone.get("artist", ""),
+        "gotaway_year": gone.get("year", ""),
+        "gotaway_medium": gone.get("medium", ""),
+        "gotaway_line": gone.get("line", ""),
+        "gotaway_museum": gone.get("museum", ""),
+        "gotaway_url": gone.get("url", ""),
         "lam_name": hideout.get("name", ""),
         "lam_blurb": hideout.get("blurb", ""),
         "lam_image": hideout.get("image", ""),
@@ -901,7 +943,7 @@ def build(today=None):
     archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB})
 
     subject = build_subject(haul, extras, line, vaults[0] if vaults else {}, hideout)
-    record_art(today, used + vault_keys, ledger)
+    record_art(today, used + vault_keys + gone_keys, ledger)
     return subject, email_html, archive_html, today
 
 

@@ -70,6 +70,25 @@
   <tr><td style="padding:0 0 18px;"></td></tr>
   {{/vault_any}}
 
+  <!-- the one that got away -->
+  {{#gotaway_title}}
+  <tr><td style="padding:0 0 12px;">
+    <span style="display:inline-block; background:#ffe95e; padding:5px 12px; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#111111;">The One That Got Away</span>
+  </td></tr>
+  <tr><td style="padding:0 0 36px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr><td align="center" style="border:2px dashed #d0d0d0; padding:30px 22px; font-family:Helvetica, Arial, sans-serif;">
+      <div style="font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#b8b8b8; padding:0 0 14px;">not for sale, not for taking</div>
+      <div style="font-size:19px; font-weight:bold; color:#111111; line-height:1.3;">{{gotaway_title}}</div>
+      <div style="font-size:14px; color:#555555; line-height:1.5; padding:4px 0 0;">{{gotaway_artist}}{{#gotaway_year}}, {{gotaway_year}}{{/gotaway_year}}</div>
+      {{#gotaway_medium}}<div style="font-size:12px; color:#999999; padding:2px 0 0;">{{gotaway_medium}}</div>{{/gotaway_medium}}
+      <div style="font-family:Georgia, 'Times New Roman', serif; font-size:15px; font-style:italic; color:#333333; line-height:1.5; padding:16px 0 0;">{{gotaway_line}}</div>
+      <div style="padding:18px 0 0;"><a href="{{gotaway_url}}" style="display:inline-block; background:#111111; color:#ffffff; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; text-decoration:none; padding:10px 18px;">See it at {{gotaway_museum}}</a></div>
+    </td></tr>
+    </table>
+  </td></tr>
+  {{/gotaway_title}}
+
   <!-- on the lam -->
   {{#lam_name}}
   <tr><td style="padding:0 0 12px;">
