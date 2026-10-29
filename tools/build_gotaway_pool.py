@@ -9,12 +9,14 @@ Sources and their notability filters (a famous name is the heartbreak):
   MoMA        Artworks.csv (CC0, GitHub): works currently on view
   the Whitney artworks.csv (CC0, GitHub): Wikidata entry + an artist it holds
               deeply (25+ works: Hopper, Warhol, Ruscha, Lichtenstein...)
-  the Art Institute of Chicago  public API: "boosted" (its own highlights)
   the Met     public API: highlights of Modern and Contemporary Art
   Tate        artwork_data.csv (CC0, GitHub): in copyright, by a famous name
   the Guggenheim  its site's public WordPress API, by a famous name
 "Famous name" for Tate and the Guggenheim means the artist also made the cut
-at one of the first four, so we never send anyone to an unknown.
+at one of the first three (or is among the Art Institute of Chicago's own
+highlights; we only use that list as a fame signal now, because more than
+half its artwork pages loop on redirects in a browser), so we never send
+anyone to an unknown.
 
 We keep paintings and sculpture from after the public-domain line (the stuff
 we really can't show), skip bare "Untitled", and cap each artist.
@@ -39,6 +41,8 @@ AIC = "https://api.artic.edu/api/v1/artworks/search"
 MET = "https://collectionapi.metmuseum.org/public/collection/v1"
 GUGG = "https://www.guggenheim.org/wp-json/wp/v2"
 HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com)"}
+BROWSER = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                         "(KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
 PD_YEAR = 1930
 PER_ARTIST = 2  # per museum, so each one keeps its own Pollock
 WHITNEY_DEPTH = 25
@@ -60,6 +64,15 @@ def get(url, **params):
         except Exception:  # noqa: BLE001
             time.sleep(2 * (attempt + 1))
     return None
+
+
+def live(url):
+    """False only when the page is definitely gone (404/410). Tate's CSV is
+    from 2014 and some of its pages have since been removed."""
+    try:
+        return requests.get(url, headers=BROWSER, timeout=30).status_code not in (404, 410)
+    except Exception:  # noqa: BLE001
+        return True
 
 
 def first_year(text):
@@ -218,11 +231,11 @@ def main():
     if len(sys.argv) < 2:
         sys.exit("usage: build_gotaway_pool.py <out.json>")
     pool = []
-    for fn in (moma, whitney, aic, met):
+    for fn in (moma, whitney, met):
         got = fn()
         print(f"  {fn.__name__:12} {len(got)}", flush=True)
         pool += got
-    famous = {norm(p["artist"]) for p in pool}
+    famous = {norm(p["artist"]) for p in pool + aic()}
     for fn in (tate, guggenheim):
         got = fn(famous)
         print(f"  {fn.__name__:12} {len(got)}", flush=True)
@@ -235,6 +248,8 @@ def main():
         per[who] = per.get(who, 0) + 1
         seen.add(p["url"])
         out.append(p)
+    # MoMA and the Met turn away scripts (403/429), so only the others are checked.
+    out = [p for p in out if p["museum"] in ("MoMA", "the Met") or live(p["url"])]
     out.sort(key=lambda x: x["url"])
     with open(sys.argv[1], "w") as f:
         json.dump(out, f, indent=0, ensure_ascii=False)
