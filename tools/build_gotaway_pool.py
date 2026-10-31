@@ -6,14 +6,17 @@ names great modern pieces the thief couldn't take and links to each museum's
 own page, where the reader sees them. Text only, no image.
 
 Sources and their notability filters (a famous name is the heartbreak):
-  MoMA        Artworks.csv (CC0, GitHub): works currently on view
+  MoMA        Artworks.csv (CC0, GitHub): works currently on view, plus the
+              rest of its paintings and sculpture by a famous name
   the Whitney artworks.csv (CC0, GitHub): Wikidata entry + an artist it holds
-              deeply (25+ works: Hopper, Warhol, Ruscha, Lichtenstein...)
+              deeply (25+ works: Hopper, Warhol, Ruscha, Lichtenstein...),
+              plus its other paintings and sculpture by a famous name
   the Met     public API: highlights of Modern and Contemporary Art
   Tate        artwork_data.csv (CC0, GitHub): in copyright, by a famous name
   the Guggenheim  its site's public WordPress API, by a famous name
-"Famous name" for Tate and the Guggenheim means the artist also made the cut
-at one of the first three (or is among the Art Institute of Chicago's own
+  the Cleveland Museum of Art  open access API: copyrighted, by a famous name
+"Famous name" means the artist made the cut at MoMA's wall, the Whitney's
+deep holdings or the Met's highlights (or is among the Art Institute of Chicago's own
 highlights; we only use that list as a fame signal now, because more than
 half its artwork pages loop on redirects in a browser), so we never send
 anyone to an unknown.
@@ -40,11 +43,12 @@ TATE = "https://raw.githubusercontent.com/tategallery/collection/master/artwork_
 AIC = "https://api.artic.edu/api/v1/artworks/search"
 MET = "https://collectionapi.metmuseum.org/public/collection/v1"
 GUGG = "https://www.guggenheim.org/wp-json/wp/v2"
+CMA = "https://openaccess-api.clevelandart.org/api/artworks/"
 HEAD = {"User-Agent": "the-heist-newsletter/1.0 (https://heist.arugulamotors.com)"}
 BROWSER = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
                          "(KHTML, like Gecko) Chrome/130.0 Safari/537.36"}
 PD_YEAR = 1930
-PER_ARTIST = 2  # per museum, so each one keeps its own Pollock
+PER_ARTIST = 3  # per museum, so each one keeps its own Pollock
 WHITNEY_DEPTH = 25
 TATE_MEDIUM = re.compile(r"(?i)\b(paint|acrylic|oil|bronze|steel|wood|stone|marble|plaster|aluminium)\b")
 
@@ -107,22 +111,35 @@ def piece(museum, title, artist, year, medium, url):
             "year": short_year(str(year)), "medium": (medium or "").strip(), "url": url}
 
 
-def moma():
+def moma(famous=None):
+    """Works on view; with famous, the rest of the paintings and sculpture by
+    those artists instead."""
     out = []
     for r in rows(MOMA):
-        if not r.get("OnView", "").strip() or r.get("Classification") not in ("Painting", "Sculpture"):
+        if r.get("Classification") not in ("Painting", "Sculpture"):
+            continue
+        on_view = bool(r.get("OnView", "").strip())
+        if famous is None and not on_view:
+            continue
+        if famous is not None and (on_view or norm(r["Artist"]) not in famous):
             continue
         if keep(r["Title"], r["Artist"], r["Date"]) and r.get("URL"):
             out.append(piece("MoMA", r["Title"], r["Artist"], r["Date"], r["Medium"], r["URL"]))
     return out
 
 
-def whitney():
+def whitney(famous=None):
+    """Wikidata-listed works by artists it holds deeply; with famous, the rest
+    of the paintings and sculpture by those artists instead."""
     data, holdings, out = rows(WHITNEY), {}, []
     for r in data:
         holdings[r["artists"]] = holdings.get(r["artists"], 0) + 1
     for r in data:
-        if not r.get("wikidata_id", "").strip() or holdings[r["artists"]] < WHITNEY_DEPTH:
+        core = bool(r.get("wikidata_id", "").strip()) and holdings[r["artists"]] >= WHITNEY_DEPTH
+        if famous is None and not core:
+            continue
+        if famous is not None and (core or norm(r["artists"]) not in famous
+                                   or r.get("classification") not in ("Paintings", "Sculpture")):
             continue
         if keep(r["title"], r["artists"], r["display_date"]):
             out.append(piece("the Whitney", r["title"], r["artists"], r["display_date"], r["medium"],
@@ -190,6 +207,28 @@ def tate(famous):
     return out
 
 
+def cleveland(famous):
+    out = []
+    for kind in ("Painting", "Sculpture"):
+        skip = 0
+        while True:
+            d = get(CMA, share_license_status="copyrighted", type=kind, created_after=PD_YEAR + 1,
+                    limit=100, skip=skip, fields="title,creators,creation_date,url,technique")
+            got = (d or {}).get("data") or []
+            for r in got:
+                makers = [c for c in r.get("creators") or [] if c.get("role") == "artist"]
+                if len(makers) != 1:
+                    continue
+                name = re.sub(r"\s*\(.*$", "", makers[0].get("description") or "").strip()
+                if norm(name) in famous and keep(r.get("title"), name, r.get("creation_date")):
+                    out.append(piece("the Cleveland Museum of Art", r["title"], name,
+                                     r["creation_date"], r.get("technique"), r["url"]))
+            if len(got) < 100:
+                break
+            skip += 100
+    return out
+
+
 def taxonomy(name):
     names, page = {}, 1
     while True:
@@ -236,7 +275,7 @@ def main():
         print(f"  {fn.__name__:12} {len(got)}", flush=True)
         pool += got
     famous = {norm(p["artist"]) for p in pool + aic()}
-    for fn in (tate, guggenheim):
+    for fn in (moma, whitney, tate, guggenheim, cleveland):
         got = fn(famous)
         print(f"  {fn.__name__:12} {len(got)}", flush=True)
         pool += got
