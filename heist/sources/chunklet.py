@@ -3,13 +3,13 @@ import time
 
 import requests
 
-API = "https://pu30nzsu59.execute-api.us-east-1.amazonaws.com/dev/chunklet"
+API = "https://chunklet-quotes.kevin-murawinski.workers.dev"
 PARAMS = {"style": "canon", "modern": 0, "context": 1, "tts": 0}
 
 
 def steal(rng):
     last = None
-    for attempt in range(3):  # Lambda cold starts deserve a second chance
+    for attempt in range(3):  # retry on a network blip
         try:
             data = requests.get(API, params=PARAMS, timeout=30).json()
             text = (data.get("text") or "").strip()
