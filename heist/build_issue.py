@@ -14,6 +14,7 @@ import shutil
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from html import escape as esc
 from pathlib import Path
@@ -785,6 +786,41 @@ GONE_ROW = """
   </td></tr>"""
 
 
+# MoMA and the Met turn scripts away (403/429), so their pages can't be checked.
+UNCHECKABLE = {"MoMA", "the Met"}
+
+
+def loads(url):
+    """Open a got-away link once. True if it served the page. This also puts
+    the page in the museum's cache: Tate's cached pages load in a second or
+    two, but an uncached one can hang for half a minute, and a few just 503."""
+    try:
+        r = requests.get(url, headers={**UA, "Accept-Encoding": "gzip, deflate, br"}, timeout=45)
+        return r.status_code == 200
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def check_gone(pieces, rng, avoid, tries=2):
+    """Swap out any piece whose museum page won't load for another from the
+    same museum. If none of the tries load, keep the last one: the runner may
+    just be blocked, and a slow link beats a missing piece."""
+    def fix(piece):
+        if piece["museum"] in UNCHECKABLE:
+            return piece
+        tried = set(avoid)
+        for _ in range(tries):
+            if loads(piece["url"]):
+                return piece
+            print(f"  [got-away swap] {piece['url']} wouldn't load")
+            tried.add(piece["url"])
+            piece = gotaway.another(rng, piece["museum"], tried) or piece
+        loads(piece["url"])
+        return piece
+    with ThreadPoolExecutor(max_workers=len(pieces) or 1) as ex:
+        return list(ex.map(fix, pieces))
+
+
 def gotaway_html(pieces):
     return "".join(GONE_ROW.format(
         gap=0 if i == len(pieces) - 1 else 22, plate=p["plate"],
@@ -930,6 +966,7 @@ def build(today=None):
     except Exception as e:  # noqa: BLE001
         print(f"  [got-away dropped] {e}")
         gone = {"pieces": [], "line": ""}
+    gone["pieces"] = check_gone(gone["pieces"], rng, recent)
     gone_keys = [p["url"] for p in gone["pieces"]]
     plates = json.loads((PLATES / "plates.json").read_text())
     art_dir = DOCS / "assets" / "art"

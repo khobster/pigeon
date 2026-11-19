@@ -21,13 +21,17 @@ LINES = [
 ]
 
 
-def steal(rng, n=3, avoid=frozenset()):
-    """n pieces from n different museums, skipping anything in avoid."""
+def _pool(avoid):
     try:
         items = json.loads(POOL.read_text())
     except FileNotFoundError as e:
         raise RuntimeError(f"Got-away pool missing: {e}")
-    items = [i for i in items if i["url"] not in avoid]
+    return [i for i in items if i["url"] not in avoid]
+
+
+def steal(rng, n=3, avoid=frozenset()):
+    """n pieces from n different museums, skipping anything in avoid."""
+    items = _pool(avoid)
     if not items:
         raise RuntimeError("Got-away pool is empty")
     # Pick the museums first so each one gets its share of the days.
@@ -35,3 +39,9 @@ def steal(rng, n=3, avoid=frozenset()):
     picks = [dict(rng.choice([i for i in items if i["museum"] == m]))
              for m in rng.sample(museums, min(n, len(museums)))]
     return {"pieces": picks, "line": rng.choice(LINES)}
+
+
+def another(rng, museum, avoid=frozenset()):
+    """A different piece from the same museum, for when a page won't load."""
+    items = [i for i in _pool(avoid) if i["museum"] == museum]
+    return dict(rng.choice(items)) if items else None
