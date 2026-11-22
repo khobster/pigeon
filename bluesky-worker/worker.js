@@ -58,16 +58,28 @@ async function run(env) {
   return `posted ${latest.date} with ${images.length} image(s)`;
 }
 
-// The caption: the lead piece, how many more are in the bag, and the way in.
+// The caption: the lead piece, where it was lifted from, and the way in.
 export function compose(latest) {
-  const [lead, ...rest] = latest.pieces;
+  const lead = latest.pieces[0];
   const by = lead.artist && !/^(unknown|anonymous)/i.test(lead.artist) ? ` by ${lead.artist}` : "";
   const year = lead.year ? `, ${lead.year}` : "";
-  const tail = `\n\n${rest.length ? `Plus ${rest.length} more in the bag. ` : ""}A free art heist in your inbox every morning: heist.arugulamotors.com`;
-  const head = (t) => `Today's haul: ${t}${by}${year}. Lifted from ${lead.museum}.`;
-  let title = lead.title;
+  const tail = "\n\nPlus a whole lot more in the bag. A free art heist in your inbox every morning: heist.arugulamotors.com";
+  const head = (t) => `Today's haul: ${t}${by}${year}. Lifted from ${place(lead.museum)}.`;
+  let title = tidy(lead.title);
   while ([...head(title) + tail].length > 300 && title.length > 20) title = title.slice(0, -10).replace(/\s+\S*$/, "") + "...";
   return head(title) + tail;
+}
+
+// "Night of the Sokol houses. 11. 9. 2015." -> "Night of the Sokol houses"
+function tidy(title) {
+  return (title || "Untitled").replace(/[.,]?\s*\b\d{1,2}\.\s?\d{1,2}\.\s?\d{4}\.?\s*$/, "").replace(/[.\s]+$/, "");
+}
+
+// "Historical Museum, Czech Republic, via Europeana" -> "the Historical
+// Museum, Czech Republic"; "The Cleveland Museum of Art" -> "the Cleveland..."
+function place(museum) {
+  const m = (museum || "a museum").replace(/,?\s*via Europeana$/, "").replace(/^The /, "the ");
+  return /^(Historical|National|Natural|Cultural|Metropolitan|State|Art|Los|Museum|Rijksmuseum)\b/.test(m) ? `the ${m}` : m;
 }
 
 function alt(p) {

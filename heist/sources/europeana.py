@@ -17,6 +17,8 @@ import requests
 
 from engine.common import EUROPEANA_KEY
 
+DOTTED_DATE = re.compile(r"[.,]?\s*\b\d{1,2}\.\s?\d{1,2}\.\s?\d{4}\.?\s*$")
+
 # edmIsShownBy is often a viewer/landing page (returns HTML/JSON, not an image),
 # which is why Europeana contributed nothing at first. Take it only when it is a
 # direct image file; otherwise fall back to edmPreview, Europeana's own thumbnail
@@ -90,6 +92,11 @@ def steal(rng):
         if not image:
             continue
         provider = _first(it, "dataProvider", "edmDataProvider")
+        # A bare "Historical Museum" says nothing about where; add the country
+        # unless the name already carries a place ("..., Budapest").
+        country = _first(it, "country")
+        if provider and country and "," not in provider:
+            provider = f"{provider}, {country}"
         # Build the record URL from the item id, NOT guid: guid embeds our wskey
         # as a utm_campaign param (a key leak in every link) and sometimes points
         # off to a raw Wikidata entity. id looks like "/628/Pb_102090".
@@ -98,7 +105,8 @@ def steal(rng):
             # Many Europeana holders are obscure digitization outfits; "via
             # Europeana" gives the odd institution name context and legitimacy.
             "museum": (f"{provider}, via Europeana" if provider else "Europeana"),
-            "title": _first(it, "title") or "Untitled",
+            # Drop a trailing event date like "... houses. 11. 9. 2015".
+            "title": DOTTED_DATE.sub("", _first(it, "title") or "").strip() or "Untitled",
             "artist": _first(it, "dcCreator") or "Unknown",
             "year": _first(it, "year"),
             "medium": q,  # the query is a usable medium/subject hint for bucketing
