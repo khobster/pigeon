@@ -5,3 +5,4 @@ compatibility_date = "2024-09-23"
 # Secrets (wrangler secret put):
 #   GOOGLE_SA  the service account json that can edit the subscriber sheet
 #   SHEET_ID   the subscriber sheet's id
+#   UNSUB_KEY  signs unsubscribe links (engine/send.py derives the same key)

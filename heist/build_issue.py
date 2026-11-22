@@ -24,6 +24,7 @@ import requests
 from PIL import Image
 
 from engine.render import render
+from engine.send import UNSUB_SLOT
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            wellcome, europeana, nypl, lacma, barnes, parismusees,
                            chunklet, loc, lam, gotaway)
@@ -1011,8 +1012,11 @@ def build(today=None):
     }
 
     template = (ROOT / "heist" / "template.html").read_text()
-    email_html = render(template, {**context, "header_src": ARCHIVE_URL + HEADER_WEB})
-    archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB})
+    # The email's footer link is filled per recipient at send time; the public
+    # archive copy has none.
+    email_html = render(template, {**context, "header_src": ARCHIVE_URL + HEADER_WEB,
+                                   "unsubscribe_url": UNSUB_SLOT})
+    archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB, "unsubscribe_url": ""})
 
     subject = build_subject(haul, extras, line, vaults[0] if vaults else {}, hideout)
     record_art(today, used + vault_keys + gone_keys, ledger)
