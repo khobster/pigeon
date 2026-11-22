@@ -1,0 +1,12 @@
+name = "heist-bluesky"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+[vars]
+BSKY_HANDLE = ""
+# BSKY_APP_PASSWORD is a secret: npx wrangler secret put BSKY_APP_PASSWORD
+
+# Every 20 minutes through the morning send window (10:40 to 20:00 UTC); it
+# posts once, as soon as the day's email is out.
+[triggers]
+crons = ["*/20 10-20 * * *"]

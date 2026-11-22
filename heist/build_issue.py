@@ -1019,6 +1019,7 @@ def build(today=None):
     archive_html = render(template, {**context, "header_src": "../" + HEADER_WEB, "unsubscribe_url": ""})
 
     subject = build_subject(haul, extras, line, vaults[0] if vaults else {}, hideout)
+    write_latest(today, haul, extras)
     record_art(today, used + vault_keys + gone_keys, ledger)
     return subject, email_html, archive_html, today
 
@@ -1042,6 +1043,17 @@ def prune_old_art(today, keep_days=365):
             removed += 1
     if removed:
         print(f"pruned {removed} art file(s) older than {keep_days} days")
+
+
+def write_latest(today, haul, extras):
+    """docs/latest.json: the day's lead art, for the Bluesky Worker
+    (bluesky-worker/), which posts it once the email has gone out."""
+    keep = ("image", "title", "artist", "year", "museum")
+    (DOCS / "latest.json").write_text(json.dumps({
+        "date": today.isoformat(),
+        "issue": f"{ARCHIVE_URL}issues/{today.isoformat()}.html",
+        "pieces": [{k: p.get(k, "") for k in keep} for p in [haul, *extras][:4]],
+    }, indent=1, ensure_ascii=False))
 
 
 RECENT_LIST = 12  # the homepage lists this many issues; the rest fold away
