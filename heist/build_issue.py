@@ -1040,6 +1040,9 @@ def prune_old_art(today, keep_days=365):
         print(f"pruned {removed} art file(s) older than {keep_days} days")
 
 
+RECENT_LIST = 12  # the homepage lists this many issues; the rest fold away
+
+
 def write_archive(archive_html, today):
     issues_dir = DOCS / "issues"
     issues_dir.mkdir(parents=True, exist_ok=True)
@@ -1053,15 +1056,17 @@ def write_archive(archive_html, today):
         except ValueError:
             return stem
 
-    items = "\n".join(
-        f'      <li><a href="issues/{p.name}">{pretty(p.stem)}</a></li>' for p in issues
-    )
+    def li(p):
+        return f'      <li><a href="issues/{p.name}">{pretty(p.stem)}</a></li>'
+
     n = len(issues)
     count_line = f"{n} heist{'s' if n != 1 else ''} and counting"
     index = (ROOT / "docs" / "_index_template.html").read_text()
-    (DOCS / "index.html").write_text(
-        index.replace("{{count_line}}", count_line).replace("{{issue_list}}", items)
-    )
+    for k, v in {"count_line": count_line, "count": str(n),
+                 "issue_list": "\n".join(li(p) for p in issues[:RECENT_LIST]),
+                 "older_list": "\n".join(li(p) for p in issues[RECENT_LIST:])}.items():
+        index = index.replace("{{%s}}" % k, v)
+    (DOCS / "index.html").write_text(index)
     print(f"archived issue {today.isoformat()} ({len(issues)} total)")
 
 

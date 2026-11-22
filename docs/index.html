@@ -10,45 +10,75 @@
 <title>the heist · your personal art thief</title>
 <meta name="description" content="One beautiful artwork a day, lifted from the world's great museums. Plus a line from the canon, a find from the Library of Congress, and a place to lay low. Free, daily, asks nothing of you.">
 <style>
+  * { box-sizing:border-box; }
   body { margin:0; background:#fff; color:#1a1a1a; font-family:Helvetica, Arial, sans-serif; }
   .wrap { max-width:560px; margin:0 auto; padding:40px 20px 80px; text-align:center; }
   .masthead { font-family:Georgia, 'Times New Roman', serif; font-size:28px; font-style:italic; color:#1a1a1a; margin:0 0 10px; }
-  .header img { width:260px; max-width:70%; height:auto; }
-  .tag { font-family:Georgia, 'Times New Roman', serif; font-style:italic; color:#8a8a8a; font-size:14px; margin:10px 0 38px; }
+  .header img { width:260px; max-width:70%; height:auto; display:inline-block; }
+  .tag { font-family:Georgia, 'Times New Roman', serif; font-style:italic; color:#8a8a8a; font-size:14px; margin:10px 0 30px; }
   p.pitch { font-size:15px; line-height:1.6; color:#333; text-align:left; }
-  form { margin:32px 0 12px; }
+  form { margin:24px 0 26px; }
   input[type=email] { font-family:inherit; font-size:16px; padding:12px 14px; width:70%; max-width:320px; border:1px solid #ccc; border-radius:4px; }
   button { font-family:Helvetica, Arial, sans-serif; font-size:14px; letter-spacing:1px; text-transform:uppercase; font-weight:800; padding:13px 24px; margin-top:10px; background:#ffe95e; color:#111; border:none; cursor:pointer; }
   button:hover { background:#ffe139; }
-  .status { font-size:14px; color:#6a6a6a; min-height:1.2em; }
+  .status { font-size:14px; color:#6a6a6a; margin:10px 0 0; }
+  .status:empty { display:none; }
+  .chip { display:inline-block; background:#ffe95e; padding:5px 12px; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#111; text-decoration:none; }
   .count { margin:48px 0 14px; }
-  .count span { display:inline-block; background:#ffe95e; padding:5px 12px; font-family:Helvetica, Arial, sans-serif; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#111; }
-  ul { list-style:none; padding:0; }
+  ul { list-style:none; padding:0; margin:0; }
   li { margin:7px 0; font-size:15px; }
+  details { margin-top:10px; }
+  summary { cursor:pointer; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; list-style:none; margin:14px 0; text-decoration:underline; }
+  summary::-webkit-details-marker { display:none; }
+  details[open] summary { display:none; }
   a { color:#1a1a1a; }
   .footer { margin-top:56px; font-size:12px; color:#9a9a9a; line-height:1.7; }
   .footer a { color:#9a9a9a; }
+
+  /* Wide screens: the bag big on the left, pitch and sign-up on the right,
+     all above the fold; the archive spreads into columns. */
+  @media (min-width: 900px) {
+    .wrap { max-width:1080px; padding:56px 40px 80px; }
+    .hero { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; text-align:left; padding:24px 0 40px; }
+    .header img { width:auto; height:auto; max-height:min(640px, 78vh); max-width:100%; }
+    .header { text-align:center; }
+    .masthead { font-size:56px; margin:0 0 4px; line-height:1.05; }
+    .tag { font-size:18px; margin:0 0 26px; }
+    p.pitch { font-size:16px; }
+    form { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    form br { display:none; }
+    input[type=email] { width:auto; flex:1; max-width:none; }
+    button { margin-top:0; }
+    .status { flex-basis:100%; margin:0; min-height:0; }
+    ul { columns:4; column-gap:24px; }
+    li { break-inside:avoid; margin:0 0 9px; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <p class="masthead">the heist</p>
-  <div class="header"><img src="assets/header.png" alt="the heist"></div>
-  <p class="tag">your personal art thief</p>
+  <div class="hero">
+    <div class="header"><picture><source media="(min-width: 900px)" srcset="assets/header-tall.webp" type="image/webp"><source srcset="assets/header.webp" type="image/webp"><img src="assets/header.png" alt="the heist: a museum statue stuffed in a paper bag" width="900" height="900"></picture></div>
+    <div class="copy">
+      <p class="masthead">the heist</p>
+      <p class="tag">your personal art thief</p>
 
-  <p class="pitch">Every day, the heist breaks into the world's great museums and steals a bag of beautiful things for you. A masterpiece from the Met, the National Gallery of Art, Cleveland, the Smithsonian, the Barnes, the Rijksmuseum, LACMA, the museums of Paris, SMK in Copenhagen, and many more. A line lifted from the canon. A find from the Library of Congress vaults. And a place to lay low. On the lam or not.</p>
-  <p class="pitch">No takeaways. No insights. No action items. It's a cleanser for an inbox full of pesk, and it asks nothing of you.</p>
-  <p class="pitch">Ninety seconds of beauty, then you get on with your day.</p>
+      <p class="pitch">Every day, the heist breaks into the world's great museums and steals a bag of beautiful things for you. A masterpiece from the Met, the National Gallery of Art, Cleveland, the Smithsonian, the Barnes, the Rijksmuseum, LACMA, the museums of Paris, SMK in Copenhagen, and many more. A line lifted from the canon. A find from the Library of Congress vaults. And a place to lay low. On the lam or not.</p>
 
-  <form id="subscribeForm">
-    <input id="email" type="email" name="email" placeholder="your email" required>
-    <input type="hidden" name="product" value="heist-subscribe">
-    <br>
-    <button type="submit">Get your thief</button>
-    <p class="status" id="status" role="status" aria-live="polite"></p>
-  </form>
+      <form id="subscribeForm">
+        <input id="email" type="email" name="email" placeholder="your email" required>
+        <input type="hidden" name="product" value="heist-subscribe">
+        <br>
+        <button type="submit">Get your thief</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
 
-  <p class="count"><span>170 heists and counting</span></p>
+      <p class="pitch">No takeaways. No insights. No action items. It's a cleanser for an inbox full of pesk, and it asks nothing of you.</p>
+      <p class="pitch">Ninety seconds of beauty, then you get on with your day.</p>
+    </div>
+  </div>
+
+  <p class="count"><span class="chip">170 heists and counting</span></p>
   <ul>
       <li><a href="issues/2026-11-22.html">November 22, 2026</a></li>
       <li><a href="issues/2026-11-21.html">November 21, 2026</a></li>
@@ -62,6 +92,10 @@
       <li><a href="issues/2026-11-13.html">November 13, 2026</a></li>
       <li><a href="issues/2026-11-12.html">November 12, 2026</a></li>
       <li><a href="issues/2026-11-11.html">November 11, 2026</a></li>
+  </ul>
+  <details>
+    <summary>All 170 heists</summary>
+    <ul>
       <li><a href="issues/2026-11-10.html">November 10, 2026</a></li>
       <li><a href="issues/2026-11-09.html">November 9, 2026</a></li>
       <li><a href="issues/2026-11-08.html">November 8, 2026</a></li>
@@ -220,7 +254,8 @@
       <li><a href="issues/2026-06-07.html">June 7, 2026</a></li>
       <li><a href="issues/2026-06-06.html">June 6, 2026</a></li>
       <li><a href="issues/2026-06-04.html">June 4, 2026</a></li>
-  </ul>
+    </ul>
+  </details>
 
   <div class="footer">
     Delivered by Pigeon, a newsletter engine that never misses.<br>
