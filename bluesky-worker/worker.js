@@ -58,16 +58,17 @@ async function run(env) {
   return `posted ${latest.date} with ${images.length} image(s)`;
 }
 
-// The caption: the lead piece, where it was lifted from, and the way in.
+// The caption: the lead piece, where it was lifted from, and the way in. All
+// lowercase, the heist's voice. (Alt text keeps real case for screen readers.)
 export function compose(latest) {
   const lead = latest.pieces[0];
   const by = lead.artist && !/^(unknown|anonymous)/i.test(lead.artist) ? ` by ${lead.artist}` : "";
   const year = lead.year ? `, ${lead.year}` : "";
-  const tail = "\n\nPlus a whole lot more in the bag. A free art heist in your inbox every morning: heist.arugulamotors.com";
-  const head = (t) => `Today's haul: ${t}${by}${year}. Lifted from ${place(lead.museum)}.`;
+  const tail = "\n\nplus a whole lot more in the bag. a free art heist in your inbox every morning: heist.arugulamotors.com";
+  const head = (t) => `today's haul: ${t}${by}${year}. lifted from ${place(lead.museum)}.`;
   let title = tidy(lead.title);
   while ([...head(title) + tail].length > 300 && title.length > 20) title = title.slice(0, -10).replace(/\s+\S*$/, "") + "...";
-  return head(title) + tail;
+  return (head(title) + tail).toLowerCase();
 }
 
 // "Night of the Sokol houses. 11. 9. 2015." -> "Night of the Sokol houses"
