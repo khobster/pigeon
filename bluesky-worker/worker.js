@@ -1,5 +1,5 @@
 // The heist on Bluesky: once the day's email has gone out, post the lead art
-// (up to 4 pieces from the bag) with a link to sign up.
+// with a link to sign up. The rest of the bag stays a mystery.
 //   cron         checks, and posts at most once per issue
 //   GET /preview the post it would make right now (no login, no posting)
 // The build writes docs/latest.json; the workflow records state/last_sent
@@ -18,7 +18,7 @@ export default {
   async fetch(req, env) {
     if (new URL(req.url).pathname !== "/preview") return new Response("the heist on bluesky");
     const latest = await getJson(LATEST);
-    return Response.json({ sent: await sentDate(), latest: latest.date, text: compose(latest), images: latest.pieces.length });
+    return Response.json({ sent: await sentDate(), latest: latest.date, text: compose(latest), image: latest.pieces[0].image });
   },
 };
 
@@ -33,7 +33,7 @@ async function run(env) {
     body: { identifier: env.BSKY_HANDLE, password: env.BSKY_APP_PASSWORD.trim() },
   });
   const images = [];
-  for (const p of latest.pieces.slice(0, 4)) {
+  for (const p of latest.pieces.slice(0, 1)) {
     try {
       const { bytes, type } = await image(p.image);
       const blob = await upload(s, bytes, type);
