@@ -68,6 +68,7 @@
       <form id="subscribeForm">
         <input id="email" type="email" name="email" placeholder="your email" required>
         <input type="hidden" name="product" value="heist-subscribe">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px;">
         <br>
         <button type="submit">Get your thief</button>
         <p class="status" id="status" role="status" aria-live="polite"></p>
@@ -99,14 +100,21 @@
     e.preventDefault();
     var status = document.getElementById('status');
     status.textContent = 'casing the joint...';
+    var data = new FormData(this);
     try {
-      var resp = await fetch('https://formspree.io/f/mvzyogdl', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(this)
-      });
-      status.textContent = resp.ok ? "you're in. first heist hits tomorrow morning." : 'something jammed. try again?';
-      if (resp.ok) this.reset();
+      // Straight into the subscriber sheet; Formspree only if the Worker is down.
+      var resp = await fetch('https://heist-signup.kevin-murawinski.workers.dev', { method: 'POST', body: data })
+        .catch(function () { return { ok: false, status: 0 }; });
+      if (!resp.ok && resp.status !== 400) {
+        resp = await fetch('https://formspree.io/f/mvzyogdl', { method: 'POST', headers: { 'Accept': 'application/json' }, body: data });
+      }
+      var body = await resp.json().catch(function () { return {}; });
+      if (resp.ok) {
+        status.textContent = body.already ? "you're already in. the thief knows where you live." : "you're in. first heist hits tomorrow morning.";
+        this.reset();
+      } else {
+        status.textContent = resp.status === 400 ? 'that email looks off. try again?' : 'something jammed. try again?';
+      }
     } catch (err) {
       status.textContent = 'something jammed. try again?';
     }
