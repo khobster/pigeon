@@ -908,10 +908,10 @@ def vault_html(vaults):
     return "".join(rows)
 
 
-def try_steal(source, rng):
+def try_steal(source, rng, **kw):
     """Optional sections fail soft: a thin issue still ships."""
     try:
-        return source.steal(rng)
+        return source.steal(rng, **kw)
     except Exception as e:  # noqa: BLE001
         print(f"  [skip] {source.__name__}: {e}")
         return {}
@@ -1043,7 +1043,7 @@ def build(today=None):
         shutil.copyfile(PLATES / f"{plate}.jpg", art_dir / name)
         piece["plate"] = f"{ARCHIVE_URL}assets/art/{name}"
 
-    hideout = try_steal(lam, rng)
+    hideout = try_steal(lam, rng, today=today)
     if hideout.get("image"):
         try:
             # 3x the 560px layout: the hideout photo runs full width, so keep it sharp.

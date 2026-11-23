@@ -1,4 +1,5 @@
 """On the Lam: tonight's hideout, somewhere on earth."""
+import hashlib
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -9,8 +10,13 @@ PLACES = json.loads((Path(__file__).resolve().parent.parent / "places.json").rea
 SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary/{}"
 
 
-def steal(rng):
-    place = rng.choice(PLACES)
+# A fixed shuffle of the list, walked one place per day: every hideout comes
+# up once before any repeats (1,644 places is four and a half years on the lam).
+ORDER = sorted(PLACES, key=lambda p: hashlib.sha256(p["wiki"].encode()).hexdigest())
+
+
+def steal(rng, today=None):
+    place = ORDER[today.toordinal() % len(ORDER)] if today else rng.choice(PLACES)
     data = requests.get(
         SUMMARY.format(place["wiki"]),
         timeout=30,

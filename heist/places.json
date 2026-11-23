@@ -1,101 +1,6578 @@
 [
-  {"name": "Chefchaouen, Morocco", "wiki": "Chefchaouen"},
-  {"name": "Matera, Italy", "wiki": "Matera"},
-  {"name": "Luang Prabang, Laos", "wiki": "Luang_Prabang"},
-  {"name": "Oaxaca, Mexico", "wiki": "Oaxaca_City"},
-  {"name": "The Faroe Islands", "wiki": "Faroe_Islands"},
-  {"name": "Salar de Uyuni, Bolivia", "wiki": "Salar_de_Uyuni"},
-  {"name": "Cappadocia, Turkey", "wiki": "Cappadocia"},
-  {"name": "Hoi An, Vietnam", "wiki": "H%E1%BB%99i_An"},
-  {"name": "Valparaiso, Chile", "wiki": "Valpara%C3%ADso"},
-  {"name": "Stone Town, Zanzibar", "wiki": "Stone_Town"},
-  {"name": "Tbilisi, Georgia", "wiki": "Tbilisi"},
-  {"name": "The Lofoten Islands, Norway", "wiki": "Lofoten"},
-  {"name": "The Isle of Skye, Scotland", "wiki": "Isle_of_Skye"},
-  {"name": "Petra, Jordan", "wiki": "Petra"},
-  {"name": "Samarkand, Uzbekistan", "wiki": "Samarkand"},
-  {"name": "Bukhara, Uzbekistan", "wiki": "Bukhara"},
-  {"name": "Kyoto, Japan", "wiki": "Kyoto"},
-  {"name": "Hakone, Japan", "wiki": "Hakone,_Kanagawa"},
-  {"name": "Jeju Island, South Korea", "wiki": "Jeju_Island"},
-  {"name": "Queenstown, New Zealand", "wiki": "Queenstown,_New_Zealand"},
-  {"name": "El Chalten, Patagonia", "wiki": "El_Chalt%C3%A9n"},
-  {"name": "Cartagena, Colombia", "wiki": "Cartagena,_Colombia"},
-  {"name": "Havana, Cuba", "wiki": "Havana"},
-  {"name": "San Miguel de Allende, Mexico", "wiki": "San_Miguel_de_Allende"},
-  {"name": "Marrakesh, Morocco", "wiki": "Marrakesh"},
-  {"name": "Essaouira, Morocco", "wiki": "Essaouira"},
-  {"name": "Lalibela, Ethiopia", "wiki": "Lalibela"},
-  {"name": "Dakar, Senegal", "wiki": "Dakar"},
-  {"name": "The Westman Islands, Iceland", "wiki": "Vestmannaeyjar"},
-  {"name": "Porto, Portugal", "wiki": "Porto"},
-  {"name": "Sintra, Portugal", "wiki": "Sintra"},
-  {"name": "Ronda, Spain", "wiki": "Ronda"},
-  {"name": "San Sebastian, Spain", "wiki": "San_Sebasti%C3%A1n"},
-  {"name": "Bologna, Italy", "wiki": "Bologna"},
-  {"name": "Trieste, Italy", "wiki": "Trieste"},
-  {"name": "Kotor, Montenegro", "wiki": "Kotor"},
-  {"name": "Hallstatt, Austria", "wiki": "Hallstatt"},
-  {"name": "Gdansk, Poland", "wiki": "Gda%C5%84sk"},
-  {"name": "Tallinn, Estonia", "wiki": "Tallinn"},
-  {"name": "Riga, Latvia", "wiki": "Riga"},
-  {"name": "Bergen, Norway", "wiki": "Bergen"},
-  {"name": "Orkney, Scotland", "wiki": "Orkney"},
-  {"name": "Dingle, Ireland", "wiki": "Dingle"},
-  {"name": "Galway, Ireland", "wiki": "Galway"},
-  {"name": "Bruges, Belgium", "wiki": "Bruges"},
-  {"name": "Ghent, Belgium", "wiki": "Ghent"},
-  {"name": "Colmar, France", "wiki": "Colmar"},
-  {"name": "Annecy, France", "wiki": "Annecy"},
-  {"name": "Menton, France", "wiki": "Menton"},
-  {"name": "Procida, Italy", "wiki": "Procida"},
-  {"name": "Ortigia, Sicily", "wiki": "Ortygia"},
-  {"name": "Naxos, Greece", "wiki": "Naxos"},
-  {"name": "Hydra, Greece", "wiki": "Hydra_(island)"},
-  {"name": "Kas, Turkey", "wiki": "Ka%C5%9F"},
-  {"name": "Yerevan, Armenia", "wiki": "Yerevan"},
-  {"name": "Jaipur, India", "wiki": "Jaipur"},
-  {"name": "Udaipur, India", "wiki": "Udaipur"},
-  {"name": "Varanasi, India", "wiki": "Varanasi"},
-  {"name": "Pondicherry, India", "wiki": "Pondicherry"},
-  {"name": "Galle, Sri Lanka", "wiki": "Galle"},
-  {"name": "Chiang Mai, Thailand", "wiki": "Chiang_Mai"},
-  {"name": "George Town, Penang", "wiki": "George_Town,_Penang"},
-  {"name": "Malacca, Malaysia", "wiki": "Malacca_City"},
-  {"name": "Ubud, Bali", "wiki": "Ubud"},
-  {"name": "Busan, South Korea", "wiki": "Busan"},
-  {"name": "Jiufen, Taiwan", "wiki": "Jiufen"},
-  {"name": "Guilin, China", "wiki": "Guilin"},
-  {"name": "Almaty, Kazakhstan", "wiki": "Almaty"},
-  {"name": "Muscat, Oman", "wiki": "Muscat"},
-  {"name": "Sidi Bou Said, Tunisia", "wiki": "Sidi_Bou_Said"},
-  {"name": "Alexandria, Egypt", "wiki": "Alexandria"},
-  {"name": "Aswan, Egypt", "wiki": "Aswan"},
-  {"name": "Lamu, Kenya", "wiki": "Lamu"},
-  {"name": "Swakopmund, Namibia", "wiki": "Swakopmund"},
-  {"name": "Quito, Ecuador", "wiki": "Quito"},
-  {"name": "Cusco, Peru", "wiki": "Cusco"},
-  {"name": "Arequipa, Peru", "wiki": "Arequipa"},
-  {"name": "Sucre, Bolivia", "wiki": "Sucre"},
-  {"name": "Colonia del Sacramento, Uruguay", "wiki": "Colonia_del_Sacramento"},
-  {"name": "Bariloche, Argentina", "wiki": "San_Carlos_de_Bariloche"},
-  {"name": "Easter Island, Chile", "wiki": "Easter_Island"},
-  {"name": "Coyoacan, Mexico City", "wiki": "Coyoac%C3%A1n"},
-  {"name": "Merida, Mexico", "wiki": "M%C3%A9rida,_Yucat%C3%A1n"},
-  {"name": "Antigua Guatemala", "wiki": "Antigua_Guatemala"},
-  {"name": "Old San Juan, Puerto Rico", "wiki": "Old_San_Juan"},
-  {"name": "Willemstad, Curacao", "wiki": "Willemstad"},
-  {"name": "Salvador, Brazil", "wiki": "Salvador,_Bahia"},
-  {"name": "Ouro Preto, Brazil", "wiki": "Ouro_Preto"},
-  {"name": "Paraty, Brazil", "wiki": "Paraty"},
-  {"name": "New Orleans, Louisiana", "wiki": "New_Orleans"},
-  {"name": "Savannah, Georgia", "wiki": "Savannah,_Georgia"},
-  {"name": "Marfa, Texas", "wiki": "Marfa,_Texas"},
-  {"name": "Taos, New Mexico", "wiki": "Taos,_New_Mexico"},
-  {"name": "Mackinac Island, Michigan", "wiki": "Mackinac_Island"},
-  {"name": "Sitka, Alaska", "wiki": "Sitka,_Alaska"},
-  {"name": "Banff, Canada", "wiki": "Banff,_Alberta"},
-  {"name": "Quebec City, Canada", "wiki": "Quebec_City"},
-  {"name": "Tofino, Canada", "wiki": "Tofino"},
-  {"name": "St. John's, Newfoundland", "wiki": "St._John%27s,_Newfoundland_and_Labrador"}
+ {
+  "name": "Chefchaouen, Morocco",
+  "wiki": "Chefchaouen"
+ },
+ {
+  "name": "Matera, Italy",
+  "wiki": "Matera"
+ },
+ {
+  "name": "Luang Prabang, Laos",
+  "wiki": "Luang_Prabang"
+ },
+ {
+  "name": "Oaxaca, Mexico",
+  "wiki": "Oaxaca_City"
+ },
+ {
+  "name": "The Faroe Islands",
+  "wiki": "Faroe_Islands"
+ },
+ {
+  "name": "Salar de Uyuni, Bolivia",
+  "wiki": "Salar_de_Uyuni"
+ },
+ {
+  "name": "Cappadocia, Turkey",
+  "wiki": "Cappadocia"
+ },
+ {
+  "name": "Hoi An, Vietnam",
+  "wiki": "H%E1%BB%99i_An"
+ },
+ {
+  "name": "Valparaiso, Chile",
+  "wiki": "Valpara%C3%ADso"
+ },
+ {
+  "name": "Stone Town, Zanzibar",
+  "wiki": "Stone_Town"
+ },
+ {
+  "name": "Tbilisi, Georgia",
+  "wiki": "Tbilisi"
+ },
+ {
+  "name": "The Lofoten Islands, Norway",
+  "wiki": "Lofoten"
+ },
+ {
+  "name": "The Isle of Skye, Scotland",
+  "wiki": "Isle_of_Skye"
+ },
+ {
+  "name": "Petra, Jordan",
+  "wiki": "Petra"
+ },
+ {
+  "name": "Samarkand, Uzbekistan",
+  "wiki": "Samarkand"
+ },
+ {
+  "name": "Bukhara, Uzbekistan",
+  "wiki": "Bukhara"
+ },
+ {
+  "name": "Kyoto, Japan",
+  "wiki": "Kyoto"
+ },
+ {
+  "name": "Hakone, Japan",
+  "wiki": "Hakone,_Kanagawa"
+ },
+ {
+  "name": "Jeju Island, South Korea",
+  "wiki": "Jeju_Island"
+ },
+ {
+  "name": "Queenstown, New Zealand",
+  "wiki": "Queenstown,_New_Zealand"
+ },
+ {
+  "name": "El Chalten, Patagonia",
+  "wiki": "El_Chalt%C3%A9n"
+ },
+ {
+  "name": "Cartagena, Colombia",
+  "wiki": "Cartagena,_Colombia"
+ },
+ {
+  "name": "Havana, Cuba",
+  "wiki": "Havana"
+ },
+ {
+  "name": "San Miguel de Allende, Mexico",
+  "wiki": "San_Miguel_de_Allende"
+ },
+ {
+  "name": "Marrakesh, Morocco",
+  "wiki": "Marrakesh"
+ },
+ {
+  "name": "Essaouira, Morocco",
+  "wiki": "Essaouira"
+ },
+ {
+  "name": "Lalibela, Ethiopia",
+  "wiki": "Lalibela"
+ },
+ {
+  "name": "Dakar, Senegal",
+  "wiki": "Dakar"
+ },
+ {
+  "name": "The Westman Islands, Iceland",
+  "wiki": "Vestmannaeyjar"
+ },
+ {
+  "name": "Porto, Portugal",
+  "wiki": "Porto"
+ },
+ {
+  "name": "Sintra, Portugal",
+  "wiki": "Sintra"
+ },
+ {
+  "name": "Ronda, Spain",
+  "wiki": "Ronda"
+ },
+ {
+  "name": "San Sebastian, Spain",
+  "wiki": "San_Sebasti%C3%A1n"
+ },
+ {
+  "name": "Bologna, Italy",
+  "wiki": "Bologna"
+ },
+ {
+  "name": "Trieste, Italy",
+  "wiki": "Trieste"
+ },
+ {
+  "name": "Kotor, Montenegro",
+  "wiki": "Kotor"
+ },
+ {
+  "name": "Hallstatt, Austria",
+  "wiki": "Hallstatt"
+ },
+ {
+  "name": "Gdansk, Poland",
+  "wiki": "Gda%C5%84sk"
+ },
+ {
+  "name": "Tallinn, Estonia",
+  "wiki": "Tallinn"
+ },
+ {
+  "name": "Riga, Latvia",
+  "wiki": "Riga"
+ },
+ {
+  "name": "Bergen, Norway",
+  "wiki": "Bergen"
+ },
+ {
+  "name": "Orkney, Scotland",
+  "wiki": "Orkney"
+ },
+ {
+  "name": "Dingle, Ireland",
+  "wiki": "Dingle"
+ },
+ {
+  "name": "Galway, Ireland",
+  "wiki": "Galway"
+ },
+ {
+  "name": "Bruges, Belgium",
+  "wiki": "Bruges"
+ },
+ {
+  "name": "Ghent, Belgium",
+  "wiki": "Ghent"
+ },
+ {
+  "name": "Colmar, France",
+  "wiki": "Colmar"
+ },
+ {
+  "name": "Annecy, France",
+  "wiki": "Annecy"
+ },
+ {
+  "name": "Menton, France",
+  "wiki": "Menton"
+ },
+ {
+  "name": "Procida, Italy",
+  "wiki": "Procida"
+ },
+ {
+  "name": "Ortigia, Sicily",
+  "wiki": "Ortygia"
+ },
+ {
+  "name": "Naxos, Greece",
+  "wiki": "Naxos"
+ },
+ {
+  "name": "Hydra, Greece",
+  "wiki": "Hydra_(island)"
+ },
+ {
+  "name": "Kas, Turkey",
+  "wiki": "Ka%C5%9F"
+ },
+ {
+  "name": "Yerevan, Armenia",
+  "wiki": "Yerevan"
+ },
+ {
+  "name": "Jaipur, India",
+  "wiki": "Jaipur"
+ },
+ {
+  "name": "Udaipur, India",
+  "wiki": "Udaipur"
+ },
+ {
+  "name": "Varanasi, India",
+  "wiki": "Varanasi"
+ },
+ {
+  "name": "Pondicherry, India",
+  "wiki": "Pondicherry"
+ },
+ {
+  "name": "Galle, Sri Lanka",
+  "wiki": "Galle"
+ },
+ {
+  "name": "Chiang Mai, Thailand",
+  "wiki": "Chiang_Mai"
+ },
+ {
+  "name": "George Town, Penang",
+  "wiki": "George_Town,_Penang"
+ },
+ {
+  "name": "Malacca, Malaysia",
+  "wiki": "Malacca_City"
+ },
+ {
+  "name": "Ubud, Bali",
+  "wiki": "Ubud"
+ },
+ {
+  "name": "Busan, South Korea",
+  "wiki": "Busan"
+ },
+ {
+  "name": "Jiufen, Taiwan",
+  "wiki": "Jiufen"
+ },
+ {
+  "name": "Guilin, China",
+  "wiki": "Guilin"
+ },
+ {
+  "name": "Almaty, Kazakhstan",
+  "wiki": "Almaty"
+ },
+ {
+  "name": "Muscat, Oman",
+  "wiki": "Muscat"
+ },
+ {
+  "name": "Sidi Bou Said, Tunisia",
+  "wiki": "Sidi_Bou_Said"
+ },
+ {
+  "name": "Alexandria, Egypt",
+  "wiki": "Alexandria"
+ },
+ {
+  "name": "Aswan, Egypt",
+  "wiki": "Aswan"
+ },
+ {
+  "name": "Lamu, Kenya",
+  "wiki": "Lamu"
+ },
+ {
+  "name": "Swakopmund, Namibia",
+  "wiki": "Swakopmund"
+ },
+ {
+  "name": "Quito, Ecuador",
+  "wiki": "Quito"
+ },
+ {
+  "name": "Cusco, Peru",
+  "wiki": "Cusco"
+ },
+ {
+  "name": "Arequipa, Peru",
+  "wiki": "Arequipa"
+ },
+ {
+  "name": "Sucre, Bolivia",
+  "wiki": "Sucre"
+ },
+ {
+  "name": "Colonia del Sacramento, Uruguay",
+  "wiki": "Colonia_del_Sacramento"
+ },
+ {
+  "name": "Bariloche, Argentina",
+  "wiki": "San_Carlos_de_Bariloche"
+ },
+ {
+  "name": "Easter Island, Chile",
+  "wiki": "Easter_Island"
+ },
+ {
+  "name": "Coyoacan, Mexico City",
+  "wiki": "Coyoac%C3%A1n"
+ },
+ {
+  "name": "Merida, Mexico",
+  "wiki": "M%C3%A9rida,_Yucat%C3%A1n"
+ },
+ {
+  "name": "Antigua Guatemala",
+  "wiki": "Antigua_Guatemala"
+ },
+ {
+  "name": "Old San Juan, Puerto Rico",
+  "wiki": "Old_San_Juan"
+ },
+ {
+  "name": "Willemstad, Curacao",
+  "wiki": "Willemstad"
+ },
+ {
+  "name": "Salvador, Brazil",
+  "wiki": "Salvador,_Bahia"
+ },
+ {
+  "name": "Ouro Preto, Brazil",
+  "wiki": "Ouro_Preto"
+ },
+ {
+  "name": "Paraty, Brazil",
+  "wiki": "Paraty"
+ },
+ {
+  "name": "New Orleans, Louisiana",
+  "wiki": "New_Orleans"
+ },
+ {
+  "name": "Savannah, Georgia",
+  "wiki": "Savannah,_Georgia"
+ },
+ {
+  "name": "Marfa, Texas",
+  "wiki": "Marfa,_Texas"
+ },
+ {
+  "name": "Taos, New Mexico",
+  "wiki": "Taos,_New_Mexico"
+ },
+ {
+  "name": "Mackinac Island, Michigan",
+  "wiki": "Mackinac_Island"
+ },
+ {
+  "name": "Sitka, Alaska",
+  "wiki": "Sitka,_Alaska"
+ },
+ {
+  "name": "Banff, Canada",
+  "wiki": "Banff,_Alberta"
+ },
+ {
+  "name": "Quebec City, Canada",
+  "wiki": "Quebec_City"
+ },
+ {
+  "name": "Tofino, Canada",
+  "wiki": "Tofino"
+ },
+ {
+  "name": "St. John's, Newfoundland",
+  "wiki": "St._John%27s,_Newfoundland_and_Labrador"
+ },
+ {
+  "name": "Mdina, Malta",
+  "wiki": "Mdina"
+ },
+ {
+  "name": "Valletta, Malta",
+  "wiki": "Valletta"
+ },
+ {
+  "name": "Gozo, Malta",
+  "wiki": "Gozo"
+ },
+ {
+  "name": "Lindos, Rhodes",
+  "wiki": "Lindos"
+ },
+ {
+  "name": "Symi, Greece",
+  "wiki": "Symi"
+ },
+ {
+  "name": "Folegandros, Greece",
+  "wiki": "Folegandros"
+ },
+ {
+  "name": "Nafplio, Greece",
+  "wiki": "Nafplio"
+ },
+ {
+  "name": "Meteora, Greece",
+  "wiki": "Meteora"
+ },
+ {
+  "name": "Monemvasia, Greece",
+  "wiki": "Monemvasia"
+ },
+ {
+  "name": "Chania, Crete",
+  "wiki": "Chania"
+ },
+ {
+  "name": "Bonifacio, Corsica",
+  "wiki": "Bonifacio, Corse-du-Sud"
+ },
+ {
+  "name": "Calvi, Corsica",
+  "wiki": "Calvi, Haute-Corse"
+ },
+ {
+  "name": "Civita di Bagnoregio, Italy",
+  "wiki": "Civita di Bagnoregio"
+ },
+ {
+  "name": "Polignano a Mare, Italy",
+  "wiki": "Polignano a Mare"
+ },
+ {
+  "name": "Alberobello, Italy",
+  "wiki": "Alberobello"
+ },
+ {
+  "name": "Lecce, Italy",
+  "wiki": "Lecce"
+ },
+ {
+  "name": "Ostuni, Italy",
+  "wiki": "Ostuni"
+ },
+ {
+  "name": "Tropea, Italy",
+  "wiki": "Tropea"
+ },
+ {
+  "name": "Cefalu, Sicily",
+  "wiki": "Cefalù"
+ },
+ {
+  "name": "Noto, Sicily",
+  "wiki": "Noto"
+ },
+ {
+  "name": "Erice, Sicily",
+  "wiki": "Erice"
+ },
+ {
+  "name": "The Aeolian Islands",
+  "wiki": "Aeolian Islands"
+ },
+ {
+  "name": "Positano, Italy",
+  "wiki": "Positano"
+ },
+ {
+  "name": "Portofino, Italy",
+  "wiki": "Portofino"
+ },
+ {
+  "name": "Cinque Terre, Italy",
+  "wiki": "Cinque Terre"
+ },
+ {
+  "name": "Bellagio, Lake Como",
+  "wiki": "Bellagio, Lombardy"
+ },
+ {
+  "name": "Bergamo, Italy",
+  "wiki": "Bergamo"
+ },
+ {
+  "name": "Mantua, Italy",
+  "wiki": "Mantua"
+ },
+ {
+  "name": "Ferrara, Italy",
+  "wiki": "Ferrara"
+ },
+ {
+  "name": "Ravenna, Italy",
+  "wiki": "Ravenna"
+ },
+ {
+  "name": "Urbino, Italy",
+  "wiki": "Urbino"
+ },
+ {
+  "name": "Orvieto, Italy",
+  "wiki": "Orvieto"
+ },
+ {
+  "name": "Montepulciano, Italy",
+  "wiki": "Montepulciano"
+ },
+ {
+  "name": "San Gimignano, Italy",
+  "wiki": "San Gimignano"
+ },
+ {
+  "name": "Lucca, Italy",
+  "wiki": "Lucca"
+ },
+ {
+  "name": "Burano, Venice",
+  "wiki": "Burano"
+ },
+ {
+  "name": "The Dolomites, Italy",
+  "wiki": "Dolomites"
+ },
+ {
+  "name": "Merano, Italy",
+  "wiki": "Merano"
+ },
+ {
+  "name": "Ljubljana, Slovenia",
+  "wiki": "Ljubljana"
+ },
+ {
+  "name": "Lake Bled, Slovenia",
+  "wiki": "Lake Bled"
+ },
+ {
+  "name": "Piran, Slovenia",
+  "wiki": "Piran"
+ },
+ {
+  "name": "Rovinj, Croatia",
+  "wiki": "Rovinj"
+ },
+ {
+  "name": "Hvar, Croatia",
+  "wiki": "Hvar"
+ },
+ {
+  "name": "Korcula, Croatia",
+  "wiki": "Korčula"
+ },
+ {
+  "name": "Mostar, Bosnia",
+  "wiki": "Mostar"
+ },
+ {
+  "name": "Ohrid, North Macedonia",
+  "wiki": "Ohrid"
+ },
+ {
+  "name": "Berat, Albania",
+  "wiki": "Berat"
+ },
+ {
+  "name": "Gjirokaster, Albania",
+  "wiki": "Gjirokastër"
+ },
+ {
+  "name": "Plovdiv, Bulgaria",
+  "wiki": "Plovdiv"
+ },
+ {
+  "name": "Sighisoara, Romania",
+  "wiki": "Sighișoara"
+ },
+ {
+  "name": "Lviv, Ukraine",
+  "wiki": "Lviv"
+ },
+ {
+  "name": "Cesky Krumlov, Czechia",
+  "wiki": "Český Krumlov"
+ },
+ {
+  "name": "Telc, Czechia",
+  "wiki": "Telč"
+ },
+ {
+  "name": "Kutna Hora, Czechia",
+  "wiki": "Kutná Hora"
+ },
+ {
+  "name": "Eger, Hungary",
+  "wiki": "Eger"
+ },
+ {
+  "name": "Pecs, Hungary",
+  "wiki": "Pécs"
+ },
+ {
+  "name": "Wroclaw, Poland",
+  "wiki": "Wrocław"
+ },
+ {
+  "name": "Zakopane, Poland",
+  "wiki": "Zakopane"
+ },
+ {
+  "name": "Torun, Poland",
+  "wiki": "Toruń"
+ },
+ {
+  "name": "Vilnius, Lithuania",
+  "wiki": "Vilnius"
+ },
+ {
+  "name": "Kuldiga, Latvia",
+  "wiki": "Kuldīga"
+ },
+ {
+  "name": "Porvoo, Finland",
+  "wiki": "Porvoo"
+ },
+ {
+  "name": "Rovaniemi, Finland",
+  "wiki": "Rovaniemi"
+ },
+ {
+  "name": "Visby, Gotland",
+  "wiki": "Visby"
+ },
+ {
+  "name": "Aero, Denmark",
+  "wiki": "Ærø"
+ },
+ {
+  "name": "Skagen, Denmark",
+  "wiki": "Skagen"
+ },
+ {
+  "name": "Alesund, Norway",
+  "wiki": "Ålesund"
+ },
+ {
+  "name": "Geiranger, Norway",
+  "wiki": "Geiranger"
+ },
+ {
+  "name": "Tromso, Norway",
+  "wiki": "Tromsø"
+ },
+ {
+  "name": "Seydisfjordur, Iceland",
+  "wiki": "Seyðisfjörður"
+ },
+ {
+  "name": "Ilulissat, Greenland",
+  "wiki": "Ilulissat"
+ },
+ {
+  "name": "Nuuk, Greenland",
+  "wiki": "Nuuk"
+ },
+ {
+  "name": "Tobermory, Mull",
+  "wiki": "Tobermory, Mull"
+ },
+ {
+  "name": "St Ives, Cornwall",
+  "wiki": "St Ives, Cornwall"
+ },
+ {
+  "name": "Portmeirion, Wales",
+  "wiki": "Portmeirion"
+ },
+ {
+  "name": "Rye, East Sussex",
+  "wiki": "Rye, East Sussex"
+ },
+ {
+  "name": "Whitby, England",
+  "wiki": "Whitby"
+ },
+ {
+  "name": "Bath, England",
+  "wiki": "Bath, Somerset"
+ },
+ {
+  "name": "Kinsale, Ireland",
+  "wiki": "Kinsale"
+ },
+ {
+  "name": "Cobh, Ireland",
+  "wiki": "Cobh"
+ },
+ {
+  "name": "Giethoorn, Netherlands",
+  "wiki": "Giethoorn"
+ },
+ {
+  "name": "Delft, Netherlands",
+  "wiki": "Delft"
+ },
+ {
+  "name": "Maastricht, Netherlands",
+  "wiki": "Maastricht"
+ },
+ {
+  "name": "Dinant, Belgium",
+  "wiki": "Dinant"
+ },
+ {
+  "name": "Vianden, Luxembourg",
+  "wiki": "Vianden"
+ },
+ {
+  "name": "Rothenburg ob der Tauber",
+  "wiki": "Rothenburg ob der Tauber"
+ },
+ {
+  "name": "Bamberg, Germany",
+  "wiki": "Bamberg"
+ },
+ {
+  "name": "Quedlinburg, Germany",
+  "wiki": "Quedlinburg"
+ },
+ {
+  "name": "Lubeck, Germany",
+  "wiki": "Lübeck"
+ },
+ {
+  "name": "Heidelberg, Germany",
+  "wiki": "Heidelberg"
+ },
+ {
+  "name": "Lindau, Germany",
+  "wiki": "Lindau"
+ },
+ {
+  "name": "Berchtesgaden, Germany",
+  "wiki": "Berchtesgaden"
+ },
+ {
+  "name": "Lauterbrunnen, Switzerland",
+  "wiki": "Lauterbrunnen"
+ },
+ {
+  "name": "Zermatt, Switzerland",
+  "wiki": "Zermatt"
+ },
+ {
+  "name": "Lugano, Switzerland",
+  "wiki": "Lugano"
+ },
+ {
+  "name": "Gruyeres, Switzerland",
+  "wiki": "Gruyères"
+ },
+ {
+  "name": "Bern, Switzerland",
+  "wiki": "Bern"
+ },
+ {
+  "name": "Salzburg, Austria",
+  "wiki": "Salzburg"
+ },
+ {
+  "name": "Durnstein, Austria",
+  "wiki": "Dürnstein"
+ },
+ {
+  "name": "Eze, France",
+  "wiki": "Èze"
+ },
+ {
+  "name": "Saint-Paul-de-Vence, France",
+  "wiki": "Saint-Paul-de-Vence"
+ },
+ {
+  "name": "Gordes, France",
+  "wiki": "Gordes"
+ },
+ {
+  "name": "Arles, France",
+  "wiki": "Arles"
+ },
+ {
+  "name": "Carcassonne, France",
+  "wiki": "Carcassonne"
+ },
+ {
+  "name": "Rocamadour, France",
+  "wiki": "Rocamadour"
+ },
+ {
+  "name": "Sarlat-la-Caneda, France",
+  "wiki": "Sarlat-la-Canéda"
+ },
+ {
+  "name": "Etretat, France",
+  "wiki": "Étretat"
+ },
+ {
+  "name": "Honfleur, France",
+  "wiki": "Honfleur"
+ },
+ {
+  "name": "Biarritz, France",
+  "wiki": "Biarritz"
+ },
+ {
+  "name": "Collioure, France",
+  "wiki": "Collioure"
+ },
+ {
+  "name": "Chamonix, France",
+  "wiki": "Chamonix"
+ },
+ {
+  "name": "Cadaques, Spain",
+  "wiki": "Cadaqués"
+ },
+ {
+  "name": "Cuenca, Spain",
+  "wiki": "Cuenca, Spain"
+ },
+ {
+  "name": "Toledo, Spain",
+  "wiki": "Toledo, Spain"
+ },
+ {
+  "name": "Segovia, Spain",
+  "wiki": "Segovia"
+ },
+ {
+  "name": "Cordoba, Spain",
+  "wiki": "Córdoba, Spain"
+ },
+ {
+  "name": "Granada, Spain",
+  "wiki": "Granada"
+ },
+ {
+  "name": "Setenil de las Bodegas",
+  "wiki": "Setenil de las Bodegas"
+ },
+ {
+  "name": "Frigiliana, Spain",
+  "wiki": "Frigiliana"
+ },
+ {
+  "name": "Albarracin, Spain",
+  "wiki": "Albarracín"
+ },
+ {
+  "name": "Santiago de Compostela, Spain",
+  "wiki": "Santiago de Compostela"
+ },
+ {
+  "name": "Soller, Mallorca",
+  "wiki": "Sóller"
+ },
+ {
+  "name": "Lanzarote, Canary Islands",
+  "wiki": "Lanzarote"
+ },
+ {
+  "name": "La Gomera, Canary Islands",
+  "wiki": "La Gomera"
+ },
+ {
+  "name": "Obidos, Portugal",
+  "wiki": "Óbidos, Portugal"
+ },
+ {
+  "name": "Evora, Portugal",
+  "wiki": "Évora"
+ },
+ {
+  "name": "Coimbra, Portugal",
+  "wiki": "Coimbra"
+ },
+ {
+  "name": "Funchal, Madeira",
+  "wiki": "Funchal"
+ },
+ {
+  "name": "Tangier, Morocco",
+  "wiki": "Tangier"
+ },
+ {
+  "name": "Fes, Morocco",
+  "wiki": "Fez, Morocco"
+ },
+ {
+  "name": "Ait Benhaddou, Morocco",
+  "wiki": "Aït Benhaddou"
+ },
+ {
+  "name": "Merzouga, Morocco",
+  "wiki": "Merzouga"
+ },
+ {
+  "name": "Asilah, Morocco",
+  "wiki": "Asilah"
+ },
+ {
+  "name": "Ghardaia, Algeria",
+  "wiki": "Ghardaïa"
+ },
+ {
+  "name": "Djerba, Tunisia",
+  "wiki": "Djerba"
+ },
+ {
+  "name": "Siwa Oasis, Egypt",
+  "wiki": "Siwa Oasis"
+ },
+ {
+  "name": "Luxor, Egypt",
+  "wiki": "Luxor"
+ },
+ {
+  "name": "Dahab, Egypt",
+  "wiki": "Dahab"
+ },
+ {
+  "name": "Harar, Ethiopia",
+  "wiki": "Harar"
+ },
+ {
+  "name": "Gondar, Ethiopia",
+  "wiki": "Gondar"
+ },
+ {
+  "name": "Mombasa, Kenya",
+  "wiki": "Mombasa"
+ },
+ {
+  "name": "Paje, Zanzibar",
+  "wiki": "Paje, Zanzibar"
+ },
+ {
+  "name": "Ilha de Mocambique",
+  "wiki": "Island of Mozambique"
+ },
+ {
+  "name": "Saint-Louis, Senegal",
+  "wiki": "Saint-Louis, Senegal"
+ },
+ {
+  "name": "Goree Island, Senegal",
+  "wiki": "Gorée"
+ },
+ {
+  "name": "Djenne, Mali",
+  "wiki": "Djenné"
+ },
+ {
+  "name": "Tetouan, Morocco",
+  "wiki": "Tétouan"
+ },
+ {
+  "name": "Ouidah, Benin",
+  "wiki": "Ouidah"
+ },
+ {
+  "name": "Cape Coast, Ghana",
+  "wiki": "Cape Coast"
+ },
+ {
+  "name": "Sao Tome",
+  "wiki": "São Tomé"
+ },
+ {
+  "name": "Mindelo, Cape Verde",
+  "wiki": "Mindelo"
+ },
+ {
+  "name": "Lake Malawi",
+  "wiki": "Lake Malawi"
+ },
+ {
+  "name": "Stellenbosch, South Africa",
+  "wiki": "Stellenbosch"
+ },
+ {
+  "name": "Bo-Kaap, Cape Town",
+  "wiki": "Bo-Kaap"
+ },
+ {
+  "name": "Victoria Falls",
+  "wiki": "Victoria Falls"
+ },
+ {
+  "name": "The Okavango Delta",
+  "wiki": "Okavango Delta"
+ },
+ {
+  "name": "Sossusvlei, Namibia",
+  "wiki": "Sossusvlei"
+ },
+ {
+  "name": "La Digue, Seychelles",
+  "wiki": "La Digue"
+ },
+ {
+  "name": "Le Morne, Mauritius",
+  "wiki": "Le Morne Brabant"
+ },
+ {
+  "name": "Socotra, Yemen",
+  "wiki": "Socotra"
+ },
+ {
+  "name": "Shibam, Yemen",
+  "wiki": "Shibam"
+ },
+ {
+  "name": "Nizwa, Oman",
+  "wiki": "Nizwa"
+ },
+ {
+  "name": "Byblos, Lebanon",
+  "wiki": "Byblos"
+ },
+ {
+  "name": "Akka, Israel",
+  "wiki": "Acre, Israel"
+ },
+ {
+  "name": "Wadi Rum, Jordan",
+  "wiki": "Wadi Rum"
+ },
+ {
+  "name": "Mardin, Turkey",
+  "wiki": "Mardin"
+ },
+ {
+  "name": "Safranbolu, Turkey",
+  "wiki": "Safranbolu"
+ },
+ {
+  "name": "Amasra, Turkey",
+  "wiki": "Amasra"
+ },
+ {
+  "name": "Kaleici, Antalya",
+  "wiki": "Kaleiçi"
+ },
+ {
+  "name": "Isfahan, Iran",
+  "wiki": "Isfahan"
+ },
+ {
+  "name": "Yazd, Iran",
+  "wiki": "Yazd"
+ },
+ {
+  "name": "Kashan, Iran",
+  "wiki": "Kashan"
+ },
+ {
+  "name": "Shiraz, Iran",
+  "wiki": "Shiraz"
+ },
+ {
+  "name": "Masuleh, Iran",
+  "wiki": "Masuleh"
+ },
+ {
+  "name": "Sheki, Azerbaijan",
+  "wiki": "Shaki, Azerbaijan"
+ },
+ {
+  "name": "Mestia, Georgia",
+  "wiki": "Mestia"
+ },
+ {
+  "name": "Kazbegi, Georgia",
+  "wiki": "Stepantsminda"
+ },
+ {
+  "name": "Sighnaghi, Georgia",
+  "wiki": "Signagi"
+ },
+ {
+  "name": "Dilijan, Armenia",
+  "wiki": "Dilijan"
+ },
+ {
+  "name": "Khiva, Uzbekistan",
+  "wiki": "Khiva"
+ },
+ {
+  "name": "Karakol, Kyrgyzstan",
+  "wiki": "Karakol"
+ },
+ {
+  "name": "Song Kol, Kyrgyzstan",
+  "wiki": "Song-Köl"
+ },
+ {
+  "name": "The Pamir Highway",
+  "wiki": "M41 highway"
+ },
+ {
+  "name": "Leh, Ladakh",
+  "wiki": "Leh"
+ },
+ {
+  "name": "Jaisalmer, India",
+  "wiki": "Jaisalmer"
+ },
+ {
+  "name": "Jodhpur, India",
+  "wiki": "Jodhpur"
+ },
+ {
+  "name": "Hampi, India",
+  "wiki": "Hampi"
+ },
+ {
+  "name": "Kochi, India",
+  "wiki": "Kochi"
+ },
+ {
+  "name": "Munnar, India",
+  "wiki": "Munnar"
+ },
+ {
+  "name": "Darjeeling, India",
+  "wiki": "Darjeeling"
+ },
+ {
+  "name": "Shillong, India",
+  "wiki": "Shillong"
+ },
+ {
+  "name": "Rishikesh, India",
+  "wiki": "Rishikesh"
+ },
+ {
+  "name": "Mcleod Ganj, India",
+  "wiki": "McLeod Ganj"
+ },
+ {
+  "name": "Kathmandu Valley, Nepal",
+  "wiki": "Kathmandu Valley"
+ },
+ {
+  "name": "Bhaktapur, Nepal",
+  "wiki": "Bhaktapur"
+ },
+ {
+  "name": "Pokhara, Nepal",
+  "wiki": "Pokhara"
+ },
+ {
+  "name": "Paro, Bhutan",
+  "wiki": "Paro, Bhutan"
+ },
+ {
+  "name": "Ella, Sri Lanka",
+  "wiki": "Ella, Sri Lanka"
+ },
+ {
+  "name": "Kandy, Sri Lanka",
+  "wiki": "Kandy"
+ },
+ {
+  "name": "Bagan, Myanmar",
+  "wiki": "Bagan"
+ },
+ {
+  "name": "Inle Lake, Myanmar",
+  "wiki": "Inle Lake"
+ },
+ {
+  "name": "Mandalay, Myanmar",
+  "wiki": "Mandalay"
+ },
+ {
+  "name": "Pai, Thailand",
+  "wiki": "Pai, Thailand"
+ },
+ {
+  "name": "Koh Lipe, Thailand",
+  "wiki": "Ko Lipe"
+ },
+ {
+  "name": "Kampot, Cambodia",
+  "wiki": "Kampot"
+ },
+ {
+  "name": "Siem Reap, Cambodia",
+  "wiki": "Siem Reap"
+ },
+ {
+  "name": "Kep, Cambodia",
+  "wiki": "Kep province"
+ },
+ {
+  "name": "Hue, Vietnam",
+  "wiki": "Huế"
+ },
+ {
+  "name": "Da Lat, Vietnam",
+  "wiki": "Da Lat"
+ },
+ {
+  "name": "Sapa, Vietnam",
+  "wiki": "Sa Pa"
+ },
+ {
+  "name": "Ha Long Bay, Vietnam",
+  "wiki": "Hạ Long Bay"
+ },
+ {
+  "name": "Ipoh, Malaysia",
+  "wiki": "Ipoh"
+ },
+ {
+  "name": "Yogyakarta, Indonesia",
+  "wiki": "Yogyakarta"
+ },
+ {
+  "name": "Batanes, Philippines",
+  "wiki": "Batanes"
+ },
+ {
+  "name": "Vigan, Philippines",
+  "wiki": "Vigan"
+ },
+ {
+  "name": "Palawan, Philippines",
+  "wiki": "Palawan"
+ },
+ {
+  "name": "Lijiang, China",
+  "wiki": "Lijiang"
+ },
+ {
+  "name": "Dali, China",
+  "wiki": "Dali City"
+ },
+ {
+  "name": "Pingyao, China",
+  "wiki": "Pingyao"
+ },
+ {
+  "name": "Fenghuang, China",
+  "wiki": "Fenghuang County"
+ },
+ {
+  "name": "Hongcun, China",
+  "wiki": "Hongcun"
+ },
+ {
+  "name": "Zhangjiajie, China",
+  "wiki": "Zhangjiajie"
+ },
+ {
+  "name": "Wuzhen, China",
+  "wiki": "Wuzhen"
+ },
+ {
+  "name": "Gulangyu, China",
+  "wiki": "Gulangyu"
+ },
+ {
+  "name": "Kashgar, China",
+  "wiki": "Kashgar"
+ },
+ {
+  "name": "Tainan, Taiwan",
+  "wiki": "Tainan"
+ },
+ {
+  "name": "Hualien, Taiwan",
+  "wiki": "Hualien City"
+ },
+ {
+  "name": "Kanazawa, Japan",
+  "wiki": "Kanazawa"
+ },
+ {
+  "name": "Takayama, Japan",
+  "wiki": "Takayama, Gifu"
+ },
+ {
+  "name": "Shirakawa-go, Japan",
+  "wiki": "Shirakawa, Gifu (village)"
+ },
+ {
+  "name": "Naoshima, Japan",
+  "wiki": "Naoshima"
+ },
+ {
+  "name": "Kurashiki, Japan",
+  "wiki": "Kurashiki"
+ },
+ {
+  "name": "Nikko, Japan",
+  "wiki": "Nikkō"
+ },
+ {
+  "name": "Kamakura, Japan",
+  "wiki": "Kamakura"
+ },
+ {
+  "name": "Yakushima, Japan",
+  "wiki": "Yakushima"
+ },
+ {
+  "name": "Otaru, Japan",
+  "wiki": "Otaru"
+ },
+ {
+  "name": "Jeonju, South Korea",
+  "wiki": "Jeonju"
+ },
+ {
+  "name": "Gorkhi-Terelj, Mongolia",
+  "wiki": "Gorkhi-Terelj National Park"
+ },
+ {
+  "name": "Hobart, Tasmania",
+  "wiki": "Hobart"
+ },
+ {
+  "name": "Byron Bay, Australia",
+  "wiki": "Byron Bay"
+ },
+ {
+  "name": "Broome, Australia",
+  "wiki": "Broome, Western Australia"
+ },
+ {
+  "name": "Fremantle, Australia",
+  "wiki": "Fremantle"
+ },
+ {
+  "name": "The Blue Mountains, Australia",
+  "wiki": "Blue Mountains (New South Wales)"
+ },
+ {
+  "name": "Uluru, Australia",
+  "wiki": "Uluru"
+ },
+ {
+  "name": "Akaroa, New Zealand",
+  "wiki": "Akaroa"
+ },
+ {
+  "name": "Wanaka, New Zealand",
+  "wiki": "Wānaka"
+ },
+ {
+  "name": "Napier, New Zealand",
+  "wiki": "Napier, New Zealand"
+ },
+ {
+  "name": "Moorea, French Polynesia",
+  "wiki": "Moʼorea"
+ },
+ {
+  "name": "Bora Bora",
+  "wiki": "Bora Bora"
+ },
+ {
+  "name": "Rarotonga, Cook Islands",
+  "wiki": "Rarotonga"
+ },
+ {
+  "name": "Levuka, Fiji",
+  "wiki": "Levuka"
+ },
+ {
+  "name": "Hanalei, Kauai",
+  "wiki": "Hanalei, Hawaii"
+ },
+ {
+  "name": "Galapagos Islands",
+  "wiki": "Galápagos Islands"
+ },
+ {
+  "name": "Lake Titicaca",
+  "wiki": "Lake Titicaca"
+ },
+ {
+  "name": "Purmamarca, Argentina",
+  "wiki": "Purmamarca"
+ },
+ {
+  "name": "Ushuaia, Argentina",
+  "wiki": "Ushuaia"
+ },
+ {
+  "name": "San Pedro de Atacama, Chile",
+  "wiki": "San Pedro de Atacama"
+ },
+ {
+  "name": "Torres del Paine, Chile",
+  "wiki": "Torres del Paine National Park"
+ },
+ {
+  "name": "Jose Ignacio, Uruguay",
+  "wiki": "José Ignacio, Uruguay"
+ },
+ {
+  "name": "Florianopolis, Brazil",
+  "wiki": "Florianópolis"
+ },
+ {
+  "name": "Olinda, Brazil",
+  "wiki": "Olinda"
+ },
+ {
+  "name": "Fernando de Noronha",
+  "wiki": "Fernando de Noronha"
+ },
+ {
+  "name": "Lencois Maranhenses",
+  "wiki": "Lençóis Maranhenses National Park"
+ },
+ {
+  "name": "Tiradentes, Brazil",
+  "wiki": "Tiradentes, Minas Gerais"
+ },
+ {
+  "name": "Granada, Nicaragua",
+  "wiki": "Granada, Nicaragua"
+ },
+ {
+  "name": "Casco Viejo, Panama City",
+  "wiki": "Casco Viejo, Panama"
+ },
+ {
+  "name": "Lake Atitlan, Guatemala",
+  "wiki": "Lake Atitlán"
+ },
+ {
+  "name": "Flores, Guatemala",
+  "wiki": "Flores, Petén"
+ },
+ {
+  "name": "Caye Caulker, Belize",
+  "wiki": "Caye Caulker"
+ },
+ {
+  "name": "Roatan, Honduras",
+  "wiki": "Roatán"
+ },
+ {
+  "name": "Trinidad, Cuba",
+  "wiki": "Trinidad, Cuba"
+ },
+ {
+  "name": "Vinales, Cuba",
+  "wiki": "Viñales"
+ },
+ {
+  "name": "Cienfuegos, Cuba",
+  "wiki": "Cienfuegos"
+ },
+ {
+  "name": "Port Antonio, Jamaica",
+  "wiki": "Port Antonio"
+ },
+ {
+  "name": "Guanajuato, Mexico",
+  "wiki": "Guanajuato (city)"
+ },
+ {
+  "name": "Taxco, Mexico",
+  "wiki": "Taxco"
+ },
+ {
+  "name": "Puebla, Mexico",
+  "wiki": "Puebla (city)"
+ },
+ {
+  "name": "Bacalar, Mexico",
+  "wiki": "Bacalar"
+ },
+ {
+  "name": "Valladolid, Yucatan",
+  "wiki": "Valladolid, Yucatán"
+ },
+ {
+  "name": "Todos Santos, Mexico",
+  "wiki": "Todos Santos, Baja California Sur"
+ },
+ {
+  "name": "Real de Catorce, Mexico",
+  "wiki": "Real de Catorce"
+ },
+ {
+  "name": "San Cristobal de las Casas",
+  "wiki": "San Cristóbal de las Casas"
+ },
+ {
+  "name": "Isla Holbox, Mexico",
+  "wiki": "Isla Holbox"
+ },
+ {
+  "name": "Zacatecas, Mexico",
+  "wiki": "Zacatecas (city)"
+ },
+ {
+  "name": "Key West, Florida",
+  "wiki": "Key West"
+ },
+ {
+  "name": "St. Augustine, Florida",
+  "wiki": "St. Augustine, Florida"
+ },
+ {
+  "name": "Charleston, South Carolina",
+  "wiki": "Charleston, South Carolina"
+ },
+ {
+  "name": "Beaufort, South Carolina",
+  "wiki": "Beaufort, South Carolina"
+ },
+ {
+  "name": "Ocracoke, North Carolina",
+  "wiki": "Ocracoke, North Carolina"
+ },
+ {
+  "name": "Asheville, North Carolina",
+  "wiki": "Asheville, North Carolina"
+ },
+ {
+  "name": "Natchez, Mississippi",
+  "wiki": "Natchez, Mississippi"
+ },
+ {
+  "name": "Eureka Springs, Arkansas",
+  "wiki": "Eureka Springs, Arkansas"
+ },
+ {
+  "name": "Galena, Illinois",
+  "wiki": "Galena, Illinois"
+ },
+ {
+  "name": "Door County, Wisconsin",
+  "wiki": "Door County, Wisconsin"
+ },
+ {
+  "name": "Duluth, Minnesota",
+  "wiki": "Duluth, Minnesota"
+ },
+ {
+  "name": "Jackson, Wyoming",
+  "wiki": "Jackson, Wyoming"
+ },
+ {
+  "name": "Bisbee, Arizona",
+  "wiki": "Bisbee, Arizona"
+ },
+ {
+  "name": "Jerome, Arizona",
+  "wiki": "Jerome, Arizona"
+ },
+ {
+  "name": "Sedona, Arizona",
+  "wiki": "Sedona, Arizona"
+ },
+ {
+  "name": "Moab, Utah",
+  "wiki": "Moab, Utah"
+ },
+ {
+  "name": "Telluride, Colorado",
+  "wiki": "Telluride, Colorado"
+ },
+ {
+  "name": "Ouray, Colorado",
+  "wiki": "Ouray, Colorado"
+ },
+ {
+  "name": "Santa Fe, New Mexico",
+  "wiki": "Santa Fe, New Mexico"
+ },
+ {
+  "name": "Joshua Tree, California",
+  "wiki": "Joshua Tree, California"
+ },
+ {
+  "name": "Big Sur, California",
+  "wiki": "Big Sur"
+ },
+ {
+  "name": "Mendocino, California",
+  "wiki": "Mendocino, California"
+ },
+ {
+  "name": "Bodie, California",
+  "wiki": "Bodie, California"
+ },
+ {
+  "name": "Port Townsend, Washington",
+  "wiki": "Port Townsend, Washington"
+ },
+ {
+  "name": "Homer, Alaska",
+  "wiki": "Homer, Alaska"
+ },
+ {
+  "name": "Skagway, Alaska",
+  "wiki": "Skagway, Alaska"
+ },
+ {
+  "name": "Nantucket, Massachusetts",
+  "wiki": "Nantucket"
+ },
+ {
+  "name": "Provincetown, Massachusetts",
+  "wiki": "Provincetown, Massachusetts"
+ },
+ {
+  "name": "Block Island, Rhode Island",
+  "wiki": "Block Island"
+ },
+ {
+  "name": "Camden, Maine",
+  "wiki": "Camden, Maine"
+ },
+ {
+  "name": "Woodstock, Vermont",
+  "wiki": "Woodstock, Vermont"
+ },
+ {
+  "name": "Hudson, New York",
+  "wiki": "Hudson, New York"
+ },
+ {
+  "name": "Cape May, New Jersey",
+  "wiki": "Cape May, New Jersey"
+ },
+ {
+  "name": "Annapolis, Maryland",
+  "wiki": "Annapolis, Maryland"
+ },
+ {
+  "name": "Lunenburg, Nova Scotia",
+  "wiki": "Lunenburg, Nova Scotia"
+ },
+ {
+  "name": "Peggy's Cove, Nova Scotia",
+  "wiki": "Peggys Cove, Nova Scotia"
+ },
+ {
+  "name": "Fogo Island, Newfoundland",
+  "wiki": "Fogo Island, Newfoundland and Labrador"
+ },
+ {
+  "name": "Dawson City, Yukon",
+  "wiki": "Dawson City"
+ },
+ {
+  "name": "Haida Gwaii, Canada",
+  "wiki": "Haida Gwaii"
+ },
+ {
+  "name": "Niagara-on-the-Lake, Canada",
+  "wiki": "Niagara-on-the-Lake"
+ },
+ {
+  "name": "Charlottetown, PEI",
+  "wiki": "Charlottetown"
+ },
+ {
+  "name": "Moulay Idriss, Morocco",
+  "wiki": "Moulay Idriss Zerhoun"
+ },
+ {
+  "name": "Todra Gorge, Morocco",
+  "wiki": "Todgha Gorge"
+ },
+ {
+  "name": "Dades Valley, Morocco",
+  "wiki": "Dades Gorges"
+ },
+ {
+  "name": "Tafraoute, Morocco",
+  "wiki": "Tafraout"
+ },
+ {
+  "name": "Taroudant, Morocco",
+  "wiki": "Taroudant"
+ },
+ {
+  "name": "Ouarzazate, Morocco",
+  "wiki": "Ouarzazate"
+ },
+ {
+  "name": "Skoura, Morocco",
+  "wiki": "Skoura"
+ },
+ {
+  "name": "Kasbah of the Udayas, Rabat",
+  "wiki": "Kasbah of the Udayas"
+ },
+ {
+  "name": "Larache, Morocco",
+  "wiki": "Larache"
+ },
+ {
+  "name": "Sidi Ifni, Morocco",
+  "wiki": "Sidi Ifni"
+ },
+ {
+  "name": "Taghazout, Morocco",
+  "wiki": "Taghazout"
+ },
+ {
+  "name": "Ifrane, Morocco",
+  "wiki": "Ifrane"
+ },
+ {
+  "name": "Oualidia, Morocco",
+  "wiki": "Oualidia"
+ },
+ {
+  "name": "Timimoun, Algeria",
+  "wiki": "Timimoun"
+ },
+ {
+  "name": "Djanet, Algeria",
+  "wiki": "Djanet"
+ },
+ {
+  "name": "Taghit, Algeria",
+  "wiki": "Taghit"
+ },
+ {
+  "name": "Tassili n'Ajjer, Algeria",
+  "wiki": "Tassili n'Ajjer"
+ },
+ {
+  "name": "Constantine, Algeria",
+  "wiki": "Constantine, Algeria"
+ },
+ {
+  "name": "Tozeur, Tunisia",
+  "wiki": "Tozeur"
+ },
+ {
+  "name": "Chenini, Tunisia",
+  "wiki": "Chenini"
+ },
+ {
+  "name": "Matmata, Tunisia",
+  "wiki": "Matmata, Tunisia"
+ },
+ {
+  "name": "Tabarka, Tunisia",
+  "wiki": "Tabarka"
+ },
+ {
+  "name": "Takrouna, Tunisia",
+  "wiki": "Takrouna"
+ },
+ {
+  "name": "White Desert, Egypt",
+  "wiki": "White Desert National Park"
+ },
+ {
+  "name": "Bahariya Oasis, Egypt",
+  "wiki": "Bahariya Oasis"
+ },
+ {
+  "name": "Dakhla Oasis, Egypt",
+  "wiki": "Dakhla Oasis"
+ },
+ {
+  "name": "Marsa Alam, Egypt",
+  "wiki": "Marsa Alam"
+ },
+ {
+  "name": "Abu Simbel, Egypt",
+  "wiki": "Abu Simbel"
+ },
+ {
+  "name": "Rosetta, Egypt",
+  "wiki": "Rosetta"
+ },
+ {
+  "name": "Danakil Depression, Ethiopia",
+  "wiki": "Danakil Depression"
+ },
+ {
+  "name": "Bale Mountains, Ethiopia",
+  "wiki": "Bale Mountains National Park"
+ },
+ {
+  "name": "Arba Minch, Ethiopia",
+  "wiki": "Arba Minch"
+ },
+ {
+  "name": "Massawa, Eritrea",
+  "wiki": "Massawa"
+ },
+ {
+  "name": "Lake Assal, Djibouti",
+  "wiki": "Lake Assal (Djibouti)"
+ },
+ {
+  "name": "Watamu, Kenya",
+  "wiki": "Watamu"
+ },
+ {
+  "name": "Diani Beach, Kenya",
+  "wiki": "Diani Beach"
+ },
+ {
+  "name": "Malindi, Kenya",
+  "wiki": "Malindi"
+ },
+ {
+  "name": "Lake Naivasha, Kenya",
+  "wiki": "Lake Naivasha"
+ },
+ {
+  "name": "Lake Turkana, Kenya",
+  "wiki": "Lake Turkana"
+ },
+ {
+  "name": "Maasai Mara, Kenya",
+  "wiki": "Maasai Mara"
+ },
+ {
+  "name": "Samburu, Kenya",
+  "wiki": "Samburu National Reserve"
+ },
+ {
+  "name": "Lake Bunyonyi, Uganda",
+  "wiki": "Lake Bunyonyi"
+ },
+ {
+  "name": "Jinja, Uganda",
+  "wiki": "Jinja, Uganda"
+ },
+ {
+  "name": "Bwindi, Uganda",
+  "wiki": "Bwindi Impenetrable National Park"
+ },
+ {
+  "name": "Murchison Falls, Uganda",
+  "wiki": "Murchison Falls National Park"
+ },
+ {
+  "name": "Gisenyi, Rwanda",
+  "wiki": "Gisenyi"
+ },
+ {
+  "name": "Ngorongoro Crater, Tanzania",
+  "wiki": "Ngorongoro Conservation Area"
+ },
+ {
+  "name": "Serengeti, Tanzania",
+  "wiki": "Serengeti National Park"
+ },
+ {
+  "name": "Kilwa Kisiwani, Tanzania",
+  "wiki": "Kilwa Kisiwani"
+ },
+ {
+  "name": "Pemba Island, Tanzania",
+  "wiki": "Pemba Island"
+ },
+ {
+  "name": "Mafia Island, Tanzania",
+  "wiki": "Mafia Island"
+ },
+ {
+  "name": "Bagamoyo, Tanzania",
+  "wiki": "Bagamoyo"
+ },
+ {
+  "name": "Lushoto, Tanzania",
+  "wiki": "Lushoto"
+ },
+ {
+  "name": "Nungwi, Zanzibar",
+  "wiki": "Nungwi"
+ },
+ {
+  "name": "Lake Natron, Tanzania",
+  "wiki": "Lake Natron"
+ },
+ {
+  "name": "Usambara Mountains, Tanzania",
+  "wiki": "Usambara Mountains"
+ },
+ {
+  "name": "Bazaruto Archipelago, Mozambique",
+  "wiki": "Bazaruto Archipelago"
+ },
+ {
+  "name": "Inhambane, Mozambique",
+  "wiki": "Inhambane"
+ },
+ {
+  "name": "Tofo, Mozambique",
+  "wiki": "Tofo"
+ },
+ {
+  "name": "Vilankulo, Mozambique",
+  "wiki": "Vilankulo"
+ },
+ {
+  "name": "Likoma Island, Malawi",
+  "wiki": "Likoma Island"
+ },
+ {
+  "name": "Cape Maclear, Malawi",
+  "wiki": "Cape Maclear"
+ },
+ {
+  "name": "Zomba Plateau, Malawi",
+  "wiki": "Zomba Plateau"
+ },
+ {
+  "name": "South Luangwa, Zambia",
+  "wiki": "South Luangwa National Park"
+ },
+ {
+  "name": "Livingstone, Zambia",
+  "wiki": "Livingstone, Zambia"
+ },
+ {
+  "name": "Lower Zambezi, Zambia",
+  "wiki": "Lower Zambezi National Park"
+ },
+ {
+  "name": "Mana Pools, Zimbabwe",
+  "wiki": "Mana Pools National Park"
+ },
+ {
+  "name": "Great Zimbabwe",
+  "wiki": "Great Zimbabwe"
+ },
+ {
+  "name": "Lake Kariba, Zimbabwe",
+  "wiki": "Lake Kariba"
+ },
+ {
+  "name": "Chobe, Botswana",
+  "wiki": "Chobe National Park"
+ },
+ {
+  "name": "Lüderitz, Namibia",
+  "wiki": "Lüderitz"
+ },
+ {
+  "name": "Kolmanskop, Namibia",
+  "wiki": "Kolmanskop"
+ },
+ {
+  "name": "Etosha, Namibia",
+  "wiki": "Etosha National Park"
+ },
+ {
+  "name": "Spitzkoppe, Namibia",
+  "wiki": "Spitzkoppe"
+ },
+ {
+  "name": "Fish River Canyon, Namibia",
+  "wiki": "Fish River Canyon"
+ },
+ {
+  "name": "Skeleton Coast, Namibia",
+  "wiki": "Skeleton Coast"
+ },
+ {
+  "name": "Franschhoek, South Africa",
+  "wiki": "Franschhoek"
+ },
+ {
+  "name": "Hermanus, South Africa",
+  "wiki": "Hermanus"
+ },
+ {
+  "name": "Paternoster, South Africa",
+  "wiki": "Paternoster, South Africa"
+ },
+ {
+  "name": "Knysna, South Africa",
+  "wiki": "Knysna"
+ },
+ {
+  "name": "Plettenberg Bay, South Africa",
+  "wiki": "Plettenberg Bay"
+ },
+ {
+  "name": "Prince Albert, South Africa",
+  "wiki": "Prince Albert, South Africa"
+ },
+ {
+  "name": "Nieu-Bethesda, South Africa",
+  "wiki": "Nieu-Bethesda"
+ },
+ {
+  "name": "Graaff-Reinet, South Africa",
+  "wiki": "Graaff-Reinet"
+ },
+ {
+  "name": "Clarens, South Africa",
+  "wiki": "Clarens, South Africa"
+ },
+ {
+  "name": "Cederberg, South Africa",
+  "wiki": "Cederberg"
+ },
+ {
+  "name": "Kalk Bay, South Africa",
+  "wiki": "Kalk Bay"
+ },
+ {
+  "name": "McGregor, South Africa",
+  "wiki": "McGregor, South Africa"
+ },
+ {
+  "name": "Tulbagh, South Africa",
+  "wiki": "Tulbagh"
+ },
+ {
+  "name": "Pilgrim's Rest, South Africa",
+  "wiki": "Pilgrim's Rest, South Africa"
+ },
+ {
+  "name": "Blyde River Canyon, South Africa",
+  "wiki": "Blyde River Canyon"
+ },
+ {
+  "name": "Drakensberg, South Africa",
+  "wiki": "Drakensberg"
+ },
+ {
+  "name": "Coffee Bay, South Africa",
+  "wiki": "Coffee Bay"
+ },
+ {
+  "name": "Kruger, South Africa",
+  "wiki": "Kruger National Park"
+ },
+ {
+  "name": "Malealea, Lesotho",
+  "wiki": "Malealea"
+ },
+ {
+  "name": "Sani Pass, Lesotho",
+  "wiki": "Sani Pass"
+ },
+ {
+  "name": "Île Sainte-Marie, Madagascar",
+  "wiki": "Nosy Boraha"
+ },
+ {
+  "name": "Avenue of the Baobabs, Madagascar",
+  "wiki": "Avenue of the Baobabs"
+ },
+ {
+  "name": "Isalo, Madagascar",
+  "wiki": "Isalo National Park"
+ },
+ {
+  "name": "Ambalavao, Madagascar",
+  "wiki": "Ambalavao"
+ },
+ {
+  "name": "Praslin, Seychelles",
+  "wiki": "Praslin"
+ },
+ {
+  "name": "Mahé, Seychelles",
+  "wiki": "Mahé"
+ },
+ {
+  "name": "Chamarel, Mauritius",
+  "wiki": "Chamarel"
+ },
+ {
+  "name": "Cilaos, Réunion",
+  "wiki": "Cilaos"
+ },
+ {
+  "name": "Mafate, Réunion",
+  "wiki": "Mafate"
+ },
+ {
+  "name": "Saint-Pierre, Réunion",
+  "wiki": "Saint-Pierre, Réunion"
+ },
+ {
+  "name": "Cidade Velha, Cape Verde",
+  "wiki": "Cidade Velha"
+ },
+ {
+  "name": "Santo Antão, Cape Verde",
+  "wiki": "Santo Antão, Cape Verde"
+ },
+ {
+  "name": "Fogo, Cape Verde",
+  "wiki": "Fogo, Cape Verde"
+ },
+ {
+  "name": "Tarrafal, Cape Verde",
+  "wiki": "Tarrafal, Cape Verde"
+ },
+ {
+  "name": "Bijagós Islands, Guinea-Bissau",
+  "wiki": "Bijagós Islands"
+ },
+ {
+  "name": "Lac Rose, Senegal",
+  "wiki": "Lake Retba"
+ },
+ {
+  "name": "Ziguinchor, Senegal",
+  "wiki": "Ziguinchor"
+ },
+ {
+  "name": "Banjul, Gambia",
+  "wiki": "Banjul"
+ },
+ {
+  "name": "Chinguetti, Mauritania",
+  "wiki": "Chinguetti"
+ },
+ {
+  "name": "Ouadane, Mauritania",
+  "wiki": "Ouadane"
+ },
+ {
+  "name": "Elmina, Ghana",
+  "wiki": "Elmina"
+ },
+ {
+  "name": "Kumasi, Ghana",
+  "wiki": "Kumasi"
+ },
+ {
+  "name": "Ganvie, Benin",
+  "wiki": "Ganvie"
+ },
+ {
+  "name": "Porto-Novo, Benin",
+  "wiki": "Porto-Novo"
+ },
+ {
+  "name": "Koutammakou, Togo",
+  "wiki": "Koutammakou"
+ },
+ {
+  "name": "Obudu, Nigeria",
+  "wiki": "Obudu Mountain Resort"
+ },
+ {
+  "name": "Calabar, Nigeria",
+  "wiki": "Calabar"
+ },
+ {
+  "name": "Kribi, Cameroon",
+  "wiki": "Kribi"
+ },
+ {
+  "name": "Foumban, Cameroon",
+  "wiki": "Foumban"
+ },
+ {
+  "name": "The Banana Islands, Sierra Leone",
+  "wiki": "Banana Islands"
+ },
+ {
+  "name": "Robertsport, Liberia",
+  "wiki": "Robertsport"
+ },
+ {
+  "name": "Îles de Los, Guinea",
+  "wiki": "Îles de Los"
+ },
+ {
+  "name": "Mumbo Island, Malawi",
+  "wiki": "Mumbo Island"
+ },
+ {
+  "name": "Pangani, Tanzania",
+  "wiki": "Pangani"
+ },
+ {
+  "name": "Lake Manyara, Tanzania",
+  "wiki": "Lake Manyara National Park"
+ },
+ {
+  "name": "Kigoma, Tanzania",
+  "wiki": "Kigoma"
+ },
+ {
+  "name": "Mount Kenya, Kenya",
+  "wiki": "Mount Kenya"
+ },
+ {
+  "name": "Hell's Gate, Kenya",
+  "wiki": "Hell's Gate National Park"
+ },
+ {
+  "name": "Galveston, Texas",
+  "wiki": "Galveston, Texas"
+ },
+ {
+  "name": "Fredericksburg, Texas",
+  "wiki": "Fredericksburg, Texas"
+ },
+ {
+  "name": "Big Bend, Texas",
+  "wiki": "Big Bend National Park"
+ },
+ {
+  "name": "Port Aransas, Texas",
+  "wiki": "Port Aransas, Texas"
+ },
+ {
+  "name": "Wimberley, Texas",
+  "wiki": "Wimberley, Texas"
+ },
+ {
+  "name": "Gruene, Texas",
+  "wiki": "Gruene, New Braunfels, Texas"
+ },
+ {
+  "name": "Jefferson, Texas",
+  "wiki": "Jefferson, Texas"
+ },
+ {
+  "name": "Alpine, Texas",
+  "wiki": "Alpine, Texas"
+ },
+ {
+  "name": "Fort Davis, Texas",
+  "wiki": "Fort Davis, Texas"
+ },
+ {
+  "name": "Silver City, New Mexico",
+  "wiki": "Silver City, New Mexico"
+ },
+ {
+  "name": "Madrid, New Mexico",
+  "wiki": "Madrid, New Mexico"
+ },
+ {
+  "name": "Truth or Consequences, New Mexico",
+  "wiki": "Truth or Consequences, New Mexico"
+ },
+ {
+  "name": "White Sands, New Mexico",
+  "wiki": "White Sands National Park"
+ },
+ {
+  "name": "Abiquiu, New Mexico",
+  "wiki": "Abiquiú, New Mexico"
+ },
+ {
+  "name": "Tombstone, Arizona",
+  "wiki": "Tombstone, Arizona"
+ },
+ {
+  "name": "Prescott, Arizona",
+  "wiki": "Prescott, Arizona"
+ },
+ {
+  "name": "Monument Valley, Arizona",
+  "wiki": "Monument Valley"
+ },
+ {
+  "name": "Havasupai, Arizona",
+  "wiki": "Havasu Falls"
+ },
+ {
+  "name": "Springdale, Utah",
+  "wiki": "Springdale, Utah"
+ },
+ {
+  "name": "Torrey, Utah",
+  "wiki": "Torrey, Utah"
+ },
+ {
+  "name": "Boulder, Utah",
+  "wiki": "Boulder, Utah"
+ },
+ {
+  "name": "Bryce Canyon, Utah",
+  "wiki": "Bryce Canyon National Park"
+ },
+ {
+  "name": "Park City, Utah",
+  "wiki": "Park City, Utah"
+ },
+ {
+  "name": "Capitol Reef, Utah",
+  "wiki": "Capitol Reef National Park"
+ },
+ {
+  "name": "Crested Butte, Colorado",
+  "wiki": "Crested Butte, Colorado"
+ },
+ {
+  "name": "Silverton, Colorado",
+  "wiki": "Silverton, Colorado"
+ },
+ {
+  "name": "Durango, Colorado",
+  "wiki": "Durango, Colorado"
+ },
+ {
+  "name": "Salida, Colorado",
+  "wiki": "Salida, Colorado"
+ },
+ {
+  "name": "Steamboat Springs, Colorado",
+  "wiki": "Steamboat Springs, Colorado"
+ },
+ {
+  "name": "Leadville, Colorado",
+  "wiki": "Leadville, Colorado"
+ },
+ {
+  "name": "Mesa Verde, Colorado",
+  "wiki": "Mesa Verde National Park"
+ },
+ {
+  "name": "Great Sand Dunes, Colorado",
+  "wiki": "Great Sand Dunes National Park and Preserve"
+ },
+ {
+  "name": "Virginia City, Nevada",
+  "wiki": "Virginia City, Nevada"
+ },
+ {
+  "name": "Ely, Nevada",
+  "wiki": "Ely, Nevada"
+ },
+ {
+  "name": "Ketchum, Idaho",
+  "wiki": "Ketchum, Idaho"
+ },
+ {
+  "name": "Sandpoint, Idaho",
+  "wiki": "Sandpoint, Idaho"
+ },
+ {
+  "name": "Stanley, Idaho",
+  "wiki": "Stanley, Idaho"
+ },
+ {
+  "name": "Wallace, Idaho",
+  "wiki": "Wallace, Idaho"
+ },
+ {
+  "name": "Livingston, Montana",
+  "wiki": "Livingston, Montana"
+ },
+ {
+  "name": "Red Lodge, Montana",
+  "wiki": "Red Lodge, Montana"
+ },
+ {
+  "name": "Philipsburg, Montana",
+  "wiki": "Philipsburg, Montana"
+ },
+ {
+  "name": "Glacier National Park, Montana",
+  "wiki": "Glacier National Park (U.S.)"
+ },
+ {
+  "name": "Cody, Wyoming",
+  "wiki": "Cody, Wyoming"
+ },
+ {
+  "name": "Sheridan, Wyoming",
+  "wiki": "Sheridan, Wyoming"
+ },
+ {
+  "name": "Badlands, South Dakota",
+  "wiki": "Badlands National Park"
+ },
+ {
+  "name": "Medora, North Dakota",
+  "wiki": "Medora, North Dakota"
+ },
+ {
+  "name": "Ely, Minnesota",
+  "wiki": "Ely, Minnesota"
+ },
+ {
+  "name": "Grand Marais, Minnesota",
+  "wiki": "Grand Marais, Minnesota"
+ },
+ {
+  "name": "Stillwater, Minnesota",
+  "wiki": "Stillwater, Minnesota"
+ },
+ {
+  "name": "Bayfield, Wisconsin",
+  "wiki": "Bayfield, Wisconsin"
+ },
+ {
+  "name": "Mineral Point, Wisconsin",
+  "wiki": "Mineral Point, Wisconsin"
+ },
+ {
+  "name": "Decorah, Iowa",
+  "wiki": "Decorah, Iowa"
+ },
+ {
+  "name": "Saugatuck, Michigan",
+  "wiki": "Saugatuck, Michigan"
+ },
+ {
+  "name": "Leland, Michigan",
+  "wiki": "Leland, Michigan"
+ },
+ {
+  "name": "Sleeping Bear Dunes, Michigan",
+  "wiki": "Sleeping Bear Dunes National Lakeshore"
+ },
+ {
+  "name": "Marquette, Michigan",
+  "wiki": "Marquette, Michigan"
+ },
+ {
+  "name": "Pictured Rocks, Michigan",
+  "wiki": "Pictured Rocks National Lakeshore"
+ },
+ {
+  "name": "Put-in-Bay, Ohio",
+  "wiki": "Put-in-Bay, Ohio"
+ },
+ {
+  "name": "Yellow Springs, Ohio",
+  "wiki": "Yellow Springs, Ohio"
+ },
+ {
+  "name": "Madison, Indiana",
+  "wiki": "Madison, Indiana"
+ },
+ {
+  "name": "Ste. Genevieve, Missouri",
+  "wiki": "Ste. Genevieve, Missouri"
+ },
+ {
+  "name": "Hermann, Missouri",
+  "wiki": "Hermann, Missouri"
+ },
+ {
+  "name": "Mountain View, Arkansas",
+  "wiki": "Mountain View, Arkansas"
+ },
+ {
+  "name": "Breaux Bridge, Louisiana",
+  "wiki": "Breaux Bridge, Louisiana"
+ },
+ {
+  "name": "Grand Isle, Louisiana",
+  "wiki": "Grand Isle, Louisiana"
+ },
+ {
+  "name": "Natchitoches, Louisiana",
+  "wiki": "Natchitoches, Louisiana"
+ },
+ {
+  "name": "Ocean Springs, Mississippi",
+  "wiki": "Ocean Springs, Mississippi"
+ },
+ {
+  "name": "Clarksdale, Mississippi",
+  "wiki": "Clarksdale, Mississippi"
+ },
+ {
+  "name": "Fairhope, Alabama",
+  "wiki": "Fairhope, Alabama"
+ },
+ {
+  "name": "Mentone, Alabama",
+  "wiki": "Mentone, Alabama"
+ },
+ {
+  "name": "Apalachicola, Florida",
+  "wiki": "Apalachicola, Florida"
+ },
+ {
+  "name": "Cedar Key, Florida",
+  "wiki": "Cedar Key, Florida"
+ },
+ {
+  "name": "Seaside, Florida",
+  "wiki": "Seaside, Florida"
+ },
+ {
+  "name": "Mount Dora, Florida",
+  "wiki": "Mount Dora, Florida"
+ },
+ {
+  "name": "Dry Tortugas, Florida",
+  "wiki": "Dry Tortugas National Park"
+ },
+ {
+  "name": "Sanibel, Florida",
+  "wiki": "Sanibel, Florida"
+ },
+ {
+  "name": "Everglades City, Florida",
+  "wiki": "Everglades City, Florida"
+ },
+ {
+  "name": "St. Simons Island, Georgia",
+  "wiki": "St. Simons, Georgia"
+ },
+ {
+  "name": "Cumberland Island, Georgia",
+  "wiki": "Cumberland Island"
+ },
+ {
+  "name": "Jekyll Island, Georgia",
+  "wiki": "Jekyll Island"
+ },
+ {
+  "name": "Dahlonega, Georgia",
+  "wiki": "Dahlonega, Georgia"
+ },
+ {
+  "name": "Madison, Georgia",
+  "wiki": "Madison, Georgia"
+ },
+ {
+  "name": "Edisto Island, South Carolina",
+  "wiki": "Edisto Island"
+ },
+ {
+  "name": "Georgetown, South Carolina",
+  "wiki": "Georgetown, South Carolina"
+ },
+ {
+  "name": "Manteo, North Carolina",
+  "wiki": "Manteo, North Carolina"
+ },
+ {
+  "name": "Edenton, North Carolina",
+  "wiki": "Edenton, North Carolina"
+ },
+ {
+  "name": "Blowing Rock, North Carolina",
+  "wiki": "Blowing Rock, North Carolina"
+ },
+ {
+  "name": "Highlands, North Carolina",
+  "wiki": "Highlands, North Carolina"
+ },
+ {
+  "name": "Bald Head Island, North Carolina",
+  "wiki": "Bald Head Island, North Carolina"
+ },
+ {
+  "name": "Chincoteague, Virginia",
+  "wiki": "Chincoteague, Virginia"
+ },
+ {
+  "name": "Staunton, Virginia",
+  "wiki": "Staunton, Virginia"
+ },
+ {
+  "name": "Abingdon, Virginia",
+  "wiki": "Abingdon, Virginia"
+ },
+ {
+  "name": "Lexington, Virginia",
+  "wiki": "Lexington, Virginia"
+ },
+ {
+  "name": "Lewisburg, West Virginia",
+  "wiki": "Lewisburg, West Virginia"
+ },
+ {
+  "name": "Fayetteville, West Virginia",
+  "wiki": "Fayetteville, West Virginia"
+ },
+ {
+  "name": "Berea, Kentucky",
+  "wiki": "Berea, Kentucky"
+ },
+ {
+  "name": "Jonesborough, Tennessee",
+  "wiki": "Jonesborough, Tennessee"
+ },
+ {
+  "name": "Townsend, Tennessee",
+  "wiki": "Townsend, Tennessee"
+ },
+ {
+  "name": "Bell Buckle, Tennessee",
+  "wiki": "Bell Buckle, Tennessee"
+ },
+ {
+  "name": "Berlin, Maryland",
+  "wiki": "Berlin, Maryland"
+ },
+ {
+  "name": "Lewes, Delaware",
+  "wiki": "Lewes, Delaware"
+ },
+ {
+  "name": "New Hope, Pennsylvania",
+  "wiki": "New Hope, Pennsylvania"
+ },
+ {
+  "name": "Jim Thorpe, Pennsylvania",
+  "wiki": "Jim Thorpe, Pennsylvania"
+ },
+ {
+  "name": "Lititz, Pennsylvania",
+  "wiki": "Lititz, Pennsylvania"
+ },
+ {
+  "name": "Wellsboro, Pennsylvania",
+  "wiki": "Wellsboro, Pennsylvania"
+ },
+ {
+  "name": "Lambertville, New Jersey",
+  "wiki": "Lambertville, New Jersey"
+ },
+ {
+  "name": "Cold Spring, New York",
+  "wiki": "Cold Spring, New York"
+ },
+ {
+  "name": "Saratoga Springs, New York",
+  "wiki": "Saratoga Springs, New York"
+ },
+ {
+  "name": "Lake Placid, New York",
+  "wiki": "Lake Placid, New York"
+ },
+ {
+  "name": "Cooperstown, New York",
+  "wiki": "Cooperstown, New York"
+ },
+ {
+  "name": "Skaneateles, New York",
+  "wiki": "Skaneateles, New York"
+ },
+ {
+  "name": "Sag Harbor, New York",
+  "wiki": "Sag Harbor, New York"
+ },
+ {
+  "name": "Greenport, New York",
+  "wiki": "Greenport, Suffolk County, New York"
+ },
+ {
+  "name": "Shelter Island, New York",
+  "wiki": "Shelter Island, New York"
+ },
+ {
+  "name": "Mystic, Connecticut",
+  "wiki": "Mystic, Connecticut"
+ },
+ {
+  "name": "Essex, Connecticut",
+  "wiki": "Essex, Connecticut"
+ },
+ {
+  "name": "Litchfield, Connecticut",
+  "wiki": "Litchfield, Connecticut"
+ },
+ {
+  "name": "Newport, Rhode Island",
+  "wiki": "Newport, Rhode Island"
+ },
+ {
+  "name": "Little Compton, Rhode Island",
+  "wiki": "Little Compton, Rhode Island"
+ },
+ {
+  "name": "Martha's Vineyard, Massachusetts",
+  "wiki": "Martha's Vineyard"
+ },
+ {
+  "name": "Edgartown, Massachusetts",
+  "wiki": "Edgartown, Massachusetts"
+ },
+ {
+  "name": "Rockport, Massachusetts",
+  "wiki": "Rockport, Massachusetts"
+ },
+ {
+  "name": "Chatham, Massachusetts",
+  "wiki": "Chatham, Massachusetts"
+ },
+ {
+  "name": "Wellfleet, Massachusetts",
+  "wiki": "Wellfleet, Massachusetts"
+ },
+ {
+  "name": "Marblehead, Massachusetts",
+  "wiki": "Marblehead, Massachusetts"
+ },
+ {
+  "name": "Stowe, Vermont",
+  "wiki": "Stowe, Vermont"
+ },
+ {
+  "name": "Grafton, Vermont",
+  "wiki": "Grafton, Vermont"
+ },
+ {
+  "name": "Brattleboro, Vermont",
+  "wiki": "Brattleboro, Vermont"
+ },
+ {
+  "name": "Portsmouth, New Hampshire",
+  "wiki": "Portsmouth, New Hampshire"
+ },
+ {
+  "name": "Bar Harbor, Maine",
+  "wiki": "Bar Harbor, Maine"
+ },
+ {
+  "name": "Kennebunkport, Maine",
+  "wiki": "Kennebunkport, Maine"
+ },
+ {
+  "name": "Castine, Maine",
+  "wiki": "Castine, Maine"
+ },
+ {
+  "name": "Boothbay Harbor, Maine",
+  "wiki": "Boothbay Harbor, Maine"
+ },
+ {
+  "name": "Lubec, Maine",
+  "wiki": "Lubec, Maine"
+ },
+ {
+  "name": "Ogunquit, Maine",
+  "wiki": "Ogunquit, Maine"
+ },
+ {
+  "name": "Friday Harbor, Washington",
+  "wiki": "Friday Harbor, Washington"
+ },
+ {
+  "name": "Orcas Island, Washington",
+  "wiki": "Orcas Island"
+ },
+ {
+  "name": "Leavenworth, Washington",
+  "wiki": "Leavenworth, Washington"
+ },
+ {
+  "name": "Winthrop, Washington",
+  "wiki": "Winthrop, Washington"
+ },
+ {
+  "name": "La Conner, Washington",
+  "wiki": "La Conner, Washington"
+ },
+ {
+  "name": "Langley, Washington",
+  "wiki": "Langley, Washington"
+ },
+ {
+  "name": "Long Beach Peninsula, Washington",
+  "wiki": "Long Beach Peninsula"
+ },
+ {
+  "name": "Cannon Beach, Oregon",
+  "wiki": "Cannon Beach, Oregon"
+ },
+ {
+  "name": "Jacksonville, Oregon",
+  "wiki": "Jacksonville, Oregon"
+ },
+ {
+  "name": "Ashland, Oregon",
+  "wiki": "Ashland, Oregon"
+ },
+ {
+  "name": "Joseph, Oregon",
+  "wiki": "Joseph, Oregon"
+ },
+ {
+  "name": "Bandon, Oregon",
+  "wiki": "Bandon, Oregon"
+ },
+ {
+  "name": "Crater Lake, Oregon",
+  "wiki": "Crater Lake"
+ },
+ {
+  "name": "Hood River, Oregon",
+  "wiki": "Hood River, Oregon"
+ },
+ {
+  "name": "Sisters, Oregon",
+  "wiki": "Sisters, Oregon"
+ },
+ {
+  "name": "Ferndale, California",
+  "wiki": "Ferndale, California"
+ },
+ {
+  "name": "Point Reyes, California",
+  "wiki": "Point Reyes Station, California"
+ },
+ {
+  "name": "Bolinas, California",
+  "wiki": "Bolinas, California"
+ },
+ {
+  "name": "Sausalito, California",
+  "wiki": "Sausalito, California"
+ },
+ {
+  "name": "Healdsburg, California",
+  "wiki": "Healdsburg, California"
+ },
+ {
+  "name": "Carmel-by-the-Sea, California",
+  "wiki": "Carmel-by-the-Sea, California"
+ },
+ {
+  "name": "Cambria, California",
+  "wiki": "Cambria, California"
+ },
+ {
+  "name": "Ojai, California",
+  "wiki": "Ojai, California"
+ },
+ {
+  "name": "Los Alamos, California",
+  "wiki": "Los Alamos, California"
+ },
+ {
+  "name": "Solvang, California",
+  "wiki": "Solvang, California"
+ },
+ {
+  "name": "Avalon, Catalina Island",
+  "wiki": "Avalon, California"
+ },
+ {
+  "name": "Nevada City, California",
+  "wiki": "Nevada City, California"
+ },
+ {
+  "name": "Mono Lake, California",
+  "wiki": "Mono Lake"
+ },
+ {
+  "name": "Lone Pine, California",
+  "wiki": "Lone Pine, California"
+ },
+ {
+  "name": "Death Valley, California",
+  "wiki": "Death Valley National Park"
+ },
+ {
+  "name": "Borrego Springs, California",
+  "wiki": "Borrego Springs, California"
+ },
+ {
+  "name": "Pioneertown, California",
+  "wiki": "Pioneertown, California"
+ },
+ {
+  "name": "Yosemite Valley, California",
+  "wiki": "Yosemite Valley"
+ },
+ {
+  "name": "Lake Tahoe, California",
+  "wiki": "Lake Tahoe"
+ },
+ {
+  "name": "Channel Islands, California",
+  "wiki": "Channel Islands National Park"
+ },
+ {
+  "name": "Hana, Hawaii",
+  "wiki": "Hāna, Hawaii"
+ },
+ {
+  "name": "Haleiwa, Hawaii",
+  "wiki": "Haleʻiwa, Hawaii"
+ },
+ {
+  "name": "Waimea Canyon, Hawaii",
+  "wiki": "Waimea Canyon State Park"
+ },
+ {
+  "name": "Volcano, Hawaii",
+  "wiki": "Volcano, Hawaii"
+ },
+ {
+  "name": "Talkeetna, Alaska",
+  "wiki": "Talkeetna, Alaska"
+ },
+ {
+  "name": "Seward, Alaska",
+  "wiki": "Seward, Alaska"
+ },
+ {
+  "name": "McCarthy, Alaska",
+  "wiki": "McCarthy, Alaska"
+ },
+ {
+  "name": "Haines, Alaska",
+  "wiki": "Haines, Alaska"
+ },
+ {
+  "name": "Kodiak, Alaska",
+  "wiki": "Kodiak, Alaska"
+ },
+ {
+  "name": "Petersburg, Alaska",
+  "wiki": "Petersburg, Alaska"
+ },
+ {
+  "name": "Wrangell, Alaska",
+  "wiki": "Wrangell, Alaska"
+ },
+ {
+  "name": "Denali, Alaska",
+  "wiki": "Denali National Park and Preserve"
+ },
+ {
+  "name": "Glacier Bay, Alaska",
+  "wiki": "Glacier Bay National Park and Preserve"
+ },
+ {
+  "name": "Cordova, Alaska",
+  "wiki": "Cordova, Alaska"
+ },
+ {
+  "name": "Halibut Cove, Alaska",
+  "wiki": "Halibut Cove, Alaska"
+ },
+ {
+  "name": "Ketchikan, Alaska",
+  "wiki": "Ketchikan, Alaska"
+ },
+ {
+  "name": "Arches, Utah",
+  "wiki": "Arches National Park"
+ },
+ {
+  "name": "Zion, Utah",
+  "wiki": "Zion National Park"
+ },
+ {
+  "name": "Yellowstone, Wyoming",
+  "wiki": "Yellowstone National Park"
+ },
+ {
+  "name": "Grand Teton, Wyoming",
+  "wiki": "Grand Teton National Park"
+ },
+ {
+  "name": "Acadia, Maine",
+  "wiki": "Acadia National Park"
+ },
+ {
+  "name": "Great Smoky Mountains, Tennessee",
+  "wiki": "Great Smoky Mountains National Park"
+ },
+ {
+  "name": "Olympic Peninsula, Washington",
+  "wiki": "Olympic National Park"
+ },
+ {
+  "name": "Canyon de Chelly, Arizona",
+  "wiki": "Canyon de Chelly National Monument"
+ },
+ {
+  "name": "Grand Canyon, Arizona",
+  "wiki": "Grand Canyon"
+ },
+ {
+  "name": "Tybee Island, Georgia",
+  "wiki": "Tybee Island, Georgia"
+ },
+ {
+  "name": "Baddeck, Nova Scotia",
+  "wiki": "Baddeck"
+ },
+ {
+  "name": "Annapolis Royal, Nova Scotia",
+  "wiki": "Annapolis Royal"
+ },
+ {
+  "name": "Cape Breton Island, Nova Scotia",
+  "wiki": "Cape Breton Island"
+ },
+ {
+  "name": "Digby, Nova Scotia",
+  "wiki": "Digby, Nova Scotia"
+ },
+ {
+  "name": "Wolfville, Nova Scotia",
+  "wiki": "Wolfville"
+ },
+ {
+  "name": "St. Andrews, New Brunswick",
+  "wiki": "Saint Andrews, New Brunswick"
+ },
+ {
+  "name": "Hopewell Rocks, New Brunswick",
+  "wiki": "Hopewell Rocks"
+ },
+ {
+  "name": "Campobello Island, New Brunswick",
+  "wiki": "Campobello Island"
+ },
+ {
+  "name": "Victoria-by-the-Sea, PEI",
+  "wiki": "Victoria, Prince Edward Island"
+ },
+ {
+  "name": "Cavendish, PEI",
+  "wiki": "Cavendish, Prince Edward Island"
+ },
+ {
+  "name": "Baie-Saint-Paul, Quebec",
+  "wiki": "Baie-Saint-Paul"
+ },
+ {
+  "name": "Tadoussac, Quebec",
+  "wiki": "Tadoussac"
+ },
+ {
+  "name": "Percé, Quebec",
+  "wiki": "Percé, Quebec"
+ },
+ {
+  "name": "Kamouraska, Quebec",
+  "wiki": "Kamouraska, Quebec"
+ },
+ {
+  "name": "Île d'Orléans, Quebec",
+  "wiki": "Île d'Orléans"
+ },
+ {
+  "name": "North Hatley, Quebec",
+  "wiki": "North Hatley"
+ },
+ {
+  "name": "Mont-Tremblant, Quebec",
+  "wiki": "Mont-Tremblant"
+ },
+ {
+  "name": "Twillingate, Newfoundland",
+  "wiki": "Twillingate"
+ },
+ {
+  "name": "Trinity, Newfoundland",
+  "wiki": "Trinity, Newfoundland and Labrador"
+ },
+ {
+  "name": "Bonavista, Newfoundland",
+  "wiki": "Bonavista, Newfoundland and Labrador"
+ },
+ {
+  "name": "Gros Morne, Newfoundland",
+  "wiki": "Gros Morne National Park"
+ },
+ {
+  "name": "L'Anse aux Meadows, Newfoundland",
+  "wiki": "L'Anse aux Meadows"
+ },
+ {
+  "name": "Battle Harbour, Labrador",
+  "wiki": "Battle Harbour"
+ },
+ {
+  "name": "Stratford, Ontario",
+  "wiki": "Stratford, Ontario"
+ },
+ {
+  "name": "Elora, Ontario",
+  "wiki": "Elora, Ontario"
+ },
+ {
+  "name": "Picton, Ontario",
+  "wiki": "Picton, Ontario"
+ },
+ {
+  "name": "Manitoulin Island, Ontario",
+  "wiki": "Manitoulin Island"
+ },
+ {
+  "name": "Algonquin Park, Ontario",
+  "wiki": "Algonquin Provincial Park"
+ },
+ {
+  "name": "Churchill, Manitoba",
+  "wiki": "Churchill, Manitoba"
+ },
+ {
+  "name": "Gimli, Manitoba",
+  "wiki": "Gimli, Manitoba"
+ },
+ {
+  "name": "Jasper, Alberta",
+  "wiki": "Jasper, Alberta"
+ },
+ {
+  "name": "Lake Louise, Alberta",
+  "wiki": "Lake Louise, Alberta"
+ },
+ {
+  "name": "Waterton, Alberta",
+  "wiki": "Waterton Park"
+ },
+ {
+  "name": "Drumheller, Alberta",
+  "wiki": "Drumheller"
+ },
+ {
+  "name": "Nelson, British Columbia",
+  "wiki": "Nelson, British Columbia"
+ },
+ {
+  "name": "Ucluelet, British Columbia",
+  "wiki": "Ucluelet"
+ },
+ {
+  "name": "Salt Spring Island, British Columbia",
+  "wiki": "Salt Spring Island"
+ },
+ {
+  "name": "Bowen Island, British Columbia",
+  "wiki": "Bowen Island"
+ },
+ {
+  "name": "Revelstoke, British Columbia",
+  "wiki": "Revelstoke, British Columbia"
+ },
+ {
+  "name": "Barkerville, British Columbia",
+  "wiki": "Barkerville"
+ },
+ {
+  "name": "Atlin, British Columbia",
+  "wiki": "Atlin, British Columbia"
+ },
+ {
+  "name": "Iqaluit, Nunavut",
+  "wiki": "Iqaluit"
+ },
+ {
+  "name": "Kluane, Yukon",
+  "wiki": "Kluane National Park and Reserve"
+ },
+ {
+  "name": "Carcross, Yukon",
+  "wiki": "Carcross"
+ },
+ {
+  "name": "Whitehorse, Yukon",
+  "wiki": "Whitehorse"
+ },
+ {
+  "name": "Ainokura, Japan",
+  "wiki": "Gokayama"
+ },
+ {
+  "name": "Tsumago, Japan",
+  "wiki": "Tsumago-juku"
+ },
+ {
+  "name": "Magome, Japan",
+  "wiki": "Magome-juku"
+ },
+ {
+  "name": "Narai, Japan",
+  "wiki": "Narai-juku"
+ },
+ {
+  "name": "Ouchi-juku, Japan",
+  "wiki": "Ōuchi-juku"
+ },
+ {
+  "name": "Kiso Valley, Japan",
+  "wiki": "Kiso Valley"
+ },
+ {
+  "name": "Matsumoto, Japan",
+  "wiki": "Matsumoto, Nagano"
+ },
+ {
+  "name": "Hagi, Japan",
+  "wiki": "Hagi, Yamaguchi"
+ },
+ {
+  "name": "Tomonoura, Japan",
+  "wiki": "Tomonoura"
+ },
+ {
+  "name": "Miyajima, Japan",
+  "wiki": "Itsukushima"
+ },
+ {
+  "name": "Ine, Japan",
+  "wiki": "Ine, Kyoto"
+ },
+ {
+  "name": "Amanohashidate, Japan",
+  "wiki": "Amanohashidate"
+ },
+ {
+  "name": "Miyakojima, Japan",
+  "wiki": "Miyako Island"
+ },
+ {
+  "name": "Zamami, Japan",
+  "wiki": "Zamami Island"
+ },
+ {
+  "name": "Shodoshima, Japan",
+  "wiki": "Shōdoshima"
+ },
+ {
+  "name": "Kakunodate, Japan",
+  "wiki": "Kakunodate, Akita"
+ },
+ {
+  "name": "Ginzan Onsen, Japan",
+  "wiki": "Ginzan Onsen"
+ },
+ {
+  "name": "Biei, Japan",
+  "wiki": "Biei"
+ },
+ {
+  "name": "Furano, Japan",
+  "wiki": "Furano, Hokkaido"
+ },
+ {
+  "name": "Shiretoko, Japan",
+  "wiki": "Shiretoko Peninsula"
+ },
+ {
+  "name": "Beppu, Japan",
+  "wiki": "Beppu"
+ },
+ {
+  "name": "Yufuin, Japan",
+  "wiki": "Yufu"
+ },
+ {
+  "name": "Takachiho, Japan",
+  "wiki": "Takachiho, Miyazaki"
+ },
+ {
+  "name": "Usuki, Japan",
+  "wiki": "Usuki"
+ },
+ {
+  "name": "Kawagoe, Japan",
+  "wiki": "Kawagoe, Saitama"
+ },
+ {
+  "name": "Nara, Japan",
+  "wiki": "Nara (city)"
+ },
+ {
+  "name": "Uji, Japan",
+  "wiki": "Uji"
+ },
+ {
+  "name": "Hida-Furukawa, Japan",
+  "wiki": "Hida, Gifu"
+ },
+ {
+  "name": "Gujo Hachiman, Japan",
+  "wiki": "Gujō"
+ },
+ {
+  "name": "Iya Valley, Japan",
+  "wiki": "Iya Valley"
+ },
+ {
+  "name": "Kotohira, Japan",
+  "wiki": "Kotohira, Kagawa"
+ },
+ {
+  "name": "Uchiko, Japan",
+  "wiki": "Uchiko, Ehime"
+ },
+ {
+  "name": "Matsuyama, Japan",
+  "wiki": "Matsuyama"
+ },
+ {
+  "name": "Nagasaki, Japan",
+  "wiki": "Nagasaki"
+ },
+ {
+  "name": "Kagoshima, Japan",
+  "wiki": "Kagoshima"
+ },
+ {
+  "name": "Andong Hahoe Village, South Korea",
+  "wiki": "Hahoe Folk Village"
+ },
+ {
+  "name": "Tongyeong, South Korea",
+  "wiki": "Tongyeong"
+ },
+ {
+  "name": "Suncheon, South Korea",
+  "wiki": "Suncheon"
+ },
+ {
+  "name": "Sokcho, South Korea",
+  "wiki": "Sokcho"
+ },
+ {
+  "name": "Damyang, South Korea",
+  "wiki": "Damyang County"
+ },
+ {
+  "name": "Yeosu, South Korea",
+  "wiki": "Yeosu"
+ },
+ {
+  "name": "Udo, South Korea",
+  "wiki": "Udo (Jeju Province)"
+ },
+ {
+  "name": "Lukang, Taiwan",
+  "wiki": "Lukang"
+ },
+ {
+  "name": "Taroko Gorge, Taiwan",
+  "wiki": "Taroko National Park"
+ },
+ {
+  "name": "Sun Moon Lake, Taiwan",
+  "wiki": "Sun Moon Lake"
+ },
+ {
+  "name": "Alishan, Taiwan",
+  "wiki": "Alishan National Scenic Area"
+ },
+ {
+  "name": "Orchid Island, Taiwan",
+  "wiki": "Orchid Island"
+ },
+ {
+  "name": "Tamsui, Taiwan",
+  "wiki": "Tamsui District"
+ },
+ {
+  "name": "Yangshuo, China",
+  "wiki": "Yangshuo County"
+ },
+ {
+  "name": "Xitang, China",
+  "wiki": "Xitang"
+ },
+ {
+  "name": "Zhouzhuang, China",
+  "wiki": "Zhouzhuang"
+ },
+ {
+  "name": "Tongli, China",
+  "wiki": "Tongli"
+ },
+ {
+  "name": "Xidi, China",
+  "wiki": "Xidi"
+ },
+ {
+  "name": "Huangshan, China",
+  "wiki": "Huangshan"
+ },
+ {
+  "name": "Jiuzhaigou, China",
+  "wiki": "Jiuzhaigou"
+ },
+ {
+  "name": "Shangri-La, China",
+  "wiki": "Shangri-La, Yunnan"
+ },
+ {
+  "name": "Tiger Leaping Gorge, China",
+  "wiki": "Tiger Leaping Gorge"
+ },
+ {
+  "name": "Yuanyang Rice Terraces, China",
+  "wiki": "Honghe Hani Rice Terraces"
+ },
+ {
+  "name": "Longji Rice Terraces, China",
+  "wiki": "Longsheng Rice Terraces"
+ },
+ {
+  "name": "Langzhong, China",
+  "wiki": "Langzhong"
+ },
+ {
+  "name": "Danba, China",
+  "wiki": "Danba County"
+ },
+ {
+  "name": "Tulou of Fujian, China",
+  "wiki": "Fujian tulou"
+ },
+ {
+  "name": "Kaiping Diaolou, China",
+  "wiki": "Diaolou"
+ },
+ {
+  "name": "Coloane, Macau",
+  "wiki": "Coloane"
+ },
+ {
+  "name": "Tai O, Hong Kong",
+  "wiki": "Tai O"
+ },
+ {
+  "name": "Dunhuang, China",
+  "wiki": "Dunhuang"
+ },
+ {
+  "name": "Turpan, China",
+  "wiki": "Turpan"
+ },
+ {
+  "name": "Kanas Lake, China",
+  "wiki": "Kanas Lake"
+ },
+ {
+  "name": "Qingdao, China",
+  "wiki": "Qingdao"
+ },
+ {
+  "name": "Pingtan, China",
+  "wiki": "Pingtan Island"
+ },
+ {
+  "name": "Khovsgol Lake, Mongolia",
+  "wiki": "Lake Khövsgöl"
+ },
+ {
+  "name": "Kharkhorin, Mongolia",
+  "wiki": "Kharkhorin"
+ },
+ {
+  "name": "Khongoryn Els, Mongolia",
+  "wiki": "Khongoryn Els"
+ },
+ {
+  "name": "Olgii, Mongolia",
+  "wiki": "Ölgii (city)"
+ },
+ {
+  "name": "Arslanbob, Kyrgyzstan",
+  "wiki": "Arslanbob"
+ },
+ {
+  "name": "Tash Rabat, Kyrgyzstan",
+  "wiki": "Tash Rabat"
+ },
+ {
+  "name": "Jeti-Oguz, Kyrgyzstan",
+  "wiki": "Jeti-Ögüz Rocks"
+ },
+ {
+  "name": "Osh, Kyrgyzstan",
+  "wiki": "Osh"
+ },
+ {
+  "name": "Charyn Canyon, Kazakhstan",
+  "wiki": "Charyn Canyon"
+ },
+ {
+  "name": "Turkistan, Kazakhstan",
+  "wiki": "Turkistan (city)"
+ },
+ {
+  "name": "Shakhrisabz, Uzbekistan",
+  "wiki": "Shahrisabz"
+ },
+ {
+  "name": "Nurata, Uzbekistan",
+  "wiki": "Nurota"
+ },
+ {
+  "name": "Margilan, Uzbekistan",
+  "wiki": "Margilan"
+ },
+ {
+  "name": "Iskanderkul, Tajikistan",
+  "wiki": "Iskanderkul"
+ },
+ {
+  "name": "Fann Mountains, Tajikistan",
+  "wiki": "Fann Mountains"
+ },
+ {
+  "name": "Merv, Turkmenistan",
+  "wiki": "Merv"
+ },
+ {
+  "name": "Darvaza Gas Crater, Turkmenistan",
+  "wiki": "Darvaza gas crater"
+ },
+ {
+  "name": "Quba, Azerbaijan",
+  "wiki": "Quba"
+ },
+ {
+  "name": "Khinalug, Azerbaijan",
+  "wiki": "Khinalug"
+ },
+ {
+  "name": "Ushguli, Georgia",
+  "wiki": "Ushguli"
+ },
+ {
+  "name": "Batumi, Georgia",
+  "wiki": "Batumi"
+ },
+ {
+  "name": "Borjomi, Georgia",
+  "wiki": "Borjomi"
+ },
+ {
+  "name": "Tusheti, Georgia",
+  "wiki": "Tusheti"
+ },
+ {
+  "name": "Kutaisi, Georgia",
+  "wiki": "Kutaisi"
+ },
+ {
+  "name": "Vardzia, Georgia",
+  "wiki": "Vardzia"
+ },
+ {
+  "name": "Mtskheta, Georgia",
+  "wiki": "Mtskheta"
+ },
+ {
+  "name": "Goris, Armenia",
+  "wiki": "Goris"
+ },
+ {
+  "name": "Lake Sevan, Armenia",
+  "wiki": "Lake Sevan"
+ },
+ {
+  "name": "Gyumri, Armenia",
+  "wiki": "Gyumri"
+ },
+ {
+  "name": "Areni, Armenia",
+  "wiki": "Areni"
+ },
+ {
+  "name": "Abyaneh, Iran",
+  "wiki": "Abyaneh"
+ },
+ {
+  "name": "Hormuz Island, Iran",
+  "wiki": "Hormuz Island"
+ },
+ {
+  "name": "Qeshm, Iran",
+  "wiki": "Qeshm Island"
+ },
+ {
+  "name": "Meybod, Iran",
+  "wiki": "Meybod"
+ },
+ {
+  "name": "Uraman Takht, Iran",
+  "wiki": "Uraman Takht"
+ },
+ {
+  "name": "Tabriz, Iran",
+  "wiki": "Tabriz"
+ },
+ {
+  "name": "Kerman, Iran",
+  "wiki": "Kerman"
+ },
+ {
+  "name": "Mahan, Iran",
+  "wiki": "Mahan, Iran"
+ },
+ {
+  "name": "Sur, Oman",
+  "wiki": "Sur, Oman"
+ },
+ {
+  "name": "Jebel Akhdar, Oman",
+  "wiki": "Jebel Akhdar (Oman)"
+ },
+ {
+  "name": "Misfat al Abriyeen, Oman",
+  "wiki": "Misfat al Abriyeen"
+ },
+ {
+  "name": "Salalah, Oman",
+  "wiki": "Salalah"
+ },
+ {
+  "name": "AlUla, Saudi Arabia",
+  "wiki": "Al-Ula"
+ },
+ {
+  "name": "Rijal Almaa, Saudi Arabia",
+  "wiki": "Rijal Almaa"
+ },
+ {
+  "name": "Al-Balad, Jeddah",
+  "wiki": "Al-Balad, Jeddah"
+ },
+ {
+  "name": "Muharraq, Bahrain",
+  "wiki": "Muharraq"
+ },
+ {
+  "name": "Batroun, Lebanon",
+  "wiki": "Batroun"
+ },
+ {
+  "name": "Bsharri, Lebanon",
+  "wiki": "Bsharri"
+ },
+ {
+  "name": "Deir el Qamar, Lebanon",
+  "wiki": "Deir al-Qamar"
+ },
+ {
+  "name": "Dana, Jordan",
+  "wiki": "Dana Biosphere Reserve"
+ },
+ {
+  "name": "Umm Qais, Jordan",
+  "wiki": "Umm Qais"
+ },
+ {
+  "name": "Zichron Yaakov, Israel",
+  "wiki": "Zikhron Ya'akov"
+ },
+ {
+  "name": "Cumalıkızık, Turkey",
+  "wiki": "Cumalıkızık"
+ },
+ {
+  "name": "Şirince, Turkey",
+  "wiki": "Şirince"
+ },
+ {
+  "name": "Alaçatı, Turkey",
+  "wiki": "Alaçatı"
+ },
+ {
+  "name": "Bozcaada, Turkey",
+  "wiki": "Tenedos"
+ },
+ {
+  "name": "Assos, Turkey",
+  "wiki": "Assos"
+ },
+ {
+  "name": "Kaleköy, Turkey",
+  "wiki": "Kaleköy"
+ },
+ {
+  "name": "Ayvalık, Turkey",
+  "wiki": "Ayvalık"
+ },
+ {
+  "name": "Göreme, Turkey",
+  "wiki": "Göreme"
+ },
+ {
+  "name": "Uçhisar, Turkey",
+  "wiki": "Uçhisar"
+ },
+ {
+  "name": "Pamukkale, Turkey",
+  "wiki": "Pamukkale"
+ },
+ {
+  "name": "Birgi, Turkey",
+  "wiki": "Birgi"
+ },
+ {
+  "name": "Midyat, Turkey",
+  "wiki": "Midyat"
+ },
+ {
+  "name": "Uzungöl, Turkey",
+  "wiki": "Uzungöl"
+ },
+ {
+  "name": "Bodrum, Turkey",
+  "wiki": "Bodrum"
+ },
+ {
+  "name": "Datça, Turkey",
+  "wiki": "Datça"
+ },
+ {
+  "name": "Mussoorie, India",
+  "wiki": "Mussoorie"
+ },
+ {
+  "name": "Shimla, India",
+  "wiki": "Shimla"
+ },
+ {
+  "name": "Manali, India",
+  "wiki": "Manali, Himachal Pradesh"
+ },
+ {
+  "name": "Spiti Valley, India",
+  "wiki": "Spiti"
+ },
+ {
+  "name": "Kaza, India",
+  "wiki": "Kaza, Himachal Pradesh"
+ },
+ {
+  "name": "Tawang, India",
+  "wiki": "Tawang"
+ },
+ {
+  "name": "Ziro, India",
+  "wiki": "Ziro"
+ },
+ {
+  "name": "Mawlynnong, India",
+  "wiki": "Mawlynnong"
+ },
+ {
+  "name": "Gangtok, India",
+  "wiki": "Gangtok"
+ },
+ {
+  "name": "Pelling, India",
+  "wiki": "Pelling"
+ },
+ {
+  "name": "Nubra Valley, India",
+  "wiki": "Nubra"
+ },
+ {
+  "name": "Pangong Lake, India",
+  "wiki": "Pangong Tso"
+ },
+ {
+  "name": "Dal Lake, Kashmir",
+  "wiki": "Dal Lake"
+ },
+ {
+  "name": "Gulmarg, India",
+  "wiki": "Gulmarg"
+ },
+ {
+  "name": "Pushkar, India",
+  "wiki": "Pushkar"
+ },
+ {
+  "name": "Mandawa, India",
+  "wiki": "Mandawa"
+ },
+ {
+  "name": "Orchha, India",
+  "wiki": "Orchha"
+ },
+ {
+  "name": "Mandu, India",
+  "wiki": "Mandu, Madhya Pradesh"
+ },
+ {
+  "name": "Maheshwar, India",
+  "wiki": "Maheshwar"
+ },
+ {
+  "name": "Khajuraho, India",
+  "wiki": "Khajuraho"
+ },
+ {
+  "name": "Chettinad, India",
+  "wiki": "Chettinad"
+ },
+ {
+  "name": "Kumbakonam, India",
+  "wiki": "Kumbakonam"
+ },
+ {
+  "name": "Mahabalipuram, India",
+  "wiki": "Mamallapuram"
+ },
+ {
+  "name": "Gokarna, India",
+  "wiki": "Gokarna, Karnataka"
+ },
+ {
+  "name": "Coorg, India",
+  "wiki": "Kodagu district"
+ },
+ {
+  "name": "Ooty, India",
+  "wiki": "Ooty"
+ },
+ {
+  "name": "Kodaikanal, India",
+  "wiki": "Kodaikanal"
+ },
+ {
+  "name": "Alleppey, India",
+  "wiki": "Alappuzha"
+ },
+ {
+  "name": "Varkala, India",
+  "wiki": "Varkala"
+ },
+ {
+  "name": "Fontainhas, Goa",
+  "wiki": "Fontainhas"
+ },
+ {
+  "name": "Panjim, Goa",
+  "wiki": "Panaji"
+ },
+ {
+  "name": "Diu, India",
+  "wiki": "Diu, India"
+ },
+ {
+  "name": "Bhuj, India",
+  "wiki": "Bhuj"
+ },
+ {
+  "name": "Rann of Kutch, India",
+  "wiki": "Rann of Kutch"
+ },
+ {
+  "name": "Majuli, India",
+  "wiki": "Majuli"
+ },
+ {
+  "name": "Havelock Island, India",
+  "wiki": "Havelock Island"
+ },
+ {
+  "name": "Lakshadweep, India",
+  "wiki": "Lakshadweep"
+ },
+ {
+  "name": "Patan, Nepal",
+  "wiki": "Lalitpur, Nepal"
+ },
+ {
+  "name": "Namche Bazaar, Nepal",
+  "wiki": "Namche Bazaar"
+ },
+ {
+  "name": "Jomsom, Nepal",
+  "wiki": "Jomsom"
+ },
+ {
+  "name": "Bumthang, Bhutan",
+  "wiki": "Bumthang District"
+ },
+ {
+  "name": "Punakha, Bhutan",
+  "wiki": "Punakha"
+ },
+ {
+  "name": "Phobjikha Valley, Bhutan",
+  "wiki": "Phobjikha Valley"
+ },
+ {
+  "name": "Hunza Valley, Pakistan",
+  "wiki": "Hunza Valley"
+ },
+ {
+  "name": "Skardu, Pakistan",
+  "wiki": "Skardu"
+ },
+ {
+  "name": "Fairy Meadows, Pakistan",
+  "wiki": "Fairy Meadows"
+ },
+ {
+  "name": "Kalash Valleys, Pakistan",
+  "wiki": "Kalasha Valleys"
+ },
+ {
+  "name": "Nuwara Eliya, Sri Lanka",
+  "wiki": "Nuwara Eliya"
+ },
+ {
+  "name": "Sigiriya, Sri Lanka",
+  "wiki": "Sigiriya"
+ },
+ {
+  "name": "Mirissa, Sri Lanka",
+  "wiki": "Mirissa"
+ },
+ {
+  "name": "Trincomalee, Sri Lanka",
+  "wiki": "Trincomalee"
+ },
+ {
+  "name": "Jaffna, Sri Lanka",
+  "wiki": "Jaffna"
+ },
+ {
+  "name": "Bentota, Sri Lanka",
+  "wiki": "Bentota"
+ },
+ {
+  "name": "Ratargul Swamp Forest, Bangladesh",
+  "wiki": "Ratargul Swamp Forest"
+ },
+ {
+  "name": "Srimangal, Bangladesh",
+  "wiki": "Sreemangal Upazila"
+ },
+ {
+  "name": "Saint Martin's Island, Bangladesh",
+  "wiki": "Saint Martin's Island"
+ },
+ {
+  "name": "Nong Khiaw, Laos",
+  "wiki": "Nong Khiaw"
+ },
+ {
+  "name": "Vang Vieng, Laos",
+  "wiki": "Vang Vieng"
+ },
+ {
+  "name": "Muang Ngoi, Laos",
+  "wiki": "Muang Ngoi Neua"
+ },
+ {
+  "name": "Phonsavan, Laos",
+  "wiki": "Phonsavan"
+ },
+ {
+  "name": "Ninh Binh, Vietnam",
+  "wiki": "Ninh Bình province"
+ },
+ {
+  "name": "Tam Coc, Vietnam",
+  "wiki": "Tam Cốc – Bích Động"
+ },
+ {
+  "name": "Phong Nha, Vietnam",
+  "wiki": "Phong Nha–Kẻ Bàng National Park"
+ },
+ {
+  "name": "Mai Chau, Vietnam",
+  "wiki": "Mai Châu district"
+ },
+ {
+  "name": "Phu Quoc, Vietnam",
+  "wiki": "Phú Quốc"
+ },
+ {
+  "name": "Con Dao, Vietnam",
+  "wiki": "Côn Đảo"
+ },
+ {
+  "name": "Quy Nhon, Vietnam",
+  "wiki": "Quy Nhơn"
+ },
+ {
+  "name": "Ban Gioc Falls, Vietnam",
+  "wiki": "Ban Gioc–Detian Falls"
+ },
+ {
+  "name": "Battambang, Cambodia",
+  "wiki": "Battambang"
+ },
+ {
+  "name": "Sukhothai, Thailand",
+  "wiki": "Sukhothai Historical Park"
+ },
+ {
+  "name": "Ayutthaya, Thailand",
+  "wiki": "Ayutthaya Historical Park"
+ },
+ {
+  "name": "Chiang Rai, Thailand",
+  "wiki": "Chiang Rai"
+ },
+ {
+  "name": "Mae Hong Son, Thailand",
+  "wiki": "Mae Hong Son"
+ },
+ {
+  "name": "Chiang Khan, Thailand",
+  "wiki": "Chiang Khan district"
+ },
+ {
+  "name": "Koh Tao, Thailand",
+  "wiki": "Ko Tao"
+ },
+ {
+  "name": "Koh Phi Phi, Thailand",
+  "wiki": "Phi Phi Islands"
+ },
+ {
+  "name": "Railay, Thailand",
+  "wiki": "Railay Beach"
+ },
+ {
+  "name": "Koh Kood, Thailand",
+  "wiki": "Ko Kut"
+ },
+ {
+  "name": "Khao Sok, Thailand",
+  "wiki": "Khao Sok National Park"
+ },
+ {
+  "name": "Phang Nga Bay, Thailand",
+  "wiki": "Phang Nga Bay"
+ },
+ {
+  "name": "Kanchanaburi, Thailand",
+  "wiki": "Kanchanaburi"
+ },
+ {
+  "name": "Cameron Highlands, Malaysia",
+  "wiki": "Cameron Highlands"
+ },
+ {
+  "name": "Langkawi, Malaysia",
+  "wiki": "Langkawi"
+ },
+ {
+  "name": "Tioman Island, Malaysia",
+  "wiki": "Tioman Island"
+ },
+ {
+  "name": "Kinabalu, Malaysia",
+  "wiki": "Mount Kinabalu"
+ },
+ {
+  "name": "Semporna, Malaysia",
+  "wiki": "Semporna"
+ },
+ {
+  "name": "Kampong Ayer, Brunei",
+  "wiki": "Kampong Ayer"
+ },
+ {
+  "name": "Pulau Ubin, Singapore",
+  "wiki": "Pulau Ubin"
+ },
+ {
+  "name": "Komodo, Indonesia",
+  "wiki": "Komodo (island)"
+ },
+ {
+  "name": "Labuan Bajo, Indonesia",
+  "wiki": "Labuan Bajo"
+ },
+ {
+  "name": "Wae Rebo, Indonesia",
+  "wiki": "Waerebo"
+ },
+ {
+  "name": "Bajawa, Indonesia",
+  "wiki": "Bajawa"
+ },
+ {
+  "name": "Kelimutu, Indonesia",
+  "wiki": "Kelimutu"
+ },
+ {
+  "name": "Tana Toraja, Indonesia",
+  "wiki": "Tana Toraja Regency"
+ },
+ {
+  "name": "Wakatobi, Indonesia",
+  "wiki": "Wakatobi Regency"
+ },
+ {
+  "name": "Banda Islands, Indonesia",
+  "wiki": "Banda Islands"
+ },
+ {
+  "name": "Lake Toba, Indonesia",
+  "wiki": "Lake Toba"
+ },
+ {
+  "name": "Bukittinggi, Indonesia",
+  "wiki": "Bukittinggi"
+ },
+ {
+  "name": "Mentawai Islands, Indonesia",
+  "wiki": "Mentawai Islands Regency"
+ },
+ {
+  "name": "Nusa Penida, Indonesia",
+  "wiki": "Nusa Penida"
+ },
+ {
+  "name": "Mount Bromo, Indonesia",
+  "wiki": "Mount Bromo"
+ },
+ {
+  "name": "Ijen, Indonesia",
+  "wiki": "Ijen"
+ },
+ {
+  "name": "Dieng Plateau, Indonesia",
+  "wiki": "Dieng Plateau"
+ },
+ {
+  "name": "Karimunjawa, Indonesia",
+  "wiki": "Karimunjawa"
+ },
+ {
+  "name": "Derawan Islands, Indonesia",
+  "wiki": "Derawan Islands"
+ },
+ {
+  "name": "Baliem Valley, Indonesia",
+  "wiki": "Baliem Valley"
+ },
+ {
+  "name": "Ternate, Indonesia",
+  "wiki": "Ternate"
+ },
+ {
+  "name": "Siquijor, Philippines",
+  "wiki": "Siquijor"
+ },
+ {
+  "name": "Camiguin, Philippines",
+  "wiki": "Camiguin"
+ },
+ {
+  "name": "Coron, Philippines",
+  "wiki": "Coron, Palawan"
+ },
+ {
+  "name": "El Nido, Philippines",
+  "wiki": "El Nido, Palawan"
+ },
+ {
+  "name": "Banaue, Philippines",
+  "wiki": "Banaue"
+ },
+ {
+  "name": "Sagada, Philippines",
+  "wiki": "Sagada"
+ },
+ {
+  "name": "The Chocolate Hills, Philippines",
+  "wiki": "Chocolate Hills"
+ },
+ {
+  "name": "Taal, Philippines",
+  "wiki": "Taal, Batangas"
+ },
+ {
+  "name": "Vernazza, Italy",
+  "wiki": "Vernazza"
+ },
+ {
+  "name": "Manarola, Italy",
+  "wiki": "Manarola"
+ },
+ {
+  "name": "Camogli, Italy",
+  "wiki": "Camogli"
+ },
+ {
+  "name": "Varenna, Italy",
+  "wiki": "Varenna"
+ },
+ {
+  "name": "Orta San Giulio, Italy",
+  "wiki": "Orta San Giulio"
+ },
+ {
+  "name": "Sirmione, Italy",
+  "wiki": "Sirmione"
+ },
+ {
+  "name": "Malcesine, Italy",
+  "wiki": "Malcesine"
+ },
+ {
+  "name": "Asolo, Italy",
+  "wiki": "Asolo"
+ },
+ {
+  "name": "Chioggia, Italy",
+  "wiki": "Chioggia"
+ },
+ {
+  "name": "Bassano del Grappa, Italy",
+  "wiki": "Bassano del Grappa"
+ },
+ {
+  "name": "Pienza, Italy",
+  "wiki": "Pienza"
+ },
+ {
+  "name": "Montalcino, Italy",
+  "wiki": "Montalcino"
+ },
+ {
+  "name": "Volterra, Italy",
+  "wiki": "Volterra"
+ },
+ {
+  "name": "Cortona, Italy",
+  "wiki": "Cortona"
+ },
+ {
+  "name": "Assisi, Italy",
+  "wiki": "Assisi"
+ },
+ {
+  "name": "Spello, Italy",
+  "wiki": "Spello"
+ },
+ {
+  "name": "Todi, Italy",
+  "wiki": "Todi"
+ },
+ {
+  "name": "Gubbio, Italy",
+  "wiki": "Gubbio"
+ },
+ {
+  "name": "Spoleto, Italy",
+  "wiki": "Spoleto"
+ },
+ {
+  "name": "Sorano, Italy",
+  "wiki": "Sorano"
+ },
+ {
+  "name": "Sperlonga, Italy",
+  "wiki": "Sperlonga"
+ },
+ {
+  "name": "Gaeta, Italy",
+  "wiki": "Gaeta"
+ },
+ {
+  "name": "Ravello, Italy",
+  "wiki": "Ravello"
+ },
+ {
+  "name": "Amalfi, Italy",
+  "wiki": "Amalfi"
+ },
+ {
+  "name": "Atrani, Italy",
+  "wiki": "Atrani"
+ },
+ {
+  "name": "Capri, Italy",
+  "wiki": "Capri"
+ },
+ {
+  "name": "Scilla, Italy",
+  "wiki": "Scilla, Calabria"
+ },
+ {
+  "name": "Pizzo, Italy",
+  "wiki": "Pizzo, Calabria"
+ },
+ {
+  "name": "Otranto, Italy",
+  "wiki": "Otranto"
+ },
+ {
+  "name": "Locorotondo, Italy",
+  "wiki": "Locorotondo"
+ },
+ {
+  "name": "Monopoli, Italy",
+  "wiki": "Monopoli"
+ },
+ {
+  "name": "Sulmona, Italy",
+  "wiki": "Sulmona"
+ },
+ {
+  "name": "Santo Stefano di Sessanio, Italy",
+  "wiki": "Santo Stefano di Sessanio"
+ },
+ {
+  "name": "Craco, Italy",
+  "wiki": "Craco"
+ },
+ {
+  "name": "Ragusa, Sicily",
+  "wiki": "Ragusa, Sicily"
+ },
+ {
+  "name": "Modica, Sicily",
+  "wiki": "Modica"
+ },
+ {
+  "name": "Taormina, Sicily",
+  "wiki": "Taormina"
+ },
+ {
+  "name": "Scicli, Sicily",
+  "wiki": "Scicli"
+ },
+ {
+  "name": "Favignana, Sicily",
+  "wiki": "Favignana"
+ },
+ {
+  "name": "Pantelleria, Italy",
+  "wiki": "Pantelleria"
+ },
+ {
+  "name": "Bosa, Sardinia",
+  "wiki": "Bosa"
+ },
+ {
+  "name": "Castelsardo, Sardinia",
+  "wiki": "Castelsardo"
+ },
+ {
+  "name": "La Maddalena, Sardinia",
+  "wiki": "La Maddalena"
+ },
+ {
+  "name": "Aosta, Italy",
+  "wiki": "Aosta"
+ },
+ {
+  "name": "Cortina d'Ampezzo, Italy",
+  "wiki": "Cortina d'Ampezzo"
+ },
+ {
+  "name": "Ortisei, Italy",
+  "wiki": "Urtijëi"
+ },
+ {
+  "name": "Bressanone, Italy",
+  "wiki": "Brixen"
+ },
+ {
+  "name": "Vipiteno, Italy",
+  "wiki": "Sterzing"
+ },
+ {
+  "name": "Dozza, Italy",
+  "wiki": "Dozza"
+ },
+ {
+  "name": "Brisighella, Italy",
+  "wiki": "Brisighella"
+ },
+ {
+  "name": "Ascoli Piceno, Italy",
+  "wiki": "Ascoli Piceno"
+ },
+ {
+  "name": "Giglio, Italy",
+  "wiki": "Isola del Giglio"
+ },
+ {
+  "name": "Portovenere, Italy",
+  "wiki": "Porto Venere"
+ },
+ {
+  "name": "Lerici, Italy",
+  "wiki": "Lerici"
+ },
+ {
+  "name": "Cervo, Italy",
+  "wiki": "Cervo, Liguria"
+ },
+ {
+  "name": "Dolceacqua, Italy",
+  "wiki": "Dolceacqua"
+ },
+ {
+  "name": "Apricale, Italy",
+  "wiki": "Apricale"
+ },
+ {
+  "name": "Saint-Cirq-Lapopie, France",
+  "wiki": "Saint-Cirq-Lapopie"
+ },
+ {
+  "name": "Conques, France",
+  "wiki": "Conques"
+ },
+ {
+  "name": "Cordes-sur-Ciel, France",
+  "wiki": "Cordes-sur-Ciel"
+ },
+ {
+  "name": "Roussillon, France",
+  "wiki": "Roussillon, Vaucluse"
+ },
+ {
+  "name": "Moustiers-Sainte-Marie, France",
+  "wiki": "Moustiers-Sainte-Marie"
+ },
+ {
+  "name": "Lourmarin, France",
+  "wiki": "Lourmarin"
+ },
+ {
+  "name": "Bonnieux, France",
+  "wiki": "Bonnieux"
+ },
+ {
+  "name": "Les Baux-de-Provence, France",
+  "wiki": "Les Baux-de-Provence"
+ },
+ {
+  "name": "Cassis, France",
+  "wiki": "Cassis"
+ },
+ {
+  "name": "Villefranche-sur-Mer, France",
+  "wiki": "Villefranche-sur-Mer"
+ },
+ {
+  "name": "Saint-Tropez, France",
+  "wiki": "Saint-Tropez"
+ },
+ {
+  "name": "Uzès, France",
+  "wiki": "Uzès"
+ },
+ {
+  "name": "Aigues-Mortes, France",
+  "wiki": "Aigues-Mortes"
+ },
+ {
+  "name": "Saintes-Maries-de-la-Mer, France",
+  "wiki": "Saintes-Maries-de-la-Mer"
+ },
+ {
+  "name": "Sète, France",
+  "wiki": "Sète"
+ },
+ {
+  "name": "Minerve, France",
+  "wiki": "Minerve, Hérault"
+ },
+ {
+  "name": "Saint-Guilhem-le-Désert, France",
+  "wiki": "Saint-Guilhem-le-Désert"
+ },
+ {
+  "name": "Vézelay, France",
+  "wiki": "Vézelay"
+ },
+ {
+  "name": "Beaune, France",
+  "wiki": "Beaune"
+ },
+ {
+  "name": "Riquewihr, France",
+  "wiki": "Riquewihr"
+ },
+ {
+  "name": "Eguisheim, France",
+  "wiki": "Eguisheim"
+ },
+ {
+  "name": "Kaysersberg, France",
+  "wiki": "Kaysersberg"
+ },
+ {
+  "name": "Yvoire, France",
+  "wiki": "Yvoire"
+ },
+ {
+  "name": "Pérouges, France",
+  "wiki": "Pérouges"
+ },
+ {
+  "name": "Dinan, France",
+  "wiki": "Dinan"
+ },
+ {
+  "name": "Locronan, France",
+  "wiki": "Locronan"
+ },
+ {
+  "name": "Île d'Ouessant, France",
+  "wiki": "Ushant"
+ },
+ {
+  "name": "Barfleur, France",
+  "wiki": "Barfleur"
+ },
+ {
+  "name": "Giverny, France",
+  "wiki": "Giverny"
+ },
+ {
+  "name": "Amboise, France",
+  "wiki": "Amboise"
+ },
+ {
+  "name": "Chinon, France",
+  "wiki": "Chinon"
+ },
+ {
+  "name": "Saint-Émilion, France",
+  "wiki": "Saint-Émilion"
+ },
+ {
+  "name": "La Roque-Gageac, France",
+  "wiki": "La Roque-Gageac"
+ },
+ {
+  "name": "Collonges-la-Rouge, France",
+  "wiki": "Collonges-la-Rouge"
+ },
+ {
+  "name": "Saint-Jean-de-Luz, France",
+  "wiki": "Saint-Jean-de-Luz"
+ },
+ {
+  "name": "Espelette, France",
+  "wiki": "Espelette"
+ },
+ {
+  "name": "Ajaccio, Corsica",
+  "wiki": "Ajaccio"
+ },
+ {
+  "name": "Corte, Corsica",
+  "wiki": "Corte, Haute-Corse"
+ },
+ {
+  "name": "Saint-Florent, Corsica",
+  "wiki": "Saint-Florent, Haute-Corse"
+ },
+ {
+  "name": "Annot, France",
+  "wiki": "Annot"
+ },
+ {
+  "name": "Briançon, France",
+  "wiki": "Briançon"
+ },
+ {
+  "name": "Cudillero, Spain",
+  "wiki": "Cudillero"
+ },
+ {
+  "name": "Llanes, Spain",
+  "wiki": "Llanes"
+ },
+ {
+  "name": "Comillas, Spain",
+  "wiki": "Comillas"
+ },
+ {
+  "name": "Potes, Spain",
+  "wiki": "Potes"
+ },
+ {
+  "name": "Cies Islands, Spain",
+  "wiki": "Cíes Islands"
+ },
+ {
+  "name": "Hondarribia, Spain",
+  "wiki": "Hondarribia"
+ },
+ {
+  "name": "Ainsa, Spain",
+  "wiki": "Aínsa"
+ },
+ {
+  "name": "Alquezar, Spain",
+  "wiki": "Alquézar"
+ },
+ {
+  "name": "Tossa de Mar, Spain",
+  "wiki": "Tossa de Mar"
+ },
+ {
+  "name": "Calella de Palafrugell, Spain",
+  "wiki": "Calella de Palafrugell"
+ },
+ {
+  "name": "Peñíscola, Spain",
+  "wiki": "Peniscola"
+ },
+ {
+  "name": "Morella, Spain",
+  "wiki": "Morella, Spain"
+ },
+ {
+  "name": "Altea, Spain",
+  "wiki": "Altea"
+ },
+ {
+  "name": "Guadalest, Spain",
+  "wiki": "El Castell de Guadalest"
+ },
+ {
+  "name": "Mojácar, Spain",
+  "wiki": "Mojácar"
+ },
+ {
+  "name": "Cabo de Gata, Spain",
+  "wiki": "Cabo de Gata-Níjar Natural Park"
+ },
+ {
+  "name": "Arcos de la Frontera, Spain",
+  "wiki": "Arcos de la Frontera"
+ },
+ {
+  "name": "Zahara de la Sierra, Spain",
+  "wiki": "Zahara de la Sierra"
+ },
+ {
+  "name": "Grazalema, Spain",
+  "wiki": "Grazalema"
+ },
+ {
+  "name": "Júzcar, Spain",
+  "wiki": "Júzcar"
+ },
+ {
+  "name": "Nerja, Spain",
+  "wiki": "Nerja"
+ },
+ {
+  "name": "Úbeda, Spain",
+  "wiki": "Úbeda"
+ },
+ {
+  "name": "Trujillo, Spain",
+  "wiki": "Trujillo, Spain"
+ },
+ {
+  "name": "Cáceres, Spain",
+  "wiki": "Cáceres, Spain"
+ },
+ {
+  "name": "Ávila, Spain",
+  "wiki": "Ávila"
+ },
+ {
+  "name": "Sigüenza, Spain",
+  "wiki": "Sigüenza"
+ },
+ {
+  "name": "Chinchón, Spain",
+  "wiki": "Chinchón"
+ },
+ {
+  "name": "Deià, Mallorca",
+  "wiki": "Deià"
+ },
+ {
+  "name": "Valldemossa, Mallorca",
+  "wiki": "Valldemossa"
+ },
+ {
+  "name": "La Palma, Canary Islands",
+  "wiki": "La Palma"
+ },
+ {
+  "name": "Marvão, Portugal",
+  "wiki": "Marvão"
+ },
+ {
+  "name": "Monsanto, Portugal",
+  "wiki": "Monsanto (Idanha-a-Nova)"
+ },
+ {
+  "name": "Tavira, Portugal",
+  "wiki": "Tavira"
+ },
+ {
+  "name": "Lagos, Portugal",
+  "wiki": "Lagos, Portugal"
+ },
+ {
+  "name": "Comporta, Portugal",
+  "wiki": "Comporta"
+ },
+ {
+  "name": "Ericeira, Portugal",
+  "wiki": "Ericeira"
+ },
+ {
+  "name": "Nazaré, Portugal",
+  "wiki": "Nazaré, Portugal"
+ },
+ {
+  "name": "Aveiro, Portugal",
+  "wiki": "Aveiro, Portugal"
+ },
+ {
+  "name": "Guimarães, Portugal",
+  "wiki": "Guimarães"
+ },
+ {
+  "name": "Ponte de Lima, Portugal",
+  "wiki": "Ponte de Lima"
+ },
+ {
+  "name": "Peso da Régua, Portugal",
+  "wiki": "Peso da Régua"
+ },
+ {
+  "name": "Pico, Azores",
+  "wiki": "Pico Island"
+ },
+ {
+  "name": "São Miguel, Azores",
+  "wiki": "São Miguel Island"
+ },
+ {
+  "name": "Porto Santo, Madeira",
+  "wiki": "Porto Santo Island"
+ },
+ {
+  "name": "Doolin, Ireland",
+  "wiki": "Doolin"
+ },
+ {
+  "name": "Westport, Ireland",
+  "wiki": "Westport, County Mayo"
+ },
+ {
+  "name": "Clifden, Ireland",
+  "wiki": "Clifden"
+ },
+ {
+  "name": "Inishbofin, Ireland",
+  "wiki": "Inishbofin, County Galway"
+ },
+ {
+  "name": "Kenmare, Ireland",
+  "wiki": "Kenmare"
+ },
+ {
+  "name": "Portmagee, Ireland",
+  "wiki": "Portmagee"
+ },
+ {
+  "name": "Adare, Ireland",
+  "wiki": "Adare"
+ },
+ {
+  "name": "Cushendun, Northern Ireland",
+  "wiki": "Cushendun"
+ },
+ {
+  "name": "Plockton, Scotland",
+  "wiki": "Plockton"
+ },
+ {
+  "name": "Ullapool, Scotland",
+  "wiki": "Ullapool"
+ },
+ {
+  "name": "Isle of Harris, Scotland",
+  "wiki": "Harris, Outer Hebrides"
+ },
+ {
+  "name": "Iona, Scotland",
+  "wiki": "Iona"
+ },
+ {
+  "name": "Pittenweem, Scotland",
+  "wiki": "Pittenweem"
+ },
+ {
+  "name": "Crail, Scotland",
+  "wiki": "Crail"
+ },
+ {
+  "name": "Applecross, Scotland",
+  "wiki": "Applecross"
+ },
+ {
+  "name": "Mousehole, Cornwall",
+  "wiki": "Mousehole"
+ },
+ {
+  "name": "Port Isaac, Cornwall",
+  "wiki": "Port Isaac"
+ },
+ {
+  "name": "Clovelly, England",
+  "wiki": "Clovelly"
+ },
+ {
+  "name": "Lyme Regis, England",
+  "wiki": "Lyme Regis"
+ },
+ {
+  "name": "Castle Combe, England",
+  "wiki": "Castle Combe"
+ },
+ {
+  "name": "Bibury, England",
+  "wiki": "Bibury"
+ },
+ {
+  "name": "Lavenham, England",
+  "wiki": "Lavenham"
+ },
+ {
+  "name": "Robin Hood's Bay, England",
+  "wiki": "Robin Hood's Bay"
+ },
+ {
+  "name": "Staithes, England",
+  "wiki": "Staithes"
+ },
+ {
+  "name": "Hay-on-Wye, Wales",
+  "wiki": "Hay-on-Wye"
+ },
+ {
+  "name": "St Davids, Wales",
+  "wiki": "St Davids"
+ },
+ {
+  "name": "Aberaeron, Wales",
+  "wiki": "Aberaeron"
+ },
+ {
+  "name": "Lindisfarne, England",
+  "wiki": "Lindisfarne"
+ },
+ {
+  "name": "Monschau, Germany",
+  "wiki": "Monschau"
+ },
+ {
+  "name": "Cochem, Germany",
+  "wiki": "Cochem"
+ },
+ {
+  "name": "Bacharach, Germany",
+  "wiki": "Bacharach"
+ },
+ {
+  "name": "Rüdesheim am Rhein, Germany",
+  "wiki": "Rüdesheim am Rhein"
+ },
+ {
+  "name": "Dinkelsbühl, Germany",
+  "wiki": "Dinkelsbühl"
+ },
+ {
+  "name": "Oberstdorf, Germany",
+  "wiki": "Oberstdorf"
+ },
+ {
+  "name": "Goslar, Germany",
+  "wiki": "Goslar"
+ },
+ {
+  "name": "Wernigerode, Germany",
+  "wiki": "Wernigerode"
+ },
+ {
+  "name": "Stralsund, Germany",
+  "wiki": "Stralsund"
+ },
+ {
+  "name": "Wismar, Germany",
+  "wiki": "Wismar"
+ },
+ {
+  "name": "Helgoland, Germany",
+  "wiki": "Heligoland"
+ },
+ {
+  "name": "Görlitz, Germany",
+  "wiki": "Görlitz"
+ },
+ {
+  "name": "Meissen, Germany",
+  "wiki": "Meissen"
+ },
+ {
+  "name": "Tübingen, Germany",
+  "wiki": "Tübingen"
+ },
+ {
+  "name": "Freiburg im Breisgau, Germany",
+  "wiki": "Freiburg im Breisgau"
+ },
+ {
+  "name": "Celle, Germany",
+  "wiki": "Celle"
+ },
+ {
+  "name": "Hiddensee, Germany",
+  "wiki": "Hiddensee"
+ },
+ {
+  "name": "Spreewald, Germany",
+  "wiki": "Spree Forest"
+ },
+ {
+  "name": "Saxon Switzerland, Germany",
+  "wiki": "Saxon Switzerland"
+ },
+ {
+  "name": "St. Wolfgang, Austria",
+  "wiki": "St. Wolfgang im Salzkammergut"
+ },
+ {
+  "name": "Zell am See, Austria",
+  "wiki": "Zell am See"
+ },
+ {
+  "name": "Kitzbühel, Austria",
+  "wiki": "Kitzbühel"
+ },
+ {
+  "name": "Bad Gastein, Austria",
+  "wiki": "Bad Gastein"
+ },
+ {
+  "name": "Heiligenblut, Austria",
+  "wiki": "Heiligenblut am Großglockner"
+ },
+ {
+  "name": "Hallein, Austria",
+  "wiki": "Hallein"
+ },
+ {
+  "name": "Gstaad, Switzerland",
+  "wiki": "Gstaad"
+ },
+ {
+  "name": "Wengen, Switzerland",
+  "wiki": "Wengen"
+ },
+ {
+  "name": "Mürren, Switzerland",
+  "wiki": "Mürren"
+ },
+ {
+  "name": "Grindelwald, Switzerland",
+  "wiki": "Grindelwald"
+ },
+ {
+  "name": "Stein am Rhein, Switzerland",
+  "wiki": "Stein am Rhein"
+ },
+ {
+  "name": "Montreux, Switzerland",
+  "wiki": "Montreux"
+ },
+ {
+  "name": "Ascona, Switzerland",
+  "wiki": "Ascona"
+ },
+ {
+  "name": "Sils im Engadin, Switzerland",
+  "wiki": "Sils im Engadin/Segl"
+ },
+ {
+  "name": "Guarda, Switzerland",
+  "wiki": "Guarda, Switzerland"
+ },
+ {
+  "name": "Lavaux, Switzerland",
+  "wiki": "Lavaux"
+ },
+ {
+  "name": "Vaduz, Liechtenstein",
+  "wiki": "Vaduz"
+ },
+ {
+  "name": "Echternach, Luxembourg",
+  "wiki": "Echternach"
+ },
+ {
+  "name": "Durbuy, Belgium",
+  "wiki": "Durbuy"
+ },
+ {
+  "name": "Thorn, Netherlands",
+  "wiki": "Thorn, Netherlands"
+ },
+ {
+  "name": "Volendam, Netherlands",
+  "wiki": "Volendam"
+ },
+ {
+  "name": "Marken, Netherlands",
+  "wiki": "Marken"
+ },
+ {
+  "name": "Zaanse Schans, Netherlands",
+  "wiki": "Zaanse Schans"
+ },
+ {
+  "name": "Schiermonnikoog, Netherlands",
+  "wiki": "Schiermonnikoog"
+ },
+ {
+  "name": "Middelburg, Netherlands",
+  "wiki": "Middelburg, Zeeland"
+ },
+ {
+  "name": "Ribe, Denmark",
+  "wiki": "Ribe"
+ },
+ {
+  "name": "Bornholm, Denmark",
+  "wiki": "Bornholm"
+ },
+ {
+  "name": "Møns Klint, Denmark",
+  "wiki": "Møns Klint"
+ },
+ {
+  "name": "Fanø, Denmark",
+  "wiki": "Fanø"
+ },
+ {
+  "name": "Dragør, Denmark",
+  "wiki": "Dragør"
+ },
+ {
+  "name": "Ystad, Sweden",
+  "wiki": "Ystad"
+ },
+ {
+  "name": "Sigtuna, Sweden",
+  "wiki": "Sigtuna"
+ },
+ {
+  "name": "Smögen, Sweden",
+  "wiki": "Smögen"
+ },
+ {
+  "name": "Marstrand, Sweden",
+  "wiki": "Marstrand"
+ },
+ {
+  "name": "Fjällbacka, Sweden",
+  "wiki": "Fjällbacka"
+ },
+ {
+  "name": "Abisko, Sweden",
+  "wiki": "Abisko"
+ },
+ {
+  "name": "Sandhamn, Sweden",
+  "wiki": "Sandhamn"
+ },
+ {
+  "name": "Henningsvær, Norway",
+  "wiki": "Henningsvær"
+ },
+ {
+  "name": "Å, Norway",
+  "wiki": "Å, Moskenes"
+ },
+ {
+  "name": "Flåm, Norway",
+  "wiki": "Flåm"
+ },
+ {
+  "name": "Undredal, Norway",
+  "wiki": "Undredal"
+ },
+ {
+  "name": "Longyearbyen, Svalbard",
+  "wiki": "Longyearbyen"
+ },
+ {
+  "name": "Stavanger, Norway",
+  "wiki": "Stavanger"
+ },
+ {
+  "name": "Lysefjord, Norway",
+  "wiki": "Lysefjord"
+ },
+ {
+  "name": "Kristiansund, Norway",
+  "wiki": "Kristiansund Municipality"
+ },
+ {
+  "name": "Senja, Norway",
+  "wiki": "Senja"
+ },
+ {
+  "name": "Hamnøy, Norway",
+  "wiki": "Hamnøya"
+ },
+ {
+  "name": "Siglufjordur, Iceland",
+  "wiki": "Siglufjörður"
+ },
+ {
+  "name": "Vik, Iceland",
+  "wiki": "Vík í Mýrdal"
+ },
+ {
+  "name": "Hofsos, Iceland",
+  "wiki": "Hofsós"
+ },
+ {
+  "name": "Djúpivogur, Iceland",
+  "wiki": "Djúpivogur"
+ },
+ {
+  "name": "Tasiilaq, Greenland",
+  "wiki": "Tasiilaq"
+ },
+ {
+  "name": "Qaqortoq, Greenland",
+  "wiki": "Qaqortoq"
+ },
+ {
+  "name": "Gjogv, Faroe Islands",
+  "wiki": "Gjógv"
+ },
+ {
+  "name": "Saksun, Faroe Islands",
+  "wiki": "Saksun"
+ },
+ {
+  "name": "Naantali, Finland",
+  "wiki": "Naantali"
+ },
+ {
+  "name": "Rauma, Finland",
+  "wiki": "Rauma, Finland"
+ },
+ {
+  "name": "Savonlinna, Finland",
+  "wiki": "Savonlinna"
+ },
+ {
+  "name": "Saariselkä, Finland",
+  "wiki": "Saariselkä"
+ },
+ {
+  "name": "Inari, Finland",
+  "wiki": "Inari, Finland"
+ },
+ {
+  "name": "Haapsalu, Estonia",
+  "wiki": "Haapsalu"
+ },
+ {
+  "name": "Kuressaare, Estonia",
+  "wiki": "Kuressaare"
+ },
+ {
+  "name": "Saaremaa, Estonia",
+  "wiki": "Saaremaa"
+ },
+ {
+  "name": "Tartu, Estonia",
+  "wiki": "Tartu"
+ },
+ {
+  "name": "Muhu, Estonia",
+  "wiki": "Muhu"
+ },
+ {
+  "name": "Cēsis, Latvia",
+  "wiki": "Cēsis"
+ },
+ {
+  "name": "Ventspils, Latvia",
+  "wiki": "Ventspils"
+ },
+ {
+  "name": "Trakai, Lithuania",
+  "wiki": "Trakai"
+ },
+ {
+  "name": "Nida, Lithuania",
+  "wiki": "Nida, Lithuania"
+ },
+ {
+  "name": "Curonian Spit, Lithuania",
+  "wiki": "Curonian Spit"
+ },
+ {
+  "name": "Kaunas, Lithuania",
+  "wiki": "Kaunas"
+ },
+ {
+  "name": "Kazimierz Dolny, Poland",
+  "wiki": "Kazimierz Dolny"
+ },
+ {
+  "name": "Sandomierz, Poland",
+  "wiki": "Sandomierz"
+ },
+ {
+  "name": "Zamość, Poland",
+  "wiki": "Zamość"
+ },
+ {
+  "name": "Hel, Poland",
+  "wiki": "Hel, Poland"
+ },
+ {
+  "name": "Malbork, Poland",
+  "wiki": "Malbork"
+ },
+ {
+  "name": "Bieszczady, Poland",
+  "wiki": "Bieszczady Mountains"
+ },
+ {
+  "name": "Slavonice, Czechia",
+  "wiki": "Slavonice"
+ },
+ {
+  "name": "Mikulov, Czechia",
+  "wiki": "Mikulov"
+ },
+ {
+  "name": "Třeboň, Czechia",
+  "wiki": "Třeboň"
+ },
+ {
+  "name": "Loket, Czechia",
+  "wiki": "Loket"
+ },
+ {
+  "name": "Karlovy Vary, Czechia",
+  "wiki": "Karlovy Vary"
+ },
+ {
+  "name": "Olomouc, Czechia",
+  "wiki": "Olomouc"
+ },
+ {
+  "name": "Bohemian Switzerland, Czechia",
+  "wiki": "Bohemian Switzerland"
+ },
+ {
+  "name": "Bardejov, Slovakia",
+  "wiki": "Bardejov"
+ },
+ {
+  "name": "Levoča, Slovakia",
+  "wiki": "Levoča"
+ },
+ {
+  "name": "Čičmany, Slovakia",
+  "wiki": "Čičmany"
+ },
+ {
+  "name": "Vlkolínec, Slovakia",
+  "wiki": "Vlkolínec"
+ },
+ {
+  "name": "High Tatras, Slovakia",
+  "wiki": "High Tatras"
+ },
+ {
+  "name": "Szentendre, Hungary",
+  "wiki": "Szentendre"
+ },
+ {
+  "name": "Hollókő, Hungary",
+  "wiki": "Hollókő"
+ },
+ {
+  "name": "Tihany, Hungary",
+  "wiki": "Tihany"
+ },
+ {
+  "name": "Biertan, Romania",
+  "wiki": "Biertan"
+ },
+ {
+  "name": "Sibiu, Romania",
+  "wiki": "Sibiu"
+ },
+ {
+  "name": "Maramureș, Romania",
+  "wiki": "Maramureș"
+ },
+ {
+  "name": "Sapanta, Romania",
+  "wiki": "Săpânța"
+ },
+ {
+  "name": "The Danube Delta, Romania",
+  "wiki": "Danube Delta"
+ },
+ {
+  "name": "Bran, Romania",
+  "wiki": "Bran, Brașov"
+ },
+ {
+  "name": "Koprivshtitsa, Bulgaria",
+  "wiki": "Koprivshtitsa"
+ },
+ {
+  "name": "Melnik, Bulgaria",
+  "wiki": "Melnik, Bulgaria"
+ },
+ {
+  "name": "Nesebar, Bulgaria",
+  "wiki": "Nesebar"
+ },
+ {
+  "name": "Sozopol, Bulgaria",
+  "wiki": "Sozopol"
+ },
+ {
+  "name": "Bansko, Bulgaria",
+  "wiki": "Bansko"
+ },
+ {
+  "name": "Shiroka Laka, Bulgaria",
+  "wiki": "Shiroka Laka"
+ },
+ {
+  "name": "Tryavna, Bulgaria",
+  "wiki": "Tryavna"
+ },
+ {
+  "name": "Kruševo, North Macedonia",
+  "wiki": "Kruševo"
+ },
+ {
+  "name": "Prizren, Kosovo",
+  "wiki": "Prizren"
+ },
+ {
+  "name": "Perast, Montenegro",
+  "wiki": "Perast"
+ },
+ {
+  "name": "Budva, Montenegro",
+  "wiki": "Budva"
+ },
+ {
+  "name": "Sveti Stefan, Montenegro",
+  "wiki": "Sveti Stefan"
+ },
+ {
+  "name": "Žabljak, Montenegro",
+  "wiki": "Žabljak"
+ },
+ {
+  "name": "Ulcinj, Montenegro",
+  "wiki": "Ulcinj"
+ },
+ {
+  "name": "Herceg Novi, Montenegro",
+  "wiki": "Herceg Novi"
+ },
+ {
+  "name": "Theth, Albania",
+  "wiki": "Theth"
+ },
+ {
+  "name": "Himara, Albania",
+  "wiki": "Himarë"
+ },
+ {
+  "name": "Ksamil, Albania",
+  "wiki": "Ksamil"
+ },
+ {
+  "name": "Krujë, Albania",
+  "wiki": "Krujë"
+ },
+ {
+  "name": "Počitelj, Bosnia",
+  "wiki": "Počitelj"
+ },
+ {
+  "name": "Jajce, Bosnia",
+  "wiki": "Jajce"
+ },
+ {
+  "name": "Golubac, Serbia",
+  "wiki": "Golubac"
+ },
+ {
+  "name": "Novi Sad, Serbia",
+  "wiki": "Novi Sad"
+ },
+ {
+  "name": "Sremski Karlovci, Serbia",
+  "wiki": "Sremski Karlovci"
+ },
+ {
+  "name": "Zlatibor, Serbia",
+  "wiki": "Zlatibor"
+ },
+ {
+  "name": "Drvengrad, Serbia",
+  "wiki": "Küstendorf"
+ },
+ {
+  "name": "Motovun, Croatia",
+  "wiki": "Motovun"
+ },
+ {
+  "name": "Grožnjan, Croatia",
+  "wiki": "Grožnjan"
+ },
+ {
+  "name": "Hum, Croatia",
+  "wiki": "Hum, Istria County"
+ },
+ {
+  "name": "Primošten, Croatia",
+  "wiki": "Primošten"
+ },
+ {
+  "name": "Trogir, Croatia",
+  "wiki": "Trogir"
+ },
+ {
+  "name": "Šibenik, Croatia",
+  "wiki": "Šibenik"
+ },
+ {
+  "name": "Ston, Croatia",
+  "wiki": "Ston"
+ },
+ {
+  "name": "Vis, Croatia",
+  "wiki": "Vis (island)"
+ },
+ {
+  "name": "Lastovo, Croatia",
+  "wiki": "Lastovo"
+ },
+ {
+  "name": "Mljet, Croatia",
+  "wiki": "Mljet"
+ },
+ {
+  "name": "Cres, Croatia",
+  "wiki": "Cres"
+ },
+ {
+  "name": "Plitvice Lakes, Croatia",
+  "wiki": "Plitvice Lakes National Park"
+ },
+ {
+  "name": "Cavtat, Croatia",
+  "wiki": "Cavtat"
+ },
+ {
+  "name": "Kobarid, Slovenia",
+  "wiki": "Kobarid"
+ },
+ {
+  "name": "Škofja Loka, Slovenia",
+  "wiki": "Škofja Loka"
+ },
+ {
+  "name": "Kranjska Gora, Slovenia",
+  "wiki": "Kranjska Gora"
+ },
+ {
+  "name": "Izola, Slovenia",
+  "wiki": "Izola"
+ },
+ {
+  "name": "Bohinj, Slovenia",
+  "wiki": "Lake Bohinj"
+ },
+ {
+  "name": "Oia, Santorini",
+  "wiki": "Oia, Greece"
+ },
+ {
+  "name": "Milos, Greece",
+  "wiki": "Milos"
+ },
+ {
+  "name": "Sifnos, Greece",
+  "wiki": "Sifnos"
+ },
+ {
+  "name": "Amorgos, Greece",
+  "wiki": "Amorgos"
+ },
+ {
+  "name": "Tinos, Greece",
+  "wiki": "Tinos"
+ },
+ {
+  "name": "Syros, Greece",
+  "wiki": "Syros"
+ },
+ {
+  "name": "Ikaria, Greece",
+  "wiki": "Ikaria"
+ },
+ {
+  "name": "Patmos, Greece",
+  "wiki": "Patmos"
+ },
+ {
+  "name": "Kastellorizo, Greece",
+  "wiki": "Kastellorizo"
+ },
+ {
+  "name": "Leros, Greece",
+  "wiki": "Leros"
+ },
+ {
+  "name": "Karpathos, Greece",
+  "wiki": "Karpathos"
+ },
+ {
+  "name": "Spetses, Greece",
+  "wiki": "Spetses"
+ },
+ {
+  "name": "Poros, Greece",
+  "wiki": "Poros"
+ },
+ {
+  "name": "Kythira, Greece",
+  "wiki": "Kythira"
+ },
+ {
+  "name": "Kefalonia, Greece",
+  "wiki": "Cephalonia"
+ },
+ {
+  "name": "Assos, Kefalonia",
+  "wiki": "Asos"
+ },
+ {
+  "name": "Paxos, Greece",
+  "wiki": "Paxos"
+ },
+ {
+  "name": "Lefkada, Greece",
+  "wiki": "Lefkada"
+ },
+ {
+  "name": "Zagori, Greece",
+  "wiki": "Zagori"
+ },
+ {
+  "name": "Papingo, Greece",
+  "wiki": "Papingo"
+ },
+ {
+  "name": "Metsovo, Greece",
+  "wiki": "Metsovo"
+ },
+ {
+  "name": "Kastoria, Greece",
+  "wiki": "Kastoria"
+ },
+ {
+  "name": "Pelion, Greece",
+  "wiki": "Pelion"
+ },
+ {
+  "name": "Skiathos, Greece",
+  "wiki": "Skiathos"
+ },
+ {
+  "name": "Skopelos, Greece",
+  "wiki": "Skopelos"
+ },
+ {
+  "name": "Alonissos, Greece",
+  "wiki": "Alonnisos"
+ },
+ {
+  "name": "Thassos, Greece",
+  "wiki": "Thasos"
+ },
+ {
+  "name": "Kardamyli, Greece",
+  "wiki": "Kardamyli"
+ },
+ {
+  "name": "Elafonisos, Greece",
+  "wiki": "Elafonisos"
+ },
+ {
+  "name": "Rethymno, Crete",
+  "wiki": "Rethymno"
+ },
+ {
+  "name": "Elounda, Crete",
+  "wiki": "Elounda"
+ },
+ {
+  "name": "Omodos, Cyprus",
+  "wiki": "Omodos"
+ },
+ {
+  "name": "Kyrenia, Cyprus",
+  "wiki": "Kyrenia"
+ },
+ {
+  "name": "Comino, Malta",
+  "wiki": "Comino"
+ },
+ {
+  "name": "Bernal, Mexico",
+  "wiki": "Bernal, Querétaro"
+ },
+ {
+  "name": "Tepoztlán, Mexico",
+  "wiki": "Tepoztlán"
+ },
+ {
+  "name": "Valle de Bravo, Mexico",
+  "wiki": "Valle de Bravo"
+ },
+ {
+  "name": "Cuetzalan, Mexico",
+  "wiki": "Cuetzalan"
+ },
+ {
+  "name": "Pátzcuaro, Mexico",
+  "wiki": "Pátzcuaro"
+ },
+ {
+  "name": "Tlacotalpan, Mexico",
+  "wiki": "Tlacotalpan"
+ },
+ {
+  "name": "Álamos, Mexico",
+  "wiki": "Álamos"
+ },
+ {
+  "name": "Loreto, Mexico",
+  "wiki": "Loreto, Baja California Sur"
+ },
+ {
+  "name": "Valle de Guadalupe, Mexico",
+  "wiki": "Valle de Guadalupe"
+ },
+ {
+  "name": "Sayulita, Mexico",
+  "wiki": "Sayulita"
+ },
+ {
+  "name": "San Sebastián del Oeste, Mexico",
+  "wiki": "San Sebastián del Oeste"
+ },
+ {
+  "name": "Mazunte, Mexico",
+  "wiki": "Mazunte"
+ },
+ {
+  "name": "Puerto Escondido, Mexico",
+  "wiki": "Puerto Escondido"
+ },
+ {
+  "name": "Hierve el Agua, Mexico",
+  "wiki": "Hierve el Agua"
+ },
+ {
+  "name": "Izamal, Mexico",
+  "wiki": "Izamal"
+ },
+ {
+  "name": "Tulum, Mexico",
+  "wiki": "Tulum"
+ },
+ {
+  "name": "Isla Mujeres, Mexico",
+  "wiki": "Isla Mujeres"
+ },
+ {
+  "name": "Cozumel, Mexico",
+  "wiki": "Cozumel"
+ },
+ {
+  "name": "Campeche, Mexico",
+  "wiki": "Campeche (city)"
+ },
+ {
+  "name": "Tequila, Mexico",
+  "wiki": "Tequila, Jalisco"
+ },
+ {
+  "name": "Copper Canyon, Mexico",
+  "wiki": "Copper Canyon"
+ },
+ {
+  "name": "Creel, Mexico",
+  "wiki": "Creel, Chihuahua"
+ },
+ {
+  "name": "Xilitla, Mexico",
+  "wiki": "Xilitla"
+ },
+ {
+  "name": "Comala, Mexico",
+  "wiki": "Comala"
+ },
+ {
+  "name": "Chacala, Mexico",
+  "wiki": "Chacala"
+ },
+ {
+  "name": "Mexcaltitán, Mexico",
+  "wiki": "Mexcaltitán de Uribe"
+ },
+ {
+  "name": "Semuc Champey, Guatemala",
+  "wiki": "Semuc Champey"
+ },
+ {
+  "name": "Quetzaltenango, Guatemala",
+  "wiki": "Quetzaltenango"
+ },
+ {
+  "name": "Todos Santos Cuchumatán, Guatemala",
+  "wiki": "Todos Santos Cuchumatán"
+ },
+ {
+  "name": "Livingston, Guatemala",
+  "wiki": "Livingston, Guatemala"
+ },
+ {
+  "name": "Tikal, Guatemala",
+  "wiki": "Tikal"
+ },
+ {
+  "name": "San Ignacio, Belize",
+  "wiki": "San Ignacio, Belize"
+ },
+ {
+  "name": "Utila, Honduras",
+  "wiki": "Utila"
+ },
+ {
+  "name": "Copán Ruinas, Honduras",
+  "wiki": "Copán Ruinas"
+ },
+ {
+  "name": "Suchitoto, El Salvador",
+  "wiki": "Suchitoto"
+ },
+ {
+  "name": "Juayúa, El Salvador",
+  "wiki": "Juayúa"
+ },
+ {
+  "name": "San Juan del Sur, Nicaragua",
+  "wiki": "San Juan del Sur"
+ },
+ {
+  "name": "Monteverde, Costa Rica",
+  "wiki": "Monteverde"
+ },
+ {
+  "name": "Puerto Viejo, Costa Rica",
+  "wiki": "Puerto Viejo de Talamanca"
+ },
+ {
+  "name": "Tortuguero, Costa Rica",
+  "wiki": "Tortuguero, Costa Rica"
+ },
+ {
+  "name": "Nosara, Costa Rica",
+  "wiki": "Nosara"
+ },
+ {
+  "name": "Arenal, Costa Rica",
+  "wiki": "Arenal Volcano"
+ },
+ {
+  "name": "Osa Peninsula, Costa Rica",
+  "wiki": "Osa Peninsula"
+ },
+ {
+  "name": "Bocas del Toro, Panama",
+  "wiki": "Bocas del Toro Province"
+ },
+ {
+  "name": "San Blas Islands, Panama",
+  "wiki": "San Blas Islands"
+ },
+ {
+  "name": "Portobelo, Panama",
+  "wiki": "Portobelo"
+ },
+ {
+  "name": "Villa de Leyva, Colombia",
+  "wiki": "Villa de Leyva"
+ },
+ {
+  "name": "Barichara, Colombia",
+  "wiki": "Barichara"
+ },
+ {
+  "name": "Salento, Colombia",
+  "wiki": "Salento, Quindío"
+ },
+ {
+  "name": "Mompox, Colombia",
+  "wiki": "Santa Cruz de Mompox"
+ },
+ {
+  "name": "Providencia, Colombia",
+  "wiki": "Providencia Island, Colombia"
+ },
+ {
+  "name": "San Andrés, Colombia",
+  "wiki": "San Andrés (island)"
+ },
+ {
+  "name": "Cabo de la Vela, Colombia",
+  "wiki": "Cabo de la Vela"
+ },
+ {
+  "name": "Popayán, Colombia",
+  "wiki": "Popayán"
+ },
+ {
+  "name": "Tayrona, Colombia",
+  "wiki": "Tayrona National Natural Park"
+ },
+ {
+  "name": "Caño Cristales, Colombia",
+  "wiki": "Caño Cristales"
+ },
+ {
+  "name": "Los Roques, Venezuela",
+  "wiki": "Los Roques Archipelago"
+ },
+ {
+  "name": "Kaieteur Falls, Guyana",
+  "wiki": "Kaieteur Falls"
+ },
+ {
+  "name": "Baños, Ecuador",
+  "wiki": "Baños de Agua Santa"
+ },
+ {
+  "name": "Vilcabamba, Ecuador",
+  "wiki": "Vilcabamba, Ecuador"
+ },
+ {
+  "name": "Quilotoa, Ecuador",
+  "wiki": "Quilotoa"
+ },
+ {
+  "name": "Montañita, Ecuador",
+  "wiki": "Montañita"
+ },
+ {
+  "name": "Puerto Ayora, Galápagos",
+  "wiki": "Puerto Ayora"
+ },
+ {
+  "name": "Pisac, Peru",
+  "wiki": "Písac"
+ },
+ {
+  "name": "Ollantaytambo, Peru",
+  "wiki": "Ollantaytambo"
+ },
+ {
+  "name": "Huaraz, Peru",
+  "wiki": "Huaraz"
+ },
+ {
+  "name": "Chachapoyas, Peru",
+  "wiki": "Chachapoyas, Peru"
+ },
+ {
+  "name": "Máncora, Peru",
+  "wiki": "Máncora"
+ },
+ {
+  "name": "Huacachina, Peru",
+  "wiki": "Huacachina"
+ },
+ {
+  "name": "Colca Canyon, Peru",
+  "wiki": "Colca Canyon"
+ },
+ {
+  "name": "Iquitos, Peru",
+  "wiki": "Iquitos"
+ },
+ {
+  "name": "Rainbow Mountain, Peru",
+  "wiki": "Vinicunca"
+ },
+ {
+  "name": "Taquile Island, Peru",
+  "wiki": "Taquile Island"
+ },
+ {
+  "name": "Machu Picchu, Peru",
+  "wiki": "Machu Picchu"
+ },
+ {
+  "name": "Copacabana, Bolivia",
+  "wiki": "Copacabana, Bolivia"
+ },
+ {
+  "name": "Isla del Sol, Bolivia",
+  "wiki": "Isla del Sol"
+ },
+ {
+  "name": "Potosí, Bolivia",
+  "wiki": "Potosí"
+ },
+ {
+  "name": "Tupiza, Bolivia",
+  "wiki": "Tupiza"
+ },
+ {
+  "name": "Rurrenabaque, Bolivia",
+  "wiki": "Rurrenabaque"
+ },
+ {
+  "name": "Sorata, Bolivia",
+  "wiki": "Sorata"
+ },
+ {
+  "name": "Valle de la Luna, Bolivia",
+  "wiki": "Valle de la Luna (Bolivia)"
+ },
+ {
+  "name": "Humahuaca, Argentina",
+  "wiki": "Humahuaca"
+ },
+ {
+  "name": "Tilcara, Argentina",
+  "wiki": "Tilcara"
+ },
+ {
+  "name": "Cafayate, Argentina",
+  "wiki": "Cafayate"
+ },
+ {
+  "name": "Iruya, Argentina",
+  "wiki": "Iruya"
+ },
+ {
+  "name": "Tafí del Valle, Argentina",
+  "wiki": "Tafí del Valle"
+ },
+ {
+  "name": "San Antonio de Areco, Argentina",
+  "wiki": "San Antonio de Areco"
+ },
+ {
+  "name": "San Martín de los Andes, Argentina",
+  "wiki": "San Martín de los Andes"
+ },
+ {
+  "name": "Puerto Madryn, Argentina",
+  "wiki": "Puerto Madryn"
+ },
+ {
+  "name": "El Calafate, Argentina",
+  "wiki": "El Calafate"
+ },
+ {
+  "name": "Perito Moreno Glacier, Argentina",
+  "wiki": "Perito Moreno Glacier"
+ },
+ {
+  "name": "Iguazú Falls, Argentina",
+  "wiki": "Iguazu Falls"
+ },
+ {
+  "name": "Talampaya, Argentina",
+  "wiki": "Talampaya National Park"
+ },
+ {
+  "name": "Tigre, Argentina",
+  "wiki": "Tigre, Buenos Aires"
+ },
+ {
+  "name": "Puerto Natales, Chile",
+  "wiki": "Puerto Natales"
+ },
+ {
+  "name": "Castro, Chile",
+  "wiki": "Castro, Chile"
+ },
+ {
+  "name": "Puerto Varas, Chile",
+  "wiki": "Puerto Varas"
+ },
+ {
+  "name": "Pucón, Chile",
+  "wiki": "Pucón"
+ },
+ {
+  "name": "Robinson Crusoe Island, Chile",
+  "wiki": "Robinson Crusoe Island"
+ },
+ {
+  "name": "Frutillar, Chile",
+  "wiki": "Frutillar"
+ },
+ {
+  "name": "Cabo Polonio, Uruguay",
+  "wiki": "Cabo Polonio"
+ },
+ {
+  "name": "Encarnación, Paraguay",
+  "wiki": "Encarnación, Paraguay"
+ },
+ {
+  "name": "Trancoso, Brazil",
+  "wiki": "Trancoso, Bahia"
+ },
+ {
+  "name": "Morro de São Paulo, Brazil",
+  "wiki": "Morro de São Paulo"
+ },
+ {
+  "name": "Ilha Grande, Brazil",
+  "wiki": "Ilha Grande"
+ },
+ {
+  "name": "Búzios, Brazil",
+  "wiki": "Armação dos Búzios"
+ },
+ {
+  "name": "Ilhabela, Brazil",
+  "wiki": "Ilhabela"
+ },
+ {
+  "name": "Ubatuba, Brazil",
+  "wiki": "Ubatuba"
+ },
+ {
+  "name": "São Luís, Brazil",
+  "wiki": "São Luís, Maranhão"
+ },
+ {
+  "name": "Alter do Chão, Brazil",
+  "wiki": "Alter do Chão"
+ },
+ {
+  "name": "Chapada Diamantina, Brazil",
+  "wiki": "Chapada Diamantina National Park"
+ },
+ {
+  "name": "Lençóis, Brazil",
+  "wiki": "Lençóis"
+ },
+ {
+  "name": "Chapada dos Veadeiros, Brazil",
+  "wiki": "Chapada dos Veadeiros National Park"
+ },
+ {
+  "name": "Pirenópolis, Brazil",
+  "wiki": "Pirenópolis"
+ },
+ {
+  "name": "Bonito, Brazil",
+  "wiki": "Bonito, Mato Grosso do Sul"
+ },
+ {
+  "name": "Pantanal, Brazil",
+  "wiki": "Pantanal"
+ },
+ {
+  "name": "São João del-Rei, Brazil",
+  "wiki": "São João del-Rei"
+ },
+ {
+  "name": "Petrópolis, Brazil",
+  "wiki": "Petrópolis"
+ },
+ {
+  "name": "Gramado, Brazil",
+  "wiki": "Gramado"
+ },
+ {
+  "name": "Porto de Galinhas, Brazil",
+  "wiki": "Porto de Galinhas"
+ },
+ {
+  "name": "Penedo, Brazil",
+  "wiki": "Penedo, Alagoas"
+ },
+ {
+  "name": "Cidade de Goiás, Brazil",
+  "wiki": "Goiás, Goiás"
+ },
+ {
+  "name": "Manaus, Brazil",
+  "wiki": "Manaus"
+ },
+ {
+  "name": "Baracoa, Cuba",
+  "wiki": "Baracoa"
+ },
+ {
+  "name": "Remedios, Cuba",
+  "wiki": "Remedios, Cuba"
+ },
+ {
+  "name": "Camagüey, Cuba",
+  "wiki": "Camagüey"
+ },
+ {
+  "name": "Cayo Levisa, Cuba",
+  "wiki": "Cayo Levisa"
+ },
+ {
+  "name": "Gibara, Cuba",
+  "wiki": "Gibara"
+ },
+ {
+  "name": "Santiago de Cuba",
+  "wiki": "Santiago de Cuba"
+ },
+ {
+  "name": "Treasure Beach, Jamaica",
+  "wiki": "Treasure Beach"
+ },
+ {
+  "name": "Negril, Jamaica",
+  "wiki": "Negril"
+ },
+ {
+  "name": "Ocho Rios, Jamaica",
+  "wiki": "Ocho Rios"
+ },
+ {
+  "name": "Zona Colonial, Santo Domingo",
+  "wiki": "Ciudad Colonial (Santo Domingo)"
+ },
+ {
+  "name": "Vieques, Puerto Rico",
+  "wiki": "Vieques, Puerto Rico"
+ },
+ {
+  "name": "Culebra, Puerto Rico",
+  "wiki": "Culebra, Puerto Rico"
+ },
+ {
+  "name": "Rincón, Puerto Rico",
+  "wiki": "Rincón, Puerto Rico"
+ },
+ {
+  "name": "San Germán, Puerto Rico",
+  "wiki": "San Germán, Puerto Rico"
+ },
+ {
+  "name": "St. John, US Virgin Islands",
+  "wiki": "Saint John, U.S. Virgin Islands"
+ },
+ {
+  "name": "Jost Van Dyke, British Virgin Islands",
+  "wiki": "Jost Van Dyke"
+ },
+ {
+  "name": "Virgin Gorda, British Virgin Islands",
+  "wiki": "Virgin Gorda"
+ },
+ {
+  "name": "Saba",
+  "wiki": "Saba (island)"
+ },
+ {
+  "name": "Sint Eustatius",
+  "wiki": "Sint Eustatius"
+ },
+ {
+  "name": "Gustavia, St. Barthélemy",
+  "wiki": "Gustavia"
+ },
+ {
+  "name": "English Harbour, Antigua",
+  "wiki": "English Harbour"
+ },
+ {
+  "name": "Les Saintes, Guadeloupe",
+  "wiki": "Îles des Saintes"
+ },
+ {
+  "name": "Deshaies, Guadeloupe",
+  "wiki": "Deshaies"
+ },
+ {
+  "name": "Saint-Pierre, Martinique",
+  "wiki": "Saint-Pierre, Martinique"
+ },
+ {
+  "name": "Mustique, Grenadines",
+  "wiki": "Mustique"
+ },
+ {
+  "name": "Carriacou, Grenada",
+  "wiki": "Carriacou"
+ },
+ {
+  "name": "Bathsheba, Barbados",
+  "wiki": "Bathsheba, Barbados"
+ },
+ {
+  "name": "Eleuthera, Bahamas",
+  "wiki": "Eleuthera"
+ },
+ {
+  "name": "Hope Town, Bahamas",
+  "wiki": "Hope Town"
+ },
+ {
+  "name": "Andros, Bahamas",
+  "wiki": "Andros, The Bahamas"
+ },
+ {
+  "name": "Little Cayman, Cayman Islands",
+  "wiki": "Little Cayman"
+ },
+ {
+  "name": "Grand Turk, Turks and Caicos",
+  "wiki": "Grand Turk Island"
+ },
+ {
+  "name": "Salt Cay, Turks and Caicos",
+  "wiki": "Salt Cay, Turks Islands"
+ },
+ {
+  "name": "Alice Springs, Australia",
+  "wiki": "Alice Springs"
+ },
+ {
+  "name": "Coober Pedy, Australia",
+  "wiki": "Coober Pedy"
+ },
+ {
+  "name": "Broken Hill, Australia",
+  "wiki": "Broken Hill"
+ },
+ {
+  "name": "Kalgoorlie, Australia",
+  "wiki": "Kalgoorlie"
+ },
+ {
+  "name": "Silverton, New South Wales",
+  "wiki": "Silverton, New South Wales"
+ },
+ {
+  "name": "Daintree, Australia",
+  "wiki": "Daintree Rainforest"
+ },
+ {
+  "name": "Port Douglas, Australia",
+  "wiki": "Port Douglas"
+ },
+ {
+  "name": "Kuranda, Australia",
+  "wiki": "Kuranda, Queensland"
+ },
+ {
+  "name": "Lady Elliot Island, Australia",
+  "wiki": "Lady Elliot Island"
+ },
+ {
+  "name": "K'gari, Australia",
+  "wiki": "K'gari"
+ },
+ {
+  "name": "Noosa, Australia",
+  "wiki": "Noosa Heads, Queensland"
+ },
+ {
+  "name": "Mudgee, Australia",
+  "wiki": "Mudgee"
+ },
+ {
+  "name": "Jervis Bay, Australia",
+  "wiki": "Jervis Bay"
+ },
+ {
+  "name": "Bright, Victoria",
+  "wiki": "Bright, Victoria"
+ },
+ {
+  "name": "Port Fairy, Victoria",
+  "wiki": "Port Fairy"
+ },
+ {
+  "name": "Lorne, Victoria",
+  "wiki": "Lorne, Victoria"
+ },
+ {
+  "name": "Twelve Apostles, Victoria",
+  "wiki": "The Twelve Apostles (Victoria)"
+ },
+ {
+  "name": "Grampians, Victoria",
+  "wiki": "Grampians National Park"
+ },
+ {
+  "name": "Beechworth, Victoria",
+  "wiki": "Beechworth"
+ },
+ {
+  "name": "Hahndorf, South Australia",
+  "wiki": "Hahndorf, South Australia"
+ },
+ {
+  "name": "Kangaroo Island, South Australia",
+  "wiki": "Kangaroo Island"
+ },
+ {
+  "name": "Barossa Valley, South Australia",
+  "wiki": "Barossa Valley"
+ },
+ {
+  "name": "Flinders Ranges, South Australia",
+  "wiki": "Flinders Ranges"
+ },
+ {
+  "name": "Margaret River, Western Australia",
+  "wiki": "Margaret River, Western Australia"
+ },
+ {
+  "name": "Esperance, Western Australia",
+  "wiki": "Esperance, Western Australia"
+ },
+ {
+  "name": "Rottnest Island, Western Australia",
+  "wiki": "Rottnest Island"
+ },
+ {
+  "name": "Shark Bay, Western Australia",
+  "wiki": "Shark Bay"
+ },
+ {
+  "name": "Exmouth, Western Australia",
+  "wiki": "Exmouth, Western Australia"
+ },
+ {
+  "name": "The Pinnacles, Western Australia",
+  "wiki": "The Pinnacles (Western Australia)"
+ },
+ {
+  "name": "Karijini, Western Australia",
+  "wiki": "Karijini National Park"
+ },
+ {
+  "name": "Bungle Bungles, Western Australia",
+  "wiki": "Purnululu National Park"
+ },
+ {
+  "name": "Cradle Mountain, Tasmania",
+  "wiki": "Cradle Mountain"
+ },
+ {
+  "name": "Freycinet, Tasmania",
+  "wiki": "Freycinet National Park"
+ },
+ {
+  "name": "Strahan, Tasmania",
+  "wiki": "Strahan, Tasmania"
+ },
+ {
+  "name": "Kaikoura, New Zealand",
+  "wiki": "Kaikōura"
+ },
+ {
+  "name": "Arrowtown, New Zealand",
+  "wiki": "Arrowtown"
+ },
+ {
+  "name": "Milford Sound, New Zealand",
+  "wiki": "Milford Sound"
+ },
+ {
+  "name": "Oamaru, New Zealand",
+  "wiki": "Oamaru"
+ },
+ {
+  "name": "Russell, New Zealand",
+  "wiki": "Russell, New Zealand"
+ },
+ {
+  "name": "Abel Tasman, New Zealand",
+  "wiki": "Abel Tasman National Park"
+ },
+ {
+  "name": "Golden Bay, New Zealand",
+  "wiki": "Golden Bay / Mohua"
+ },
+ {
+  "name": "Rotorua, New Zealand",
+  "wiki": "Rotorua"
+ },
+ {
+  "name": "Lake Tekapo, New Zealand",
+  "wiki": "Lake Tekapo"
+ },
+ {
+  "name": "Aoraki / Mount Cook, New Zealand",
+  "wiki": "Aoraki / Mount Cook"
+ },
+ {
+  "name": "Franz Josef, New Zealand",
+  "wiki": "Franz Josef Glacier"
+ },
+ {
+  "name": "Punakaiki, New Zealand",
+  "wiki": "Punakaiki"
+ },
+ {
+  "name": "Great Barrier Island, New Zealand",
+  "wiki": "Great Barrier Island"
+ },
+ {
+  "name": "Hokitika, New Zealand",
+  "wiki": "Hokitika"
+ },
+ {
+  "name": "Martinborough, New Zealand",
+  "wiki": "Martinborough"
+ },
+ {
+  "name": "Chatham Islands, New Zealand",
+  "wiki": "Chatham Islands"
+ },
+ {
+  "name": "Aitutaki, Cook Islands",
+  "wiki": "Aitutaki"
+ },
+ {
+  "name": "Rangiroa, French Polynesia",
+  "wiki": "Rangiroa"
+ },
+ {
+  "name": "Fakarava, French Polynesia",
+  "wiki": "Fakarava"
+ },
+ {
+  "name": "Hiva Oa, French Polynesia",
+  "wiki": "Hiva Oa"
+ },
+ {
+  "name": "Maupiti, French Polynesia",
+  "wiki": "Maupiti"
+ },
+ {
+  "name": "Kadavu, Fiji",
+  "wiki": "Kadavu Island"
+ },
+ {
+  "name": "Savusavu, Fiji",
+  "wiki": "Savusavu"
+ },
+ {
+  "name": "Isle of Pines, New Caledonia",
+  "wiki": "Isle of Pines (island)"
+ },
+ {
+  "name": "Lifou, New Caledonia",
+  "wiki": "Lifou"
+ },
+ {
+  "name": "Ouvéa, New Caledonia",
+  "wiki": "Ouvéa"
+ },
+ {
+  "name": "The Rock Islands, Palau",
+  "wiki": "Rock Islands"
+ },
+ {
+  "name": "Rota, Northern Mariana Islands",
+  "wiki": "Rota, Northern Mariana Islands"
+ },
+ {
+  "name": "Funafuti, Tuvalu",
+  "wiki": "Funafuti"
+ },
+ {
+  "name": "Kiritimati, Kiribati",
+  "wiki": "Kiritimati"
+ },
+ {
+  "name": "Gizo, Solomon Islands",
+  "wiki": "Gizo, Solomon Islands"
+ },
+ {
+  "name": "Marovo Lagoon, Solomon Islands",
+  "wiki": "Marovo Lagoon"
+ },
+ {
+  "name": "Beaufort, North Carolina",
+  "wiki": "Beaufort, North Carolina"
+ },
+ {
+  "name": "Woodstock, New York",
+  "wiki": "Woodstock, New York"
+ },
+ {
+  "name": "Jackson, New Hampshire",
+  "wiki": "Jackson, New Hampshire"
+ },
+ {
+  "name": "Trinidad, California",
+  "wiki": "Trinidad, California"
+ },
+ {
+  "name": "Tobermory, Ontario",
+  "wiki": "Tobermory, Ontario"
+ },
+ {
+  "name": "Mérida, Venezuela",
+  "wiki": "Mérida, Mérida"
+ }
 ]

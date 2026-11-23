@@ -47,15 +47,18 @@ TOPICS = [
     "japanese print", "chromolithograph", "color lithograph", "cigar label",
     "fruit crate label", "seed catalog", "sheet music cover", "fashion plate",
     "baseball card", "political cartoon color",
+    # added 2026-11-23 when the drawer grew from ~500 to ~4,000
+    "currier & ives", "trade card", "valentine", "botanical print", "bird print",
+    "postcard color", "book cover",
 ]
 # Rights: anything dated after the US public-domain line must come from a
 # federal program (federal work = public domain), e.g. WPA posters, FSA/OWI
 # Kodachromes, national park posters. Undated items pass, as before.
 PD_YEAR = 1930
 FEDERAL = {"wpa poster", "national park poster", "fsa owi color", "kodachrome"}
-PER_TOPIC = 22        # equal share per topic so no category owns the drawer
-PER_PLACE = 4         # max items per country ("..., Dalmatia, Austro-Hungary]")
-PAGES = 3             # search deeper than page one, where series cluster
+PER_TOPIC = 160       # equal share per topic so no category owns the drawer
+PER_PLACE = 40        # max items per country ("..., Dalmatia, Austro-Hungary]")
+PAGES = 10            # search deep: page one is where series cluster
 SKIP_TITLE = re.compile(r"unidentified|^\[?group |portrait of an? unidentified", re.I)
 BAD_IMG = ("/static/", ".svg", ".gif")
 MIN_AREA = 500 * 400
