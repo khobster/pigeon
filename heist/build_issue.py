@@ -27,7 +27,7 @@ from engine.render import render
 from engine.send import UNSUB_SLOT
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            wellcome, europeana, nypl, lacma, barnes, parismusees,
-                           chunklet, loc, lam, gotaway)
+                           chunklet, loc, lam, gotaway, getty)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -224,7 +224,12 @@ RELIGIOUS = re.compile(
     r"sankt|sanct|sint|sainte|santo|santa|hl\.|heilig\w*|"
     r"christus|kristus|cristo|krist\w+|"
     r"jomfru|vierge|vergine|virgen|"
-    r"kors\b|kreuz|croce|cruz\b"
+    r"kors\b|kreuz|croce|cruz\b|"
+    # clergy and Old Testament scenes (the Getty's manuscripts are full of them)
+    r"popes?|papal|priests?|monks?|nuns?|bishops?|abbots?|abbess|friars?|clergy|cleric\w*|"
+    r"last judgm?ent|idolatry|psalms?|psalter|missal|breviary|bible|biblical|prayers?|praying|sermon|"
+    r"moses|abraham|noah|solomon|goliath|samson|jonah|apocalypse|devils?|demons?|satan|"
+    r"agony in the garden|the passion|stigmata|flagellation|pentecost|transfiguration"
     r")\b",
     re.I,
 )
@@ -583,12 +588,13 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # europeana alone aggregates 3,000+ institutions. lacma is a bundled PD pool
     # biased to its cool/graphic seam (prints, costumes, textiles, 1850+). barnes
     # is a bundled PD pool of the Barnes Foundation's pictures, parismusees a
-    # bundled CC0 pool of the City of Paris museums (via its Commons mirror). AIC and
+    # bundled CC0 pool of the City of Paris museums (via its Commons mirror),
+    # getty a bundled CC0 pool of the Getty's open content. AIC and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
     museums = ([met, cleveland, smk, commons, nga, lacma, barnes, parismusees,
-                rijks, yale, wellcome]
+                rijks, yale, wellcome, getty]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
@@ -653,6 +659,15 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
         if try_add(barnes, "barnes"):
             barnes_added += 1
     print(f"  [barnes seeded {barnes_added} into the pool]")
+
+    # The Getty's big, sharp CC0 images make strong heroes, so make sure the
+    # art director always has a couple to choose from.
+    getty_added, getty_tries = 0, 0
+    while getty_added < 2 and getty_tries < 8:
+        getty_tries += 1
+        if try_add(getty, "getty"):
+            getty_added += 1
+    print(f"  [getty seeded {getty_added} into the pool]")
 
     # General gather fills the rest of the pool from the full rotation.
     for museum in rotation * 16:
