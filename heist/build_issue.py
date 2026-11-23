@@ -28,7 +28,7 @@ from engine.send import UNSUB_SLOT
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            wellcome, europeana, nypl, lacma, barnes, parismusees,
                            chunklet, loc, lam, gotaway, getty, fng, nasjonalmuseet,
-                           nationalmuseum, mia)
+                           nationalmuseum, mia, brooklyn)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -602,12 +602,14 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # wall). The Nordic trio are bundled pools too: fng (Finnish National
     # Gallery, CC0), nasjonalmuseet (Oslo, Munch) and nationalmuseum
     # (Stockholm, via its Commons donation). mia is a bundled pool of the
-    # Minneapolis Institute of Art (Japanese prints and screens). AIC and
+    # Minneapolis Institute of Art (Japanese prints and screens), brooklyn of
+    # the Brooklyn Museum (via Wikidata and its Commons uploads). AIC and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
     museums = ([met, cleveland, smk, commons, nga, lacma, barnes, parismusees,
-                rijks, yale, wellcome, getty, fng, nasjonalmuseet, nationalmuseum, mia]
+                rijks, yale, wellcome, getty, fng, nasjonalmuseet, nationalmuseum, mia,
+                brooklyn]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
