@@ -28,7 +28,8 @@ from engine.send import UNSUB_SLOT
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            wellcome, europeana, nypl, lacma, barnes, parismusees,
                            chunklet, loc, lam, gotaway, getty, fng, nasjonalmuseet,
-                           nationalmuseum, mia, brooklyn)
+                           nationalmuseum, mia, brooklyn, mkg, birmingham, walters,
+                           artic, bhl)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -84,12 +85,20 @@ def record_art(today, keys, ledger):
     subprocess.run(["git", "add", str(RECENT)], check=False)
 
 
+AIC_IIIF = "https://www.artic.edu/iiif/2/"
+
+
 def resized(url, width=1120):
     """The wsrv.nl image CDN, used only to fetch a smaller render at build
     time. Width 1120 = retina-sharp at the 560px layout. &we = never enlarge:
     without it a 400px thumbnail came back stretched to 1120 and looked full
     size, so blurry art slipped through (Europeana previews, 2026-11-23)."""
-    return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside&we"
+    if url.startswith(AIC_IIIF):
+        # AIC's image host refuses wsrv, so ask its own IIIF server for a size
+        # it serves openly: 843px for thumbnails, 1686px otherwise.
+        return re.sub(r"/full/\d+,/", "/full/843,/" if width <= 843 else "/full/1686,/", url)
+    # &output=jpg: some sources (BHL) serve WebP, which Outlook won't show
+    return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside&we&output=jpg"
 
 
 def probe_ok(url):
@@ -237,7 +246,7 @@ RELIGIOUS = re.compile(
     r"judith|tobias|tobit|zarephath|micaiah|ahab|cain|abel|israel|ark of the covenant|babylon|"
     r"david (?:with|and|before|meeting|playing|spareth)|daniel(?:'s| and)|joseph(?:'s| and| in prison| dining)|"
     r"(?:story|life|lives) of joseph|twenty-four elders|the lamb|the marriage of the lamb|first seal|seventh trumpet|"
-    r"throne of god|the creation of|expulsion from paradise|first temptation|temptation of|ten kings|book of hours|hours of the virgin"
+    r"throne of god|the creation of|expulsion from paradise|first temptation|temptation of|ten kings|book of hours|hours of the virgin|magdalen\w*|penitent saint|jesu|omsk\w*relse"
     r")\b",
     re.I,
 )
@@ -603,13 +612,19 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # Gallery, CC0), nasjonalmuseet (Oslo, Munch) and nationalmuseum
     # (Stockholm, via its Commons donation). mia is a bundled pool of the
     # Minneapolis Institute of Art (Japanese prints and screens), brooklyn of
-    # the Brooklyn Museum (via Wikidata and its Commons uploads). AIC and
+    # the Brooklyn Museum (via Wikidata and its Commons uploads), mkg of MKG
+    # Hamburg (posters, Japanese prints, Jugendstil), birmingham and walters via
+    # Wikidata and Commons like brooklyn. artic is a bundled pool of the Art
+    # Institute of Chicago, its images fetched straight from AIC (see resized()),
+    # bhl of hand-colored natural history plates from the Biodiversity Heritage
+    # Library.
+    # The live AIC module and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
     museums = ([met, cleveland, smk, commons, nga, lacma, barnes, parismusees,
                 rijks, yale, wellcome, getty, fng, nasjonalmuseet, nationalmuseum, mia,
-                brooklyn]
+                brooklyn, mkg, birmingham, walters, artic, bhl]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]

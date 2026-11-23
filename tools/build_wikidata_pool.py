@@ -19,6 +19,7 @@ import os
 import random
 import re
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from urllib.parse import quote
 
@@ -111,7 +112,9 @@ def works(cfg):
     for b in r.json()["results"]["bindings"]:
         row = {k: v["value"] for k, v in b.items()}
         w = items.setdefault(row["item"], {**row, "deaths": set(), "makers": set()})
-        if row.get("aLabel"):
+        if row.get("aLabel", "").startswith("http"):  # "unknown value": an anonymous maker
+            w["deaths"].add(None)
+        elif row.get("aLabel"):
             w["makers"].add(row["aLabel"])
             w["deaths"].add(year_of(row.get("dod")))
         if row.get("ref") and not w.get("ref"):
@@ -136,12 +139,20 @@ def vet(w, cfg):
     if not free(w):
         return None
     image = w["img"].replace("http://", "https://") + "?width=1600"
-    try:
-        t = requests.get(f"https://wsrv.nl/?url={quote(image, safe='')}&w=240&fit=inside&we",
-                         headers={"User-Agent": "Mozilla/5.0 Chrome/130"}, timeout=60)
-        if not t.headers.get("content-type", "").startswith("image/") or not is_color(t.content):
-            return None
-    except Exception:  # noqa: BLE001
+    # Color check on a small Commons thumbnail, fetched directly and politely:
+    # through wsrv, a long burst gets the proxy 429'd by Wikimedia for hours.
+    thumb = w["img"].replace("http://", "https://") + "?width=330"
+    t = None
+    for attempt in range(4):
+        try:
+            t = requests.get(thumb, headers=HEAD, timeout=60)
+        except Exception:  # noqa: BLE001
+            t = None
+        time.sleep(0.5)
+        if t is not None and t.status_code != 429:
+            break
+        time.sleep(20 * (attempt + 1))
+    if t is None or not t.headers.get("content-type", "").startswith("image/") or not is_color(t.content):
         return None
     makers = sorted(m for m in w["makers"] if not re.fullmatch(r"Q\d+", m))
     made = year_of(w.get("inc"))
@@ -165,7 +176,7 @@ def main():
     rows = works(cfg)
     print(f"  {len(rows)} works on Wikidata", flush=True)
     random.Random(SEED).shuffle(rows)
-    with ThreadPoolExecutor(max_workers=6) as ex:
+    with ThreadPoolExecutor(max_workers=2) as ex:
         got = [p for p in ex.map(lambda w: vet(w, cfg), rows) if p]
     sides = long_sides([p["image"] for p in got])
     got = [p for p in got if sides.get(p["image"], 0) >= cfg.get("min_side", 1600)]

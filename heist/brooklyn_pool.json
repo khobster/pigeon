@@ -1,12 +1,138 @@
 [
 {
 "museum": "the Brooklyn Museum",
+"title": "On Synepuxent Bay, Maryland",
+"artist": "Arthur Quartley",
+"year": "1876",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20On%20Synepuxent%20Bay%2C%20Maryland%20-%20Arthur%20Quartley%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q110664357"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Figures on a Terrace",
+"artist": "Ferdinand Heilbuth",
+"year": "1870",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Figures%20on%20a%20Terrace%20-%20Ferdinand%20Heilbuth%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q111087055"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Aventine from the Palatine",
+"artist": "Walter Crane",
+"year": "1873",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Aventine%20from%20the%20Palatine%20-%20Walter%20T.%20Crane.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q111663151"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Evening Glow, The Old Red Cow",
+"artist": "Albert Pinkham Ryder",
+"year": "1870",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Evening%20Glow%20The%20Old%20Red%20Cow%20-%20Albert%20Pinkham%20Ryder%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q111669076"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Grazing Horse",
+"artist": "Albert Pinkham Ryder",
+"year": "1872",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Grazing%20Horse%20-%20Albert%20Pinkham%20Ryder%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q111669122"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Hunter",
+"artist": "Albert Pinkham Ryder",
+"year": "1880",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Hunter%20-%20Albert%20Pinkham%20Ryder%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q111669125"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Mrs. William Allen",
+"artist": "John Wollaston the Younger",
+"year": "1756",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Mrs.%20William%20Allen%20-%20John%20Wollaston%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q122200742"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "George Taylor II",
+"artist": "Rembrandt Peale",
+"year": "",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20George%20Taylor%20II%20-%20Rembrandt%20Peale%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q123015143"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Street Scene (Hester Street)",
 "artist": "George Luks",
 "year": "1905",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/40.339%20SL1-General%20Use.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q123750112"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Brothers",
+"artist": "Lydia Field Emmet",
+"year": "1909",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Brothers%20by%20Lydia%20Field%20Emmet.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q123759889"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Italian Shepherd Boy",
+"artist": "Washington Allston",
+"year": "1821",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Italian%20Shepherd%20Boy%20-%20Washington%20Allston%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q125022209"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "With a Babe in the Woods",
+"artist": "Laura Theresa Alma-Tadema",
+"year": "1879",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20With%20a%20Babe%20in%20the%20Woods%20-%20Lady%20Laura%20Theresa%20Alma-Tadema.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q125022550"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Landscape",
+"artist": "George Inness",
+"year": "1882",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Inness%20-%20Landscape%20%28c.%201882-83%29%20-%20Brooklyn%20Museum.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q125228127"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Boy Reading: Ned Anshutz",
+"artist": "Thomas Pollock Anshutz",
+"year": "1900",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Boy%20Reading%20Ned%20Anshutz%20-%20Thomas%20Pollack%20Anshutz.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q126723216"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "House and Tree (The Artist's House)",
+"artist": "Thomas Pollock Anshutz",
+"year": "1895",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20House%20and%20Tree%20%28The%20Artist%27s%20House%29%20-%20Thomas%20Pollack%20Anshutz%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q126723626"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -28,12 +154,48 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Trout",
+"artist": "Unknown",
+"year": "1867",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Trout%20-%20Walter%20M.%20Brackett%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q134606536"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "A Back Road",
+"artist": "Childe Hassam",
+"year": "1884",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20A%20Back%20Road%20-%20Frederick%20Childe%20Hassam.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q134960162"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Portrait of John Adams",
+"artist": "Samuel Finley Breese Morse",
+"year": "1816",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Portrait%20of%20John%20Adams%20-%20Samuel%20Finley%20Breese%20Morse%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q134976011"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Girl in Fur Hood (Head of a Woman with Fur-Lined hood)",
 "artist": "Abbott Handerson Thayer",
 "year": "1908",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Girl%20in%20Fur%20Hood%20%28Head%20of%20a%20Woman%20with%20Fur-Lined%20hood%29%20-%20Abbott%20H.%20Thayer.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q134978921"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Queen Victoria Lying in State",
+"artist": "Emil Fuchs",
+"year": "1901",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Queen%20Victoria%20Lying%20in%20State%20-%20Emil%20Fuchs%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q134981436"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -46,12 +208,30 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "The Republican Court (Lady Washington's Reception Day)",
+"artist": "Daniel Huntington",
+"year": "1861",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Republican%20Court%20%28Lady%20Washington%27s%20Reception%20Day%29%20-%20Daniel%20Huntington%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135110404"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "The Governor's Grandsons",
 "artist": "Edwin Blashfield",
 "year": "1894",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Governor%27s%20Grandsons%20-%20Edwin%20Howland%20Blashfield.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q135110672"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Gorge, Appledore",
+"artist": "Childe Hassam",
+"year": "1912",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Gorge%2C%20Appledore%20-%20Frederick%20Childe%20Hassam%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135110684"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -64,12 +244,48 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "The Red Bow",
+"artist": "Charles Webster Hawthorne",
+"year": "1902",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Red%20Bow%20-%20Charles%20W.%20Hawthorne%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135113251"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Sarah Cowell LeMoyne",
 "artist": "Jane E. Bartlett",
 "year": "1877",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sarah%20Cowell%20by%20Jane%20Bartlett.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q135208853"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Dancing Children",
+"artist": "Arthur Bowen Davies",
+"year": "1902",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Dancing%20Children%20-%20Arthur%20B.%20Davies%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135409618"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Flowers in a Figured Vase",
+"artist": "Jan Pieter Brueghel",
+"year": "1670",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Flowers%20in%20a%20Figured%20Vase%20-%20Jan%20Peeter%20Brueghel.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135409625"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "In a Hayloft",
+"artist": "Unknown",
+"year": "1904",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20In%20a%20Hayloft%20-%20John%20Singer%20Sargent.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135409772"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -82,12 +298,39 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Lady with the Hydrangeas",
+"artist": "Henry Caro-Delvaille",
+"year": "1911",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Lady%20with%20the%20Hydrangeas%20%28Dame%20%C3%A0%20la%20Hortensia%29%20-%20Henri%20Caro-Delvaille%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135436031"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Montauk",
 "artist": "Childe Hassam",
 "year": "1921",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Montauk%20-%20Frederick%20Childe%20Hassam%20-%20overall.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q135436156"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Lovers (Indian Love Song)",
+"artist": "E. Irving Couse",
+"year": "1905",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Lovers%20Indian%20Love%20Song%20-%20Eanger%20Irving%20Couse%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135436300"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Mrs. Wyseman Clagett (Née Lettice Mitchell; Later Mrs. Simon McQuesten)",
+"artist": "Joseph Blackburn",
+"year": "1760",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Mrs.%20Wyseman%20Clagett%20%28N%C3%A9e%20Lettice%20Mitchell%3B%20Later%20Mrs.%20Simon%20McQuesten%29%20-%20Joseph%20Blackburn%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q135647731"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -163,12 +406,75 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Sunrise",
+"artist": "George Inness",
+"year": "1887",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/WLA%20brooklynmuseum%20Sunrise%20by%20George%20Inness.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20054730"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Sunset over the Sea",
+"artist": "George Inness",
+"year": "1887",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Sunset%20over%20the%20Sea%20-%20George%20Inness%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20054741"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Morteratsch Glacier Upper Engadine Valley Pontresina",
+"artist": "Albert Bierstadt",
+"year": "1895",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bierstadt%20Albert%20The%20Morteratsch%20Glacier%20Upper%20Engadine%20Valley%20Pontresina.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20488124"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Mount Baker, Washington, from the Frazier River",
+"artist": "Albert Bierstadt",
+"year": "1890",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert%20Bierstadt%20-%20Mount%20Baker%2C%20Washington.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20585065"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Landscape",
 "artist": "Asher Brown Durand",
 "year": "1867",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/HRSOA%20AsherDurand-Landscape.JPG?width=1600",
 "url": "http://www.wikidata.org/entity/Q20737312"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Cattle and Landscape",
+"artist": "James McDougal Hart",
+"year": "1867",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Cattle%20and%20Landscape%20-%20James%20McDougal%20Hart%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20739262"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Midsummer",
+"artist": "James McDougal Hart",
+"year": "1870",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Midsummer%20-%20James%20McDougal%20Hart%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q20739275"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Lake George",
+"artist": "John Frederick Kensett",
+"year": "1870",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Lake%20George%20-%20John%20Frederick%20Kensett%20-%20overall.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q21711738"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -262,15 +568,6 @@
 },
 {
 "museum": "the Brooklyn Museum",
-"title": "Rhododendrons",
-"artist": "Elizabeth Boott",
-"year": "1882",
-"medium": "",
-"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Elizabeth%20Boott%20Duveneck%20-%20Rhododendrons%20-%20Google%20Art%20Project%20%286100236%29.jpg?width=1600",
-"url": "http://www.wikidata.org/entity/Q28797700"
-},
-{
-"museum": "the Brooklyn Museum",
 "title": "The Waste of Waters is Their Field",
 "artist": "Albert Pinkham Ryder",
 "year": "1880",
@@ -286,6 +583,24 @@
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ignacio%20Zuloaga%20y%20Zabaleta%20-%20Portrait%20of%20Anita%20Ram%C3%ADrez%20in%20Black%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "http://www.wikidata.org/entity/Q31187972"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Jean Cocteau",
+"artist": "Amedeo Modigliani",
+"year": "1916",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/1916%2C%20Modigliani%2C%20Jean%20Cocteau.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q3937581"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The End of the working day",
+"artist": "Jules Breton",
+"year": "1886",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Fin%20du%20travail%20%28The%20End%20of%20the%20Working%20Day%29%20-%20Jules%20Breton.jpg?width=1600",
+"url": "http://www.wikidata.org/entity/Q61959284"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -338,7 +653,7 @@
 "artist": "George Bellows",
 "year": "1910",
 "medium": "",
-"image": "https://commons.wikimedia.org/wiki/Special:FilePath/A%20Morning%20Snow-Hudson%20River%20at%20the%20Brooklyn%20Museum%20%2880534%29a.jpg?width=1600",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20A%20Morning%20Snow--Hudson%20River%20-%20George%20Wesley%20Bellows%20-%20overall.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/1051"
 },
 {
@@ -428,8 +743,17 @@
 "artist": "Unknown",
 "year": "1889",
 "medium": "",
-"image": "https://commons.wikimedia.org/wiki/Special:FilePath/John%20Singer%20Sargent%20-%20An%20Out-of-Doors%20Study%20-%20Google%20Art%20Project.jpg?width=1600",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sargent%20-%20Paul%20Helleu%20Sketching%20with%20his%20Wife.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/131"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "What Our Lord Saw from the Cross",
+"artist": "James Tissot",
+"year": "1890",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20What%20Our%20Lord%20Saw%20from%20the%20Cross%20%28Ce%20que%20voyait%20Notre-Seigneur%20sur%20la%20Croix%29%20-%20James%20Tissot.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/13508"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -487,6 +811,15 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Handsome Drinks",
+"artist": "Marsden Hartley",
+"year": "1916",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marsden%20Hartley%20-%20Handsome%20Drinks%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/1468"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Washerwomen in the Ruins of the Colosseum",
 "artist": "Hubert Robert",
 "year": "1760",
@@ -505,6 +838,15 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Lake George",
+"artist": "John William Casilear",
+"year": "1857",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/WLA%20brooklynmuseum%20John%20William%20Casilear-Lake%20George%201857.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/1555"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "A Storm in the Rocky Mountains, Mt. Rosalie",
 "artist": "Albert Bierstadt",
 "year": "1866",
@@ -514,12 +856,75 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Hunter on Horseback Attacked by a Lion",
+"artist": "Unknown",
+"year": "1750",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hunter%20on%20Horseback%20Attacked%20by%20a%20Lion%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/157592"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Hunter on Horseback Attacked by a Mythical Beast",
+"artist": "Unknown",
+"year": "1750",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hunter%20on%20Horseback%20Attacked%20by%20a%20Mythical%20Beast%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/157593"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Sultan Sanjar and the Old Woman",
+"artist": "Unknown",
+"year": "1750",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan%20Sanjar%20and%20the%20Old%20Woman%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/157595"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Khusraw Discovers Shirin Bathing, From Pictorial Cycle of Eight Poetic Subjects",
+"artist": "Unknown",
+"year": "1750",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Khusraw%20Discovers%20Shirin%20Bathing%2C%20From%20Pictorial%20Cycle%20of%20Eight%20Poetic%20Subjects%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/157598"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Columbus Before the Queen",
+"artist": "Emanuel Leutze",
+"year": "1843",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emanuel%20Gottlieb%20Leutze%20-%20Columbus%20Before%20the%20Queen.JPG?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/1584"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Colonel Nathan Beckwith",
+"artist": "Ammi Phillips",
+"year": "1817",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Colonel%20Nathan%20Beckwith%20-%20Ammi%20Phillips%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/1606"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Mrs. Alexander Cumming, née Elizabeth Goldthwaite, later Mrs. John Bacon",
 "artist": "John Singleton Copley",
 "year": "1770",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/John%20Singleton%20Copley%20-%20Mrs.%20Alexander%20Cumming%2C%20n%C3%A9e%20Elizabeth%20Goldthwaite%2C%20later%20Mrs.%20John%20Bacon%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/162"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Rigor of the Game, Kearsarge Hall, North Conway, New Hampshire",
+"artist": "George Inness",
+"year": "1875",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Rigor%20of%20the%20Game%2C%20Kearsarge%20Hall%2C%20North%20Conway%2C%20New%20Hampshire%20-%20George%20Inness%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/1621"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -578,7 +983,7 @@
 {
 "museum": "the Brooklyn Museum",
 "title": "Dona Mariana Belsunse y Salasar",
-"artist": "Pedro Díaz",
+"artist": "José Joaquín Bermejo",
 "year": "1780",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dona%20Mariana%20Belsunse%20y%20Salasar%20-%20Google%20Art%20Project.jpg?width=1600",
@@ -599,7 +1004,7 @@
 "artist": "Unknown",
 "year": "1907",
 "medium": "",
-"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Dolce%20Far%20Niente%20-%20John%20Singer%20Sargent%20-%20overall.jpg?width=1600",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sargent%20-%20Dolce%20Far%20Niente%2C%20ca.%201907%2C%2011.518.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/2"
 },
 {
@@ -730,12 +1135,39 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "William Allen",
+"artist": "John Wollaston the Younger",
+"year": "1756",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20William%20Allen%20-%20John%20Wollaston%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/269"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Portrait of a Woman",
+"artist": "Bartolomeo Traballesi",
+"year": "",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bartolomeo%20traballesi%2C%20ritratto%20di%20donna%20col%20libro%2C%201570-75%20ca.%20%28cropped%29.JPG?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/26923"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "The Sand Cart",
 "artist": "George Bellows",
 "year": "1917",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/George%20Wesley%20Bellows%20-%20The%20Sand%20Cart%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/272"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Boy Violinist",
+"artist": "John George Brown",
+"year": "1874",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Boy%20Violinist%20-%20John%20George%20Brown%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/273"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -754,6 +1186,15 @@
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Miguel%20Cabrera%20-%20Do%C3%B1a%20Mar%C3%ADa%20de%20la%20Luz%20Padilla%20y%20%28G%C3%B3mez%20de%29%20Cervantes%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/2827"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Handsome Morning -- A Dakota",
+"artist": "Harry C. Edwards",
+"year": "1921",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Harry%20C.%20Edwards%20-%20Handsome%20Morning%20--%20A%20Dakota%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/296"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -784,12 +1225,39 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Painting of Lady Tjepu",
+"artist": "Unknown",
+"year": "1390",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lady%20Tjepu%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/3743"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Freshness of the Wounded",
 "artist": "Arthur Bowen Davies",
 "year": "1917",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Arthur%20B.%20Davies%20-%20Freshness%20of%20the%20Wounded%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/389"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Arch",
+"artist": "Henry Ossawa Tanner",
+"year": "1919",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Arch%20-%20Henry%20Ossawa%20Tanner%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/397"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Emily Post",
+"artist": "Emil Fuchs",
+"year": "1906",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emil%20Fuchs%20-%20Emily%20Post%2C%20ca.%201906.%2032.199.156.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/407"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -802,6 +1270,15 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "The Mist",
+"artist": "Arthur Parton",
+"year": "1875",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Mist%20-%20Arthur%20Parton%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/417"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "In the Mountains",
 "artist": "Winslow Homer",
 "year": "1877",
@@ -811,21 +1288,39 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "An Embarrassment of Choices",
+"artist": "Jehan Georges Vibert",
+"year": "1873",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20An%20Embarrassment%20of%20Choices%2C%20or%20A%20Difficult%20Choice%20%28Un%20Embarras%20du%20Choix%29%20-%20Jehan-Georges%20Vibert%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4350"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Le Havre , the harbor",
+"artist": "Eugène Louis Boudin",
+"year": "1884",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Havre%2C%20The%20Port%20Eug%C3%A8ne%20Louis%20Boudin%201884.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4355"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Great Red Dragon and the Woman Clothed with the Sun (Rev. 12: 1-4)",
+"artist": "William Blake",
+"year": "1800",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Great%20Red%20Dragon%20and%20the%20Woman%20Clothed%20with%20the%20Sun%20%28Rev.%2012%201-4%29%20-%20William%20Blake.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4368"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "The Doges Palace (Le Palais ducal)",
 "artist": "Claude Monet",
 "year": "1908",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Monet%20-%20The%20Doges%20Palace%20%28Le%20Palais%20ducal%29%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/4377"
-},
-{
-"museum": "the Brooklyn Museum",
-"title": "Portrait of a Lady as Mary Magdalen",
-"artist": "Bartolomeo Veneto",
-"year": "1520",
-"medium": "",
-"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bartolomeo%20Veneto%20-%20Portrait%20of%20a%20Lady%20as%20Mary%20Magdalen%20-%20Google%20Art%20Project.jpg?width=1600",
-"url": "https://www.brooklynmuseum.org/objects/4385"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -844,6 +1339,15 @@
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/William%20Bouguereau%20-%20The%20Elder%20Sister%2C%20reduction%20%28La%20soeur%20a%C3%AEn%C3%A9e%2C%20r%C3%A9duction%29%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/4390"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Breton Peasant Woman Holding a Taper",
+"artist": "Jules Breton",
+"year": "1869",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Breton%20Peasant%20Woman%20Holding%20a%20Taper%20-%20Jules%20Breton%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4392"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -883,6 +1387,33 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "The Lover",
+"artist": "Étienne-Prosper Berne-Bellecour",
+"year": "1869",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Lover%20-%20Etienne%20Prosper%20Berne-Bellecour.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4723"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Old Forest",
+"artist": "Charles Jacque",
+"year": "1865",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Old%20Forest%20-%20Charles-%C3%89mile%20Jacque.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4728"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Young Woman of Albano (L'Albanaise)",
+"artist": "Jean-Baptiste Camille Corot",
+"year": "1872",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Young%20Woman%20of%20Albano%20%28L%27Albanaise%29%20-%20Jean-Baptiste-Camille%20Corot.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4739"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Flowers in a Vase (Zinnias)",
 "artist": "Maurice Prendergast",
 "year": "1911",
@@ -919,6 +1450,42 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Still Life with Strawberries",
+"artist": "Pierre-Auguste Renoir",
+"year": "1914",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Renoir%20-%20Still%20Life%20with%20Strawberries%2C%201914.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4787"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Still Life with Blue Cup",
+"artist": "Pierre-Auguste Renoir",
+"year": "1900",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Renoir%20-%20Still%20Life%20with%20Blue%20Cup%2C%20ca.%201900.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4797"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Young Woman Overtaken by a Storm",
+"artist": "Féréol Bonnemaison",
+"year": "1799",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Young%20Woman%20Overtaken%20by%20a%20Storm%20-%20Chevalier%20F%C3%A9r%C3%A9ol%20de%20Bonnemaison.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4817"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Prince Yahya",
+"artist": "Unknown",
+"year": "1830",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Muhammad%20Hasan%20-%20Prince%20Yahya%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4822"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "William Rush Carving His Allegorical Figure of the Schuylkill River",
 "artist": "Thomas Eakins",
 "year": "1908",
@@ -943,6 +1510,60 @@
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/William%20Sidney%20Mount%20-%20Caught%20Napping%20%28Boys%20Caught%20Napping%20in%20a%20Field%29%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/492"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Landscape in Auvergne",
+"artist": "Auguste Bonheur",
+"year": "1850",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Landscape%20in%20Auvergne%20-%20Auguste-Fran%C3%A7ois%20Bonheur.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4953"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "View of a Field",
+"artist": "Auguste Bonheur",
+"year": "1850",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20View%20of%20a%20Field%20-%20Auguste-Fran%C3%A7ois%20Bonheur.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4955"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Marshlands",
+"artist": "Auguste Bonheur",
+"year": "1853",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Marshlands%20-%20Auguste-Fran%C3%A7ois%20Bonheur.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4956"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Portrait of Emily Warren Roebling",
+"artist": "Carolus-Duran",
+"year": "1896",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Portrait%20of%20Emily%20Warren%20Roebling%20-%20Charles-%C3%89mile-Auguste%20Carolus-Duran.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4960"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Running Stream at San Cosimato",
+"artist": "Jean-Joseph-Xavier Bidauld",
+"year": "1788",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Running%20Stream%20at%20San%20Cosimato%20-%20Jean-Joseph-Xavier%20Bidauld.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4969"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Mountains in Auvergne",
+"artist": "Jean-Baptiste Camille Corot",
+"year": "1841",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Mountains%20in%20Auvergne%20%28Montagnes%20d%27Auvergne%29%20-%20Jean-Baptiste-Camille%20Corot.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/4971"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -973,6 +1594,42 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Rising Tide at Pourville",
+"artist": "Claude Monet",
+"year": "1882",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monet%20-%20Rising%20Tide%20at%20Pourville%20%28Mar%C3%A9e%20montante%20%C3%A0%20Pourville%29%2C%201882.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/52641"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "The Wounded Cuirassier, study",
+"artist": "Théodore Géricault",
+"year": "1814",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20The%20Wounded%20Cuirassier%20study%20%28Le%20Cuirassier%20bless%C3%A9%20quittant%20le%20feu%20esquisse%29%20-%20Th%C3%A9odore%20G%C3%A9ricault.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/54748"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Leaving the Sheep Pen",
+"artist": "Charles Jacque",
+"year": "1880",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Leaving%20the%20Sheep%20Pen%20-%20Charles-%C3%89mile%20Jacque.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/58125"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Portrait of Jean de Carondelet",
+"artist": "Jan Cornelisz Vermeyen",
+"year": "1530",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Cornelisz.%20Vermeyen%20-%20Portrait%20of%20Jean%20de%20Carondelet.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/60243"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "The Peaceable Kingdom",
 "artist": "Edward Hicks",
 "year": "1835",
@@ -1000,12 +1657,39 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Landscape after Ruisdael",
+"artist": "Thomas Doughty",
+"year": "1846",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/WLA%20brooklynmuseum%20Thomas%20Doughty%20Landscape%20after%20Ruisdael%204.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/625"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Pierre Van Cortlandt",
+"artist": "Unknown",
+"year": "1731",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre%20Van%20Cortlandt%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/627"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Lydia Field Emmet",
 "artist": "William Merritt Chase",
 "year": "1892",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/William%20Merritt%20Chase%20-%20Lydia%20Field%20Emmet%20-%20Google%20Art%20Project.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/68"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Study of a Lion",
+"artist": "Théodore Géricault",
+"year": "1850",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%A9ricault%20-%20Study%20of%20a%20Lion%20%28or%20a%20Lion%29%2C%2013.68.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/6908"
 },
 {
 "museum": "the Brooklyn Museum",
@@ -1036,6 +1720,15 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "The Carpenters Shop in Nazareth",
+"artist": "Unknown",
+"year": "1750",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Carpenters%20Shop%20in%20Nazareth%20-%20Google%20Art%20Project.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/715"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Portrait of a Woman",
 "artist": "Robert Feke",
 "year": "1748",
@@ -1045,12 +1738,57 @@
 },
 {
 "museum": "the Brooklyn Museum",
+"title": "Colonel Isaac Barré",
+"artist": "Gilbert Stuart",
+"year": "1785",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Colonel%20Isaac%20Barr%C3%A9%20-%20Gilbert%20Stuart%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/79"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Willimantic Thread Factory",
+"artist": "J. Alden Weir",
+"year": "1893",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Willimantic%20Thread%20Factory%20-%20Julian%20Alden%20Weir%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/82"
+},
+{
+"museum": "the Brooklyn Museum",
 "title": "Thoughts of the Future",
 "artist": "Hugues Merle",
 "year": "1864",
 "medium": "",
 "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hugues%20merle%20thoughts%20of%20the%20future061605%29.jpg?width=1600",
 "url": "https://www.brooklynmuseum.org/objects/9031"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "A Statuette",
+"artist": "William Sergeant Kendall",
+"year": "1914",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20A%20Statuette%20-%20William%20Sergeant%20Kendall%20-%20overall.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/929"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "Samoan Lady",
+"artist": "John La Farge",
+"year": "1891",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Brooklyn%20Museum%20-%20Samoan%20Lady%20-%20John%20La%20Farge.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/93255"
+},
+{
+"museum": "the Brooklyn Museum",
+"title": "George Washington",
+"artist": "Gilbert Stuart",
+"year": "1796",
+"medium": "",
+"image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gilbert%20Stuart%20-%20George%20Washington%20-%20Google%20Art%20Project%20%286966745%29.jpg?width=1600",
+"url": "https://www.brooklynmuseum.org/objects/934"
 },
 {
 "museum": "the Brooklyn Museum",

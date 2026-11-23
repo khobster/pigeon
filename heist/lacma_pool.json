@@ -46,15 +46,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Seal Impression of a Priest",
-"artist": "Unknown",
-"year": "Middle Kingdom - Late Period (1991 - 332 BCE)",
-"medium": "Gray semi-baked clay",
-"image": "https://collections-images.lacma.org/images/42116/42116-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/42116"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Jules Bastien-Lepage (1848-1884)",
 "artist": "Auguste Rodin  France, Paris, 1840-1917",
 "year": "first modeled c. 1887, this cast 1987",
@@ -75,7 +66,7 @@
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Prodigal Son",
 "artist": "Auguste Rodin  France, Paris, 1840-1917",
-"year": "first modelled circa 1884/1894-1899, this cast 1967 (Mus\u00e9e Rodin 8/12)",
+"year": "first modelled circa 1884/1894-1899, this cast 1967 (Musée Rodin 8/12)",
 "medium": "Bronze",
 "image": "https://collections-images.lacma.org/images/33279/33279-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/33279"
@@ -127,7 +118,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Lake Ch\u016bzenji",
+"title": "Lake Chūzenji",
 "artist": "Takahashi Hiroaki",
 "year": "circa 1929-1932",
 "medium": "Color woodblock print",
@@ -146,7 +137,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Bluebird on Autumn Maple Branch",
-"artist": "It\u014d S\u014dzan  Japan, born 1884",
+"artist": "Itō Sōzan  Japan, born 1884",
 "year": "circa 1915-1926",
 "medium": "Color woodblock print",
 "image": "https://collections-images.lacma.org/images/88118/88118-1-desktop.jpg",
@@ -155,7 +146,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Flying Geese",
-"artist": "Ohara Sh\u014dson  Japan, 1877-1945",
+"artist": "Ohara Shōson  Japan, 1877-1945",
 "year": "1926",
 "medium": "Color woodblock print",
 "image": "https://collections-images.lacma.org/images/102939/102939-1-desktop.jpg",
@@ -173,20 +164,11 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Standing Figure",
-"artist": "Albert M\u00fcller  Switzerland, 1897-1926",
+"artist": "Albert Müller  Switzerland, 1897-1926",
 "year": "1924",
 "medium": "Stained wood",
 "image": "https://collections-images.lacma.org/images/49084/49084-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/49084"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Crucifixion of Christ",
-"artist": "George Bellows",
-"year": "1923",
-"medium": "Lithograph",
-"image": "https://collections-images.lacma.org/images/14420/14420-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/14420"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -241,15 +223,6 @@
 "medium": "Lithograph on Watteau paper",
 "image": "https://collections-images.lacma.org/images/73778/73778-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/73778"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "St. Cloud",
-"artist": "Eug\u00e8ne Atget",
-"year": "1915 - 1919",
-"medium": "Gelatin silver print",
-"image": "https://collections-images.lacma.org/images/142921/142921-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/142921"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -397,7 +370,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Tiger-legged Dining Table with Shark\u2019s Skin and Phoenix Design",
+"title": "Tiger-legged Dining Table with Shark’s Skin and Phoenix Design",
 "artist": "Unknown",
 "year": "Joseon dynasty (1392-1910), early 20th century",
 "medium": "Brown lacquer on wood core with shark skin inlay and brass fittings",
@@ -523,8 +496,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Horizontal Staff:  If you follow the way, Nantenb\u014d! If you do not follow the way, Nantenb\u014d!",
-"artist": "Nakahara Nantenb\u014d  Japan, 1839-1925",
+"title": "Horizontal Staff:  If you follow the way, Nantenbō! If you do not follow the way, Nantenbō!",
+"artist": "Nakahara Nantenbō  Japan, 1839-1925",
 "year": "circa 1905",
 "medium": "Fan; bamboo, mica-dusted paper, sumi ink",
 "image": "https://collections-images.lacma.org/images/165983/165983-1-desktop.jpg",
@@ -587,7 +560,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Rodin Sculptant",
-"artist": "Eug\u00e8ne Carri\u00e8re",
+"artist": "Eugène Carrière",
 "year": "1900",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/783/783-1-desktop.jpg",
@@ -659,7 +632,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Peasant",
-"artist": "Aim\u00e9-Jules Dalou  France, 1838-1902",
+"artist": "Aimé-Jules Dalou  France, 1838-1902",
 "year": "circa 1897-1899",
 "medium": "Bronze",
 "image": "https://collections-images.lacma.org/images/55149/55149-1-desktop.jpg",
@@ -677,7 +650,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Madeleine",
-"artist": "Jean-Fran\u00e7ois Raffa\u00eblli",
+"artist": "Jean-François Raffaëlli",
 "year": "1898",
 "medium": "Color etching and drypoint on Japan paper",
 "image": "https://collections-images.lacma.org/images/11739/11739-1-desktop.jpg",
@@ -713,7 +686,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Miser",
-"artist": "Henri Charles Gu\u00e9rard",
+"artist": "Henri Charles Guérard",
 "year": "1846 - 1897",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/59826/59826-1-desktop.jpg",
@@ -803,7 +776,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Lyre (The Lyre)",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1895",
 "medium": "Photogravure with drypoint and soft-ground etching",
 "image": "https://collections-images.lacma.org/images/36828/36828-1-desktop.jpg",
@@ -812,7 +785,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Vase, 'Sous l'eau du songe'",
-"artist": "Emile Gall\u00e9",
+"artist": "Emile Gallé",
 "year": "circa 1890-1895",
 "medium": "Cased, acid-etched and wheel-cut glass",
 "image": "https://collections-images.lacma.org/images/40244/40244-1-desktop.jpg",
@@ -821,7 +794,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Salon des Cent",
-"artist": "Eug\u00e8ne Samuel Grasset  Switzerland, Lausanne, active France, 1845-1917",
+"artist": "Eugène Samuel Grasset  Switzerland, Lausanne, active France, 1845-1917",
 "year": "1894",
 "medium": "Photorelief etching in seven colors: green, pale yellow green, dark turquoise, light ocher, reddish brown, dark gray, and black",
 "image": "https://collections-images.lacma.org/images/59908/59908-1-desktop.jpg",
@@ -839,7 +812,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "To Schumann",
-"artist": "F\u00e9lix Edouard Vallotton",
+"artist": "Félix Edouard Vallotton",
 "year": "1893",
 "medium": "Woodcut on blue laid paper",
 "image": "https://collections-images.lacma.org/images/97279/97279-1-desktop.jpg",
@@ -847,7 +820,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Ichikawa Udanji as the Spirit of Sogo's Wife Carrying Off Yamazumi Goheita Played by Ichimura Kagor\u014d",
+"title": "Ichikawa Udanji as the Spirit of Sogo's Wife Carrying Off Yamazumi Goheita Played by Ichimura Kagorō",
 "artist": "Toyohara Kunichika  Japan, 1835-1900",
 "year": "March 1893",
 "medium": "Triptych; color woodblock prints",
@@ -866,7 +839,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Miner at the Vein",
-"artist": "Constantin-\u00c9mile Meunier",
+"artist": "Constantin-Émile Meunier",
 "year": "circa 1892",
 "medium": "Bronze (Verbeyst cast)",
 "image": "https://collections-images.lacma.org/images/38600/38600-1-desktop.jpg",
@@ -911,7 +884,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Prince Hotta Garden",
-"artist": "Tamamura K\u014dzabur\u014d  Japan, 1856 -  circa 1923",
+"artist": "Tamamura Kōzaburō  Japan, 1856 -  circa 1923",
 "year": "ca. 1870-1890",
 "medium": "Albumen silver print, hand-colored",
 "image": "https://collections-images.lacma.org/images/97006/97006-1-desktop.jpg",
@@ -956,7 +929,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Bust of a Puddler",
-"artist": "Constantin-\u00c9mile Meunier",
+"artist": "Constantin-Émile Meunier",
 "year": "1885-1890",
 "medium": "Bronze",
 "image": "https://collections-images.lacma.org/images/40047/40047-1-desktop.jpg",
@@ -992,7 +965,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Ma main coupable",
-"artist": "Henri Charles Gu\u00e9rard  France, Paris, 1846-1897",
+"artist": "Henri Charles Guérard  France, Paris, 1846-1897",
 "year": "before 1888",
 "medium": "Hand print, black ink on tan paper",
 "image": "https://collections-images.lacma.org/images/120965/120965-1-desktop.jpg",
@@ -1000,7 +973,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Looking Weighed Down:  The Manner of a Waitress at Fukagawa in the Tenp\u014d Era",
+"title": "Looking Weighed Down:  The Manner of a Waitress at Fukagawa in the Tenpō Era",
 "artist": "Tsukioka Yoshitoshi",
 "year": "1888, October",
 "medium": "Color woodblock print",
@@ -1027,8 +1000,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "\u00c0 coeur perdu",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "À coeur perdu",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1888",
 "medium": "Soft-ground etching",
 "image": "https://collections-images.lacma.org/images/44699/44699-1-desktop.jpg",
@@ -1072,8 +1045,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Ky\u014dsai's Treatise on Painting, volume 2",
-"artist": "Kawanabe Ky\u014dsai",
+"title": "Kyōsai's Treatise on Painting, volume 2",
+"artist": "Kawanabe Kyōsai",
 "year": "1887",
 "medium": "Color woodblock printed books; four volumes covered with a slip cover having woodblock printed illustration adhered to cloth",
 "image": "https://collections-images.lacma.org/images/113195/113195-1-desktop.jpg",
@@ -1144,7 +1117,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Kintar\u014d Seizes the Carp",
+"title": "Kintarō Seizes the Carp",
 "artist": "Tsukioka Yoshitoshi  Japan, 1839-1892",
 "year": "1885",
 "medium": "Diptych; color woodblock print",
@@ -1180,17 +1153,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Demons of Illness and Poverty Stalking the Lucky Gods",
-"artist": "Tsukioka Yoshitoshi",
-"year": "1884",
-"medium": "Triptych; color woodblock prints",
-"image": "https://collections-images.lacma.org/images/89176/89176-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/89176"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Hector Le Roux",
-"artist": "Bra\u00fcn & Co.",
+"artist": "Braün & Co.",
 "year": "1876-1884",
 "medium": "Woodburytype",
 "image": "https://collections-images.lacma.org/images/64101/64101-1-desktop.jpg",
@@ -1198,8 +1162,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Le Vice supr\u00eame (The Supreme Vice)",
-"artist": "F\u00e9licien Victor Joseph Rops  Belgium, Namur, 1833-1898",
+"title": "Le Vice suprême (The Supreme Vice)",
+"artist": "Félicien Victor Joseph Rops  Belgium, Namur, 1833-1898",
 "year": "1884",
 "medium": "Etching and aquatint",
 "image": "https://collections-images.lacma.org/images/36804/36804-1-desktop.jpg",
@@ -1216,15 +1180,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Mission Santa Barbara",
-"artist": "Henry Chapman Ford",
-"year": "published in 1883",
-"medium": "Etching and drypoint",
-"image": "https://collections-images.lacma.org/images/37141/37141-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/37141"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Ein Mutter III",
 "artist": "Max Klinger  Germany, also active France, 1857-1920",
 "year": "1882-1883",
@@ -1234,16 +1189,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Santa Barbara (Rear View)",
-"artist": "Henry Chapman Ford",
-"year": "published in 1883",
-"medium": "Etching and drypoint",
-"image": "https://collections-images.lacma.org/images/37181/37181-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/37181"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Yorimitsu (Raik\u014d) Enters the Treasure Mountain",
+"title": "Yorimitsu (Raikō) Enters the Treasure Mountain",
 "artist": "Tsukioka Yoshitoshi",
 "year": "1882, May",
 "medium": "Color woodblock print",
@@ -1253,15 +1199,15 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Le Plus bel amour de Don Juan",
-"artist": "F\u00e9licien Victor Joseph Rops  Belgium, Namur, 1833-1898",
-"year": "1882\u201383",
+"artist": "Félicien Victor Joseph Rops  Belgium, Namur, 1833-1898",
+"year": "1882–83",
 "medium": "Photogravure with etching",
 "image": "https://collections-images.lacma.org/images/44713/44713-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/44713"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Evening at T\u014dsh\u014dg\u016b Shrine, Ueno, Tokyo",
+"title": "Evening at Tōshōgū Shrine, Ueno, Tokyo",
 "artist": "Kobayashi Kiyochika",
 "year": "1881",
 "medium": "Color woodblock print",
@@ -1270,7 +1216,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "\u014ckubo Hikozaemon Tadanori Rescuing Tokugawa Ieyasu",
+"title": "Ōkubo Hikozaemon Tadanori Rescuing Tokugawa Ieyasu",
 "artist": "Tsukioka Yoshitoshi",
 "year": "1881, December",
 "medium": "Color woodblock print",
@@ -1324,7 +1270,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Breakwater Stakes and Ry\u014dgoku Bridge",
+"title": "Breakwater Stakes and Ryōgoku Bridge",
 "artist": "Kobayashi Kiyochika  Japan, 1847-1915",
 "year": "1880",
 "medium": "Color woodblock print",
@@ -1423,15 +1369,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Taira no Tadamori Captures the Priest of Mid\u014d",
-"artist": "Kobayashi Kiyochika",
-"year": "1877",
-"medium": "Triptych; color woodblock prints",
-"image": "https://collections-images.lacma.org/images/29677/29677-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/29677"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Child's Dress",
 "artist": "Unknown",
 "year": "circa 1877",
@@ -1451,7 +1388,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Beurre d'Isigny",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1875",
 "medium": "Etching with aquatint",
 "image": "https://collections-images.lacma.org/images/39160/39160-1-desktop.jpg",
@@ -1559,7 +1496,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Caire, Allee De Pyramides #98",
-"artist": "F\u00e9lix Bonfils",
+"artist": "Félix Bonfils",
 "year": "1870",
 "medium": "Albumen silver print",
 "image": "https://collections-images.lacma.org/images/144491/144491-1-desktop.jpg",
@@ -1586,7 +1523,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Arab Woman in a Doorway",
-"artist": "Jean-L\u00e9on G\u00e9r\u00f4me  France, Vesoul, 1824-1904",
+"artist": "Jean-Léon Gérôme  France, Vesoul, 1824-1904",
 "year": "1870",
 "medium": "Oil on canvas",
 "image": "https://collections-images.lacma.org/images/103988/103988-1-desktop.jpg",
@@ -1612,10 +1549,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Woman\u2019s Outer Kimono (Uchikake) with Plank Bridges, Irises, and Swallows",
+"title": "Woman’s Outer Kimono (Uchikake) with Plank Bridges, Irises, and Swallows",
 "artist": "Unknown",
 "year": "late Edo period (1615-1868), late 18th-early 19th century",
-"medium": "Silk plain weave (crepe) (chirimen) with paste-resist dyed (y\u016bzen) and stenciled paste-resist imitation tie-dyed (kata kanoko) with silk and gilt-paper-wrapped silk thread embroidery.",
+"medium": "Silk plain weave (crepe) (chirimen) with paste-resist dyed (yūzen) and stenciled paste-resist imitation tie-dyed (kata kanoko) with silk and gilt-paper-wrapped silk thread embroidery.",
 "image": "https://collections-images.lacma.org/images/69366/69366-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/69366"
 },
@@ -1660,7 +1597,7 @@
 "title": "Kosode (Kimono) Fragment with Fans, Blossoming Cherry Branch, and Water",
 "artist": "Unknown",
 "year": "Edo period (1615-1868), 18th century",
-"medium": "Silk figured satin (rinzu) with appliqu\u00e9s and silk and gilt-paper-wrapped-silk thread embroidery",
+"medium": "Silk figured satin (rinzu) with appliqués and silk and gilt-paper-wrapped-silk thread embroidery",
 "image": "https://collections-images.lacma.org/images/1161/1161-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/1161"
 },
@@ -1693,8 +1630,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les tailleurs n'ayant cess\u00e9 la gr\u00e8ve qu'\u00e0 la condition de voir diminuer leur travail.",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"title": "Les tailleurs n'ayant cessé la grève qu'à la condition de voir diminuer leur travail.",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1867",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/5711/5711-1-desktop.jpg",
@@ -1702,8 +1639,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "En voil\u00e0 assez!  Faut plus que tu grandisses!  C'est dans l'int\u00e9r\u00eat de ta sante, ce que je t'en dis l\u00e0.",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"title": "En voilà assez!  Faut plus que tu grandisses!  C'est dans l'intérêt de ta sante, ce que je t'en dis là.",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1867",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/5668/5668-1-desktop.jpg",
@@ -1720,8 +1657,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Voil\u00e0 un sou!  Promettez moi que vous changerez votre politique.",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"title": "Voilà un sou!  Promettez moi que vous changerez votre politique.",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1867",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/5879/5879-1-desktop.jpg",
@@ -1730,7 +1667,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Serenade",
-"artist": "Mariano Jos\u00e9 Maria Bernardo Fortuny y Carb\u00f3  Spain, Reus, 1838-1874",
+"artist": "Mariano José Maria Bernardo Fortuny y Carbó  Spain, Reus, 1838-1874",
 "year": "circa 1866",
 "medium": "Etching and aquatint",
 "image": "https://collections-images.lacma.org/images/37210/37210-1-desktop.jpg",
@@ -1738,7 +1675,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Namikiri J\u016bzabor\u014d with Drawn Sword",
+"title": "Namikiri Jūzaborō with Drawn Sword",
 "artist": "Tsukioka Yoshitoshi",
 "year": "1866, 2nd month",
 "medium": "Color woodblock print",
@@ -1756,7 +1693,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Actor Kawarasaki Gonj\u016br\u014d for a Fire Troupe",
+"title": "The Actor Kawarasaki Gonjūrō for a Fire Troupe",
 "artist": "Tsukioka Yoshitoshi  Japan, 1839-1892",
 "year": "1865, 8th month",
 "medium": "color woodblock print",
@@ -1766,7 +1703,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Tachant de profiter de ce que l'attention se detourne un instant pour mettre son affaire dans le sac",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1865",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/5630/5630-1-desktop.jpg",
@@ -1783,8 +1720,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Monsieur Alexandre Dumas fils recevant des commandes de tous les c\u00f4t\u00e9s ses tableaux se vendant tr\u00e8s bien",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"title": "Monsieur Alexandre Dumas fils recevant des commandes de tous les côtés ses tableaux se vendant très bien",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1865",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/6034/6034-1-desktop.jpg",
@@ -1819,7 +1756,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Bris\u00e9 Fan with Box",
+"title": "Brisé Fan with Box",
 "artist": "Unknown",
 "year": "1865",
 "medium": "a) Fan:  Ivory sticks and loop, fifteen ivory leaves, silk ribbon; b) Box:  paper",
@@ -1828,7 +1765,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "R\u00e9conciliation \u00e0 l'Am\u00e9ricaine",
+"title": "Réconciliation à l'Américaine",
 "artist": "Alfred-Henri Darjou",
 "year": "1864",
 "medium": "Lithograph",
@@ -1837,17 +1774,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les ombres de Pitt et de Cobourg f\u00eatant la r\u00e9edification de le Sainte-alliance.",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
-"year": "1864",
-"medium": "Lithograph",
-"image": "https://collections-images.lacma.org/images/5674/5674-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/5674"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Le veau d'or se trouvant compl\u00eatement d\u00e9gomm\u00e9 par le cheval de course",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"title": "Le veau d'or se trouvant complêtement dégommé par le cheval de course",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1864",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/6031/6031-1-desktop.jpg",
@@ -1855,8 +1783,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Yoshitsune Training with the Tengu S\u014dj\u014db\u014d",
-"artist": "Kawanabe Ky\u014dsai  Japan, 1831-1889",
+"title": "Yoshitsune Training with the Tengu Sōjōbō",
+"artist": "Kawanabe Kyōsai  Japan, 1831-1889",
 "year": "1863, 9th month",
 "medium": "Color woodblock print",
 "image": "https://collections-images.lacma.org/images/89199/89199-1-desktop.jpg",
@@ -1865,7 +1793,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Self-Portrait in Indian Costume",
-"artist": "Nadar (Gaspard-F\u00e9lix Tournachon)  France, 1820-1910",
+"artist": "Nadar (Gaspard-Félix Tournachon)  France, 1820-1910",
 "year": "circa 1863",
 "medium": "Albumen silver print",
 "image": "https://collections-images.lacma.org/images/94362/94362-1-desktop.jpg",
@@ -1873,8 +1801,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "La Grande Berg\u00e8re",
-"artist": "Jean-Fran\u00e7ois Millet  France, Gruchy, 1814-1875",
+"title": "La Grande Bergère",
+"artist": "Jean-François Millet  France, Gruchy, 1814-1875",
 "year": "1862",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/69693/69693-1-desktop.jpg",
@@ -2071,8 +1999,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les L\u00e9gendes Flamandes",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Les Légendes Flamandes",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1858",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/36719/36719-1-desktop.jpg",
@@ -2080,7 +2008,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "\u00c9tudes Maritimes",
+"title": "Études Maritimes",
 "artist": "Jules Renard-Draner",
 "year": "1857",
 "medium": "Lithograph",
@@ -2089,8 +2017,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "La P\u00eache",
-"artist": "Pierre-Edmond-Alexandre H\u00e9douin",
+"title": "La Pêche",
+"artist": "Pierre-Edmond-Alexandre Hédouin",
 "year": "1857",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/48307/48307-1-desktop.jpg",
@@ -2107,7 +2035,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Bord de la Meuse \u00e0 Zwindrecht",
+"title": "Bord de la Meuse à Zwindrecht",
 "artist": "August-Paul-Charles Anastasi  France, 1820-1889",
 "year": "1857",
 "medium": "Lithograph",
@@ -2117,7 +2045,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "L'Empereur de Chine trouvant un protecteur",
-"artist": "Cham (Count Am\u00e9d\u00e9e-Charles-Henry de No\u00e9)",
+"artist": "Cham (Count Amédée-Charles-Henry de Noé)",
 "year": "1857",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/6016/6016-1-desktop.jpg",
@@ -2126,7 +2054,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Les Faillites de Cupidon",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1856",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/112180/112180-1-desktop.jpg",
@@ -2144,7 +2072,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Faubourg de Cologne",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1856",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/112279/112279-1-desktop.jpg",
@@ -2152,8 +2080,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les Th\u00e9\u00e2tres au mois d'Ao\u00fbt",
-"artist": "Honor\u00e9 Daumier",
+"title": "Les Théâtres au mois d'Août",
+"artist": "Honoré Daumier",
 "year": "1856",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111613/111613-1-desktop.jpg",
@@ -2162,7 +2090,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "L'Art",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "1856",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/48334/48334-1-desktop.jpg",
@@ -2179,8 +2107,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Le R\u00e9gisseur. - Vous avez beau jouer les rois...",
-"artist": "Honor\u00e9 Daumier",
+"title": "Le Régisseur. - Vous avez beau jouer les rois...",
+"artist": "Honoré Daumier",
 "year": "1856",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111324/111324-1-desktop.jpg",
@@ -2189,7 +2117,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Sortie",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1855",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111700/111700-1-desktop.jpg",
@@ -2225,7 +2153,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Dans une salle de spectacle",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1854",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111542/111542-1-desktop.jpg",
@@ -2252,7 +2180,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "J'veux aussi qu'on me fasse...",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1851",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111536/111536-1-desktop.jpg",
@@ -2261,7 +2189,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Hamlet",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1851",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/65292/65292-1-desktop.jpg",
@@ -2269,8 +2197,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "On dit que les jolies femmes sont...demand\u00e9es...",
-"artist": "Honor\u00e9 Daumier",
+"title": "On dit que les jolies femmes sont...demandées...",
+"artist": "Honoré Daumier",
 "year": "1851",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111487/111487-1-desktop.jpg",
@@ -2324,7 +2252,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Blind Man with Stone in Clog",
-"artist": "Suganoya Sh\u014dko",
+"artist": "Suganoya Shōko",
 "year": "mid-19th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/89787/89787-1-desktop.jpg",
@@ -2341,7 +2269,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Ry\u016bjin: Ruler of Seas and Tides",
+"title": "Ryūjin: Ruler of Seas and Tides",
 "artist": "Unknown",
 "year": "late 19th century",
 "medium": "Wood",
@@ -2360,7 +2288,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Sparrow on Tile",
-"artist": "\u014chara Mitsuhiro",
+"artist": "Ōhara Mitsuhiro",
 "year": "mid-19th century",
 "medium": "Ebony with inlays",
 "image": "https://collections-images.lacma.org/images/89829/89829-1-desktop.jpg",
@@ -2378,7 +2306,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Chinese Lion on a Roof Tile",
-"artist": "Tanaka Mink\u014d",
+"artist": "Tanaka Minkō",
 "year": "late 18th-early 19th century",
 "medium": "Wood with inlays",
 "image": "https://collections-images.lacma.org/images/89949/89949-1-desktop.jpg",
@@ -2398,14 +2326,14 @@
 "title": "Woman's Shawl",
 "artist": "Unknown",
 "year": "mid-19th century",
-"medium": "Silk damask with silk macram\u00e9 and fringe",
+"medium": "Silk damask with silk macramé and fringe",
 "image": "https://collections-images.lacma.org/images/58702/58702-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/58702"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Sh\u014dj\u014d",
-"artist": "Kimura Ry\u016bmin",
+"title": "Shōjō",
+"artist": "Kimura Ryūmin",
 "year": "mid- to late 19th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/90177/90177-1-desktop.jpg",
@@ -2414,7 +2342,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Aoi Matsuri Shrine Horse and Archers",
-"artist": "Kinoshita Rosh\u016b",
+"artist": "Kinoshita Roshū",
 "year": "19th century",
 "medium": "Color woodblock print; surimono, with silver and lacquer",
 "image": "https://collections-images.lacma.org/images/88426/88426-1-desktop.jpg",
@@ -2422,16 +2350,16 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Inr\u014d, Ojime, and Netsuke",
+"title": "Inrō, Ojime, and Netsuke",
 "artist": "Unknown",
 "year": "19th century",
-"medium": "Inr\u014d: Keyaki wood with lacquer, simulated inlays, and mother-of-pearl; Ojime: agate; Netsuke: paulownia wood",
+"medium": "Inrō: Keyaki wood with lacquer, simulated inlays, and mother-of-pearl; Ojime: agate; Netsuke: paulownia wood",
 "image": "https://collections-images.lacma.org/images/85038/85038-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/85038"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Ichikawa Kodanji IV as Hige no Iky\u016b, Band\u014d Sh\u016bka I as Miuraya Agemaki, and Ichikawa Danj\u016br\u014d VIII as Agemaki no Sukeroku in the play Sukeroku",
+"title": "Ichikawa Kodanji IV as Hige no Ikyū, Bandō Shūka I as Miuraya Agemaki, and Ichikawa Danjūrō VIII as Agemaki no Sukeroku in the play Sukeroku",
 "artist": "Utagawa Kunisada (Toyokuni III)",
 "year": "1850",
 "medium": "Triptych; color woodblock prints",
@@ -2452,7 +2380,7 @@
 "title": "Pair of Half Sleeves",
 "artist": "Unknown",
 "year": "mid-19th century",
-"medium": "Cotton Carrickmacross appliqu\u00e9 on cotton machine net",
+"medium": "Cotton Carrickmacross appliqué on cotton machine net",
 "image": "https://collections-images.lacma.org/images/4483/4483-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/4483"
 },
@@ -2477,7 +2405,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Yorimasa: The Master Archer",
-"artist": "Sh\u016b\u014dsai Hidemasa II  Japan, active mid-19th century",
+"artist": "Shūōsai Hidemasa II  Japan, active mid-19th century",
 "year": "mid-19th century",
 "medium": "Ivory with staining, sumi",
 "image": "https://collections-images.lacma.org/images/89469/89469-1-desktop.jpg",
@@ -2503,17 +2431,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Itinerant Priest",
-"artist": "Unknown",
-"year": "19th century",
-"medium": "Wood",
-"image": "https://collections-images.lacma.org/images/89900/89900-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/89900"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Namanari",
-"artist": "Kimura Ry\u016bmin",
+"artist": "Kimura Ryūmin",
 "year": "mid- to late 19th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/89965/89965-1-desktop.jpg",
@@ -2585,20 +2504,11 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Fukurokuju: God of Wisdom",
-"artist": "Sueyoshi Sekish\u016b  Japan, active late 18th-early 19th century",
+"artist": "Sueyoshi Sekishū  Japan, active late 18th-early 19th century",
 "year": "late 18th-early 19th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/84830/84830-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/84830"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "A Priest or a Saint",
-"artist": "Unknown",
-"year": "18th-19th century",
-"medium": "Ink on paper",
-"image": "https://collections-images.lacma.org/images/30942/30942-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/30942"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -2656,10 +2566,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Inr\u014d, Ojime, Netsuke",
+"title": "Inrō, Ojime, Netsuke",
 "artist": "Jitokusai Gyokuzan  Japan, active circa 1800-1830",
 "year": "early 19th century",
-"medium": "Inr\u014d: lacquer on substrate, mixed metal flecks; Ojime: glass; Netsuke: lacquer on wood with inlaid gold",
+"medium": "Inrō: lacquer on substrate, mixed metal flecks; Ojime: glass; Netsuke: lacquer on wood with inlaid gold",
 "image": "https://collections-images.lacma.org/images/85188/85188-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/85188"
 },
@@ -2693,9 +2603,9 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Kane-jo Halting a Runaway Horse",
-"artist": "Ichiy\u016bsai Naomitsu",
+"artist": "Ichiyūsai Naomitsu",
 "year": "late 18th-early 19th century",
-"medium": "Ivory with staining, sumi; manj\u016b type",
+"medium": "Ivory with staining, sumi; manjū type",
 "image": "https://collections-images.lacma.org/images/84884/84884-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/84884"
 },
@@ -2711,7 +2621,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Yorimasa",
-"artist": "Kimura Ry\u016bmin",
+"artist": "Kimura Ryūmin",
 "year": "mid- to late 19th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/90048/90048-1-desktop.jpg",
@@ -2756,7 +2666,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Raconteur",
-"artist": "\u014chara Mitsuhiro",
+"artist": "Ōhara Mitsuhiro",
 "year": "mid-19th century",
 "medium": "Wood with inlays",
 "image": "https://collections-images.lacma.org/images/89623/89623-1-desktop.jpg",
@@ -2828,7 +2738,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Frame",
-"artist": "Faberg\u00e9",
+"artist": "Fabergé",
 "year": "late 19th century",
 "medium": "Gold, enamel",
 "image": "https://collections-images.lacma.org/images/42424/42424-1-desktop.jpg",
@@ -2920,7 +2830,7 @@
 "title": "Sake Bottle",
 "artist": "Unknown",
 "year": "Edo period, 18th - first half 19th century",
-"medium": "Sh\u014ddai ware; stoneware with iron and rice straw ash glazes",
+"medium": "Shōdai ware; stoneware with iron and rice straw ash glazes",
 "image": "https://collections-images.lacma.org/images/140536/140536-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/140536"
 },
@@ -2953,7 +2863,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Censer (k\u014dr\u014d) with Landscape and Basketry Cartouche Design",
+"title": "Censer (kōrō) with Landscape and Basketry Cartouche Design",
 "artist": "Unknown",
 "year": "late 19th century",
 "medium": "Hirado ware; porcelain with underglaze blue",
@@ -3016,17 +2926,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Angel with Bird",
-"artist": "Unknown",
-"year": "19th century",
-"medium": "Oil on canvas",
-"image": "https://collections-images.lacma.org/images/44285/44285-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/44285"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Birds, Mandarin Ducks, and Flowers",
-"artist": "Okamoto Sh\u016bki  Japan, 1807-1862",
+"artist": "Okamoto Shūki  Japan, 1807-1862",
 "year": "19th century",
 "medium": "Hanging scroll; ink and colors on silk",
 "image": "https://collections-images.lacma.org/images/206299/206299-1-desktop.jpg",
@@ -3071,7 +2972,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Proudhon",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1849",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111354/111354-1-desktop.jpg",
@@ -3088,8 +2989,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "C'est pourtant l\u00e0 que j'ai grav\u00e9 mon chiffre...",
-"artist": "Honor\u00e9 Daumier",
+"title": "C'est pourtant là que j'ai gravé mon chiffre...",
+"artist": "Honoré Daumier",
 "year": "1849",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111455/111455-1-desktop.jpg",
@@ -3097,7 +2998,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Actor Kataoka Gad\u014d II as Matsu Tajima in the Play Keisei Hanabusa s\u014dshi",
+"title": "The Actor Kataoka Gadō II as Matsu Tajima in the Play Keisei Hanabusa sōshi",
 "artist": "Utagawa Hirosada  Japan, active circa 1820-1860",
 "year": "1849",
 "medium": "Color woodblock print",
@@ -3115,8 +3016,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "\u00c0 la recherche d'une for\u00eat en Champagne",
-"artist": "Honor\u00e9 Daumier",
+"title": "À la recherche d'une forêt en Champagne",
+"artist": "Honoré Daumier",
 "year": "1848",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111495/111495-1-desktop.jpg",
@@ -3124,8 +3025,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Oui c'est bien feu ma femme!...seulement je trouve que vous l'avez trop flatt\u00e9e!...",
-"artist": "Honor\u00e9 Daumier",
+"title": "Oui c'est bien feu ma femme!...seulement je trouve que vous l'avez trop flattée!...",
+"artist": "Honoré Daumier",
 "year": "1847",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/17682/17682-1-desktop.jpg",
@@ -3154,7 +3055,7 @@
 "title": "Joueur de guitare",
 "artist": "Charles-Emile Jacque",
 "year": "1845",
-"medium": "Etching on chine coll\u00e9",
+"medium": "Etching on chine collé",
 "image": "https://collections-images.lacma.org/images/39975/39975-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/39975"
 },
@@ -3178,8 +3079,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Satan\u00e9 piallard d'enfant va!...",
-"artist": "Honor\u00e9 Daumier",
+"title": "Satané piallard d'enfant va!...",
+"artist": "Honoré Daumier",
 "year": "1844",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111364/111364-1-desktop.jpg",
@@ -3188,7 +3089,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Les Chemins de Fer (series of prints)",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1843",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/152276/152276-1-desktop.jpg",
@@ -3232,8 +3133,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Attention, Gargouillet, v'l\u00e0 le bourgeois qui passe...",
-"artist": "Honor\u00e9 Daumier",
+"title": "Attention, Gargouillet, v'là le bourgeois qui passe...",
+"artist": "Honoré Daumier",
 "year": "1842",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111399/111399-1-desktop.jpg",
@@ -3241,8 +3142,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Impressions de voyage d'un grand po\u00e8te",
-"artist": "Honor\u00e9 Daumier",
+"title": "Impressions de voyage d'un grand poète",
+"artist": "Honoré Daumier",
 "year": "1842",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/153352/153352-1-desktop.jpg",
@@ -3251,7 +3152,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Le Marchand d'habits",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1842",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/110890/110890-1-desktop.jpg",
@@ -3287,7 +3188,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Types Parisiens (series of prints)",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1839",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/152202/152202-1-desktop.jpg",
@@ -3296,7 +3197,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "11 heures du matin",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1839",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/111333/111333-1-desktop.jpg",
@@ -3305,7 +3206,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Croquis d'Expressions (series of prints)",
-"artist": "Honor\u00e9 Daumier",
+"artist": "Honoré Daumier",
 "year": "1838",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/152274/152274-1-desktop.jpg",
@@ -3341,7 +3242,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Interior of a Port",
-"artist": "Eug\u00e8ne Isabey",
+"artist": "Eugène Isabey",
 "year": "1833",
 "medium": "Lithograph, laid down",
 "image": "https://collections-images.lacma.org/images/73775/73775-1-desktop.jpg",
@@ -3350,7 +3251,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Refitting a Boat at Low Tide",
-"artist": "Eug\u00e8ne Isabey",
+"artist": "Eugène Isabey",
 "year": "1833",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/73815/73815-1-desktop.jpg",
@@ -3412,7 +3313,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, \u2018Promenade Dress\u2019 for \u2018The Repository of Arts\u2019",
+"title": "Fashion Plate, ‘Promenade Dress’ for ‘The Repository of Arts’",
 "artist": "Rudolph Ackermann",
 "year": "February 1, 1828",
 "medium": "Hand-colored engraving on paper",
@@ -3427,15 +3328,6 @@
 "medium": "Hand-colored engraving on paper",
 "image": "https://collections-images.lacma.org/images/55744/55744-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/55744"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "The Fall of Satan",
-"artist": "William Blake",
-"year": "published 1826",
-"medium": "Engraving on laid India (or China) paper",
-"image": "https://collections-images.lacma.org/images/105620/105620-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/105620"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -3457,7 +3349,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, \u2018Ball Dress\u2019 for \u2018The Repository of Arts\u2019",
+"title": "Fashion Plate, ‘Ball Dress’ for ‘The Repository of Arts’",
 "artist": "Rudolph Ackermann",
 "year": "June 1, 1826",
 "medium": "Hand-colored engraving on paper",
@@ -3520,7 +3412,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, 'Carriage Dress' for 'La Belle Assembl\u00e9e'",
+"title": "Fashion Plate, 'Carriage Dress' for 'La Belle Assemblée'",
 "artist": "John Bell",
 "year": "February 1, 1824",
 "medium": "Hand-colored engraving on paper",
@@ -3529,7 +3421,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, \u2018Dinner Dress\u2019 for \u2018The Repository of Arts\u2019",
+"title": "Fashion Plate, ‘Dinner Dress’ for ‘The Repository of Arts’",
 "artist": "Rudolph Ackermann",
 "year": "May 1, 1824",
 "medium": "Hand-colored engraving on paper",
@@ -3538,8 +3430,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les extr\u00eames se touchent",
-"artist": "Joseph-Louis-Hippolyte Bellang\u00e9  France, Paris, 1800-1866",
+"title": "Les extrêmes se touchent",
+"artist": "Joseph-Louis-Hippolyte Bellangé  France, Paris, 1800-1866",
 "year": "1823",
 "medium": "Lithograph",
 "image": "https://collections-images.lacma.org/images/15904/15904-1-desktop.jpg",
@@ -3556,7 +3448,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, 'Ball Dress' for 'La Belle Assembl\u00e9e'",
+"title": "Fashion Plate, 'Ball Dress' for 'La Belle Assemblée'",
 "artist": "John Bell",
 "year": "June 11, 1822",
 "medium": "Hand-colored engraving on paper",
@@ -3583,7 +3475,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, 'Walking Dress' for 'La Belle Assembl\u00e9e'",
+"title": "Fashion Plate, 'Walking Dress' for 'La Belle Assemblée'",
 "artist": "John Bell",
 "year": "May 1, 1820",
 "medium": "Hand-colored engraving on paper",
@@ -3610,21 +3502,12 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, 'Morning Dress' for 'La Belle Assembl\u00e9e'",
+"title": "Fashion Plate, 'Morning Dress' for 'La Belle Assemblée'",
 "artist": "John Bell",
 "year": "May 1, 1817",
 "medium": "Hand-colored engraving on paper",
 "image": "https://collections-images.lacma.org/images/55605/55605-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/55605"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Sh\u014dki, the Demon Queller",
-"artist": "Attributed to Kitagawa Kikumaro (Tsukimaro)",
-"year": "circa 1805-1815",
-"medium": "Color woodblock print",
-"image": "https://collections-images.lacma.org/images/131428/131428-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/131428"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -3709,7 +3592,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Fashion Plate, 'Female Costume of Egra/London Morning Dress' for 'La Belle Assembl\u00e9e'",
+"title": "Fashion Plate, 'Female Costume of Egra/London Morning Dress' for 'La Belle Assemblée'",
 "artist": "Unknown",
 "year": "April 1, 1808",
 "medium": "Hand-colored engraving on paper",
@@ -3727,7 +3610,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Act III from the Play Kanadehon Ch\u016bshingura, \"A Kana Primer for the Treasury of Loyal Retainers\"",
+"title": "Act III from the Play Kanadehon Chūshingura, \"A Kana Primer for the Treasury of Loyal Retainers\"",
 "artist": "Katsushika Hokusai",
 "year": "1806",
 "medium": "Color woodblock print",
@@ -3736,7 +3619,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Actors Band\u014d Mitsugor\u014d and Iwai Hanshir\u014d",
+"title": "Actors Bandō Mitsugorō and Iwai Hanshirō",
 "artist": "Utagawa Toyokuni I",
 "year": "1806",
 "medium": "Color woodblock print",
@@ -3799,7 +3682,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Play Yoshitsune Senbonzakura Starring Ichikawa Danjoz\u014d and Ichikawa Yabaiz\u014d",
+"title": "The Play Yoshitsune Senbonzakura Starring Ichikawa Danjozō and Ichikawa Yabaizō",
 "artist": "Utagawa Toyokuni I",
 "year": "circa 1800",
 "medium": "Color woodblock print",
@@ -3823,15 +3706,6 @@
 "medium": "Cotton quilting in jacquard marseilles work",
 "image": "https://collections-images.lacma.org/images/136615/136615-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/136615"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Krishna Riding a Composite Horse",
-"artist": "Unknown",
-"year": "circa 1800",
-"medium": "Ink, opaque watercolor, and gold on paper",
-"image": "https://collections-images.lacma.org/images/65987/65987-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/65987"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -3907,7 +3781,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Illustration to Becker's Pocketbook f\u00fcr 1799",
+"title": "Illustration to Becker's Pocketbook für 1799",
 "artist": "Daniel Nikolaus Chodowiecki",
 "year": "1799",
 "medium": "Etching",
@@ -3925,7 +3799,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Two Ky\u014dka poets: Kink\u014dsha Kadomichi; Fukujus\u014d Sh\u014dmaru",
+"title": "Two Kyōka poets: Kinkōsha Kadomichi; Fukujusō Shōmaru",
 "artist": "Katsushika Hokusai",
 "year": "circa 1796-1798",
 "medium": "Color woodblock print",
@@ -3934,7 +3808,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Paysanne de Schwatzenbourgenghusse'",
+"title": "Costumes de Différents Pays, 'Paysanne de Schwatzenbourgenghusse'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3943,7 +3817,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Femme du Brabant'",
+"title": "Costumes de Différents Pays, 'Femme du Brabant'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3952,7 +3826,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Ancienne Amazone'",
+"title": "Costumes de Différents Pays, 'Ancienne Amazone'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3961,7 +3835,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Homme Patagon'",
+"title": "Costumes de Différents Pays, 'Homme Patagon'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3970,7 +3844,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Sauvagesse de la Terre de Natal'",
+"title": "Costumes de Différents Pays, 'Sauvagesse de la Terre de Natal'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3979,7 +3853,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Paysanne d'Hanac en Boheme'",
+"title": "Costumes de Différents Pays, 'Paysanne d'Hanac en Boheme'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3988,7 +3862,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Homme Barabinze'",
+"title": "Costumes de Différents Pays, 'Homme Barabinze'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -3997,7 +3871,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Hongroise'",
+"title": "Costumes de Différents Pays, 'Hongroise'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -4006,7 +3880,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Homme Mordwine'",
+"title": "Costumes de Différents Pays, 'Homme Mordwine'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -4024,7 +3898,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Guerrier de Longo'",
+"title": "Costumes de Différents Pays, 'Guerrier de Longo'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -4033,7 +3907,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Costumes de Diff\u00e9rents Pays, 'Persan'",
+"title": "Costumes de Différents Pays, 'Persan'",
 "artist": "L. F. Labrousse",
 "year": "circa 1797",
 "medium": "Hand-tinted engraving on paper",
@@ -4051,7 +3925,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Segawa Kikunoj\u014d III in a Female Role",
+"title": "Segawa Kikunojō III in a Female Role",
 "artist": "Katsukawa Shun'ei",
 "year": "circa 1790-1795",
 "medium": "Color woodblock print",
@@ -4133,7 +4007,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Suma",
-"artist": "Ch\u014dbunsai Eishi",
+"artist": "Chōbunsai Eishi",
 "year": "circa 1790",
 "medium": "Color woodblock print, one sheet from a triptych; benigirai-e, red-hating picture",
 "image": "https://collections-images.lacma.org/images/134397/134397-1-desktop.jpg",
@@ -4186,7 +4060,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Woman's Dress and Petticoat (Robe \u00e0 la fran\u00e7aise)",
+"title": "Woman's Dress and Petticoat (Robe à la française)",
 "artist": "Unknown",
 "year": "1775-1785",
 "medium": "Cotton plain weave, block printed and glazed",
@@ -4267,8 +4141,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Iwai Hanshir\u014d IV in a Female Role, Holding a Branch of Bush Clover",
-"artist": "Katsukawa Shunsh\u014d  Japan, 1726-1792",
+"title": "Iwai Hanshirō IV in a Female Role, Holding a Branch of Bush Clover",
+"artist": "Katsukawa Shunshō  Japan, 1726-1792",
 "year": "circa 1778-1783",
 "medium": "Color woodblock print",
 "image": "https://collections-images.lacma.org/images/183226/183226-1-desktop.jpg",
@@ -4330,7 +4204,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Woman's Dress (Robe \u00e0 l'anglaise)",
+"title": "Woman's Dress (Robe à l'anglaise)",
 "artist": "Unknown",
 "year": "1770-1780",
 "medium": "Silk plain weave with supplementary warp- and weft-float patterning",
@@ -4366,7 +4240,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les Fol\u00e2tres Jeux font les premiers cuisiniers du monde",
+"title": "Les Folâtres Jeux font les premiers cuisiniers du monde",
 "artist": "Nicolas de Launay",
 "year": "1778",
 "medium": "Etching and engraving",
@@ -4375,10 +4249,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Woman's Dress and Petticoat (Robe \u00e0 la fran\u00e7aise)",
+"title": "Woman's Dress and Petticoat (Robe à la française)",
 "artist": "Unknown",
 "year": "circa 1775",
-"medium": "Silk plain weave (faille) with supplementary weft-float patterning, moir\u00e9 finish, and silk passementerie with silk fly fringe",
+"medium": "Silk plain weave (faille) with supplementary weft-float patterning, moiré finish, and silk passementerie with silk fly fringe",
 "image": "https://collections-images.lacma.org/images/137344/137344-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/137344"
 },
@@ -4417,15 +4291,6 @@
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/61546/61546-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/61546"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Scenes from the Life of Krishna, Folio from a Bhagavata Purana (Ancient Stories of the Lord)",
-"artist": "Unknown",
-"year": "circa 1775",
-"medium": "Opaque watercolor, gold, and ink on paper",
-"image": "https://collections-images.lacma.org/images/44281/44281-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/44281"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -4537,10 +4402,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Man\u2019s Suit (Jacket, Vest, and Breeches)",
+"title": "Man’s Suit (Jacket, Vest, and Breeches)",
 "artist": "Unknown",
 "year": "circa 1760",
-"medium": "Silk plain weave (faille), moir\u00e9 finish, with sequins and metallic-thread embroidery",
+"medium": "Silk plain weave (faille), moiré finish, with sequins and metallic-thread embroidery",
 "image": "https://collections-images.lacma.org/images/137386/137386-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/137386"
 },
@@ -4561,15 +4426,6 @@
 "medium": "Brocaded silk, leather, and linen",
 "image": "https://collections-images.lacma.org/images/43586/43586-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/43586"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Christ on the Cross",
-"artist": "Ubaldo Gandolfi  Italy, Bologna, 1728-1781",
-"year": "18th century",
-"medium": "Pen and brown ink and wash",
-"image": "https://collections-images.lacma.org/images/19868/19868-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/19868"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -4646,7 +4502,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Bizen Pottery Sherd",
-"artist": "Gech\u016b",
+"artist": "Gechū",
 "year": "18th century",
 "medium": "Wood",
 "image": "https://collections-images.lacma.org/images/89837/89837-1-desktop.jpg",
@@ -4663,10 +4519,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Landscapes (Inr\u014d/Ojime/Netsuke Ensemble)",
+"title": "Landscapes (Inrō/Ojime/Netsuke Ensemble)",
 "artist": "Unknown",
 "year": "18th century",
-"medium": "[inr\u014d] carved red lacquer; [ojime] agate; [netsuke] carved red and black lacquer",
+"medium": "[inrō] carved red lacquer; [ojime] agate; [netsuke] carved red and black lacquer",
 "image": "https://collections-images.lacma.org/images/87741/87741-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/87741"
 },
@@ -4708,15 +4564,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Death of St. Joseph",
-"artist": "Unknown",
-"year": "18th century",
-"medium": "Pen and brown ink over traces of black chalk",
-"image": "https://collections-images.lacma.org/images/46754/46754-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/46754"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Weird Cat",
 "artist": "Unknown",
 "year": "18th century",
@@ -4754,7 +4601,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Pack Horse and Driver",
-"artist": "After Watanabe Shik\u014d  Japan, 1683-1755",
+"artist": "After Watanabe Shikō  Japan, 1683-1755",
 "year": "18th century",
 "medium": "Page from a woodblock printed book",
 "image": "https://collections-images.lacma.org/images/103221/103221-1-desktop.jpg",
@@ -4808,7 +4655,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Artist in His Studio",
-"artist": "Fran\u00e7ois Boucher",
+"artist": "François Boucher",
 "year": "circa 1733",
 "medium": "Red chalk, heightened with white",
 "image": "https://collections-images.lacma.org/images/20914/20914-1-desktop.jpg",
@@ -4831,15 +4678,6 @@
 "medium": "Linen bobbin lace",
 "image": "https://collections-images.lacma.org/images/25601/25601-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/25601"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Krishna Quelling the Serpent King Kaliya (recto), Text (verso), Folio from a Bhagavata Purana (Ancient Stories of the Lord)",
-"artist": "Unknown",
-"year": "1718",
-"medium": "Opaque watercolor and ink on paper",
-"image": "https://collections-images.lacma.org/images/28767/28767-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/28767"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -4876,15 +4714,6 @@
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/36582/36582-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/36582"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Abraham de Fabert, Marshal of France",
-"artist": "G\u00e9rard Edelinck",
-"year": "1698 (?)",
-"medium": "Engraving",
-"image": "https://collections-images.lacma.org/images/66453/66453-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/66453"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -4960,21 +4789,12 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Charles d'Orl\u00e9ans-Longueville, Comte de Dunois",
+"title": "Charles d'Orléans-Longueville, Comte de Dunois",
 "artist": "Robert Nanteuil",
 "year": "1660",
 "medium": "Engraving",
 "image": "https://collections-images.lacma.org/images/62684/62684-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/62684"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "The Annunciation",
-"artist": "Jan Boeckhorst (called Lange Jan)  Germany, Munster, 1605-1668, active Southern Netherlands",
-"year": "circa 1659",
-"medium": "Gouache, brown wash and black chalk on prepared paper (sheet slightly enlarged)",
-"image": "https://collections-images.lacma.org/images/141227/141227-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/141227"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -5032,15 +4852,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Hindu Goddess Durga",
-"artist": "Unknown",
-"year": "late 17th century",
-"medium": "Opaque watercolor and silver on paper",
-"image": "https://collections-images.lacma.org/images/53265/53265-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/53265"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Textile Fragment",
 "artist": "Unknown",
 "year": "17th century",
@@ -5077,19 +4888,10 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The True Portrait of Saint Dominic Brought Down from Heaven by Saints Catherine and Mary Magdalene",
-"artist": "Unknown",
-"year": "17th century",
-"medium": "Red and black chalk",
-"image": "https://collections-images.lacma.org/images/30329/30329-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/30329"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Textile Fragment",
 "artist": "Unknown",
 "year": "17th century",
-"medium": "Silk cut, uncut, and voided velvet (cisel\u00e9)",
+"medium": "Silk cut, uncut, and voided velvet (ciselé)",
 "image": "https://collections-images.lacma.org/images/151135/151135-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/151135"
 },
@@ -5116,7 +4918,7 @@
 "title": "Textile Length",
 "artist": "Unknown",
 "year": "last quarter of the 17th century",
-"medium": "Silk and wool satin with silk satin appliqu\u00e9 and silk-cord embroidery, painted",
+"medium": "Silk and wool satin with silk satin appliqué and silk-cord embroidery, painted",
 "image": "https://collections-images.lacma.org/images/59363/59363-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/59363"
 },
@@ -5240,7 +5042,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Susanna and the Elders",
-"artist": "Ren\u00e9 Boyvin",
+"artist": "René Boyvin",
 "year": "circa 1525-1625",
 "medium": "Engraving",
 "image": "https://collections-images.lacma.org/images/60194/60194-1-desktop.jpg",
@@ -5338,15 +5140,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Temptation of Adam",
-"artist": "Jan Pietersz. Saenredam  Northern Netherlands, circa 1565-1607",
-"year": "1604",
-"medium": "Engraving",
-"image": "https://collections-images.lacma.org/images/60468/60468-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/60468"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "God Creating the Land Animals",
 "artist": "Antonio Tempesta",
 "year": "circa 1600",
@@ -5375,7 +5168,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Jeanne d'Albret, Queen of Navarre",
-"artist": "L\u00e9onard Gaultier",
+"artist": "Léonard Gaultier",
 "year": "1596",
 "medium": "Engraving",
 "image": "https://collections-images.lacma.org/images/66527/66527-1-desktop.jpg",
@@ -5473,15 +5266,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Holy Family with Saint Elizabeth and Saint John the Baptist",
-"artist": "Aegidius Sadeler II",
-"year": "1593",
-"medium": "Engraving",
-"image": "https://collections-images.lacma.org/images/60712/60712-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/60712"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Babur Marches from Kabul to Hindustan in 1507 (recto); Text (verso); Folio from a Baburnama (Memoirs of Babur)",
 "artist": "Unknown",
 "year": "1589-1590",
@@ -5563,7 +5347,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Portrait of Lady Fran\u00e7oise van Egmond",
+"title": "Portrait of Lady Françoise van Egmond",
 "artist": "Hendrick Goltzius  Northern Netherlands, 1558-1617",
 "year": "1580",
 "medium": "Engraving",
@@ -5573,7 +5357,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Ruins of the Temple of Vespasian",
-"artist": "Etienne Dup\u00e9rac",
+"artist": "Etienne Dupérac",
 "year": "1575",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/54947/54947-1-desktop.jpg",
@@ -5618,7 +5402,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "The Death of the Wife of Asdrubal",
-"artist": "Pierre Woeiriot  France, Vosges, Neufch\u00e2teau, 1532-1599",
+"artist": "Pierre Woeiriot  France, Vosges, Neufchâteau, 1532-1599",
 "year": "circa 1555-1560",
 "medium": "Engraving",
 "image": "https://collections-images.lacma.org/images/46641/46641-1-desktop.jpg",
@@ -5656,7 +5440,7 @@
 "title": "Textile Fragment",
 "artist": "Unknown",
 "year": "fourth quarter of the 16th century",
-"medium": "Linen and wool pile-on-pile velvet (moquette velout\u00e9)",
+"medium": "Linen and wool pile-on-pile velvet (moquette velouté)",
 "image": "https://collections-images.lacma.org/images/43525/43525-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/43525"
 },
@@ -5710,7 +5494,7 @@
 "title": "Textile Fragment",
 "artist": "Unknown",
 "year": "16th century",
-"medium": "Silk satin and plain weave (damass\u00e9) with metallic-thread supplementary-weft patterning bound in twill",
+"medium": "Silk satin and plain weave (damassé) with metallic-thread supplementary-weft patterning bound in twill",
 "image": "https://collections-images.lacma.org/images/151089/151089-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/151089"
 },
@@ -5770,15 +5554,6 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Judith with the Head of Holofernes",
-"artist": "Giovanni Battista di Jacopo Rosso, called Rosso Fiorentino  Italian, Florence, 1494 - 1540",
-"year": "circa 1535-1540",
-"medium": "Red chalk on gray buff paper",
-"image": "https://collections-images.lacma.org/images/30602/30602-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/30602"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Nude Figure among Foliage Holding a Globe, and Two Putti",
 "artist": "Girolamo Francesco Maria Mazzola (called Parmigianino)",
 "year": "circa 1527-1531",
@@ -5788,39 +5563,12 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Entombment",
-"artist": "Girolamo Francesco Maria Mazzola (called Parmigianino)",
-"year": "circa 1527-1530",
-"medium": "Etching",
-"image": "https://collections-images.lacma.org/images/60364/60364-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/60364"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Krishna and Balarama Play with Gopas (recto), Text (verso), Folio from the \u201cPalam\u201d Bhagavata Purana (Ancient Stories of the Lord) (recto), T",
-"artist": "Unknown",
-"year": "circa 1520-1530",
-"medium": "Opaque watercolor and ink on paper",
-"image": "https://collections-images.lacma.org/images/28741/28741-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/28741"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
 "title": "Cap",
 "artist": "Unknown",
-"year": "Mamluk Dynasty (1250\u20131517), 14th century",
+"year": "Mamluk Dynasty (1250–1517), 14th century",
 "medium": "Silk satin with silk supplementary-weft patterning bound in plain weave (lampas), silk embroidery",
 "image": "https://collections-images.lacma.org/images/115135/115135-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/115135"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Saint Jerome in Penance",
-"artist": "Hans Baldung Grien",
-"year": "circa 1511",
-"medium": "Woodcut",
-"image": "https://collections-images.lacma.org/images/20107/20107-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/20107"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -5863,7 +5611,7 @@
 "title": "Textile Fragment",
 "artist": "Unknown",
 "year": "circa 1450",
-"medium": "Silk cut and voided pile-on-pile velvet with metallic-thread supplementary weft-loop (boucl\u00e9) and discontinuous supplementary-weft patterning (brocade)",
+"medium": "Silk cut and voided pile-on-pile velvet with metallic-thread supplementary weft-loop (bouclé) and discontinuous supplementary-weft patterning (brocade)",
 "image": "https://collections-images.lacma.org/images/21214/21214-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/21214"
 },
@@ -5915,7 +5663,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "L'Incantation",
-"artist": "F\u00e9licien Victor Joseph Rops  Belgium, Namur, 1833-1898",
+"artist": "Félicien Victor Joseph Rops  Belgium, Namur, 1833-1898",
 "year": "no date",
 "medium": "Soft-ground etching",
 "image": "https://collections-images.lacma.org/images/46773/46773-1-desktop.jpg",
@@ -5924,7 +5672,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Indolence",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching on sof-ground",
 "image": "https://collections-images.lacma.org/images/48370/48370-1-desktop.jpg",
@@ -5941,7 +5689,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "The Night Attack in The Storehouse of Loyal Retainers: The Twenty-four Major Retainers and the Twenty-three Minor Retainers Assemble at Ry\u014dg",
+"title": "The Night Attack in The Storehouse of Loyal Retainers: The Twenty-four Major Retainers and the Twenty-three Minor Retainers Assemble at Ryōg",
 "artist": "Utagawa Kunisada (Toyokuni III)",
 "year": "1830s",
 "medium": "Triptych of color woodblock prints",
@@ -5960,7 +5708,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Presse",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/48501/48501-1-desktop.jpg",
@@ -5968,8 +5716,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Billet \u00e0 ordre",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Billet à ordre",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/48424/48424-1-desktop.jpg",
@@ -5977,21 +5725,12 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Le Ch\u00e8vrefeuille",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Le Chèvrefeuille",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/48483/48483-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/48483"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "St. Peter's From Pincian Hill",
-"artist": "James Anderson  England, active Italy, 1813-1877",
-"year": "1860s",
-"medium": "Albumen silver print",
-"image": "https://collections-images.lacma.org/images/145621/145621-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/145621"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
@@ -6013,8 +5752,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Les Pens\u00e9es",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Les Pensées",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/48419/48419-1-desktop.jpg",
@@ -6032,7 +5771,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Diane et la femme au corset noir",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Aquatint",
 "image": "https://collections-images.lacma.org/images/48671/48671-1-desktop.jpg",
@@ -6040,8 +5779,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "La Chasse au li\u00e8vre",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "La Chasse au lièvre",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/39092/39092-1-desktop.jpg",
@@ -6059,7 +5798,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Milice hanovrienne",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/39094/39094-1-desktop.jpg",
@@ -6097,14 +5836,14 @@
 "title": "Woman's Coat",
 "artist": "Unknown",
 "year": "1880s",
-"medium": "Wool twill with wool twill appliqu\u00e9 and glass buttons",
+"medium": "Wool twill with wool twill appliqué and glass buttons",
 "image": "https://collections-images.lacma.org/images/1834/1834-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/1834"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Pigeon-vole et La femme en toilette de ville",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/39067/39067-1-desktop.jpg",
@@ -6113,7 +5852,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Barque",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/39246/39246-1-desktop.jpg",
@@ -6149,7 +5888,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "La Fileuse",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/46872/46872-1-desktop.jpg",
@@ -6175,8 +5914,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Le Vieux Ch\u00eane",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Le Vieux Chêne",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching mounted on China paper",
 "image": "https://collections-images.lacma.org/images/46902/46902-1-desktop.jpg",
@@ -6185,7 +5924,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Le Moineau de Lesbie",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching and drypoint",
 "image": "https://collections-images.lacma.org/images/44588/44588-1-desktop.jpg",
@@ -6203,7 +5942,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Dimanche",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Soft-ground etching and drypoint",
 "image": "https://collections-images.lacma.org/images/48369/48369-1-desktop.jpg",
@@ -6212,7 +5951,7 @@
 {
 "museum": "the Los Angeles County Museum of Art",
 "title": "Le Chat",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching with brown/black ink",
 "image": "https://collections-images.lacma.org/images/48498/48498-1-desktop.jpg",
@@ -6220,8 +5959,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Quatre petits po\u00e8mes libertins ou L'Examen de Flora",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Quatre petits poèmes libertins ou L'Examen de Flora",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Etching",
 "image": "https://collections-images.lacma.org/images/44657/44657-1-desktop.jpg",
@@ -6238,8 +5977,8 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "Le D\u00e9couverte de l'Am\u00e9rique",
-"artist": "F\u00e9licien Victor Joseph Rops",
+"title": "Le Découverte de l'Amérique",
+"artist": "Félicien Victor Joseph Rops",
 "year": "no date",
 "medium": "Soft-ground and aquatint",
 "image": "https://collections-images.lacma.org/images/46888/46888-1-desktop.jpg",
@@ -6247,16 +5986,7 @@
 },
 {
 "museum": "the Los Angeles County Museum of Art",
-"title": "David Playing the Harp before King Saul (recto); Study of a Standing Man (verso)",
-"artist": "Jacopo Vignali",
-"year": "no date",
-"medium": "Recto: black chalk and white gouache on green prepared paper; Verso: red chalk",
-"image": "https://collections-images.lacma.org/images/60123/60123-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/60123"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "Woman's Dress (Robe \u00e0 la fran\u00e7aise)",
+"title": "Woman's Dress (Robe à la française)",
 "artist": "Unknown",
 "year": "1760s-1770s",
 "medium": "Silk plain weave (taffeta) with silk supplementary-weft patterning and silk passementerie trim",
@@ -6271,15 +6001,6 @@
 "medium": "Leather, wood, and metal",
 "image": "https://collections-images.lacma.org/images/25381/25381-1-desktop.jpg",
 "url": "https://collections.lacma.org/object/25381"
-},
-{
-"museum": "the Los Angeles County Museum of Art",
-"title": "The Holy Trinity",
-"artist": "Cornelis Bos",
-"year": "circa 1550s",
-"medium": "Engraving",
-"image": "https://collections-images.lacma.org/images/60233/60233-1-desktop.jpg",
-"url": "https://collections.lacma.org/object/60233"
 },
 {
 "museum": "the Los Angeles County Museum of Art",
