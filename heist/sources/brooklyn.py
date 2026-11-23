@@ -2,7 +2,7 @@
 
 Brooklyn's site and API block scripts now, so the pool comes from Wikidata
 and the images from Brooklyn's own uploads to Wikimedia Commons. Rebuild
-with tools/build_brooklyn_pool.py.
+with tools/build_wikidata_pool.py brooklyn.
 """
 from heist.sources.pooled import steal_from
 

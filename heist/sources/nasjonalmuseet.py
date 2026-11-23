@@ -3,7 +3,7 @@
 Munch, Dahl, Gude, Thaulow, Kittelsen and Astrup. The museum site blocks
 scripts, so the pool comes from Wikidata and the images from Wikimedia
 Commons (makers dead before 1956, works by 1930). Rebuild with
-tools/build_nasjonalmuseet_pool.py.
+tools/build_wikidata_pool.py nasjonalmuseet.
 """
 from heist.sources.pooled import steal_from
 

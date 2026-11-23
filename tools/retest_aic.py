@@ -38,6 +38,11 @@ def probe(url, **kw):
         return f"ERR {e}"
 
 
+# The Great Wave, Hokusai's Shower Below the Summit, Seurat's Grande Jatte
+KNOWN = ["b3974542-b9b4-7568-fc4b-966738f61d78", "bbb6d024-f931-2e2f-eb95-750991834b1c",
+         "2d484387-2509-5e8e-2c43-22f9981972eb"]
+
+
 def main():
     rng = random.Random(1)
     api_ok = img_ok = 0
@@ -51,6 +56,16 @@ def main():
             print(f"  steal {i}: OK  {art['title'][:50]!r}")
         except Exception as e:  # noqa: BLE001
             print(f"  steal {i}: FAIL  {e}")
+
+    # A pre-built pool only needs the image host, not the API, so also probe
+    # known images directly (wsrv is refused by AIC's Cloudflare regardless).
+    print("=== AIC image host, known images (a pool's only dependency) ===")
+    known_ok = 0
+    for iid in KNOWN:
+        r = probe(f"https://www.artic.edu/iiif/2/{iid}/full/1686,/0/default.jpg")
+        known_ok += r.startswith("200 image")
+        print(f"  direct 1686px: {r}")
+    print(f"  known images: {known_ok}/{len(KNOWN)}")
 
     print("=== AIC image fetch (production path: wsrv first, then direct) ===")
     for img in images[:3]:
