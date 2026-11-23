@@ -3,6 +3,7 @@ main = "worker.js"
 compatibility_date = "2024-09-23"
 
 [vars]
+START_DATE = "2026-11-24"  # the feed was wiped 11-23; nothing earlier gets posted
 BSKY_HANDLE = "did:plc:stqre32vjfy2exmy3uapewjw"  # @heist.arugulamotors.com (the DID survives handle changes)
 # BSKY_APP_PASSWORD is a secret: npx wrangler secret put BSKY_APP_PASSWORD
 

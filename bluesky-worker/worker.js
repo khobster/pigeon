@@ -26,6 +26,7 @@ async function run(env) {
   if (!env.BSKY_HANDLE || !env.BSKY_APP_PASSWORD) return "no account configured";
   const [latest, sent] = await Promise.all([getJson(LATEST), sentDate()]);
   if (latest.date !== sent) return `waiting: latest ${latest.date}, last sent ${sent}`;
+  if (env.START_DATE && latest.date < env.START_DATE) return `holding until ${env.START_DATE}`;
   const tag = `heist${latest.date.replaceAll("-", "")}`;
   if (await alreadyPosted(env.BSKY_HANDLE, tag)) return `already posted ${latest.date}`;
 

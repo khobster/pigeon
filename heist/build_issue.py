@@ -85,8 +85,10 @@ def record_art(today, keys, ledger):
 
 def resized(url, width=1120):
     """The wsrv.nl image CDN, used only to fetch a smaller render at build
-    time. Width 1120 = retina-sharp at the 560px layout."""
-    return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside"
+    time. Width 1120 = retina-sharp at the 560px layout. &we = never enlarge:
+    without it a 400px thumbnail came back stretched to 1120 and looked full
+    size, so blurry art slipped through (Europeana previews, 2026-11-23)."""
+    return f"https://wsrv.nl/?url={quote(url, safe='')}&w={width}&fit=inside&we"
 
 
 def probe_ok(url):
@@ -485,10 +487,14 @@ def in_color(candidate, stats):
 
 
 MAX_BYTES = 1_500_000
+# Real pixels wanted (the layout is 560px for the hero, 440px for the bag;
+# retina wants about double). Smaller sources look soft, so they're dropped.
+HERO_MIN = 900
+EXTRA_MIN = 600
 Image.MAX_IMAGE_PIXELS = None  # big museum scans are fine, we shrink them
 
 
-def verified(url, today, tag, width=1120):
+def verified(url, today, tag, width=1120, min_width=0):
     """Download the image and return a URL on OUR domain, or raise.
 
     This is the whole guarantee. Every image in the email is a file we
@@ -528,6 +534,10 @@ def verified(url, today, tag, width=1120):
     # check sits outside the retry loop and drops the piece straight away.
     if not is_color(content):
         raise RuntimeError(f"black-and-white, want color: {url}")
+    if min_width:
+        w = Image.open(io.BytesIO(content)).size[0]
+        if w < min_width:
+            raise RuntimeError(f"too small ({w}px wide, want {min_width}): {url}")
     ext = ".png" if "png" in ctype else ".jpg"
     # When wsrv can't handle a huge origin we get the raw original (one
     # Europeana scan came back at 45MB), so shrink anything oversized here.
@@ -677,20 +687,29 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
                       key=lambda i: wow_score(pool[i]["candidate"], pool[i]["stats"]), reverse=True)
     order = primary + backfill
 
-    # Hero: the first piece in order whose full-resolution image downloads.
+    # Hero: the first piece in order that is big and sharp, and not from
+    # Europeana (an aggregator whose images are too often small previews and
+    # whose labels are rough). If a night's pool has nothing that clears the
+    # bar, relax the rules in steps rather than skip the issue.
     hero = None
-    for pos, idx in enumerate(order):
-        p = pool[idx]
-        try:
-            p["candidate"]["image"] = verified(p["candidate"]["image"], today, "haul")
-        except Exception as e:  # noqa: BLE001
-            print(f"  [hero winner failed to download] {e}")
-            continue
-        hero = tidy(p["candidate"])
-        seen.add(p["key"])
-        used.append(p["key"])
-        order = order[pos + 1:]
-        break
+    for strict_size, no_europeana in ((True, True), (False, True), (False, False)):
+        for idx in order:
+            p = pool[idx]
+            if no_europeana and p["source"] == "europeana":
+                continue
+            try:
+                p["candidate"]["image"] = verified(p["candidate"]["image"], today, "haul",
+                                                   min_width=HERO_MIN if strict_size else 0)
+            except Exception as e:  # noqa: BLE001
+                print(f"  [hero pass skipped] {e}")
+                continue
+            hero = tidy(p["candidate"])
+            seen.add(p["key"])
+            used.append(p["key"])
+            order = [i for i in order if i != idx]
+            break
+        if hero:
+            break
     if not hero:
         raise RuntimeError("no hero could be secured tonight")
 
@@ -718,7 +737,8 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
         if p["source"] == "barnes" and sum(e.get("museum", "").startswith("the Barnes") for e in extras) >= 2:
             continue
         try:
-            p["candidate"]["image"] = verified(p["candidate"]["image"], today, f"extra{len(extras)}", width=880)
+            p["candidate"]["image"] = verified(p["candidate"]["image"], today, f"extra{len(extras)}",
+                                               width=880, min_width=EXTRA_MIN)
         except Exception as e:  # noqa: BLE001
             print(f"  [extra failed to download] {e}")
             continue
