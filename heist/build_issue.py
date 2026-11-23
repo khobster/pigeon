@@ -27,7 +27,8 @@ from engine.render import render
 from engine.send import UNSUB_SLOT
 from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            wellcome, europeana, nypl, lacma, barnes, parismusees,
-                           chunklet, loc, lam, gotaway, getty)
+                           chunklet, loc, lam, gotaway, getty, fng, nasjonalmuseet,
+                           nationalmuseum, mia)
 from heist import curator
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -229,7 +230,14 @@ RELIGIOUS = re.compile(
     r"popes?|papal|priests?|monks?|nuns?|bishops?|abbots?|abbess|friars?|clergy|cleric\w*|"
     r"last judgm?ent|idolatry|psalms?|psalter|missal|breviary|bible|biblical|prayers?|praying|sermon|"
     r"moses|abraham|noah|solomon|goliath|samson|jonah|apocalypse|devils?|demons?|satan|"
-    r"agony in the garden|the passion|stigmata|flagellation|pentecost|transfiguration"
+    r"agony in the garden|the passion|stigmata|flagellation|pentecost|transfiguration|lazarus|annunciation|nativity|baptist\w*|baptism|adam and eve|good shepherd|book of job|"
+    # the Getty's Old Testament and Apocalypse leaves, named story by story so
+    # "Sir David Baird" and Van Gogh's "Joseph Roulin" still get through
+    r"jacob'?s?|esau|potiphar'?s?|pharaoh'?s?|ahasuerus|susannah|elijah|elisha|bathsheba|abigail|holofernes|"
+    r"judith|tobias|tobit|zarephath|micaiah|ahab|cain|abel|israel|ark of the covenant|babylon|"
+    r"david (?:with|and|before|meeting|playing|spareth)|daniel(?:'s| and)|joseph(?:'s| and| in prison| dining)|"
+    r"(?:story|life|lives) of joseph|twenty-four elders|the lamb|the marriage of the lamb|first seal|seventh trumpet|"
+    r"throne of god|the creation of|expulsion from paradise|first temptation|temptation of|ten kings|book of hours|hours of the virgin"
     r")\b",
     re.I,
 )
@@ -583,18 +591,23 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
     # A broad bench of open-access sources so no single museum dominates and a
     # dead one is never fatal. Commons is the always-on anchor (keyless, images
     # on upload.wikimedia.org, which never blocks datacenter IPs); nga is a
-    # bundled CC0 pool; rijks/yale/wellcome are keyless live APIs. si and
+    # bundled CC0 pool; rijks/wellcome are keyless live APIs. si and
     # europeana are key-gated and only join the rotation when their key is set —
     # europeana alone aggregates 3,000+ institutions. lacma is a bundled PD pool
     # biased to its cool/graphic seam (prints, costumes, textiles, 1850+). barnes
     # is a bundled PD pool of the Barnes Foundation's pictures, parismusees a
     # bundled CC0 pool of the City of Paris museums (via its Commons mirror),
-    # getty a bundled CC0 pool of the Getty's open content. AIC and
+    # getty a bundled CC0 pool of the Getty's open content. yale is a bundled
+    # pool read from Yale's IIIF manifests (its LUX search went behind a bot
+    # wall). The Nordic trio are bundled pools too: fng (Finnish National
+    # Gallery, CC0), nasjonalmuseet (Oslo, Munch) and nationalmuseum
+    # (Stockholm, via its Commons donation). mia is a bundled pool of the
+    # Minneapolis Institute of Art (Japanese prints and screens). AIC and
     # Harvard were retired 2026-07-14 (both hard-block the runner's IP with 403/429
     # and had contributed no art for weeks); their modules stay in the tree in case
     # the blocks ever lift.
     museums = ([met, cleveland, smk, commons, nga, lacma, barnes, parismusees,
-                rijks, yale, wellcome, getty]
+                rijks, yale, wellcome, getty, fng, nasjonalmuseet, nationalmuseum, mia]
                + [m for m in (si, europeana, nypl) if m.available()])
     start = today.toordinal() % len(museums)
     rotation = museums[start:] + museums[:start]
@@ -642,10 +655,11 @@ def build_haul(rng, today, extras_wanted=8, recent=frozenset()):
 
     # Pre-seed Europeana so its global eclectica reliably makes each issue rather
     # than only when the round-robin lands on it. Its yield is low (many scans are
-    # sepia/monochrome and get dropped as B&W), so we try hard for a few.
+    # sepia/monochrome and get dropped as B&W), so we try for a couple. Cut from
+    # 4 to 2 on 2026-11-23 once the Getty, Yale, Mia and the Nordic pools landed.
     if europeana.available():
         euro_added, euro_tries = 0, 0
-        while euro_added < 4 and euro_tries < 22:
+        while euro_added < 2 and euro_tries < 12:
             euro_tries += 1
             if try_add(europeana, "europeana"):
                 euro_added += 1

@@ -9,17 +9,8 @@ the nightly build never depends on a SPARQL endpoint.
 
 Rebuild the pool with tools/build_getty_pool.py from any machine.
 """
-import json
-from pathlib import Path
-
-POOL = Path(__file__).resolve().parent.parent / "getty_pool.json"
+from heist.sources.pooled import steal_from
 
 
 def steal(rng):
-    try:
-        items = json.loads(POOL.read_text())
-    except FileNotFoundError as e:
-        raise RuntimeError(f"Getty pool missing: {e}")
-    if not items:
-        raise RuntimeError("Getty pool is empty")
-    return dict(rng.choice(items))
+    return steal_from("getty_pool.json", "Getty", rng)
