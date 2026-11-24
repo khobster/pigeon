@@ -1190,6 +1190,21 @@ def main():
         print(f"test: sent '{data['subject']}' to {to} only")
         return
 
+    # GitHub's scheduled runs can start hours late: the 9:47am backup for
+    # 2026-11-23 fired at 8:13pm Eastern, when the runner's UTC clock already
+    # read the 24th, so Tuesday's issue went out Monday night. The workflow
+    # names the day by UTC, so a run that starts while it is still the evening
+    # before in Charleston must fail outright; a quiet exit would let the next
+    # step mark tomorrow as delivered and block the real morning send.
+    if os.environ.get("GITHUB_ACTIONS"):
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+
+        eastern = datetime.now(ZoneInfo("America/New_York")).date()
+        if eastern != date.today():
+            sys.exit(f"late run: it is still {eastern} in Charleston; "
+                     f"{date.today()} goes out tomorrow morning, not tonight")
+
     # A pinned edition (heist/pinned/<date>.json, with subject/email_html/
     # archive_html) locks a specific hand-approved issue for that day instead
     # of regenerating it. The nightly build is not fully reproducible — The
