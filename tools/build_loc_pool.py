@@ -60,6 +60,24 @@ PER_TOPIC = 160       # equal share per topic so no category owns the drawer
 PER_PLACE = 40        # max items per country ("..., Dalmatia, Austro-Hungary]")
 PAGES = 10            # search deep: page one is where series cluster
 SKIP_TITLE = re.compile(r"unidentified|^\[?group |portrait of an? unidentified", re.I)
+# A deep search wanders off topic (a "trade card" page turns up war dead and
+# earthquake ruins), and period titles carry period language. Off the drawer:
+# slavery, race, death and disaster, churches and holy sites, the Confederacy.
+AVOID = re.compile(r"\b(slave\w*|negro\w*|darke?y\w*|colou?red (troops|regiment\w*|man|men|woman|people)|"
+                   r"no distinction of color|dead|death|died|kill(s|ed|ing)?|disaster|devastat\w*|debris|"
+                   r"earthquake|burned city|refugee\w*|wreck(ed)?|massacre|corpse\w*|wounded|lynch\w*|"
+                   r"cemetery|grave(s|yard)?|funeral|cathedral|chapel|church|abbey|convent|seminary|"
+                   r"divinity|cardinal|golgatha|golgotha|bethany|bethphage|mount of olives|leper|"
+                   r"confedera\w*|robert e\.? lee|stonewall|jefferson davis|davis, lee|battle|bombard\w*|"
+                   r"siege|darktown|minstrel\w*|contraband|othello|pocahontas|warpath)\b", re.I)
+# Period ephemera hides caricatures that no title gives away: a look at 203
+# deep-search finds in these categories turned up 19 (minstrel sheet music,
+# "Darktown" prints, slave-sale trade cards, battlefield dead). They stay at
+# the old shallow depth, where the first pages run to the safer, famous pieces.
+RISKY = ["trade card", "chromolithograph", "currier & ives", "sheet music cover", "color lithograph",
+         "cigar label", "advertising poster", "political cartoon color", "circus poster", "magic poster"]
+TOPIC_CAP = {t: 22 for t in RISKY} | {"political cartoon color": 12}
+SAME_TITLE = 2        # postcard series repeat a title (six "Color guard of...")
 BAD_IMG = ("/static/", ".svg", ".gif")
 MIN_AREA = 500 * 400
 
@@ -126,7 +144,7 @@ def vet(item, topic):
     title = (item.get("title") or "").strip(". ")
     if not title or SKIP_TITLE.search(title):
         return None
-    if not secular(title) or not inoffensive(title):
+    if not secular(title) or not inoffensive(title) or AVOID.search(title):
         return None
     # Collection-level records ("Posters: Artist Posters") aren't a single find.
     if "collection" in (item.get("original_format") or []):
@@ -157,23 +175,27 @@ def vet(item, topic):
 def main():
     if len(sys.argv) < 2:
         sys.exit("usage: build_loc_pool.py <out.json>")
-    pool, seen, places = [], set(), {}
+    pool, seen, places, titles = [], set(), {}, {}
     for topic in TOPICS:
         results = search(topic)
-        added = 0
+        added, cap = 0, TOPIC_CAP.get(topic, PER_TOPIC)
         # Vet in small batches and stop once this topic has its share.
         with ThreadPoolExecutor(max_workers=8) as ex:
             for start in range(0, len(results), 24):
-                if added >= PER_TOPIC:
+                if added >= cap:
                     break
                 batch = results[start:start + 24]
                 for got in ex.map(lambda it: vet(it, topic), batch):
-                    if not got or got["image"] in seen or added >= PER_TOPIC:
+                    if not got or got["image"] in seen or added >= cap:
+                        continue
+                    key = re.sub(r"\W+", " ", got["title"].lower()).strip()[:60]
+                    if titles.get(key, 0) >= SAME_TITLE:
                         continue
                     where = place(got["title"])
                     if where and places.get(where, 0) >= PER_PLACE:
                         continue
                     seen.add(got["image"])
+                    titles[key] = titles.get(key, 0) + 1
                     if where:
                         places[where] = places.get(where, 0) + 1
                     pool.append(got)

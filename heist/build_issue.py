@@ -516,7 +516,7 @@ EXTRA_MIN = 600
 Image.MAX_IMAGE_PIXELS = None  # big museum scans are fine, we shrink them
 
 
-def verified(url, today, tag, width=1120, min_width=0):
+def verified(url, today, tag, width=1120, min_width=0, want_color=True):
     """Download the image and return a URL on OUR domain, or raise.
 
     This is the whole guarantee. Every image in the email is a file we
@@ -554,7 +554,7 @@ def verified(url, today, tag, width=1120, min_width=0):
         raise RuntimeError(f"could not fetch {url}: {last}")
     # Retrying a grayscale image would just refetch the same bytes, so this
     # check sits outside the retry loop and drops the piece straight away.
-    if not is_color(content):
+    if want_color and not is_color(content):
         raise RuntimeError(f"black-and-white, want color: {url}")
     if min_width:
         w = Image.open(io.BytesIO(content)).size[0]
@@ -1047,7 +1047,8 @@ def build(today=None):
     if hideout.get("image"):
         try:
             # 3x the 560px layout: the hideout photo runs full width, so keep it sharp.
-            hideout["image"] = verified(hideout["image"], today, "lam", width=1680)
+            # a real place can be sandstone and sky: the color rule is for the art
+            hideout["image"] = verified(hideout["image"], today, "lam", width=1680, want_color=False)
         except Exception:  # noqa: BLE001
             hideout["image"] = ""  # the hideout survives without a photo
 
