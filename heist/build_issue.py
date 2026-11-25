@@ -30,7 +30,7 @@ from heist.sources import (met, cleveland, smk, si, commons, nga, rijks, yale,
                            chunklet, loc, lam, gotaway, getty, fng, nasjonalmuseet,
                            nationalmuseum, mia, brooklyn, mkg, birmingham, walters,
                            artic, bhl)
-from heist import curator
+from heist import curator, hobs, squishy
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -1052,6 +1052,21 @@ def build(today=None):
         except Exception:  # noqa: BLE001
             hideout["image"] = ""  # the hideout survives without a photo
 
+    # J. Paul Squishy: Kevin's emailed line, printed as a tabloid clipping.
+    # No reply (or "skip", or no Gmail in reach) and the column sits out.
+    squishy_img = squishy_alt = ""
+    column = hobs.collect(today)
+    if column:
+        try:
+            name = f"{today.isoformat()}-squishy.jpg"
+            art_dir.mkdir(parents=True, exist_ok=True)
+            (art_dir / name).write_bytes(squishy.render(column, seed=today.toordinal()))
+            squishy_img = f"{ARCHIVE_URL}assets/art/{name}"
+            squishy_alt = f"J. Paul Squishy: {column}"
+            print(f"  squishy: {column}")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [squishy dropped: could not print the clipping] {e}")
+
     context = {
         "date_pretty": today.strftime("%B %-d, %Y"),
         "preheader": f"Last night's haul: {haul['title']}",
@@ -1067,6 +1082,8 @@ def build(today=None):
         "line_text": line.get("text", ""),
         "line_attr": line.get("attribution") or "lifted from somewhere in the canon",
         "line_summary": line.get("summary", ""),
+        "squishy_img": squishy_img,
+        "squishy_alt": esc(squishy_alt, quote=True),
         "vault_any": bool(vaults),
         "vault_html": vault_html(vaults),
         "gotaway_any": bool(gone["pieces"]),
@@ -1158,8 +1175,14 @@ def main():
         from engine.send import send_issue
 
         data = json.loads(OUTBOX.read_text())
+        day = date.fromisoformat(data.get("date") or date.today().isoformat())
         n = send_issue(data["subject"], data["html"])
         print(f"sent '{data['subject']}' to {n} subscriber(s)")
+        try:
+            hobs.ask(day + timedelta(days=1))
+            print(f"asked hobs for {day + timedelta(days=1)}")
+        except Exception as e:  # noqa: BLE001
+            print(f"  [hobs: could not send tomorrow's ask] {e}")
         return
 
     if "--wait-live" in sys.argv:
@@ -1226,7 +1249,7 @@ def main():
     subject, email_html, archive_html, today = build()
     write_archive(archive_html, today)
     prune_old_art(today)
-    OUTBOX.write_text(json.dumps({"subject": subject, "html": email_html}))
+    OUTBOX.write_text(json.dumps({"subject": subject, "html": email_html, "date": today.isoformat()}))
     if "--prepare" in sys.argv:
         print(f"prepared '{subject}' into the outbox")
     else:
