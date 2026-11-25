@@ -1,0 +1,32 @@
+name: J. Paul Squishy proofs
+
+# Every 15 minutes: any new reply to a "hobs for ..." ask gets an email back
+# with the clipping exactly as it will print, and whether it fits the box.
+# Read-only on the repo; it only touches the heist inbox.
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: squishy-proof
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install python-dotenv Pillow numpy pyphen uharfbuzz
+      - name: Proof new replies
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python -m heist.hobs --proof
