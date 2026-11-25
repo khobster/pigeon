@@ -28,6 +28,7 @@ PITCH, SIZE, COL = 18.6, 17.2, 240   # baseline to baseline, type size, column w
 BOX_W, BOX_H = 236, 252    # the sig box
 PHOTO_AT = (55, 350)       # headshot slot inside the box, at working scale
 PHOTO_SIZE = (1070, 860)
+LINES = 13                 # lines of body type the box is tall
 GUTTER, MARGIN = 16, 4
 PAPER = .88                # newsprint's gray, as screened dots
 CELL = 2.2                 # screen pitch, in page pixels
@@ -85,6 +86,11 @@ def _lines(text, col, indent):
         cur, first = [], False
     lines.append((cur, True, first))
     return lines
+
+
+def lines_needed(text):
+    """How many lines `text` sets to in the column."""
+    return len(_lines(_curly(text), COL * U, 1.1 * SIZE * U))
 
 
 def _body(text):
