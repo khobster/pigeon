@@ -1,0 +1,8 @@
+name = "heist-desk"
+main = "worker.js"
+compatibility_date = "2024-09-23"
+
+kv_namespaces = [{ binding = "DESK", id = "e920e17534e64c61b457fcab5c7e7653" }]
+
+# Secret (wrangler secret put DESK_KEY): sha256 hex of
+# "heist-desk:" + GMAIL_APP_PASSWORD, the same key heist/hobs.py derives.

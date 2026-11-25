@@ -1,27 +1,30 @@
 """One line a day from Kevin, collected by email, for the J. Paul Squishy column.
 
 Each morning, right after the issue goes out, the heist's Gmail asks Kevin
-for tomorrow's line ("hobs for Wednesday, November 25"). He replies whenever
-he likes; within about 15 minutes `--proof` (its own workflow) answers with
-the clipping exactly as it will print and whether it fits the box. The next
-morning's build reads the inbox, takes his latest reply (only his address,
-only one Gmail signed for), keeps the whole sentences that fit the box's 13
-lines, and heist/squishy.py prints it as a newspaper clipping. "skip", or no
-reply at all, and the column sits out that day.
+for tomorrow's line ("hobs for Wednesday, November 25") with a link to his
+desk (docs/desk/), a page that sets the line as he types, counts it against
+the box's 13 lines, and saves it to the heist-desk Worker. Replying to the
+email still works as a backup (only his address, only one Gmail signed for);
+a desk save wins over a reply. The next morning's build keeps the whole
+sentences that fit the box, and heist/squishy.py prints it as a newspaper
+clipping. "skip", or nothing saved, and the column sits out that day.
 """
 import email
+import hashlib
+import hmac
 import imaplib
 import re
-import sys
-from datetime import datetime, timedelta
+from datetime import timedelta
 from email.utils import formataddr, parseaddr, parsedate_to_datetime
-from zoneinfo import ZoneInfo
+
+import requests
 
 from engine.common import GMAIL_USER, GMAIL_APP_PASSWORD
 
 KEVIN = "kevin.murawinski@gmail.com"
 MAX_CHARS = 1200          # far past the box; only guards against a pasted essay
-PROOFED = "squishy-proofed"  # Gmail label on a reply that has had its proof
+DESK = "https://heist.arugulamotors.com/desk/"
+WORKER = "https://heist-desk.kevin-murawinski.workers.dev/line"
 ABBREV = re.compile(r"\b(Mr|Mrs|Ms|Dr|St|Jr|Sr|vs|Mt|No)\.$")
 
 QUOTE_START = [
@@ -37,6 +40,28 @@ def subject_for(day):
     return f"hobs for {day:%A, %B} {day.day}"
 
 
+def _desk_k(day):
+    """The heist-desk Worker checks the same HMAC (its DESK_KEY secret)."""
+    key = hashlib.sha256(f"heist-desk:{GMAIL_APP_PASSWORD}".encode()).hexdigest()
+    return hmac.new(key.encode(), f"desk:{day.isoformat()}".encode(), hashlib.sha256).hexdigest()[:32]
+
+
+def desk_link(day):
+    return f"{DESK}?d={day.isoformat()}&k={_desk_k(day)}"
+
+
+def from_desk(day):
+    """What Kevin saved at his desk for `day`, or None (nothing saved, or the
+    Worker is out of reach)."""
+    try:
+        r = requests.get(WORKER, params={"d": day.isoformat(), "k": _desk_k(day)}, timeout=20)
+        r.raise_for_status()
+        return r.json().get("line")
+    except Exception as e:  # noqa: BLE001
+        print(f"  [hobs: desk unreachable] {e}")
+        return None
+
+
 def ask(day):
     """Email Kevin for the line that runs on `day`."""
     import smtplib
@@ -47,12 +72,12 @@ def ask(day):
     msg["From"] = formataddr(("the heist", GMAIL_USER))
     msg["To"] = KEVIN
     msg.set_content(
-        f"Reply with your line for {day:%A}'s heist. About 55 to 60 words fills "
-        "the box (13 lines); whole sentences past that get left on the floor.\n\n"
-        "Within about 15 minutes you'll get a proof back showing exactly how it prints.\n"
-        "Reply again to change it; the newest reply wins.\n\n"
-        "Reply \"skip\", or don't reply, and the column sits out.\n"
-        "Replies count until the issue goes out that morning.\n"
+        f"Your desk for {day:%A}'s heist:\n\n{desk_link(day)}\n\n"
+        "Type your line there and watch it set. About 55 to 60 words fills the box "
+        "(13 lines); whole sentences past that get left on the floor.\n\n"
+        "Save as often as you like until the issue goes out that morning. "
+        "Save \"skip\", or nothing, and the column sits out.\n"
+        "(Replying to this email still works too, but a desk save wins.)\n"
     )
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(GMAIL_USER, GMAIL_APP_PASSWORD)
@@ -158,21 +183,24 @@ def _latest(replies):
 
 
 def collect(day):
-    """Kevin's line for `day`, fitted to the box, or "" (no reply, a skip,
-    or the inbox is out of reach)."""
-    try:
-        imap = imaplib.IMAP4_SSL("imap.gmail.com")
-        imap.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-        imap.select("INBOX", readonly=True)
-        replies = _replies(imap, day)
-        imap.logout()
-    except Exception as e:  # noqa: BLE001
-        print(f"  [hobs: inbox unreachable, column sits out] {e}")
-        return ""
-    if not replies:
-        print("  [hobs: no reply, column sits out]")
-        return ""
-    line = clean(_body(_latest(replies)[1]))
+    """Kevin's line for `day`, fitted to the box, or "" (nothing saved, no
+    reply, a skip, or neither the desk nor the inbox in reach)."""
+    line = from_desk(day)
+    if line is None:
+        try:
+            imap = imaplib.IMAP4_SSL("imap.gmail.com")
+            imap.login(GMAIL_USER, GMAIL_APP_PASSWORD)
+            imap.select("INBOX", readonly=True)
+            replies = _replies(imap, day)
+            imap.logout()
+        except Exception as e:  # noqa: BLE001
+            print(f"  [hobs: inbox unreachable, column sits out] {e}")
+            return ""
+        if not replies:
+            print("  [hobs: nothing saved and no reply, column sits out]")
+            return ""
+        line = clean(_body(_latest(replies)[1]))
+    line = " ".join(line.split())
     if _is_skip(line):
         print("  [hobs: skipped]")
         return ""
@@ -180,68 +208,3 @@ def collect(day):
     if dropped:
         print(f"  [hobs: {need} lines, left off] {dropped}")
     return line
-
-
-def _proof_note(day, line):
-    if _is_skip(line):
-        return f"Got it: skip. The column sits out {day:%A}.\n", None
-    from heist import squishy
-
-    printed, dropped, need = fit(line)
-    again = "Reply again to change it; the newest reply wins."
-    if not dropped:
-        room = squishy.LINES - need
-        more = f" Room for about {room * 5} more words." if room >= 2 else ""
-        note = f"Fits: {need} of {squishy.LINES} lines.{more} This is how it prints {day:%A}.\n\n{again}\n"
-    else:
-        tail = printed.split()[-3:]
-        note = (f"Runs {need - squishy.LINES} line{'s' if need - squishy.LINES > 1 else ''} past the box "
-                f"({need} lines, the box holds {squishy.LINES}), so it prints through "
-                f"\"...{' '.join(tail)}\" and leaves off:\n\n    {dropped}\n\n"
-                f"Trim it to get it all in. {again}\n")
-    return note, squishy.render(printed, seed=day.toordinal())
-
-
-def proof():
-    """Answer each new reply with its clipping, exactly as it will print."""
-    import smtplib
-    from email.message import EmailMessage
-
-    now = datetime.now(ZoneInfo("America/New_York"))
-    days = [now.date() + timedelta(days=1)]
-    if now.hour < 7:  # this morning's issue hasn't gone out yet
-        days.insert(0, now.date())
-    imap = imaplib.IMAP4_SSL("imap.gmail.com")
-    imap.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-    imap.select("INBOX")
-    for day in days:
-        replies = _replies(imap, day)
-        if not replies:
-            continue
-        i, msg = _latest(replies)
-        _, data = imap.fetch(i, "(X-GM-LABELS)")
-        if PROOFED in data[0].decode("utf-8", "replace"):
-            continue
-        note, jpg = _proof_note(day, clean(_body(msg)))
-        out = EmailMessage()
-        subj = msg["Subject"] or subject_for(day)
-        out["Subject"] = subj if subj.lower().startswith("re:") else "Re: " + subj
-        out["From"] = formataddr(("the heist", GMAIL_USER))
-        out["To"] = KEVIN
-        if msg["Message-ID"]:
-            out["In-Reply-To"] = msg["Message-ID"]
-            out["References"] = " ".join(filter(None, [msg["References"], msg["Message-ID"]]))
-        out.set_content(note)
-        if jpg:
-            out.add_attachment(jpg, maintype="image", subtype="jpeg", filename=f"squishy-{day.isoformat()}.jpg")
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
-            smtp.login(GMAIL_USER, GMAIL_APP_PASSWORD)
-            smtp.send_message(out)
-        imap.store(i, "+X-GM-LABELS", f"({PROOFED})")
-        print(f"proofed {day}: {note.splitlines()[0]}")
-    imap.logout()
-
-
-if __name__ == "__main__":
-    if "--proof" in sys.argv:
-        proof()

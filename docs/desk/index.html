@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>the heist: the desk</title>
+<link rel="icon" href="/favicon.ico">
+<style>
+  body { margin:0; background:#fff; color:#1a1a1a; font-family:Helvetica, Arial, sans-serif; }
+  .wrap { max-width:600px; margin:0 auto; padding:36px 16px 60px; }
+  .masthead { font-family:Georgia, 'Times New Roman', serif; font-size:28px; font-style:italic; margin:0 0 18px; }
+  .masthead a { color:inherit; text-decoration:none; }
+  .chip { display:inline-block; background:#ffe95e; padding:5px 12px; font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#111; }
+  .for { font-family:Georgia, 'Times New Roman', serif; font-style:italic; color:#8a8a8a; font-size:15px; margin:10px 0 22px; }
+  canvas { display:block; width:100%; height:auto; background:#efebe4; }
+  textarea { box-sizing:border-box; width:100%; min-height:190px; margin-top:20px; padding:14px; font-family:Georgia, 'Times New Roman', serif; font-size:17px; line-height:1.5; color:#1a1a1a; border:1px solid #ccc; border-radius:4px; resize:vertical; }
+  textarea:focus { outline:none; border-color:#1a1a1a; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:10px; flex-wrap:wrap; }
+  .count { font-size:14px; font-weight:800; letter-spacing:.5px; color:#1a1a1a; }
+  .count.over { color:#c8102e; }
+  .count .bar { display:inline-block; vertical-align:middle; width:120px; height:6px; background:#eee; margin-left:8px; position:relative; }
+  .count .bar i { position:absolute; left:0; top:0; bottom:0; background:#1a1a1a; }
+  .count.over .bar i { background:#c8102e; }
+  button { font-family:Helvetica, Arial, sans-serif; font-size:14px; letter-spacing:1px; text-transform:uppercase; font-weight:800; padding:13px 24px; background:#ffe95e; color:#111; border:none; cursor:pointer; }
+  button:hover { background:#ffe139; }
+  button:disabled { opacity:.5; cursor:default; }
+  .status { font-size:13px; color:#8a8a8a; margin-top:8px; min-height:1em; }
+  .dropped { margin-top:16px; font-family:Georgia, 'Times New Roman', serif; font-size:15px; line-height:1.5; color:#8a8a8a; }
+  .dropped b { font-family:Helvetica, Arial, sans-serif; font-size:12px; letter-spacing:1px; text-transform:uppercase; color:#c8102e; display:block; margin-bottom:4px; }
+  .dropped s { text-decoration-color:#c8102e; }
+  .note { font-size:13px; color:#8a8a8a; line-height:1.5; margin-top:26px; }
+  .shut { font-family:Georgia, 'Times New Roman', serif; font-size:17px; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="masthead"><a href="/">the heist</a></p>
+  <span class="chip">J. Paul Squishy's desk</span>
+  <p class="for" id="for"></p>
+  <div id="desk" hidden>
+    <canvas id="clip" width="1133" height="591" aria-label="How the clipping will print"></canvas>
+    <textarea id="line" placeholder="Type the line..." spellcheck="true"></textarea>
+    <div class="row">
+      <span class="count" id="count">&nbsp;</span>
+      <button id="save" disabled>Save</button>
+    </div>
+    <div class="status" id="status"></div>
+    <div class="dropped" id="dropped" hidden><b>Won't fit, won't print</b><s id="droppedText"></s></div>
+    <p class="note">About 55 to 60 words fills the box. Whole sentences past the 13th line get left on the floor.
+      Save as often as you like until the issue goes out that morning; the last save prints.
+      Save "skip", or nothing, and the column sits out.</p>
+  </div>
+  <p class="shut" id="shut" hidden>This desk opens from the link in the morning email.</p>
+</div>
+
+<script type="module">
+const WORKER = "https://heist-desk.kevin-murawinski.workers.dev/line";
+const ABBREV = /\b(Mr|Mrs|Ms|Dr|St|Jr|Sr|vs|Mt|No)\.$/;
+const $ = (id) => document.getElementById(id);
+const q = new URLSearchParams(location.search);
+const d = q.get("d"), k = q.get("k");
+
+if (!d || !k || !/^\d{4}-\d{2}-\d{2}$/.test(d)) {
+  $("shut").hidden = false;
+  throw new Error("no desk link");
+}
+$("for").textContent = "for " + new Date(d + "T12:00:00").toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" });
+$("desk").hidden = false;
+
+// The printer's rules (heist/squishy.py and heist/hobs.py), ported line for line.
+const [spec, hy, box] = await Promise.all([
+  fetch("spec.json").then((r) => r.json()),
+  fetch("hyph-en_US.json").then((r) => r.json()),
+  new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = "box.jpg"; }),
+]);
+let hb, face, font, shapeCache = new Map();
+try {
+  hb = await import("https://cdn.jsdelivr.net/npm/harfbuzzjs@1.6.3/dist/index.mjs");
+  const bytes = await (await fetch("Merriweather-Squishy.ttf")).arrayBuffer();
+  face = new hb.Face(new hb.Blob(bytes));
+  font = new hb.Font(face);
+  const ff = new FontFace("Squishy", bytes);
+  document.fonts.add(await ff.load());
+} catch (e) {
+  console.error(e);
+  hb = null;
+}
+
+function shape(text) {
+  let hit = shapeCache.get(text);
+  if (hit) return hit;
+  const buf = new hb.Buffer();
+  buf.addText(text);
+  buf.guessSegmentProperties();
+  hb.shape(font, buf, [new hb.Feature("liga", 0)]);
+  const kk = spec.shape_size / face.upem, out = [];
+  let x = 0;
+  const infos = buf.getGlyphInfos(), pos = buf.getGlyphPositions();
+  infos.forEach((info, i) => {
+    out.push([text[info.cluster], x + pos[i].xOffset * kk]);
+    x += pos[i].xAdvance * kk;
+  });
+  hit = [out, x];
+  shapeCache.set(text, hit);
+  return hit;
+}
+const width = (s) => shape(s)[1];
+const sum = (a) => a.reduce((t, w) => t + width(w), 0);
+
+function positions(word) {
+  const w = "." + word.toLowerCase() + ".", refs = new Array(w.length + 1).fill(0);
+  for (let i = 0; i < w.length - 1; i++) {
+    const stop = Math.min(i + hy.maxlen, w.length) + 1;
+    for (let j = i + 1; j < stop; j++) {
+      const p = hy.patterns[w.slice(i, j)];
+      if (!p) continue;
+      const [off, vals] = p;
+      vals.forEach((v, t) => { refs[i + off + t] = Math.max(v, refs[i + off + t]); });
+    }
+  }
+  const pts = [];
+  refs.forEach((r, i) => { if (r % 2) pts.push(i - 1); });
+  return pts.filter((i) => hy.left <= i && i <= word.length - hy.right);
+}
+
+function curly(t) {
+  t = t.replace(/(^|[\s(\[])"/g, "$1“").replace(/"/g, "”");
+  return t.replace(/(^|[\s(\[])'/g, "$1‘").replace(/'/g, "’");
+}
+
+function setLines(text) {
+  const col = spec.col, indent = spec.indent, space = width(" ");
+  const words = text.split(/\s+/).filter(Boolean), lines = [];
+  let cur = [], first = true, i = 0;
+  while (i < words.length) {
+    const w = words[i], avail = col - (first ? indent : 0);
+    if (!cur.length || sum([...cur, w]) + space * 0.75 * cur.length <= avail) {
+      cur.push(w);
+      i++;
+      continue;
+    }
+    const room = avail - sum(cur) - space * 0.75 * cur.length;
+    for (const p of positions(w).reverse()) {
+      const a = w.slice(0, p), b = w.slice(p);
+      if (a.length >= 2 && b.length >= 2 && width(a + "-") <= room) {
+        cur.push(a + "-");
+        words[i] = b;
+        break;
+      }
+    }
+    lines.push([cur, false, first]);
+    cur = [];
+    first = false;
+  }
+  lines.push([cur, true, first]);
+  return lines;
+}
+const linesNeeded = (t) => setLines(curly(t)).length;
+
+function sentences(text) {
+  const out = [];
+  for (const piece of text.split(/(?:(?<=[.!?])|(?<=[.!?]["'”’)]))\s+(?=[A-Z0-9"'“‘(])/)) {
+    if (out.length && ABBREV.test(out[out.length - 1])) out[out.length - 1] += " " + piece;
+    else out.push(piece);
+  }
+  return out;
+}
+
+function fit(text) {
+  const need = linesNeeded(text);
+  if (need <= spec.lines) return [text, "", need];
+  const parts = sentences(text), kept = [];
+  for (const s of parts) {
+    if (linesNeeded([...kept, s].join(" ")) > spec.lines) break;
+    kept.push(s);
+  }
+  if (!kept.length) {
+    const words = parts[0].split(/\s+/).filter(Boolean);
+    while (words.length && linesNeeded(words.join(" ") + "...") > spec.lines) words.pop();
+    return [words.join(" ").replace(/[,;:]+$/, "") + "...", text.slice(words.join(" ").length).trim(), need];
+  }
+  return [kept.join(" "), parts.slice(kept.length).join(" "), need];
+}
+
+const ctx = $("clip").getContext("2d");
+function draw(text) {
+  ctx.drawImage(box, 0, 0);
+  if (!text) return;
+  const s = spec.scale, space = width(" ");
+  ctx.font = `${spec.size * s}px Squishy`;
+  ctx.fillStyle = ctx.strokeStyle = "#1c1a17";
+  ctx.lineWidth = 0.5;
+  let y = 0;
+  for (const [words, last, first] of setLines(curly(text))) {
+    let x = first ? spec.indent : 0;
+    const nat = sum(words);
+    const gap = last || words.length < 2 ? space : (spec.col - x - nat) / (words.length - 1);
+    for (const w of words) {
+      for (const [ch, gx] of shape(w)[0]) {
+        const px = (spec.x + x + gx) * s, py = (spec.y + y + spec.ascender) * s;
+        ctx.fillText(ch, px, py);
+        ctx.strokeText(ch, px, py);
+      }
+      x += width(w) + gap;
+    }
+    y += spec.pitch;
+  }
+}
+
+const isSkip = (t) => !t || t.toLowerCase().replace(/^[ .!]+|[ .!]+$/g, "") === "skip";
+let saved = "";
+function update() {
+  const text = $("line").value.split(/\s+/).filter(Boolean).join(" ").slice(0, spec.max_chars);
+  const count = $("count");
+  $("save").disabled = text === saved;
+  if (text !== saved) $("status").textContent = "Not saved yet";
+  if (!hb) {
+    count.textContent = "Can't set type in this browser; saving still works";
+    ctx.drawImage(box, 0, 0);
+    return;
+  }
+  if (isSkip(text)) {
+    draw("");
+    count.className = "count";
+    count.textContent = text ? "Skip: the column sits out" : "Nothing yet";
+    $("dropped").hidden = true;
+    return;
+  }
+  const [printed, dropped, need] = fit(text);
+  draw(printed);
+  const over = need > spec.lines;
+  count.className = "count" + (over ? " over" : "");
+  count.innerHTML = `${need} of ${spec.lines} lines<span class="bar"><i style="width:${Math.min(100, need / spec.lines * 100)}%"></i></span>`;
+  $("dropped").hidden = !dropped;
+  $("droppedText").textContent = dropped;
+}
+
+let timer;
+$("line").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(update, 60); });
+
+async function save() {
+  const text = $("line").value.split(/\s+/).filter(Boolean).join(" ");
+  $("save").disabled = true;
+  $("status").textContent = "Saving...";
+  try {
+    const r = await fetch(WORKER, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ d, k, line: text }) });
+    const j = await r.json();
+    if (!r.ok) throw new Error(j.error || r.status);
+    saved = j.line;
+    $("status").textContent = "Saved " + new Date(j.saved).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" }) + ". This is what prints.";
+  } catch (e) {
+    $("save").disabled = false;
+    $("status").textContent = "Didn't save (" + e.message + "). Try again.";
+  }
+}
+$("save").addEventListener("click", save);
+$("line").addEventListener("keydown", (e) => { if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) save(); });
+addEventListener("beforeunload", (e) => {
+  if ($("line").value.split(/\s+/).filter(Boolean).join(" ") !== saved) e.preventDefault();
+});
+
+try {
+  const r = await fetch(WORKER + "?" + new URLSearchParams({ d, k }));
+  const j = await r.json();
+  if (r.status === 403) {
+    $("desk").hidden = true;
+    $("shut").hidden = false;
+    $("shut").textContent = "This link doesn't open that day's desk. Use the link from the morning email.";
+  } else if (j.line != null) {
+    saved = j.line;
+    $("line").value = j.line;
+    $("status").textContent = "Saved " + new Date(j.saved).toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit" });
+  }
+} catch {
+  $("status").textContent = "Couldn't reach the desk; typing works, saving may not.";
+}
+update();
+if (!saved) $("status").textContent = "";
+</script>
+</body>
+</html>
